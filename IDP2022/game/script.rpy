@@ -4,7 +4,7 @@
 # name of the character.
 
 python:
-    # test
+    # second push test
 
 define company = Character("Odyssey7")
 define mc = Character(inputName)
