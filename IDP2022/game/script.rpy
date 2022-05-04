@@ -3,8 +3,15 @@
 # Declare characters used by this game. The color argument colorizes the
 # name of the character.
 
-define e = Character("Eileen")
+python:
+    # test
 
+define company = Character("Odyssey7")
+define mc = Character(inputName)
+define j = Character("Jeremy")
+define a = Character("Audrey")
+define vc = Character("Village Chief")
+#define v = Character("Voice")
 
 # The game starts here.
 
