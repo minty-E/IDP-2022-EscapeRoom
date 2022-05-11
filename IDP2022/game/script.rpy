@@ -38,6 +38,8 @@ label settings:
         "...Hm. There isn't anything on here."
         jump startOrSettings
 
+
+
 label start:
     
     
@@ -95,12 +97,36 @@ label start:
 
         a "We'll take you to our Village Chief."
 
-        show chief happy at 
+        scene bg village
+
+        show chief happy 
+
+        vc "insert dialogue"
+
+        # insert line to line dialogue of conversation
+
+        # move to tree
+
+        scene bg treeNormal
+
+        # tour
+
+        scene bg village
+
+        # more dialogue to return to the tree
+
+        scene bg treeNormal
+
+        # outsider touches tree
+
+        scene bg treeRed
+
+        # dialogue about tree
+
+        scene bg hole
+
+        # special effects rumbling
         
-
-    
-
-
 
     #show Odyssey7 default at center 
 
