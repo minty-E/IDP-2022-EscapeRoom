@@ -1,40 +1,113 @@
-﻿# The script of the game goes in this file.
-
-# Declare characters used by this game. The color argument colorizes the
-# name of the character.
-
-python:
-    # second push test
-
+﻿# add color to characters later
 define company = Character("Odyssey7")
-define mc = Character(inputName)
+
 define j = Character("Jeremy")
 define a = Character("Audrey")
+define mc = Character("[name]")
 define vc = Character("Village Chief")
-#define v = Character("Voice")
+define hinter = Character("Puzzle Master")
+define vt = Character("Voice in the Tower")
 
+# audrey photos
+image audrey default = "/audrey/audreyDefault.png"
+image audrey confused = "/audrey/audreyConfused.png"
+image audrey evil = "/audrey/audreyEvilLaugh.png"
+image audrey happy = "/audrey/audreyHappy.png"
+image audrey mad = "/audrey/audreyMad.png"
+
+# jeremy photos
+image jeremy default = "/jeremy/jeremyDefault.png"
+image jeremy confused = "/jeremy/jeremyConfused.png"
+image jeremy smile = "/jeremy/jeremyOpenSmile.png"
+image jeremy wideSmile = "/jeremy/jeremyToothySmile.png"
+
+# village chief photos, CHECK IF WORKING
+image chief happy = "/villageChief/chiefHappy.png"
+image chief scrunched = "/villageChief/chiefScrunched.png"
+
+# guard
+image guard default = "/guard/guardDefault.png"
+
+# backgrounds
+image bg bedroom = "/backgrounds/bedroom.png"
+image bg blackScreen = "/backgrounds/blackScreen.png"
 # The game starts here.
 
+label settings:
+        scene bg blackScreen
+        "...Hm. There isn't anything on here."
+        jump startOrSettings
+
 label start:
+    
+    
+    scene bg blackScreen
+    
+    $ name = renpy.input("What is your name?")
+    $ name = name.strip()
 
-    # Show a background. This uses a placeholder by default, but you can
-    # add a file (named either "bg room.png" or "bg room.jpg") to the
-    # images directory to show it.
 
-    scene bg room
+    scene bg bedroom
 
-    # This shows a character sprite. A placeholder is used, but you can
-    # replace it by adding a file named "eileen happy.png" to the images
-    # directory.
+    label startOrSettings:
+        scene bg titleScreen
+        "What should I press?"
+    menu: 
+        "Play":
+            jump play
 
-    show eileen happy
+        "Settings":
+            jump settings
 
-    # These display lines of dialogue.
 
-    e "You've created a new Ren'Py game."
+    label play:
+        scene bg cave
+        with fade
+        # entering the game
 
-    e "Once you add a story, pictures, and music, you can release it to the world!"
+        "Huh..? Where am I?"
+        "It's so dark..."
+        "Wait, I see a light! I should head to it."
 
-    # This ends the game.
+        # exits cave
+        #scene bg outsideOfCave
+
+        # introduction to jeremy and audrey
+        #scene bg berries
+
+        "Huh, are those people? They must be the new AI characters that Odyssey said they made. I should go up to them!"
+        "..."
+
+        mc "Hey, you two! Hey!"
+
+        scene bg berriesWithout
+
+        # talk to jeremy and audrey
+
+        show audrey evil at left
+        #show jeremy default at right
+
+        show jeremy wideSmile at right
+
+        a "Hello there!"
+
+        j "Hi!"
+
+        a "We'll take you to our Village Chief."
+
+        show chief happy at 
+        
+
+    
+
+
+
+    #show Odyssey7 default at center 
+
+    #company "Dear valued customer, \n You have been selected to be an alpha tester of our brand new game! We have spent the last ___ years developing this exciting new open world fantasy adventure game!"
+
+
+
+    
 
     return
