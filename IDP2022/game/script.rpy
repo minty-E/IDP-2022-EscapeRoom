@@ -29,14 +29,18 @@ image chief scrunched = "/villageChief/chiefScrunched.png"
 image guard default = "/guard/guardDefault.png"
 
 # backgrounds
-image bg bedroom = "/backgrounds/bedroom.png"
+#image bg bedroom = "/backgrounds/bedroom.png"
 image bg blackScreen = "/backgrounds/blackScreen.png"
+image bg cave = "/backgrounds/cave.png"
+image bg bedroom = "/backgrounds/BedRoom2.png"
 # The game starts here.
 
 label settings:
         scene bg blackScreen
         "...Hm. There isn't anything on here."
         jump startOrSettings
+
+
 
 
 
@@ -51,6 +55,25 @@ label start:
 
     scene bg bedroom
 
+    "..."
+    mc "Huh, I wonder who sent me an email this late at night."
+    menu: 
+        "Open the email":
+            jump emailScene
+
+    label emailScene:
+        mc "Oh wait..."
+        scene bg email
+        with vpunch
+        mc "Odyssey7 sent me this?! No way, I love their games!"
+        mc "I have to test this out now, I need a break from all the work I'm doing anyways."
+
+
+    "..."
+
+    scene bg titleScreen
+    "Huh, the title screen is kind of bare. There's only Start and Settings."
+
     label startOrSettings:
         scene bg titleScreen
         "What should I press?"
@@ -63,16 +86,24 @@ label start:
 
 
     label play:
+        "Whatever, doesn't matter if the appearance is lacking. I just want to play the game!"
+
+        scene bg blackScreen
+        $ renpy.pause(delay = 2, hard = False)
+
         scene bg cave
         with fade
         # entering the game
 
         "Huh..? Where am I?"
         "It's so dark..."
-        "Wait, I see a light! I should head to it."
+        "Wait, I see a light! Am I in a cave?"
+        "I should head to it."
 
         # exits cave
         #scene bg outsideOfCave
+
+        "Oh wow! The world is so detailed!"
 
         # introduction to jeremy and audrey
         #scene bg berries
