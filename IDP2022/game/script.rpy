@@ -6,7 +6,7 @@
         sec = sec % 60
         hours = mins // 60
         mins = mins % 60
-        renpy.say(mc, ("Time Lapsed = {0}:{1}:{2}".format(int(hours),int(mins),int(sec))))
+        renpy.say(" ", ("Time Lapsed = {0}:{1}:{2}".format(int(hours),int(mins),int(sec))))
 
 
 
