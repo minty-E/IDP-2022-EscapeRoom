@@ -1,3 +1,5 @@
+#THIS IS A PIECE OF CODE I GOT OFF INTERNET
+
 import time
 
 def time_convert(sec):
