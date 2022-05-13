@@ -1,28 +1,30 @@
 ﻿I'm sorry, but an uncaught exception occurred.
 
 While running game code:
-  File "game/script.rpy", line 94, in script
-    with pause(2)
-  File "game/script.rpy", line 94, in <module>
-    with pause(2)
-NameError: name 'pause' is not defined
+  File "game/script.rpy", line 188, in script
+    $ time_convert(time_lapsed)
+  File "game/script.rpy", line 188, in <module>
+    $ time_convert(time_lapsed)
+  File "game/script.rpy", line 9, in time_convert
+    renpy.say(("Time Lapsed = {0}:{1}:{2}".format(int(hours),int(mins),int(sec))))
+TypeError: say() takes at least 2 arguments (1 given)
 
 -- Full Traceback ------------------------------------------------------------
 
 Full traceback:
-  File "game/script.rpy", line 94, in script
-    with pause(2)
-  File "/Applications/renpy-7.4.11-sdk/renpy/ast.py", line 1436, in execute
-    trans = renpy.python.py_eval(self.expr)
-  File "/Applications/renpy-7.4.11-sdk/renpy/python.py", line 2276, in py_eval
-    return py_eval_bytecode(code, globals, locals)
-  File "/Applications/renpy-7.4.11-sdk/renpy/python.py", line 2269, in py_eval_bytecode
-    return eval(bytecode, globals, locals)
-  File "game/script.rpy", line 94, in <module>
-    with pause(2)
-NameError: name 'pause' is not defined
+  File "game/script.rpy", line 188, in script
+    $ time_convert(time_lapsed)
+  File "/Applications/renpy-7.4.11-sdk/renpy/ast.py", line 928, in execute
+    renpy.python.py_exec_bytecode(self.code.bytecode, self.hide, store=self.store)
+  File "/Applications/renpy-7.4.11-sdk/renpy/python.py", line 2245, in py_exec_bytecode
+    exec(bytecode, globals, locals)
+  File "game/script.rpy", line 188, in <module>
+    $ time_convert(time_lapsed)
+  File "game/script.rpy", line 9, in time_convert
+    renpy.say(("Time Lapsed = {0}:{1}:{2}".format(int(hours),int(mins),int(sec))))
+TypeError: say() takes at least 2 arguments (1 given)
 
 Darwin-21.1.0-x86_64-i386-64bit
 Ren'Py 7.4.11.2266
 IDP2022 1.0
-Thu May 12 10:52:00 2022
+Fri May 13 12:42:50 2022

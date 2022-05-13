@@ -1,4 +1,16 @@
-﻿# add color to characters later
+﻿init python:
+    import time
+
+    def time_convert(sec):
+        mins = sec // 60
+        sec = sec % 60
+        hours = mins // 60
+        mins = mins % 60
+        renpy.say(mc, ("Time Lapsed = {0}:{1}:{2}".format(int(hours),int(mins),int(sec))))
+
+
+
+# add color to characters later
 define company = Character("Odyssey7")
 
 define j = Character("Jeremy")
@@ -33,7 +45,11 @@ image guard default = "/guard/guardDefault.png"
 image bg blackScreen = "/backgrounds/blackScreen.png"
 image bg cave = "/backgrounds/cave.png"
 image bg bedroom = "/backgrounds/BedRoom2.png"
+
+# image ralsei default = "ralsei.jpeg"
 # The game starts here.
+
+
 
 label settings:
         scene bg blackScreen
@@ -51,6 +67,7 @@ label start:
     
     $ name = renpy.input("What is your name?")
     $ name = name.strip()
+    $ start_time = time.time()
 
 
     scene bg bedroom
@@ -61,9 +78,11 @@ label start:
         "Open the email":
             jump emailScene
 
+
     label emailScene:
         mc "Oh wait..."
-        scene bg email
+        #scene bg email
+        scene bg bedroom
         with vpunch
         mc "Odyssey7 sent me this?! No way, I love their games!"
         mc "I have to test this out now, I need a break from all the work I'm doing anyways."
@@ -89,7 +108,7 @@ label start:
         "Whatever, doesn't matter if the appearance is lacking. I just want to play the game!"
 
         scene bg blackScreen
-        $ renpy.pause(delay = 2, hard = False)
+        $ renpy.pause(delay = 2, hard = True)
 
         scene bg cave
         with fade
@@ -140,6 +159,10 @@ label start:
 
         scene bg treeNormal
 
+        #call screen ralsei default
+
+        
+
         # tour
 
         scene bg village
@@ -157,14 +180,13 @@ label start:
         scene bg hole
 
         # special effects rumbling
+
+        "..."
+        "This is the end of the game."
+        $ end_time = time.time()
+        $ time_lapsed = end_time - start_time
+        $ time_convert(time_lapsed)
         
-
-    #show Odyssey7 default at center 
-
-    #company "Dear valued customer, \n You have been selected to be an alpha tester of our brand new game! We have spent the last ___ years developing this exciting new open world fantasy adventure game!"
-
-
-
+        "Test"
     
-
     return
