@@ -139,11 +139,17 @@ label start:
         show audrey evil at left
         #show jeremy default at right
 
+        show jeremy default at right
+
+        a "Hey! I’ve never seen you before, what's your name?"
+
+        mc "I'm [name]"
+
+        a "Oh, hi [name]! Welcome to our village! I’m Audrey. This guy is my best friend."
+
         show jeremy wideSmile at right
 
-        a "Hello there!"
-
-        j "Hi!"
+        j "Nice to meet you, [name]!"
 
         a "We'll take you to our Village Chief."
 
@@ -178,8 +184,11 @@ label start:
         # dialogue about tree
 
         scene bg hole
-
+        with vpunch
+        with hpunch
         # special effects rumbling
+
+
 
         "..."
         "This is the end of the game."
