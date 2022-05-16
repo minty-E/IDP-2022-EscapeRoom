@@ -1,6 +1,8 @@
 ﻿init python:
     import time
 
+    hintUsed = False
+
     def time_convert(sec):
         mins = sec // 60
         sec = sec % 60
@@ -13,6 +15,8 @@
 # add color to characters later
 define company = Character("Odyssey7")
 
+define s1 = Character("Scientist 1")
+define s2 = Character("Scientist 2")
 define j = Character("Jeremy")
 define a = Character("Audrey")
 define mc = Character("[name]")
@@ -61,7 +65,13 @@ label settings:
 
 
 label start:
-    
+    label testButton:
+        scene bg blackScreen
+        call screen testImgButton
+        "Currently in testing label"
+        show screen testImgButton
+        "testing done"
+        hide screen testImgButton
     
     scene bg blackScreen
     
@@ -85,7 +95,26 @@ label start:
         scene bg bedroom
         with vpunch
         mc "Odyssey7 sent me this?! No way, I love their games!"
-        mc "I have to test this out now, I need a break from all the work I'm doing anyways."
+        mc "Wait, I should read this more carefully."
+        # what email says
+        company ""
+
+    label facility:
+        scene bg facilityEntrance
+        s "Hello there! I see you have received our email about a new alpha test. Our game has breakthrough artificial intelligence and virtual reality technology, that we're excited for you to experience it!"
+
+        scene bg mainFacility
+        with fade
+
+        s "Before we begin your experience, please measure and record your heart rate."
+
+        
+
+
+
+        
+
+
 
 
     "..."
@@ -186,7 +215,7 @@ label start:
         scene bg hole
         with vpunch
         with hpunch
-        # special effects rumbling
+        
 
 
 
@@ -197,5 +226,6 @@ label start:
         $ time_convert(time_lapsed)
         
         "Test"
-    
+
+
     return

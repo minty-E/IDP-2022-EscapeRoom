@@ -2,9 +2,9 @@
 errors listed below, and try again.
 
 
-File "game/script.rpy", line 190: expected statement.
-    timeS
-         ^
+File "game/myscreens.rpy", line 4: expected a keyword argument or end of line.
+    xanchor: 0.5
+           ^
 
 Ren'Py Version: Ren'Py 7.4.11.2266
-Fri May 13 12:30:32 2022
+Mon May 16 13:23:34 2022
