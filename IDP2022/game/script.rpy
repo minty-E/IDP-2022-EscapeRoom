@@ -54,6 +54,8 @@ image bg bedroom = "/backgrounds/BedRoom2.png"
 # image ralsei default = "ralsei.jpeg"
 # The game starts here.
 
+label addTime:
+    hintUsed++
 
 
 label settings:
@@ -68,7 +70,6 @@ label settings:
 label start:
     label testButton:
         scene bg blackScreen
-        call screen testImgButton
         "Currently in testing label"
         show screen testImgButton
         "testing done"

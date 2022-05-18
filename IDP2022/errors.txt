@@ -2,9 +2,13 @@
 errors listed below, and try again.
 
 
-File "game/myscreens.rpy", line 4: expected a keyword argument or end of line.
-    xanchor: 0.5
-           ^
+File "game/custom_screens.rpy", line 9: u'hintUsed' is not a keyword argument or valid child for the textbutton statement.
+    textbutton "Add 5 seconds to timer" hintUsed++
+                                                ^
+
+File "game/script.rpy", line 58: expected statement.
+    hintUsed++
+            ^
 
 Ren'Py Version: Ren'Py 7.4.11.2266
-Mon May 16 13:23:34 2022
+Tue May 17 14:03:59 2022
