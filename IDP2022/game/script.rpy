@@ -1,7 +1,7 @@
 init python:
     import time
 
-    hintUsed = 1
+    hintUsed = 0
 
     def time_convert(sec):
         sec += (hintUsed * 10)
