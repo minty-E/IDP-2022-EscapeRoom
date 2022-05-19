@@ -201,24 +201,78 @@ label start:
         "..."
         "ALERT: YOU HAVE BEEN TRAPPED IN A GAME, WE ARE WORKING TO FREE YOU."
         with vpunch
-        jump puzzle1_1
-
-    label puzzle1_1:
-        hacker "filler, either give instructions here or"
-        "have the mc figure it out themselves"
-
-        # enter or implement dragging code 
-
-
         
 
+        label puzzle1: 
+            hacker "filler, either give instructions here or"
+            "have the mc figure it out themselves"
+
+            # enter or implement dragging code 
+
+            # hanoi puzzle IMPORTANT
+
+            # drag and drop pieces of mirror, get artist to do this
+
+        # death of jeremy and audrey leaves
+
+        # get ingredient
+
+        # contact by company, move to cave
+
+    
 
 
+    label act2:
         "..."
-        "This is the end of the game."
-        $ end_time = time.time()
-        $ time_lapsed = end_time - start_time
-        $ time_convert(time_lapsed)
+        # arrive in cave
+
+        "Hm, the cave is blocked."
+
+        label puzzle2:
+            # torch puzzle, clicking image buttons to change orientation
+
+            # move to memorial where npc guard instructs to solve puzzles
+
+            # recreate a piano melody
+
+            # find correct part of statue and drag and drop on it
+
+            
+
+        # receive 2nd ingredient
+
+    label act3: 
+        # enter tower
+
+        # voice in tower calls out to pass trial 
+
+        # each task will form more stairs
+
+        label puzzle3:
+            # make a light purple, code different color combinations, drag and drop
+
+            # shuffle different letters to form words
+
+            # slide on image, maze puzzle
+
+        # arrive at top of tower
+
+    label ending: 
+        # audrey shows up hacked
+        # hacker sends spells through audrey, quick time events to stop
+        # health bar will lower if user fails 
+        # company sends spell book to kill audrey
+        # mixes three ingredients to cure the tree
+        # curing tree leads to exiting the game
+        # hacker gets arrested and user gets sent home
+
+
+
+    "..."
+    "This is the end of the game."
+    $ end_time = time.time()
+    $ time_lapsed = end_time - start_time
+    $ time_convert(time_lapsed)
         
         "Test"
 
