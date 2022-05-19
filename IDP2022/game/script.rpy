@@ -24,6 +24,7 @@ define mc = Character("[name]")
 define vc = Character("Village Chief")
 define hinter = Character("Puzzle Master")
 define vt = Character("Voice in the Tower")
+define hacker = Character("Mysterious Hacker")
 
 # audrey photos
 image audrey default = "/audrey/audreyDefault.png"
@@ -58,15 +59,6 @@ label addTime:
     hintUsed++
 
 
-label settings:
-        scene bg blackScreen
-        "...Hm. There isn't anything on here."
-        jump startOrSettings
-
-
-
-
-
 label start:
     label testButton:
         scene bg blackScreen
@@ -99,7 +91,7 @@ label start:
         mc "Odyssey7 sent me this?! No way, I love their games!"
         mc "Wait, I should read this more carefully."
         # what email says
-        company ""
+        company "filler here"
 
     label facility:
         scene bg facilityEntrance
@@ -110,33 +102,14 @@ label start:
 
         s "Before we begin your experience, please measure and record your heart rate."
 
-        
-
-
-
-        
-
-
+        # HOOKED TO VR
 
 
     "..."
 
-    scene bg titleScreen
-    "Huh, the title screen is kind of bare. There's only Start and Settings."
 
-    label startOrSettings:
-        scene bg titleScreen
-        "What should I press?"
-    menu: 
-        "Play":
-            jump play
-
-        "Settings":
-            jump settings
-
-
-    label play:
-        "Whatever, doesn't matter if the appearance is lacking. I just want to play the game!"
+    label introAct:
+        
 
         scene bg blackScreen
         $ renpy.pause(delay = 2, hard = True)
@@ -196,10 +169,6 @@ label start:
 
         scene bg treeNormal
 
-        #call screen ralsei default
-
-        
-
         # tour
 
         scene bg village
@@ -217,6 +186,30 @@ label start:
         scene bg hole
         with vpunch
         with hpunch
+
+
+    # act 1
+    label act1:
+        "..."
+        "Where am I...?"
+
+        # fade in background or simulate looking around
+
+        scene bg dungeon
+        with fade()
+
+        "..."
+        "ALERT: YOU HAVE BEEN TRAPPED IN A GAME, WE ARE WORKING TO FREE YOU."
+        with vpunch
+        jump puzzle1_1
+
+    label puzzle1_1:
+        hacker "filler, either give instructions here or"
+        "have the mc figure it out themselves"
+
+        # enter or implement dragging code 
+
+
         
 
 
