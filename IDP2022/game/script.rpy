@@ -201,7 +201,7 @@ label start:
         mc "Sure, I'll help you guys. Where do we start searching?"
 
         show audrey default at left
-        a "Well, we can always start at the heart of the problem."
+        a "Well, we can always start at the heart of the problem.".
 
 
         # insert line to line dialogue of conversation

@@ -19,7 +19,7 @@ screen qte_button:
             xalign 0.5
             xysize 100, 100
             background Animation("#000", 0.5, "#fff", 0.5) #change to image, etc
-            activate_sound "sounds/hit.mp3"
+            #activate_sound "sounds/hit.mp3"
             #same function as the key input
 
 

@@ -8,7 +8,15 @@ screen testImgButton:
         style "centered_style"
         textbutton "Add time by clicking!": 
             action [SetVariable("hintUsed", True)]
-        
+screen torchPuzzle:
+    add "torch1.png"
+    # etc
+    modal True
+
+    imagebutton auto "":
+        focus_mask True
+        action[]
+
 
 
     #imagemap:
