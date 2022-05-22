@@ -2,33 +2,9 @@
 errors listed below, and try again.
 
 
-File "game/script.rpy", line 21: unexpected EOF while parsing
-    Character("Audrey", color = )
-                                 ^
-
-File "game/script.rpy", line 22: unexpected EOF while parsing
-    Character("[name]", color = )
-                                 ^
-
-File "game/script.rpy", line 23: unexpected EOF while parsing
-    Character("Village Chief", color = )
-                                        ^
-
-File "game/script.rpy", line 24: unexpected EOF while parsing
-    Character("Puzzle Master", color = )
-                                        ^
-
-File "game/script.rpy", line 25: unexpected EOF while parsing
-    Character("Voice in the Tower", color = )
-                                             ^
-
-File "game/script.rpy", line 26: unexpected EOF while parsing
-    Character("Mysterious Hacker", color = )
-                                            ^
-
-File "game/script.rpy", line 27: unexpected EOF while parsing
-    Character("Guard", color = )
-                                ^
+File "game/script.rpy", line 204: end of line expected.
+    a "Well, we can always start at the heart of the problem.".
+                                                              ^
 
 Ren'Py Version: Ren'Py 7.4.11.2266
-Sun May 22 00:58:33 2022
+Sun May 22 16:16:45 2022
