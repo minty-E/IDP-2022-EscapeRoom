@@ -1,19 +1,19 @@
 ﻿I'm sorry, but an uncaught exception occurred.
 
 After initialization, but before game start.
-  File "game/custom_screens.rpy", line 1, in prepare_screen
+  File "game/custom_screens.rpy", line 6, in prepare_screen
     screen testImgButton:
-  File "game/custom_screens.rpy", line 1, in prepare
+  File "game/custom_screens.rpy", line 6, in prepare
     screen testImgButton:
-  File "game/custom_screens.rpy", line 3, in prepare
-    imagemap:
-  File "game/custom_screens.rpy", line 3, in prepare
-    imagemap:
-  File "game/custom_screens.rpy", line 5, in prepare
-    hotspot(0, 0, 420, 283) action hintUsed++
-  File "game/custom_screens.rpy", line 5, in prepare
-    hotspot(0, 0, 420, 283) action hintUsed++
-SyntaxError: unexpected EOF while parsing (custom_screens.rpy, line 5)
+  File "game/custom_screens.rpy", line 7, in prepare
+    hbox:
+  File "game/custom_screens.rpy", line 7, in prepare
+    hbox:
+  File "game/custom_screens.rpy", line 9, in prepare
+    textbutton "Add time by clicking!":
+  File "game/custom_screens.rpy", line 9, in prepare
+    textbutton "Add time by clicking!":
+SyntaxError: invalid syntax (custom_screens.rpy, line 10)
 
 -- Full Traceback ------------------------------------------------------------
 
@@ -26,27 +26,27 @@ Full traceback:
     renpy.display.screen.prepare_screens()
   File "/Applications/renpy-7.4.11-sdk/renpy/display/screen.py", line 955, in prepare_screens
     s.ast.prepare_screen()
-  File "game/custom_screens.rpy", line 1, in prepare_screen
+  File "game/custom_screens.rpy", line 6, in prepare_screen
     screen testImgButton:
-  File "game/custom_screens.rpy", line 1, in prepare
+  File "game/custom_screens.rpy", line 6, in prepare
     screen testImgButton:
-  File "game/custom_screens.rpy", line 3, in prepare
-    imagemap:
-  File "game/custom_screens.rpy", line 3, in prepare
-    imagemap:
-  File "game/custom_screens.rpy", line 5, in prepare
-    hotspot(0, 0, 420, 283) action hintUsed++
-  File "game/custom_screens.rpy", line 5, in prepare
-    hotspot(0, 0, 420, 283) action hintUsed++
+  File "game/custom_screens.rpy", line 7, in prepare
+    hbox:
+  File "game/custom_screens.rpy", line 7, in prepare
+    hbox:
+  File "game/custom_screens.rpy", line 9, in prepare
+    textbutton "Add time by clicking!":
+  File "game/custom_screens.rpy", line 9, in prepare
+    textbutton "Add time by clicking!":
   File "/Applications/renpy-7.4.11-sdk/renpy/pyanalysis.py", line 714, in ast_eval
     return self.ast_eval_literal(expr)[0]
   File "/Applications/renpy-7.4.11-sdk/renpy/pyanalysis.py", line 696, in ast_eval_literal
     expr = py_compile(expr, 'eval', ast_node=True)
   File "/Applications/renpy-7.4.11-sdk/renpy/python.py", line 835, in py_compile
     raise e
-SyntaxError: unexpected EOF while parsing (custom_screens.rpy, line 5)
+SyntaxError: invalid syntax (custom_screens.rpy, line 10)
 
 Darwin-21.1.0-x86_64-i386-64bit
 Ren'Py 7.4.11.2266
 IDP2022 1.0
-Tue May 17 13:19:17 2022
+Fri May 20 11:32:34 2022

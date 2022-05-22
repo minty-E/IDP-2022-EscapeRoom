@@ -1,10 +1,10 @@
 init python:
     import time
 
-    hintUsed = 0
+    hintUsed = False
 
     def time_convert(sec):
-        sec += (hintUsed * 10)
+        #sec += (hintUsed * 10)
         mins = sec // 60
         sec = sec % 60
         hours = mins // 60
@@ -14,10 +14,9 @@ init python:
 
 
 # add color to characters later
-define company = Character("Odyssey7")
-
-define s1 = Character("Scientist 1")
-define s2 = Character("Scientist 2")
+define company = Character("Email")
+define s1 = Character("Scientist 1", color = "#808080")
+define s2 = Character("Scientist 2", color = "#808080")
 define j = Character("Jeremy")
 define a = Character("Audrey")
 define mc = Character("[name]")
@@ -25,38 +24,36 @@ define vc = Character("Village Chief")
 define hinter = Character("Puzzle Master")
 define vt = Character("Voice in the Tower")
 define hacker = Character("Mysterious Hacker")
-
+define g = Character("Guard")
 # audrey photos
 image audrey default = "/audrey/audreyDefault.png"
 image audrey confused = "/audrey/audreyConfused.png"
 image audrey evil = "/audrey/audreyEvilLaugh.png"
 image audrey happy = "/audrey/audreyHappy.png"
 image audrey mad = "/audrey/audreyMad.png"
-
 # jeremy photos
 image jeremy default = "/jeremy/jeremyDefault.png"
 image jeremy confused = "/jeremy/jeremyConfused.png"
 image jeremy smile = "/jeremy/jeremyOpenSmile.png"
 image jeremy wideSmile = "/jeremy/jeremyToothySmile.png"
-
 # village chief photos, CHECK IF WORKING
 image chief happy = "/villageChief/chiefHappy.png"
 image chief scrunched = "/villageChief/chiefScrunched.png"
-
 # guard
 image guard default = "/guard/guardDefault.png"
 
 # backgrounds
-#image bg bedroom = "/backgrounds/bedroom.png"
+
 image bg blackScreen = "/backgrounds/blackScreen.png"
-image bg cave = "/backgrounds/cave.png"
-image bg bedroom = "/backgrounds/BedRoom2.png"
+image bg cave = "/backgrounds/StartCaveBackground.png"
+image bg bedroom = "/backgrounds/BedRoom.png"
+image bg facility = "/backgrounds/Facility.png"
 
 # image ralsei default = "ralsei.jpeg"
 # The game starts here.
 
-label addTime:
-    hintUsed++
+# label addTime:
+#    hintUsed++
 
 
 label start:
@@ -88,19 +85,26 @@ label start:
         #scene bg email
         scene bg bedroom
         with vpunch
-        mc "Odyssey7 sent me this?! No way, I love their games!"
-        mc "Wait, I should read this more carefully."
+        mc "Odyssey7 sent me this?!{w} No way, I love their games!"
         # what email says
-        company "filler here"
+        company "Hello!{w} Odyssey7 would like to invite you to the facility where we make our games. We have just developed a new VR game, but we would like you to beta-test it. Please see the link to the address below.{w} See you soon,{w} \nOdyssey7"
 
     label facility:
-        scene bg facilityEntrance
-        s "Hello there! I see you have received our email about a new alpha test. Our game has breakthrough artificial intelligence and virtual reality technology, that we're excited for you to experience it!"
+        scene bg facility
+        s1 "Hello there [name]! I see you received our email about testing our new game."
+        mc "Of course. It would be a shame if I pass up such a good opportunity."
+        s1 "I’m glad to hear that!{w} Now, enough said, let’s get you into the game. Follow me!"
 
-        scene bg mainFacility
+        scene bg facility
         with fade
 
-        s "Before we begin your experience, please measure and record your heart rate."
+        s1 "Before we begin your experience, please measure and record your heart rate."
+        $ hRate = renpy.input("Enter heart rate and press enter: ")
+        $ hRate = hRate.strip()
+
+        #s2 helps with vr headset
+
+        s2 "...{w} Alright, you’re all set. Just remember that the game is still in early stages, so please expect a lot of bugs. Please report anything you find to us through the direct messaging system in your control panel."
 
         # HOOKED TO VR
 
@@ -109,8 +113,7 @@ label start:
 
 
     label introAct:
-        
-
+        "...{w} Start of Prologue"
         scene bg blackScreen
         $ renpy.pause(delay = 2, hard = True)
 
@@ -118,36 +121,46 @@ label start:
         with fade
         # entering the game
 
-        "Huh..? Where am I?"
-        "It's so dark..."
-        "Wait, I see a light! Am I in a cave?"
-        "I should head to it."
+        "Huh..? Where am I?{w} Am I in a cave?"
+        "I should climb up."
 
         # exits cave
         #scene bg outsideOfCave
 
-        "Oh wow! The world is so detailed!"
+        mc "Wow... I expected no less from Odyssey7!"
+
+        # pan or show village
+
+        mc "Now if this game follows every videogame trope ever, the quest would start in that village over there."
+        mc "I should head over to the village."
+
+        # maybe fade to black and play footstep noises?
+
+        scene bg blackScreen
+        with fade
 
         # introduction to jeremy and audrey
-        #scene bg berries
 
-        "Huh, are those people? They must be the new AI characters that Odyssey said they made. I should go up to them!"
+        scene bg berries 
+        with fade
+
+        "Huh, are those people?{w} They must be the new AI characters that Odyssey said they made. I should go up to them!"
         "..."
-
         mc "Hey, you two! Hey!"
 
         scene bg berriesWithout
 
         # talk to jeremy and audrey
 
-        show audrey evil at left
+        show audrey default at left
         #show jeremy default at right
 
         show jeremy default at right
 
-        a "Hey! I’ve never seen you before, what's your name?"
+        a "Hey!{w} I’ve never seen you before, what's your name?"
+        mc "I'm [name]."
 
-        mc "I'm [name]"
+        show audrey happy at left
 
         a "Oh, hi [name]! Welcome to our village! I’m Audrey. This guy is my best friend."
 
@@ -155,13 +168,41 @@ label start:
 
         j "Nice to meet you, [name]!"
 
-        a "We'll take you to our Village Chief."
+        show jeremy smile at right
 
-        scene bg village
+        j "You should come with us to the village chief.{w} Audrey and I have an important task. You could help us!"
+        mc "Well alright!"
 
+        scene bg villageHouse
+        show audrey default at left
+        show jeremy default at right
         show chief happy 
 
-        vc "insert dialogue"
+        vc "Welcome back Audrey and Jeremy. I see you brought a friend as well!"
+
+        show jeremy confused at right
+
+        j "Yes, we found [name] wandering around the tree."
+
+        show chief scrunched
+
+        vc " Oh, you’re interested in Yggdrasil? It was cursed a few years ago by an evil wizard…. The surrounding area of the tree to sink miles down from the surface, hence the massive rock walls surrounding our land. It is slowly making our land infertile, meaning we’ll run out of food soon."
+
+        mc "Ah, that’s unfortunate. What can I do to help?"
+
+        show chief happy
+
+        vc "Our villager scientists devised a cure with rare ingredients being locked away in 3 hidden locations.{w} We want to send our best adventurers, like Audrey and Jeremy here, to get them.{w} [name], you can help out as well. "
+
+        show audrey happy at left
+        show jeremy smile at right
+
+        j "Yeah, [name], you should come!"
+        mc "Sure, I'll help you guys. Where do we start searching?"
+
+        show audrey default at left
+        a "Well, we can always start at the heart of the problem."
+
 
         # insert line to line dialogue of conversation
 
@@ -196,7 +237,7 @@ label start:
         # fade in background or simulate looking around
 
         scene bg dungeon
-        with fade()
+        with fade
 
         "..."
         "ALERT: YOU HAVE BEEN TRAPPED IN A GAME, WE ARE WORKING TO FREE YOU."
@@ -232,6 +273,9 @@ label start:
             # torch puzzle, clicking image buttons to change orientation
 
             # move to memorial where npc guard instructs to solve puzzles
+
+            g "...{w} Hello."
+            g "I'm "
 
             # recreate a piano melody
 
@@ -274,7 +318,7 @@ label start:
     $ time_lapsed = end_time - start_time
     $ time_convert(time_lapsed)
         
-        "Test"
+    #    "Test"
 
 
     return

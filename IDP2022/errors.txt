@@ -2,13 +2,33 @@
 errors listed below, and try again.
 
 
-File "game/custom_screens.rpy", line 9: u'hintUsed' is not a keyword argument or valid child for the textbutton statement.
-    textbutton "Add 5 seconds to timer" hintUsed++
-                                                ^
+File "game/script.rpy", line 21: unexpected EOF while parsing
+    Character("Audrey", color = )
+                                 ^
 
-File "game/script.rpy", line 58: expected statement.
-    hintUsed++
-            ^
+File "game/script.rpy", line 22: unexpected EOF while parsing
+    Character("[name]", color = )
+                                 ^
+
+File "game/script.rpy", line 23: unexpected EOF while parsing
+    Character("Village Chief", color = )
+                                        ^
+
+File "game/script.rpy", line 24: unexpected EOF while parsing
+    Character("Puzzle Master", color = )
+                                        ^
+
+File "game/script.rpy", line 25: unexpected EOF while parsing
+    Character("Voice in the Tower", color = )
+                                             ^
+
+File "game/script.rpy", line 26: unexpected EOF while parsing
+    Character("Mysterious Hacker", color = )
+                                            ^
+
+File "game/script.rpy", line 27: unexpected EOF while parsing
+    Character("Guard", color = )
+                                ^
 
 Ren'Py Version: Ren'Py 7.4.11.2266
-Tue May 17 14:03:59 2022
+Sun May 22 00:58:33 2022

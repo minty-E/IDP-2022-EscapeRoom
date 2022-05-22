@@ -6,7 +6,8 @@ style centered_style:
 screen testImgButton:
     hbox:
         style "centered_style"
-        textbutton "Add 5 seconds to timer"
+        textbutton "Add time by clicking!": 
+            action [SetVariable("hintUsed", True)]
         
 
 

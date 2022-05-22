@@ -1,6 +1,6 @@
 # i watched a youtube tutorial for this btw
 
-define e = Character("")
+define e = Character("augh")
 
 # stores names of dragged items
 init python:
