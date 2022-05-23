@@ -8,6 +8,7 @@ screen testImgButton:
         style "centered_style"
         textbutton "Add time by clicking!": 
             action [SetVariable("hintUsed", hintUsed + 1)]
+            
 screen torchPuzzle:
     add "torch1.png"
     # etc
