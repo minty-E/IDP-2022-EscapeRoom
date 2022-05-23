@@ -1,16 +1,28 @@
 ﻿I'm sorry, but an uncaught exception occurred.
 
-While loading <'Image' u'towe of hanoi/smallring.png'>:
-  File "game/script.rpy", line 818, in script
+While running game code:
+  File "game/script.rpy", line 834, in script
     pause
   File "renpy/common/000statements.rpy", line 455, in execute_pause
     renpy.pause()
-IOError: Couldn't find file 'towe of hanoi/smallring.png'.
+  File "game/script.rpy", line 839, in execute
+    screen pedestal2close:
+  File "game/script.rpy", line 839, in execute
+    screen pedestal2close:
+  File "game/script.rpy", line 843, in execute
+    draggroup:
+  File "game/script.rpy", line 855, in execute
+    drag:
+  File "game/script.rpy", line 855, in keywords
+    drag:
+  File "game/script.rpy", line 861, in <module>
+    dragged dragging
+NameError: name 'dragging' is not defined
 
 -- Full Traceback ------------------------------------------------------------
 
 Full traceback:
-  File "game/script.rpy", line 818, in script
+  File "game/script.rpy", line 834, in script
     pause
   File "C:\Users\zerog\Downloads\renpy-7.4.11-sdk/renpy/ast.py", line 2015, in execute
     self.call("execute")
@@ -26,59 +38,41 @@ Full traceback:
     rv = renpy.game.interface.interact(roll_forward=roll_forward, **kwargs)
   File "C:\Users\zerog\Downloads\renpy-7.4.11-sdk/renpy/display/core.py", line 3325, in interact
     repeat, rv = self.interact_core(preloads=preloads, trans_pause=trans_pause, pause=pause, pause_start=pause_start, **kwargs)
-  File "C:\Users\zerog\Downloads\renpy-7.4.11-sdk/renpy/display/core.py", line 3839, in interact_core
-    self.draw_screen(root_widget, fullscreen_video, (not fullscreen_video) or video_frame_drawn)
-  File "C:\Users\zerog\Downloads\renpy-7.4.11-sdk/renpy/display/core.py", line 2565, in draw_screen
-    renpy.config.screen_height,
-  File "render.pyx", line 492, in renpy.display.render.render_screen
-  File "render.pyx", line 263, in renpy.display.render.render
-  File "C:\Users\zerog\Downloads\renpy-7.4.11-sdk/renpy/display/layout.py", line 826, in render
-    surf = render(child, width, height, cst, cat)
-  File "render.pyx", line 170, in renpy.display.render.render
-  File "render.pyx", line 263, in renpy.display.render.render
-  File "C:\Users\zerog\Downloads\renpy-7.4.11-sdk/renpy/display/transition.py", line 181, in render
-    renpy.display.render.render(self.transitions[-1], width, height, 0, 0)
-  File "render.pyx", line 170, in renpy.display.render.render
-  File "render.pyx", line 263, in renpy.display.render.render
-  File "C:\Users\zerog\Downloads\renpy-7.4.11-sdk/renpy/display/transition.py", line 368, in render
-    top = render(self.new_widget, width, height, st, at)
-  File "render.pyx", line 170, in renpy.display.render.render
-  File "render.pyx", line 263, in renpy.display.render.render
-  File "C:\Users\zerog\Downloads\renpy-7.4.11-sdk/renpy/display/layout.py", line 826, in render
-    surf = render(child, width, height, cst, cat)
-  File "render.pyx", line 170, in renpy.display.render.render
-  File "render.pyx", line 263, in renpy.display.render.render
-  File "C:\Users\zerog\Downloads\renpy-7.4.11-sdk/renpy/display/layout.py", line 826, in render
-    surf = render(child, width, height, cst, cat)
-  File "render.pyx", line 170, in renpy.display.render.render
-  File "render.pyx", line 263, in renpy.display.render.render
-  File "C:\Users\zerog\Downloads\renpy-7.4.11-sdk/renpy/display/screen.py", line 688, in render
-    child = renpy.display.render.render(self.child, w, h, st, at)
-  File "render.pyx", line 170, in renpy.display.render.render
-  File "render.pyx", line 263, in renpy.display.render.render
-  File "C:\Users\zerog\Downloads\renpy-7.4.11-sdk/renpy/display/layout.py", line 826, in render
-    surf = render(child, width, height, cst, cat)
-  File "render.pyx", line 170, in renpy.display.render.render
-  File "render.pyx", line 263, in renpy.display.render.render
-  File "C:\Users\zerog\Downloads\renpy-7.4.11-sdk/renpy/display/dragdrop.py", line 853, in render
-    return super(DragGroup, self).render(width, height, st, at)
-  File "C:\Users\zerog\Downloads\renpy-7.4.11-sdk/renpy/display/layout.py", line 826, in render
-    surf = render(child, width, height, cst, cat)
-  File "render.pyx", line 170, in renpy.display.render.render
-  File "render.pyx", line 263, in renpy.display.render.render
-  File "C:\Users\zerog\Downloads\renpy-7.4.11-sdk/renpy/display/dragdrop.py", line 461, in render
-    cr = render(child, width, height, st, at)
-  File "render.pyx", line 170, in renpy.display.render.render
-  File "render.pyx", line 263, in renpy.display.render.render
-  File "C:\Users\zerog\Downloads\renpy-7.4.11-sdk/renpy/display/im.py", line 625, in render
-    return cache.get(self, render=True)
-  File "C:\Users\zerog\Downloads\renpy-7.4.11-sdk/renpy/display/im.py", line 287, in get
-    surf = image.load()
-  File "C:\Users\zerog\Downloads\renpy-7.4.11-sdk/renpy/display/im.py", line 706, in load
-    raise e
-IOError: Couldn't find file 'towe of hanoi/smallring.png'.
+  File "C:\Users\zerog\Downloads\renpy-7.4.11-sdk/renpy/display/core.py", line 3737, in interact_core
+    root_widget.visit_all(lambda i : i.per_interact())
+  File "C:\Users\zerog\Downloads\renpy-7.4.11-sdk/renpy/display/core.py", line 568, in visit_all
+    d.visit_all(callback, seen)
+  File "C:\Users\zerog\Downloads\renpy-7.4.11-sdk/renpy/display/core.py", line 568, in visit_all
+    d.visit_all(callback, seen)
+  File "C:\Users\zerog\Downloads\renpy-7.4.11-sdk/renpy/display/core.py", line 568, in visit_all
+    d.visit_all(callback, seen)
+  File "C:\Users\zerog\Downloads\renpy-7.4.11-sdk/renpy/display/core.py", line 568, in visit_all
+    d.visit_all(callback, seen)
+  File "C:\Users\zerog\Downloads\renpy-7.4.11-sdk/renpy/display/core.py", line 568, in visit_all
+    d.visit_all(callback, seen)
+  File "C:\Users\zerog\Downloads\renpy-7.4.11-sdk/renpy/display/screen.py", line 436, in visit_all
+    callback(self)
+  File "C:\Users\zerog\Downloads\renpy-7.4.11-sdk/renpy/display/core.py", line 3737, in <lambda>
+    root_widget.visit_all(lambda i : i.per_interact())
+  File "C:\Users\zerog\Downloads\renpy-7.4.11-sdk/renpy/display/screen.py", line 447, in per_interact
+    self.update()
+  File "C:\Users\zerog\Downloads\renpy-7.4.11-sdk/renpy/display/screen.py", line 637, in update
+    self.screen.function(**self.scope)
+  File "game/script.rpy", line 839, in execute
+    screen pedestal2close:
+  File "game/script.rpy", line 839, in execute
+    screen pedestal2close:
+  File "game/script.rpy", line 843, in execute
+    draggroup:
+  File "game/script.rpy", line 855, in execute
+    drag:
+  File "game/script.rpy", line 855, in keywords
+    drag:
+  File "game/script.rpy", line 861, in <module>
+    dragged dragging
+NameError: name 'dragging' is not defined
 
 Windows-10-10.0.22000
 Ren'Py 7.4.11.2266
 IDP2022 1.0
-Mon May 23 11:25:49 2022
+Mon May 23 14:03:52 2022

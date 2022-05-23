@@ -46,6 +46,14 @@ image guard default = "/guard/guardDefault.png"
 init python:
     piecesinplace = 0
     currentlayer = 1
+    smallx = 2
+    midx = 1
+    bigx = 0
+    smallring = 1
+    midring = 1
+    bigring = 1
+    posx1y0 = ""
+
 
     def snapinplace1(drags, drop):
         global piecesinplace
@@ -60,7 +68,11 @@ init python:
     def dragring(drags, drop):
         if drop:
             if drop.x == 810 and drop.y == 707:
-                pass
+                posx1y0 = drags[0].drag_name
+            if drop.x == 810 and drop.y == 707:
+                drags[0].snap(drop.x,drop.y)
+                smallringx = 1
+                return
     def snapinplace2(drags, drop):
         global piecesinplace
         if drop:
@@ -838,6 +850,8 @@ screen pedestal2close:
             xpos 508
             ypos 707
             dragged dragring
+            draggable If(bigx + 1 == smallx or bigx + 1 == midx, true = False, false = True)
+            droppable False
             drag_raise True
 
         drag:
@@ -846,6 +860,10 @@ screen pedestal2close:
             child "tower of hanoi/midring.png"
             xpos 537
             ypos 630
+            dragged dragring
+            draggable If(midx + 1 == smallx, true = False, false = True)
+            droppable False
+            drag_raise True
 
         drag:
             focus_mask True
@@ -853,17 +871,33 @@ screen pedestal2close:
             child "tower of hanoi/smallring.png"
             xpos 563
             ypos 570
+            dragged dragring
+            draggable True
+            droppable False
+
         drag:
             drag_name "0,0"
             xpos 508
             ypos 707
             xsize 60
             ysize 60
+            draggable False
+            droppable True
         drag:
             drag_name "1,0"
             xpos 810
             ypos 707
             xsize 60
             ysize 60
+            draggable False
+            droppable True
+        drag:
+            drag_name "2,0"
+            xpos 1120
+            ypos 707
+            xsize 60
+            ysize 60
+            draggable False
+            droppable True
 #    return
  
