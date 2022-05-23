@@ -1,52 +1,84 @@
 ﻿I'm sorry, but an uncaught exception occurred.
 
-After initialization, but before game start.
-  File "game/custom_screens.rpy", line 6, in prepare_screen
-    screen testImgButton:
-  File "game/custom_screens.rpy", line 6, in prepare
-    screen testImgButton:
-  File "game/custom_screens.rpy", line 7, in prepare
-    hbox:
-  File "game/custom_screens.rpy", line 7, in prepare
-    hbox:
-  File "game/custom_screens.rpy", line 9, in prepare
-    textbutton "Add time by clicking!":
-  File "game/custom_screens.rpy", line 9, in prepare
-    textbutton "Add time by clicking!":
-SyntaxError: invalid syntax (custom_screens.rpy, line 10)
+While loading <'Image' u'towe of hanoi/smallring.png'>:
+  File "game/script.rpy", line 818, in script
+    pause
+  File "renpy/common/000statements.rpy", line 455, in execute_pause
+    renpy.pause()
+IOError: Couldn't find file 'towe of hanoi/smallring.png'.
 
 -- Full Traceback ------------------------------------------------------------
 
 Full traceback:
-  File "/Applications/renpy-7.4.11-sdk/renpy/bootstrap.py", line 331, in bootstrap
-    renpy.main.main()
-  File "/Applications/renpy-7.4.11-sdk/renpy/main.py", line 662, in main
-    run(restart)
-  File "/Applications/renpy-7.4.11-sdk/renpy/main.py", line 97, in run
-    renpy.display.screen.prepare_screens()
-  File "/Applications/renpy-7.4.11-sdk/renpy/display/screen.py", line 955, in prepare_screens
-    s.ast.prepare_screen()
-  File "game/custom_screens.rpy", line 6, in prepare_screen
-    screen testImgButton:
-  File "game/custom_screens.rpy", line 6, in prepare
-    screen testImgButton:
-  File "game/custom_screens.rpy", line 7, in prepare
-    hbox:
-  File "game/custom_screens.rpy", line 7, in prepare
-    hbox:
-  File "game/custom_screens.rpy", line 9, in prepare
-    textbutton "Add time by clicking!":
-  File "game/custom_screens.rpy", line 9, in prepare
-    textbutton "Add time by clicking!":
-  File "/Applications/renpy-7.4.11-sdk/renpy/pyanalysis.py", line 714, in ast_eval
-    return self.ast_eval_literal(expr)[0]
-  File "/Applications/renpy-7.4.11-sdk/renpy/pyanalysis.py", line 696, in ast_eval_literal
-    expr = py_compile(expr, 'eval', ast_node=True)
-  File "/Applications/renpy-7.4.11-sdk/renpy/python.py", line 835, in py_compile
+  File "game/script.rpy", line 818, in script
+    pause
+  File "C:\Users\zerog\Downloads\renpy-7.4.11-sdk/renpy/ast.py", line 2015, in execute
+    self.call("execute")
+  File "C:\Users\zerog\Downloads\renpy-7.4.11-sdk/renpy/ast.py", line 2003, in call
+    return renpy.statements.call(method, parsed, *args, **kwargs)
+  File "C:\Users\zerog\Downloads\renpy-7.4.11-sdk/renpy/statements.py", line 278, in call
+    return method(parsed, *args, **kwargs)
+  File "renpy/common/000statements.rpy", line 455, in execute_pause
+    renpy.pause()
+  File "C:\Users\zerog\Downloads\renpy-7.4.11-sdk/renpy/exports.py", line 1563, in pause
+    rv = renpy.ui.interact(mouse='pause', type='pause', roll_forward=roll_forward, pause=delay)
+  File "C:\Users\zerog\Downloads\renpy-7.4.11-sdk/renpy/ui.py", line 298, in interact
+    rv = renpy.game.interface.interact(roll_forward=roll_forward, **kwargs)
+  File "C:\Users\zerog\Downloads\renpy-7.4.11-sdk/renpy/display/core.py", line 3325, in interact
+    repeat, rv = self.interact_core(preloads=preloads, trans_pause=trans_pause, pause=pause, pause_start=pause_start, **kwargs)
+  File "C:\Users\zerog\Downloads\renpy-7.4.11-sdk/renpy/display/core.py", line 3839, in interact_core
+    self.draw_screen(root_widget, fullscreen_video, (not fullscreen_video) or video_frame_drawn)
+  File "C:\Users\zerog\Downloads\renpy-7.4.11-sdk/renpy/display/core.py", line 2565, in draw_screen
+    renpy.config.screen_height,
+  File "render.pyx", line 492, in renpy.display.render.render_screen
+  File "render.pyx", line 263, in renpy.display.render.render
+  File "C:\Users\zerog\Downloads\renpy-7.4.11-sdk/renpy/display/layout.py", line 826, in render
+    surf = render(child, width, height, cst, cat)
+  File "render.pyx", line 170, in renpy.display.render.render
+  File "render.pyx", line 263, in renpy.display.render.render
+  File "C:\Users\zerog\Downloads\renpy-7.4.11-sdk/renpy/display/transition.py", line 181, in render
+    renpy.display.render.render(self.transitions[-1], width, height, 0, 0)
+  File "render.pyx", line 170, in renpy.display.render.render
+  File "render.pyx", line 263, in renpy.display.render.render
+  File "C:\Users\zerog\Downloads\renpy-7.4.11-sdk/renpy/display/transition.py", line 368, in render
+    top = render(self.new_widget, width, height, st, at)
+  File "render.pyx", line 170, in renpy.display.render.render
+  File "render.pyx", line 263, in renpy.display.render.render
+  File "C:\Users\zerog\Downloads\renpy-7.4.11-sdk/renpy/display/layout.py", line 826, in render
+    surf = render(child, width, height, cst, cat)
+  File "render.pyx", line 170, in renpy.display.render.render
+  File "render.pyx", line 263, in renpy.display.render.render
+  File "C:\Users\zerog\Downloads\renpy-7.4.11-sdk/renpy/display/layout.py", line 826, in render
+    surf = render(child, width, height, cst, cat)
+  File "render.pyx", line 170, in renpy.display.render.render
+  File "render.pyx", line 263, in renpy.display.render.render
+  File "C:\Users\zerog\Downloads\renpy-7.4.11-sdk/renpy/display/screen.py", line 688, in render
+    child = renpy.display.render.render(self.child, w, h, st, at)
+  File "render.pyx", line 170, in renpy.display.render.render
+  File "render.pyx", line 263, in renpy.display.render.render
+  File "C:\Users\zerog\Downloads\renpy-7.4.11-sdk/renpy/display/layout.py", line 826, in render
+    surf = render(child, width, height, cst, cat)
+  File "render.pyx", line 170, in renpy.display.render.render
+  File "render.pyx", line 263, in renpy.display.render.render
+  File "C:\Users\zerog\Downloads\renpy-7.4.11-sdk/renpy/display/dragdrop.py", line 853, in render
+    return super(DragGroup, self).render(width, height, st, at)
+  File "C:\Users\zerog\Downloads\renpy-7.4.11-sdk/renpy/display/layout.py", line 826, in render
+    surf = render(child, width, height, cst, cat)
+  File "render.pyx", line 170, in renpy.display.render.render
+  File "render.pyx", line 263, in renpy.display.render.render
+  File "C:\Users\zerog\Downloads\renpy-7.4.11-sdk/renpy/display/dragdrop.py", line 461, in render
+    cr = render(child, width, height, st, at)
+  File "render.pyx", line 170, in renpy.display.render.render
+  File "render.pyx", line 263, in renpy.display.render.render
+  File "C:\Users\zerog\Downloads\renpy-7.4.11-sdk/renpy/display/im.py", line 625, in render
+    return cache.get(self, render=True)
+  File "C:\Users\zerog\Downloads\renpy-7.4.11-sdk/renpy/display/im.py", line 287, in get
+    surf = image.load()
+  File "C:\Users\zerog\Downloads\renpy-7.4.11-sdk/renpy/display/im.py", line 706, in load
     raise e
-SyntaxError: invalid syntax (custom_screens.rpy, line 10)
+IOError: Couldn't find file 'towe of hanoi/smallring.png'.
 
-Darwin-21.1.0-x86_64-i386-64bit
+Windows-10-10.0.22000
 Ren'Py 7.4.11.2266
 IDP2022 1.0
-Fri May 20 11:32:34 2022
+Mon May 23 11:25:49 2022

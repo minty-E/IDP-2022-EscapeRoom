@@ -2,9 +2,10 @@
 errors listed below, and try again.
 
 
-File "game/script.rpy", line 204: end of line expected.
-    a "Well, we can always start at the heart of the problem.".
-                                                              ^
+File "game/script.rpy", line 63: expected an indented block
+    def snapinplace2(drags, drop):
+    ^
+    
 
 Ren'Py Version: Ren'Py 7.4.11.2266
-Sun May 22 16:16:45 2022
+Mon May 23 13:29:46 2022

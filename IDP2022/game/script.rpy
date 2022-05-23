@@ -42,12 +42,265 @@ image chief scrunched = "/villageChief/chiefScrunched.png"
 # guard
 image guard default = "/guard/guardDefault.png"
 
+#act 1 stuff
+init python:
+    piecesinplace = 0
+    currentlayer = 1
+
+    def snapinplace1(drags, drop):
+        global piecesinplace
+        if drop:
+            if drop.x == 790:
+                drags[0].snap(drop.x,drop.y)
+                drags[0].draggable = False
+                piecesinplace = piecesinplace + 1
+                if piecesinplace == 13:
+                    renpy.call_in_new_context("puzzle2complete")
+                return
+    def dragring(drags, drop):
+        if drop:
+            if drop.x == 810 and drop.y == 707:
+                pass
+    def snapinplace2(drags, drop):
+        global piecesinplace
+        if drop:
+            if drop.x == 885:
+                drags[0].snap(drop.x,drop.y)
+                drags[0].draggable = False
+                piecesinplace = piecesinplace + 1
+                if piecesinplace == 13:
+                    renpy.call_in_new_context("puzzle2complete")
+                return
+    def snapinplace3(drags, drop):
+        global piecesinplace
+        if drop:
+            if drop.x == 812:
+                drags[0].snap(drop.x,drop.y)
+                drags[0].draggable = False
+                piecesinplace = piecesinplace + 1
+                if piecesinplace == 13:
+                    renpy.call_in_new_context("puzzle2complete")
+                return
+    def snapinplace4(drags, drop):
+        global piecesinplace
+        if drop:
+            if drop.x == 1012:
+                drags[0].snap(drop.x,drop.y)
+                drags[0].draggable = False
+                piecesinplace = piecesinplace + 1
+                if piecesinplace == 13:
+                    renpy.call_in_new_context("puzzle2complete")
+                return
+    def snapinplace5(drags, drop):
+        global piecesinplace
+        if drop:
+            if drop.x == 903:
+                drags[0].snap(drop.x,drop.y)
+                drags[0].draggable = False
+                piecesinplace = piecesinplace + 1
+                if piecesinplace == 13:
+                    renpy.call_in_new_context("puzzle2complete")
+                return
+    def snapinplace6(drags, drop):
+        global piecesinplace
+        if drop:
+            if drop.x == 850:
+                drags[0].snap(drop.x,drop.y)
+                drags[0].draggable = False
+                piecesinplace = piecesinplace + 1
+                if piecesinplace == 13:
+                    renpy.call_in_new_context("puzzle2complete")
+                return
+    def snapinplace7(drags, drop):
+        global piecesinplace
+        if drop:
+            if drop.x == 970:
+                drags[0].snap(drop.x,drop.y)
+                drags[0].draggable = False
+                piecesinplace = piecesinplace + 1
+                if piecesinplace == 13:
+                    renpy.call_in_new_context("puzzle2complete")
+                return
+    def snapinplace8(drags, drop):
+        global piecesinplace
+        if drop:
+            if drop.x == 1026:
+                drags[0].snap(drop.x,drop.y)
+                drags[0].draggable = False
+                piecesinplace = piecesinplace + 1
+                if piecesinplace == 13:
+                    renpy.call_in_new_context("puzzle2complete")
+                return
+    def snapinplace9(drags, drop):
+        global piecesinplace
+        if drop:
+            if drop.x == 799:
+                drags[0].snap(drop.x,drop.y)
+                drags[0].draggable = False
+                piecesinplace = piecesinplace + 1
+                if piecesinplace == 13:
+                    renpy.call_in_new_context("puzzle2complete")
+                return
+    def snapinplace10(drags, drop):
+        global piecesinplace
+        if drop:
+            if drop.x == 1089:
+                drags[0].snap(drop.x,drop.y)
+                drags[0].draggable = False
+                piecesinplace = piecesinplace + 1
+                if piecesinplace == 13:
+                    renpy.call_in_new_context("puzzle2complete")
+                return
+    def snapinplace11(drags, drop):
+        global piecesinplace
+        if drop:
+            if drop.x == 1007:
+                drags[0].snap(drop.x,drop.y)
+                drags[0].draggable = False
+                piecesinplace = piecesinplace + 1
+                if piecesinplace == 13:
+                    renpy.call_in_new_context("puzzle2complete")
+                return
+    def snapinplace12(drags, drop):
+        global piecesinplace
+        if drop:
+            if drop.x == 850:
+                drags[0].snap(drop.x,drop.y)
+                drags[0].draggable = False
+                piecesinplace = piecesinplace + 1
+                if piecesinplace == 13:
+                    renpy.call_in_new_context("puzzle2complete")
+                return
+    def snapinplace13(drags, drop):
+        global piecesinplace
+        if drop:
+            if drop.x == 978:
+                drags[0].snap(drop.x,drop.y)
+                drags[0].draggable = False
+                piecesinplace = piecesinplace + 1
+                if piecesinplace == 13:
+                    renpy.call_in_new_context("puzzle2complete")
+                return
+
+    def drag_placed(drags, drop):
+        if not drop:
+            return
+
+        store.draggable = drags[0].drag_name
+        store.droppable = drop[0].drag_name
+
+        return True
+    from copy import deepcopy
+    class slider_class:
+        def __init__(self, rows, columns, size, image = None):
+            self.rows = rows
+            self.columns = columns
+            self.pieces = []
+            self.size = size
+            self.image = image
+            self.crops = []
+            self.missing = None
+            self.win = None
+
+            self.build()
+        def win_check(self):
+            if all(item in self.pieces for item in self.win):
+                return True
+        def slide(self, index):
+            if self.check(index):
+                m = self.pieces[index]
+                self.pieces[index] = self.missing
+                self.missing = m
+        def shuffle(self):
+            for ii,i in enumerate(self.pieces):
+                r = renpy.random.randint(0, len(self.pieces)-1)
+                self.pieces[ii], self.pieces[r] = self.pieces[r], self.pieces[ii]
+
+        def check(self, index):
+            if self.pieces[index][0] == self.missing[0]:
+                if self.pieces[index][1]+1 == self.missing[1] or self.pieces[index][1]-1 == self.missing[1]:
+                    return True
+            if self.pieces[index][1] == self.missing[1]:
+                if self.pieces[index][0]+1 == self.missing[0] or self.pieces[index][0]-1 == self.missing[0]:
+                    return True
+            return False
+
+        def build(self):
+            self.pieces = []
+            for i in range(self.rows):
+                for ii in range(self.columns):
+                    self.pieces.append([ii, i])
+                    if self.image:
+                        self.crops.append(Crop((ii*self.size, i*self.size, self.size, self.size), self.image))
+            self.missing = self.pieces.pop(-1)
+            self.win = deepcopy(self.pieces)
+        def cheat(self, index):
+            m = self.pieces[index]
+            self.pieces[index] = self.missing
+            self.missing = m
+
+
+# slider_class(3,3,210) means 3 rows, 3 columns, size is 210
+default slider_1  = slider_class(3, 3, 205)
+screen slider(g = slider_1):
+    modal True
+    style_prefix "slider"
+    default shuffle = 1
+    default cheating = 1
+
+    frame:
+        xysize (g.columns*g.size)+30,(g.rows*g.size)+30
+        xpos 625
+        ypos 370
+        background None
+        if g.image and g.win == g.pieces:
+            add g.image at slider_image
+        for ii,i in enumerate(g.pieces):
+            if i:
+                button:
+                    xysize g.size,g.size
+                    at slider_piece(i[0]*g.size,i[1]*g.size)
+                    anchor 0.0,0.0
+                    if g.image:
+                        add g.crops[ii]
+                    else:
+                        image "images/pieces/{}.png".format(ii)
+                    if cheating:
+                        action Function(g.cheat, ii)
+                    else:
+                        action Function(g.slide, ii)
+
+# this shuffles the thing idk how you can make it happen off screen
+    if shuffle:
+        timer .2 repeat False action [Function(g.shuffle), SetScreenVariable("shuffle", 0)]
+
+    elif g.win == g.pieces:
+        button:
+            yalign 0.5
+            xalign 0.5
+            xsize 3000
+            ysize 3000
+            text "Proceed"
+            hovered ShowMenu("puzzle1complete", transition = fade)
+            action NullAction()
+
+transform slider_piece(x, y):
+    ease .2 xpos x ypos y
+transform slider_image:
+    alpha 0
+    pause .4
+    ease .2 alpha 1
+style slider_text:
+    size 30
+        
+
 # backgrounds
 
 image bg blackScreen = "/backgrounds/blackScreen.png"
 image bg cave = "/backgrounds/StartCaveBackground.png"
 image bg bedroom = "/backgrounds/BedRoom.png"
 image bg facility = "/backgrounds/Facility.png"
+image bg dungeon = "/backgrounds/Dungeon.png"
 
 # image ralsei default = "ralsei.jpeg"
 # The game starts here.
@@ -226,7 +479,7 @@ label start:
 
         scene bg hole
         with vpunch
-        with hpunch
+        with hpunch 
 
 
     # act 1
@@ -235,18 +488,265 @@ label start:
         "Where am I...?"
 
         # fade in background or simulate looking around
-
-        scene bg dungeon
+        scene dungeon
         with fade
 
         "..."
         "ALERT: YOU HAVE BEEN TRAPPED IN A GAME, WE ARE WORKING TO FREE YOU."
         with vpunch
-        
+        window hide 
+        show screen puzzle1(slider_1)
+        scene dungeon
+        pause
+        hide screen puzzle1
+screen puzzle1:
+    modal True 
+    imagebutton auto "pedestal1-%s":
+        focus_mask True
+        action [Show("pedestal1close", transition = fade), Show("slider", transition = fade)]
+screen puzzle1complete:
+    add "backgrounds/puzzle1complete.png"
+    modal True
+    imagebutton auto "pedestal3-%s":
+        focus_mask True
+        action [Show("pedestal3close", transition = fade)]
+screen pedestal1close:
+ #   "These tiles can be moved around, huh?"
+  #  "Seems like I have to correct the image."
+    add "backgrounds/dungeonwall.png"
+    add "pedestals/pedestal1.png"
+    modal True
+screen pedestal3close:
+    add "backgrounds/dungeonwall.png"
+    add "pedestals/pedestal3.png"
+    modal True
 
-        label puzzle1: 
-            hacker "filler, either give instructions here or"
-            "have the mc figure it out themselves"
+    draggroup:
+        drag:
+            drag_name "piece1"
+            child "mirror pieces/piece1.png"
+            xpos 0.1
+            ypos 0.75
+            draggable True
+            droppable False
+            dragged snapinplace1
+            drag_raise True
+        drag:
+            drag_name "piece2"
+            child "mirror pieces/piece2.png"
+            xpos 1
+            ypos 0.75
+            draggable True
+            droppable False
+            dragged snapinplace2
+            drag_raise True
+        drag:
+            drag_name "piece3"
+            child "mirror pieces/piece3.png"
+            xpos 0.98  
+            ypos 0.75
+            draggable True
+            droppable False
+            dragged snapinplace3
+            drag_raise True
+        drag:
+            drag_name "piece4"
+            child "mirror pieces/piece4.png"
+            xpos 0.75
+            ypos 0.75
+            draggable True
+            droppable False
+            dragged snapinplace4
+            drag_raise True
+        drag:
+            drag_name "piece5"
+            child "mirror pieces/piece5.png"
+            xpos 0.1
+            ypos 0.5
+            draggable True
+            droppable False
+            dragged snapinplace5
+            drag_raise True
+        drag:
+            drag_name "piece6"
+            child "mirror pieces/piece6.png"
+            xpos 0.3
+            ypos 0.5
+            draggable True
+            droppable False
+            dragged snapinplace6
+            drag_raise True
+        drag:
+            drag_name "piece7"
+            child "mirror pieces/piece7.png"
+            xpos 0
+            ypos 0.5
+            draggable True
+            droppable False
+            dragged snapinplace7
+            drag_raise True
+        drag:
+            drag_name "piece8"
+            child "mirror pieces/piece8.png"
+            xpos 0.75
+            ypos 0.5
+            draggable True
+            droppable False
+            dragged snapinplace8
+            drag_raise True
+        drag:
+            drag_name "piece9"
+            child "mirror pieces/piece9.png"
+            xpos 1
+            ypos 0.5
+            draggable True
+            droppable False
+            dragged snapinplace9
+            drag_raise True
+        drag:
+            drag_name "piece10"
+            child "mirror pieces/piece10.png"
+            xpos 1
+            ypos 0.5874
+            draggable True
+            droppable False
+            dragged snapinplace10
+            drag_raise True
+        drag:
+            drag_name "piece11"
+            child "mirror pieces/piece11.png"
+            xpos 0.2
+            ypos 0.471
+            draggable True
+            droppable False
+            dragged snapinplace11
+            drag_raise True
+        drag:
+            drag_name "piece12"
+            child "mirror pieces/piece12.png"
+            xpos 0.1
+            ypos 0.2328
+            draggable True
+            droppable False
+            dragged snapinplace12
+            drag_raise True
+        drag:
+            drag_name "piece13"
+            child "mirror pieces/piece13.png"
+            xpos 0.1
+            ypos 0.58329
+            draggable True
+            droppable False
+            dragged snapinplace13
+            drag_raise True
+        drag:
+            drag_name "piece1"
+            xpos 790
+            ypos 202
+            draggable False
+            droppable True
+            xsize 93
+            ysize 141
+
+        drag:
+            drag_name "piece2"
+            xpos 885
+            ypos 384
+            xsize 137
+            ysize 117
+            draggable False
+            droppable True
+        drag:
+            drag_name "piece3"
+            xpos 812
+            ypos 360
+            xsize 105
+            ysize 110
+            draggable False
+            droppable True
+        drag:
+            drag_name "piece4"
+            xpos 1012
+            ypos 420
+            xsize 70
+            ysize 78
+            draggable False
+            droppable True
+        drag:
+            drag_name "piece5"
+            xpos 903
+            ypos 321
+            xsize 139
+            ysize 96
+            draggable False
+            droppable True
+        drag:
+            drag_name "piece6"
+            xpos 850
+            ypos 180
+            xsize 208
+            ysize 87
+            draggable False
+            droppable True
+        drag:
+            drag_name "piece7"
+            xpos 970
+            ypos 213
+            xsize 64
+            ysize 73
+            draggable False
+            droppable True
+        drag:
+            drag_name "piece8"
+            xpos 1026
+            ypos 213
+            xsize 96
+            ysize 105
+            draggable False
+            droppable True
+        drag:
+            drag_name "piece9"
+            xpos 799
+            ypos 295
+            xsize 132
+            ysize 101
+            draggable False
+            droppable True
+        drag:
+            drag_name "piece10"
+            xpos 1089
+            ypos 306
+            xsize 38
+            ysize 89
+            draggable False
+            droppable True
+        drag:
+            drag_name "piece11"
+            xpos 1007
+            ypos 321
+            xsize 114
+            ysize 141
+            draggable False
+            droppable True
+        drag:
+            drag_name "piece12"
+            xpos 850
+            ypos 248
+            xsize 139
+            ysize 79
+            draggable False
+            droppable True
+        drag:
+            drag_name "piece13"
+            xpos 978
+            ypos 257
+            xsize 126
+            ysize 97
+            draggable False
+            droppable True
+
+
+
 
             # enter or implement dragging code 
 
@@ -263,19 +763,17 @@ label start:
     
 
 
-    label act2:
-        "..."
+    #label act2:
         # arrive in cave
+        # "Hm, the cave is blocked."
 
-        "Hm, the cave is blocked."
-
-        label puzzle2:
+        # label puzzle2:
             # torch puzzle, clicking image buttons to change orientation
 
             # move to memorial where npc guard instructs to solve puzzles
 
-            g "...{w} Hello."
-            g "I'm "
+           # g "...{w} Hello."
+           # g "I'm "
 
             # recreate a piano melody
 
@@ -285,14 +783,14 @@ label start:
 
         # receive 2nd ingredient
 
-    label act3: 
+    #label act3: 
         # enter tower
 
         # voice in tower calls out to pass trial 
 
         # each task will form more stairs
 
-        label puzzle3:
+        #label puzzle3:
             # make a light purple, code different color combinations, drag and drop
 
             # shuffle different letters to form words
@@ -301,7 +799,7 @@ label start:
 
         # arrive at top of tower
 
-    label ending: 
+    # label ending: 
         # audrey shows up hacked
         # hacker sends spells through audrey, quick time events to stop
         # health bar will lower if user fails 
@@ -312,13 +810,60 @@ label start:
 
 
 
-    "..."
-    "This is the end of the game."
-    $ end_time = time.time()
-    $ time_lapsed = end_time - start_time
-    $ time_convert(time_lapsed)
+    #"..."
+    # "This is the end of the game."
+    #$ end_time = time.time()
+    #$ time_lapsed = end_time - start_time
+    #$ time_convert(time_lapsed)
         
     #    "Test"
+label puzzle2complete:
+    scene puzzle2complete
+    with fade
+    show screen puzzle2completescreen
+    pause
+screen puzzle2completescreen:
+    imagebutton auto "pedestal2-%s":
+        focus_mask True
+        action Show("pedestal2close", transition = fade)
+screen pedestal2close:
+    add "backgrounds/dungeonwall.png"
+    add "pedestals/pedestal2.png"
+    modal True
+    draggroup:
+        drag:
+            focus_mask True
+            drag_name "bigring"
+            child "tower of hanoi/bigring.png"
+            xpos 508
+            ypos 707
+            dragged dragring
+            drag_raise True
 
+        drag:
+            focus_mask True
+            drag_name "midring"
+            child "tower of hanoi/midring.png"
+            xpos 537
+            ypos 630
 
-    return
+        drag:
+            focus_mask True
+            drag_name "smallring"
+            child "tower of hanoi/smallring.png"
+            xpos 563
+            ypos 570
+        drag:
+            drag_name "0,0"
+            xpos 508
+            ypos 707
+            xsize 60
+            ysize 60
+        drag:
+            drag_name "1,0"
+            xpos 810
+            ypos 707
+            xsize 60
+            ysize 60
+#    return
+ 
