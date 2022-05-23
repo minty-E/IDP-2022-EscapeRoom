@@ -13,9 +13,9 @@ screen torchPuzzle:
     # etc
     modal True
 
-    imagebutton auto "":
+    imagebutton auto "ralsei.png":
         focus_mask True
-        action[]
+        action[SetVariable("")]
 
 
 
