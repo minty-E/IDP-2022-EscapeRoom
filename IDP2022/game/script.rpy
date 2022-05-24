@@ -43,18 +43,205 @@ image chief scrunched = "/villageChief/chiefScrunched.png"
 image guard default = "/guard/guardDefault.png"
 
 #act 1 stuff
+define shuffle = 1
+define firsttouch = True
 init python:
     piecesinplace = 0
     currentlayer = 1
-    smallx = 2
-    midx = 1
-    bigx = 0
-    smallring = 1
-    midring = 1
-    bigring = 1
-    posx1y0 = ""
+    currentsmallx = 568
+    currentsmally = 514
+    currentmidx = 542
+    currentmidy = 611
+    currentbigx = 508 
+    currentbigy = 707
+    smallx = 0
+    smally = 2
+    midx = 0
+    midy = 1
+    bigx = 0 
+    bigy = 0 
+    def refresh():
+        renpy.restart_interaction()
+    def dragringsmall(drags, drop):
+        global smallx 
+        global smally 
+        global currentsmallx
+        global currentsmally
+        global currentmidx
+        global currentbigx
+        if drop:
+            if drop.drag_name == "0,0":
+                if currentmidx != 536 and currentbigx != 508:
+                    drags[0].snap(562,706)
+                    currentsmallx = 562
+                    currentsmally = 706
+                    smallx = 0
+                    smally = 0
+                    return
+            if drop.drag_name == "0,1":
+                if currentmidx != 542:
+                    if currentmidx == 536 or currentbigx == 508:
+                        drags[0].snap(564, 607)
+                        currentsmallx = 564
+                        currentsmally = 607
+                        smallx = 0
+                        smally = 1
+                        return
+            if drop.drag_name == "0,2":
+                if currentmidx == 542:
+                    drags[0].snap(568, 514)
+                    currentsmallx = 568
+                    currentsmally = 514
+                    smallx = 0
+                    smally = 2
+                    return  
+            if drop.drag_name == "1,0":
+                if currentmidx != 849 and currentbigx != 824:
+                    drags[0].snap(880,707)
+                    currentsmallx = 880
+                    currentsmally = 707
+                    smallx = 1
+                    smally = 0
+                    return
+                        
+            if drop.drag_name == "1,1":
+                if currentmidx != 851:
+                    if currentmidx == 849 or currentbigx == 824:
+                        drags[0].snap(875, 607)
+                        currentsmallx = 875
+                        currentsmallly = 607
+                        smallx = 1
+                        smally = 1
+                        return
+            if drop.drag_name == "1,2":
+                if currentmidx == 851:
+                    drags[0].snap(874, 511)
+                    currentsmallx = 874
+                    currentsmallly = 511
+                    smallx = 1
+                    smally = 2        
+                    return            
+            if drop.drag_name == "2,0":
+                if currentmidx != 1160:
+                    drags[0].snap(1186, 706)
+                    currentsmallx = 1186
+                    currentsmallly = 70 
+                    smallx = 2
+                    smally = 0   
+                    return
+            if drop.drag_name == "2,1":
+                if currentmidx != 1164:
+                    if currentmidx == 1160 or currentbigx == 1118:
+                        drags[0].snap(1187, 607)
+                        currentsmallx = 1187
+                        currentsmally = 607   
+                        smallx = 2
+                        smally = 1 
+                        return
+            if drop.drag_name == "2,2":
+                if currentmidx == 1164:
+                    drags[0].snap(1185,511)
+                    currentsmallx = 1185
+                    currentsmally = 511
+                    smallx = 2
+                    smally = 2
+                    renpy.call_in_new_context("puzzle3complete")
+                    return  
+               
+        drags[0].snap(currentsmallx,currentsmally)
+        renpy.show_screen("pedestal2close")
+        return
+    def dragringmid(drags, drop):
+        global midx 
+        global midy 
+        global currentmidx
+        global currentmidy
+        global currentsmallx
+        global currentbigx
+        if drop:
+            if drop.drag_name == "0,0":
+                if currentsmallx != 562 or currentbigx != 508:
+                    drags[0].snap(536,706)
+                    currentmidx = 536
+                    currentmidy = 706
+                    midx = 0
+                    midy = 0
+                    return
+            if drop.drag_name == "1,0":
+                if currentsmallx != 880 or currentbigx != 824:
+                    drags[0].snap(849,704)
+                    currentmidx = 849
+                    currentmidy = 704
+                    midx = 1
+                    midy = 0
+                    return 
+            if drop.drag_name == "2,0":
+                if currentsmallx != 1186 or currentbigx != 1118:
+                    drags[0].snap(1160, 704)
+                    currentmidx = 1160
+                    currentmidy = 704
+                    midx = 2
+                    midy = 0
+                    return
+            if drop.drag_name == "0,1":
+                if currentsmallx != 564:
+                    if currentbigx == 508:
+                        drags[0].snap(542,611)
+                        currentmidx = 542
+                        currentmidy = 611
+                        midx = 0
+                        midy = 1
+            if drop.drag_name == "1,1":
+                if currentsmallx != 875:
+                    if currentbigx == 824:
+                        drags[0].snap(851,608)
+                        currentmidx = 851
+                        currentmidy = 608
+                        midx = 1
+                        midy = 1
+            if drop.drag_name == "2,1":
+                if currentsmallx != 1187:
+                    if currentbigx == 1118:
+                        drags[0].snap(1164,607)
+                        currentmidx = 1164
+                        currentmidy = 607
+                        midx = 2
+                        midy = 1
 
+        drags[0].snap(currentmidx,currentmidy)
 
+        return
+    def dragringbig(drags, drop):
+        global bigx 
+        global bigy 
+        global currentbigx
+        global currentbigy
+        global currentsmallx
+        global currentmidx
+        if drop:
+            if drop.drag_name == "0,0":
+                if currentsmallx != 562 and currentmidx != 536:
+                    drags[0].snap(508, 707)
+                    currentbigx = 508
+                    currentbigy = 707
+                    bigx = 0
+                    bigy = 0
+            if drop.drag_name == "1,0":
+                if currentsmallx != 880 and currentmidx != 849:
+                    drags[0].snap(824,707)
+                    currentbigx = 824
+                    currentbigy = 707
+                    bigx = 1
+                    bigy = 0
+            if drop.drag_name == "2,0":
+                if currentsmallx != 1186 and currentmidx != 1160:
+                    drags[0].snap(1118,707)
+                    currentbigx = 1118
+                    currentbigy = 707
+                    bigx = 2
+                    bigy = 0
+        drags[0].snap(currentbigx,currentbigy)
+        return          
     def snapinplace1(drags, drop):
         global piecesinplace
         if drop:
@@ -62,17 +249,10 @@ init python:
                 drags[0].snap(drop.x,drop.y)
                 drags[0].draggable = False
                 piecesinplace = piecesinplace + 1
-                if piecesinplace == 13:
-                    renpy.call_in_new_context("puzzle2complete")
+                if piecesinplace == 1:
+                    renpy.call_in_new_context("puzzle2complete")   
                 return
-    def dragring(drags, drop):
-        if drop:
-            if drop.x == 810 and drop.y == 707:
-                posx1y0 = drags[0].drag_name
-            if drop.x == 810 and drop.y == 707:
-                drags[0].snap(drop.x,drop.y)
-                smallringx = 1
-                return
+
     def snapinplace2(drags, drop):
         global piecesinplace
         if drop:
@@ -102,7 +282,7 @@ init python:
                 piecesinplace = piecesinplace + 1
                 if piecesinplace == 13:
                     renpy.call_in_new_context("puzzle2complete")
-                return
+                    return
     def snapinplace5(drags, drop):
         global piecesinplace
         if drop:
@@ -255,9 +435,11 @@ init python:
 # slider_class(3,3,210) means 3 rows, 3 columns, size is 210
 default slider_1  = slider_class(3, 3, 205)
 screen slider(g = slider_1):
+    add "backgrounds/dungeonwall.png"
+    add "pedestals/pedestal1.png"
     modal True
+
     style_prefix "slider"
-    default shuffle = 1
     default cheating = 1
 
     frame:
@@ -278,22 +460,24 @@ screen slider(g = slider_1):
                     else:
                         image "images/pieces/{}.png".format(ii)
                     if cheating:
-                        action Function(g.cheat, ii)
+                        if firsttouch == False:
+                            action Function(g.cheat, ii)
+                        
                     else:
                         action Function(g.slide, ii)
 
 # this shuffles the thing idk how you can make it happen off screen
-    if shuffle:
-        timer .2 repeat False action [Function(g.shuffle), SetScreenVariable("shuffle", 0)]
+    if shuffle == 1:
+        timer .2 repeat False action [Function(g.shuffle), SetVariable("shuffle", 0)]
 
     elif g.win == g.pieces:
         button:
             yalign 0.5
             xalign 0.5
-            xsize 3000
-            ysize 3000
+            xsize 5000
+            ysize 5000
             text "Proceed"
-            hovered ShowMenu("puzzle1complete", transition = fade)
+            hovered Return()
             action NullAction()
 
 transform slider_piece(x, y):
@@ -507,28 +691,54 @@ label start:
         "ALERT: YOU HAVE BEEN TRAPPED IN A GAME, WE ARE WORKING TO FREE YOU."
         with vpunch
         window hide 
-        show screen puzzle1(slider_1)
-        scene dungeon
-        pause
-        hide screen puzzle1
-screen puzzle1:
+        call screen puzzle1()
+        show screen slider with fade
+        mc "What is this?"
+        mc "Looks like a scrambled image of Yggdrasil..."
+        mc "These tiles look like they can be moved."
+        mc "Maybe I should try correcting the image."
+        window hide
+        $firsttouch = False
+        call screen slider()
+        show screen puzzle1complete with fade
+        mc "The mirror moved. The light is pointing to the pedestal on the right now."
+        mc "I should check it out."
+        call screen puzzle1complete()
+        show screen pedestal3close() with fade
+        mc "The mirror is shattered. I should put the pieces back together."
+        call screen pedestal3close()
+        show screen puzzle2complete with fade
+        show screen pedestal2close with fade
+        mc "What is this supposed to be?"
+        mc "There's a small piece of text here..."
+        call screen pedestal2close()
+label puzzle2complete:
+    scene puzzle2complete
+    call screen puzzle2completescreen() with fade
+    show screen pedestal2close with fade
+    mc "hm."
+    call screen pedestal2close()
+
+label puzzle3complete:
+    scene puzzle3complete with fade
+    pause
+    # put open door thing
+    
+
+
+screen puzzle1():   
     modal True 
     imagebutton auto "pedestal1-%s":
         focus_mask True
-        action [Show("pedestal1close", transition = fade), Show("slider", transition = fade)]
-screen puzzle1complete:
+        action Return()
+screen puzzle1complete():
     add "backgrounds/puzzle1complete.png"
     modal True
     imagebutton auto "pedestal3-%s":
         focus_mask True
-        action [Show("pedestal3close", transition = fade)]
-screen pedestal1close:
- #   "These tiles can be moved around, huh?"
-  #  "Seems like I have to correct the image."
-    add "backgrounds/dungeonwall.png"
-    add "pedestals/pedestal1.png"
-    modal True
-screen pedestal3close:
+        action Return()
+
+screen pedestal3close():
     add "backgrounds/dungeonwall.png"
     add "pedestals/pedestal3.png"
     modal True
@@ -829,19 +1039,18 @@ screen pedestal3close:
     #$ time_convert(time_lapsed)
         
     #    "Test"
-label puzzle2complete:
-    scene puzzle2complete
-    with fade
-    show screen puzzle2completescreen
-    pause
+
 screen puzzle2completescreen:
+    add "backgrounds/puzzle2complete.png"
+    modal True
     imagebutton auto "pedestal2-%s":
         focus_mask True
-        action Show("pedestal2close", transition = fade)
+        action Return()
 screen pedestal2close:
     add "backgrounds/dungeonwall.png"
-    add "pedestals/pedestal2.png"
+    add "pedestals/renpypedestal2.png"
     modal True
+    timer .2 repeat True action Function(refresh)
     draggroup:
         drag:
             focus_mask True
@@ -849,8 +1058,8 @@ screen pedestal2close:
             child "tower of hanoi/bigring.png"
             xpos 508
             ypos 707
-            dragged dragring
-            draggable If(bigx + 1 == smallx or bigx + 1 == midx, true = False, false = True)
+            dragged dragringbig
+            draggable If(bigy + 1 == smally and bigx == smallx or bigy + 1 == midy and bigx == midx,true= False,false= True)
             droppable False
             drag_raise True
 
@@ -858,10 +1067,10 @@ screen pedestal2close:
             focus_mask True
             drag_name "midring"
             child "tower of hanoi/midring.png"
-            xpos 537
-            ypos 630
-            dragged dragring
-            draggable If(midx + 1 == smallx, true = False, false = True)
+            xpos 542
+            ypos 611
+            dragged dragringmid
+            draggable If(midy + 1 == smally and midx == smallx,true= False,false= True)
             droppable False
             drag_raise True
 
@@ -869,35 +1078,85 @@ screen pedestal2close:
             focus_mask True
             drag_name "smallring"
             child "tower of hanoi/smallring.png"
-            xpos 563
-            ypos 570
-            dragged dragring
+            xpos 568
+            ypos 514
+            dragged dragringsmall
             draggable True
             droppable False
-
         drag:
             drag_name "0,0"
-            xpos 508
-            ypos 707
-            xsize 60
+            xpos 567
+            ypos 706
+            xsize 100
+            ysize 60
+            draggable False
+            droppable True
+        drag:
+            drag_name "0,1"
+            xpos 568
+            ypos 607
+            xsize 100
+            ysize 60
+            draggable False
+            droppable True
+        drag:
+            drag_name "0,2"
+            xpos 566
+            ypos 511
+            xsize 100
             ysize 60
             draggable False
             droppable True
         drag:
             drag_name "1,0"
-            xpos 810
+            xpos 880
             ypos 707
-            xsize 60
+            xsize 100
+            ysize 60
+            draggable False
+            droppable True
+        drag:
+            drag_name "1,1"
+            xpos 875
+            ypos 608
+            xsize 100
+            ysize 60
+            draggable False
+            droppable True
+        drag:
+            drag_name "1,2"
+            xpos 881
+            ypos 512
+            xsize 100
             ysize 60
             draggable False
             droppable True
         drag:
             drag_name "2,0"
-            xpos 1120
-            ypos 707
-            xsize 60
+            xpos 1124
+            ypos 708
+            xsize 100
             ysize 60
             draggable False
             droppable True
+        drag:
+            drag_name "2,1"
+            xpos 1187
+            ypos 609
+            xsize 100
+            ysize 60
+            draggable False
+            droppable True
+        drag: 
+            drag_name "2,2"
+            xpos 1183
+            ypos 513
+            xsize 100
+            ysize 60
+            draggable False
+            droppable True
+
+
+
 #    return
  
