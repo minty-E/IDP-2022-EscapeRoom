@@ -1,10 +1,11 @@
 init python:
     import time
+    from tabulate import tabulate
 
     hintUsed = 0
 
     def time_convert(sec):
-        #sec += (hintUsed * 10)
+        sec += (hintUsed * 10)
         mins = sec // 60
         sec = sec % 60
         hours = mins // 60
