@@ -13,7 +13,6 @@ init python:
         renpy.say(" ", ("Time Lapsed = {0}:{1}:{2}".format(int(hours),int(mins),int(sec))))
 
 
-
 # add color to characters later
 define company = Character("Email")
 define s1 = Character("Scientist 1", color = "#808080")
