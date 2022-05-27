@@ -27,4 +27,8 @@ File "game/script.rpy", line 756: expected statement.
        ^
 
 Ren'Py Version: Ren'Py 7.4.11.2266
+<<<<<<< HEAD
 Fri May 27 14:36:45 2022
+=======
+Fri May 27 14:36:13 2022
+>>>>>>> main

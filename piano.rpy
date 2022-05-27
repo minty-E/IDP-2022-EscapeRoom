@@ -3,7 +3,7 @@
 # only 1st and 2nd are clickable rn
 # pretend like i imagemapped the 2nd key right
 
-define e = Character("")
+define disV = Character("")
 define key1 = 0
 define key2 = 0
 define key3 = 0
@@ -38,9 +38,9 @@ init python:
             # change to the correct keys to press. ex: 1457 or smth
             if key1 == 1 and key2 == 2 and key3 == 2:
                 #i kept getting an error if i didn't put interact = False so keep that in mind w/ dialogue
-                renpy.say(e, "correct!", interact = False)
+                renpy.say(disV, "That was right!", interact = False)
                 keyspressed = 1
             else:
                 # this resets the keys you pressed so you can try again
-                renpy.say(e, "that wasn't right.. let me try again.", interact = False)
+                renpy.say(disV, "That wasn't right, I should try again.", interact = False)
                 keyspressed = 1
