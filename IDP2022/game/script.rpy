@@ -886,7 +886,18 @@ label act2puzzle2complete:
     $ ending_time()
     $ starting_time()
 <<<<<<< HEAD
+<<<<<<< HEAD
 =======
+=======
+
+label endingSurvey:
+    #finish fail safe
+    q1 = input("What was the best or worst puzzle in the game and why?")
+    q2 = input("How would you rate the overall experience 1 to 5?")
+    q3 = input("Would you recommend it to a friend?")
+    q4 = input("On a scale from  1 to 5, how engaging were the puzzles?")
+    q5 = input("How were you feeling throughout the game? Select all that apply.")
+>>>>>>> main
 
 label endingSurvey:
     #finish fail safe
