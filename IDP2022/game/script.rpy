@@ -826,6 +826,7 @@ label puzzle2complete:
 
 label puzzle3complete:
     scene puzzle3complete with fade
+<<<<<<< HEAD
     # show screen dooropen with fade
     scene caveentrance with fade
     $act = 2
@@ -879,6 +880,20 @@ label act2puzzle2complete:
     scene memorialrightopen with fade
     "The statue opened!"
     "Is there anything inside?"
+=======
+    pause
+    # put open door thing
+    $ ending_time()
+    $ starting_time()
+
+label endingSurvey:
+    #finish fail safe
+    q1 = input("What was the best or worst puzzle in the game and why?")
+    q2 = input("How would you rate the overall experience 1 to 5?")
+    q3 = input("Would you recommend it to a friend?")
+    q4 = input("On a scale from  1 to 5, how engaging were the puzzles?")
+    q5 = input("How were you feeling throughout the game? Select all that apply.")
+>>>>>>> main
 
     call screen rightcompartment()
     pause
