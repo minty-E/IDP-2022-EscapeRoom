@@ -12,29 +12,33 @@ ImportError: No module named google.oauth2.credentials
 -- Full Traceback ------------------------------------------------------------
 
 Full traceback:
-  File "/Applications/renpy-7.4.11-sdk/renpy/bootstrap.py", line 331, in bootstrap
+  File "C:\Users\zerog\Downloads\renpy-7.4.11-sdk/renpy/bootstrap.py", line 331, in bootstrap
     renpy.main.main()
-  File "/Applications/renpy-7.4.11-sdk/renpy/main.py", line 560, in main
+  File "C:\Users\zerog\Downloads\renpy-7.4.11-sdk/renpy/main.py", line 560, in main
     renpy.game.context().run(node)
   File "game/script.rpy", line 6, in script
     init python:
   File "game/script.rpy", line 6, in script
     init python:
-  File "/Applications/renpy-7.4.11-sdk/renpy/ast.py", line 928, in execute
+  File "C:\Users\zerog\Downloads\renpy-7.4.11-sdk/renpy/ast.py", line 928, in execute
     renpy.python.py_exec_bytecode(self.code.bytecode, self.hide, store=self.store)
-  File "/Applications/renpy-7.4.11-sdk/renpy/python.py", line 2245, in py_exec_bytecode
+  File "C:\Users\zerog\Downloads\renpy-7.4.11-sdk/renpy/python.py", line 2245, in py_exec_bytecode
     exec(bytecode, globals, locals)
   File "game/script.rpy", line 9, in <module>
     import gspread
-  File "/Applications/renpy-7.4.11-sdk/renpy/loader.py", line 985, in load_module
+  File "C:\Users\zerog\Downloads\renpy-7.4.11-sdk/renpy/loader.py", line 985, in load_module
     exec(code, mod.__dict__)
   File "python-packages/gspread/__init__.py", line 16, in <module>
-  File "/Applications/renpy-7.4.11-sdk/renpy/loader.py", line 985, in load_module
+  File "C:\Users\zerog\Downloads\renpy-7.4.11-sdk/renpy/loader.py", line 985, in load_module
     exec(code, mod.__dict__)
   File "python-packages/gspread/auth.py", line 12, in <module>
 ImportError: No module named google.oauth2.credentials
 
-Darwin-21.1.0-x86_64-i386-64bit
+Windows-10-10.0.22000
 Ren'Py 7.4.11.2266
 spreadsheetPrac 1.0
+<<<<<<< HEAD
 Fri May 27 11:52:55 2022
+=======
+Fri May 27 11:52:36 2022
+>>>>>>> c2c1996ff30b7ac67e813ddef058a0e2e05dda3d
