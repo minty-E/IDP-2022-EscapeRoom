@@ -1,0 +1,12 @@
+{
+  "type": "service_account",
+  "project_id": "idp-2022-leaderboard",
+  "private_key_id": "0efee2c8a6559bc3d0d1f9be31f2b2e08be1ed69",
+  "private_key": "-----BEGIN PRIVATE KEY-----\nMIIEvgIBADANBgkqhkiG9w0BAQEFAASCBKgwggSkAgEAAoIBAQCql56DzUP+94vt\nhxXu5yw7/sE+diKCoW40XYs1ijFrJ+D6LriI8koi3N0BWje+dFlr+M3mDQmYiwZi\nJVXy1hbm588ZWVvx24cUjnzlphx3Iso5izE3fsTFeHtPsaYJFg/5FTsZS4YX13Mv\nJ33HNeHWVNdCTCA6WzWAbtvMRVkepw1oUxQDfUEs0eCZJrRdk2Rbt862bKl+ZOGk\npdhtUjmtippnzRoqYAlBjsM7zkHlkvL2KGREpkeiI/efA+4rH8LJIH4Y3zTqswWm\nWSE2uy7jCikJs6bywogNkaeKFbN0a1AqcI+797hLVEYeMCEPvlj94sySJX8FbRRH\nulxguMejAgMBAAECggEAD5Pd0TpOwbsYJ34E5jZs5yOZwNrnxtb36cc6/Y4beiX/\nmMjoZ/T8CRfzBHsZCQa13bKwFphNLoVPdWnkYdLj73zuf+mViE3cFWf3hr727Xgb\nUEriGSe1zzRzyjC2MTE3Dy89oM8xNP8jEQTBqw3EDB7eMzshXELU7V/yKUKR40cG\nXma63FuyTBhvHOY9lRWUzitK/h3aGLuympDKS6p22bIsuznstuEq1+r0Ni3vKrEX\ngWVItYyNPNESCL8F5GyvFkhg9aJ1iVpuNgsKRc88kTPUZUrZjLM0HoITWh4/6q4V\nvVR/y1lhD1PXE143WoeAFuWbEe+ElmdwnjOXDa3p4QKBgQDv3aaSnOW2J3rhk9kw\nbt2FsmFc4HS3ToTXMgf/ZFbtsEt6bSHBIJXdnYSbeKY697BSwGMMqL8cbcnQR2gR\n//1b1Qb/KoAFomnhqa3PVtIxMIFlZ1sfVRq2rWM1SfiWVn+mZLDhfnux9kUtlhRY\nT6D3I8U2Ga0dUZ4tVuVi+3Nh4QKBgQC2ER5IE1hawXbFTM+k8UqcWJzpw/dLlnE2\nTfCQOu8rNw8RYAB0ndNARvGd+KoThY/i5nMZPzyKLOrKKPU3M1gmtCC2/XRJtI5f\nZ9YwwAptOFh8Z6qawanAJhpjyJGNPSXX9DzBeZmx0S5kN4vvuzkYxYgKSbt/gAD+\nRQenfLbiAwKBgQCNM/o/DMXdeVhJOvP8IwedEOln92o+Dqb816MFoVfbDJEiPORG\nAJy4nWXW8CtLQ0w1KrQkW6JFZgwL5D1Le1r2mG1KAQbkSjvycCS1jfKmqltCCpoF\n09+p8mAYmrcQKVNz7IqD9CV1GfiXYWYQpq+nTRNnSa4zODzZi/H1VvkRgQKBgFpF\nVoxJ+y7UaX0dvn57nJC0ZuiI314881kHf9UjQ15b6D6nKNKpRgrCoh2/IySWvmaz\n+DF2Zx/jcW5WrG54KKbX/Lh+JmA9A7JOG6cEMKdCnqzgAXjFuNKqkb8TvQcYYGEY\nmd8b2ZaOrr/Fwr5UR9T+a5seP7bR0qw/sbHbZhndAoGBAL3uR5gSB57Y7SdZdiH8\ntLd4ZUFC+FAlqxQG/T03NsJ5Xt5xw1IL8Ylwmlhysf6vdEpHsHDkH5x6OIz9BnWC\nzvIVrTS9bk0HZXey23h+oOiRgC91izAnU5WEnIcnN65qDahVeveEtW8oEaRklIOL\nRFAmvDYqoWG+mOMCcd4QKs2t\n-----END PRIVATE KEY-----\n",
+  "client_email": "service-for-idp-game-score@idp-2022-leaderboard.iam.gserviceaccount.com",
+  "client_id": "108209703403029211104",
+  "auth_uri": "https://accounts.google.com/o/oauth2/auth",
+  "token_uri": "https://oauth2.googleapis.com/token",
+  "auth_provider_x509_cert_url": "https://www.googleapis.com/oauth2/v1/certs",
+  "client_x509_cert_url": "https://www.googleapis.com/robot/v1/metadata/x509/service-for-idp-game-score%40idp-2022-leaderboard.iam.gserviceaccount.com"
+}

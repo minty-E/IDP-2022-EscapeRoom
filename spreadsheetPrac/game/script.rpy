@@ -6,14 +6,14 @@
 init python:
     
     # install pkgs gspread, pyopenssl, oauth2client, tabulate
-    #import gspread
+    import gspread
     # import google.oauth2.credentials
     # import pyOpenSSL
-    import requests
-    #from oauth2client.service_account import ServiceAccountCredentials
-    #from tabulate import tabulate
+    # import requests
+    from oauth2client.service_account import ServiceAccountCredentials
+    from tabulate import tabulate
 
-    def spreadsheetTest():
+    """def spreadsheetTest():
         URL = "https://script.google.com/macros/s/AKfycbzA1w5BMrhey6Pji3xhn7RbcxAQPuJt9NFPCqplmFrB3nDCseLE/exec"
             # Use requests to send the data.
         requests.post(
@@ -59,27 +59,11 @@ init python:
         headers = wks.row_values(1)
 
         print(tabulate(leaderboard, headers, tablefmt="github"))
-        """
-    
-
-
-# The game starts here.
+        
 
 label start:
 
-    # Show a background. This uses a placeholder by default, but you can
-    # add a file (named either "bg room.png" or "bg room.jpg") to the
-    # images directory to show it.
-
-    
-
-    # This shows a character sprite. A placeholder is used, but you can
-    # replace it by adding a file named "eileen happy.png" to the images
-    # directory.
-
     show eileen happy
-
-    # These display lines of dialogue.
 
     $ user = renpy.input("What is your name: ")
     $ user = renpy.strip(user)
@@ -90,7 +74,6 @@ label start:
     $ qu1 = renpy.input("What did you like about the game: ")
     $ qu1 = renpy.strip(qu1)
 
-    # This ends the game.
     $ spreadsheetTest()
 
     return

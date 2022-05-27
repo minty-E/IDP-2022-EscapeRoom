@@ -5,9 +5,9 @@ While running game code:
     init python:
   File "game/script.rpy", line 6, in script
     init python:
-  File "game/script.rpy", line 12, in <module>
-    import requests
-SyntaxError: invalid syntax (api.py, line 38)
+  File "game/script.rpy", line 9, in <module>
+    import gspread
+ImportError: No module named google.oauth2.credentials
 
 -- Full Traceback ------------------------------------------------------------
 
@@ -24,19 +24,17 @@ Full traceback:
     renpy.python.py_exec_bytecode(self.code.bytecode, self.hide, store=self.store)
   File "/Applications/renpy-7.4.11-sdk/renpy/python.py", line 2245, in py_exec_bytecode
     exec(bytecode, globals, locals)
-  File "game/script.rpy", line 12, in <module>
-    import requests
+  File "game/script.rpy", line 9, in <module>
+    import gspread
   File "/Applications/renpy-7.4.11-sdk/renpy/loader.py", line 985, in load_module
     exec(code, mod.__dict__)
-  File "python-packages/requests/__init__.py", line 48, in <module>
+  File "python-packages/gspread/__init__.py", line 16, in <module>
   File "/Applications/renpy-7.4.11-sdk/renpy/loader.py", line 985, in load_module
     exec(code, mod.__dict__)
-  File "python-packages/charset_normalizer/__init__.py", line 24, in <module>
-  File "/Applications/renpy-7.4.11-sdk/renpy/loader.py", line 979, in load_module
-    code = compile(source, filename, 'exec', renpy.python.old_compile_flags, 1)
-SyntaxError: invalid syntax (api.py, line 38)
+  File "python-packages/gspread/auth.py", line 12, in <module>
+ImportError: No module named google.oauth2.credentials
 
 Darwin-21.1.0-x86_64-i386-64bit
 Ren'Py 7.4.11.2266
 spreadsheetPrac 1.0
-Thu May 26 14:44:08 2022
+Fri May 27 09:21:16 2022
