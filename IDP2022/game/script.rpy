@@ -1,5 +1,7 @@
 init python:
     import time
+    import gspread
+    from gspread.foauth2client.service_account import ServiceAccountCredentials
     from tabulate import tabulate
 
     hintUsed = 0
@@ -10,7 +12,17 @@ init python:
         sec = sec % 60
         hours = mins // 60
         mins = mins % 60
-        renpy.say(" ", ("Time Lapsed = {0}:{1}:{2}".format(int(hours),int(mins),int(sec))))
+        totalTime = ("Time Lapsed = {0}:{1}:{2}".format(int(hours),int(mins),int(sec)))
+
+    def starting_time():
+        start_time = time.time()
+
+
+    def ending_time():
+        end_time = time.time()
+        time_lapsed = end_time - start_time
+        time_convert(time_lapsed)
+        
 
 
 # add color to characters later
@@ -712,6 +724,12 @@ label start:
         mc "What is this supposed to be?"
         mc "There's a small piece of text here..."
         call screen pedestal2close()
+
+        # where is ending?
+        $ ending_time()
+        $ starting_time()
+
+        renpy.say(" ", ("Time Lapsed = {0}:{1}:{2}".format(int(hours),int(mins),int(sec))))
 label puzzle2complete:
     scene puzzle2complete
     call screen puzzle2completescreen() with fade
@@ -719,11 +737,23 @@ label puzzle2complete:
     mc "hm."
     call screen pedestal2close()
 
+    $ ending_time()
+    $ starting_time()
+
 label puzzle3complete:
     scene puzzle3complete with fade
     pause
     # put open door thing
-    
+    $ ending_time()
+    $ starting_time()
+
+label endingSurvey:
+    #finish fail safe
+    q1 = input("What was the best or worst puzzle in the game and why?")
+    q2 = input("How would you rate the overall experience 1 to 5?")
+    q3 = input("Would you recommend it to a friend?")
+    q4 = input("On a scale from  1 to 5, how engaging were the puzzles?")
+    q5 = input("How were you feeling throughout the game? Select all that apply.")
 
 
 screen puzzle1():   
@@ -1034,9 +1064,7 @@ screen pedestal3close():
 
     #"..."
     # "This is the end of the game."
-    #$ end_time = time.time()
-    #$ time_lapsed = end_time - start_time
-    #$ time_convert(time_lapsed)
+    
         
     #    "Test"
 
