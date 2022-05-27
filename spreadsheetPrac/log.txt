@@ -1,13 +1,13 @@
-Fri May 27 09:21:16 2022
+Fri May 27 11:52:55 2022
 Darwin-21.1.0-x86_64-i386-64bit
 Ren'Py 7.4.11.2266
  
 
-Bootstrap to the start of init.init took 0.11s
+Bootstrap to the start of init.init took 0.10s
 Early init took 0.00s
 Loader init took 0.02s
-Loading error handling took 0.02s
-Loading script took 0.09s
+Loading error handling took 0.03s
+Loading script took 0.10s
 Loading save slot metadata. took 0.00s
 Loading persistent took 0.00s
 Importing _renpysteam: ImportError('No module named _renpysteam',)

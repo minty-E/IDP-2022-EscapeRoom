@@ -22,22 +22,50 @@ screen torchPuzzle:
 # screens for image/textbuttons for hints
 
 screen p1_1Hint:
+    hbox:
+        style "centered_style"
+        textbutton "Shift the pieces to complete and solve the picture..."
 
 screen p1_2Hint: 
+    hbox:
+        style "centered_style"
+        textbutton "You cannot place larger rings on smaller ones, try distributing the rings around first then stacking them in order."
+
 
 screen p1_3Hint:
+    hbox:
+        style "centered_style"
+        textbutton "Place pieces that fit together on the mirror in order for the light to reflect off of it."
 
 screen p2_1Hint:
+    hbox:
+        style "centered_style"
+        textbutton "Match the torches to the images above."
 
 screen p2_2Hint:
+    hbox:
+        style "centered_style"
+        textbutton "You could play the 4 keys to "
 
 screen p2_3Hint:
+    hbox:
+        style "centered_style"
+        textbutton "You could find this plant located near the plant used to give height."
 
 screen p3_1Hint:
+    hbox:
+        style "centered_style"
+        textbutton "It seems like you’re having trouble figuring out what I am asking. What color did Yggdrasil turn after being touched by the outlander? And what color was the sky before it was cursed?"
 
 screen p3_2Hint:
+    hbox:
+        style "centered_style"
+        textbutton "The middle of the village has a very large plant that was cursed many years ago."
 
 screen p3_3Hint:
+    hbox:
+        style "centered_style"
+        textbutton "Put the handle on the tree symbol and press down on it."
 
 
 
