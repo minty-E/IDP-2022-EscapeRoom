@@ -1,132 +1,40 @@
-Fri May 27 11:11:05 2022
+Fri May 27 13:41:07 2022
 Windows-10-10.0.22000
 Ren'Py 7.4.11.2266
  
 
-Bootstrap to the start of init.init took 0.07s
+Bootstrap to the start of init.init took 0.10s
 Early init took 0.01s
-Loader init took 0.03s
-Loading error handling took 0.02s
-Loading script took 0.22s
-Loading save slot metadata. took 0.02s
+Loader init took 0.04s
+Loading error handling took 0.03s
+Loading script took 0.33s
+Loading save slot metadata. took 0.03s
 Loading persistent took 0.00s
 Importing _renpysteam: ImportError('No module named _renpysteam',)
-Running init code took 0.07s
-Loading analysis data took 0.02s
+Running init code took 0.09s
+Loading analysis data took 0.03s
 Analyze and compile ATL took 0.00s
 Index archives took 0.00s
-Dump and make backups. took 0.05s
+Dump and make backups. took 0.08s
 Cleaning cache took 0.00s
 Making clean stores took 0.00s
 Initial gc. took 0.02s
 DPI scale factor: 1.500000
 nvdrs: Loaded, about to disable thread optimizations.
 nvdrs: Disabled thread optimizations.
-Creating interface object took 0.20s
-Cleaning stores took 0.00s
-Init translation took 0.03s
-Build styles took 0.00s
-Load screen analysis took 0.02s
-Analyze screens took 0.00s
-Save screen analysis took 0.00s
-Prepare screens took 0.07s
-Save pyanalysis. took 0.00s
-Save bytecode. took 0.02s
-Running _start took 0.00s
-Performance test:
-Interface start took 0.10s
-
-Initializing gl2 renderer:
-primary display bounds: (0, 0, 1920, 1080)
-swap interval: 1 frames
-Fullscreen mode.
-Vendor: 'NVIDIA Corporation'
-Renderer: 'NVIDIA GeForce RTX 2060 with Max-Q Design/PCIe/SSE2'
-Version: '4.6.0 NVIDIA 496.49'
-Display Info: None
-Screen sizes: virtual=(1920, 1080) physical=(1920, 1080) drawable=(1920, 1080)
-Maximum texture size: 4096x4096
-Screen sizes: virtual=(1920, 1080) physical=(1738, 978) drawable=(1738, 978)
-Maximum texture size: 4096x4096
-Screen sizes: virtual=(1920, 1080) physical=(1920, 1046) drawable=(1920, 1046)
-Maximum texture size: 4096x4096
-Resetting cache.
-Bootstrap to the start of init.init took 324.45s
-Early init took 0.00s
-Loader init took 0.03s
-Loading error handling took 0.02s
-Loading script took 0.11s
-Loading save slot metadata. took 0.02s
-Loading persistent took 0.00s
-Importing _renpysteam: ImportError('No module named _renpysteam',)
-Running init code took 0.04s
-Loading analysis data took 0.02s
-Analyze and compile ATL took 0.00s
-Index archives took 0.00s
-Dump and make backups. took 0.05s
-Cleaning cache took 0.00s
-Making clean stores took 0.00s
-Initial gc. took 0.03s
-DPI scale factor: 1.500000
-nvdrs: Loaded, about to disable thread optimizations.
-nvdrs: Disabled thread optimizations.
-Creating interface object took 0.17s
-Cleaning stores took 0.00s
-Init translation took 0.03s
-Build styles took 0.00s
-Load screen analysis took 0.02s
-Analyze screens took 0.00s
-Save screen analysis took 0.00s
-Prepare screens took 0.07s
-Save pyanalysis. took 0.00s
-Save bytecode. took 0.00s
-Running _start took 0.00s
-Performance test:
-Interface start took 0.05s
-
-Initializing gl2 renderer:
-primary display bounds: (0, 0, 1920, 1080)
-swap interval: 1 frames
-Windowed mode.
-Vendor: 'NVIDIA Corporation'
-Renderer: 'NVIDIA GeForce RTX 2060 with Max-Q Design/PCIe/SSE2'
-Version: '4.6.0 NVIDIA 496.49'
-Display Info: None
-Screen sizes: virtual=(1920, 1080) physical=(1920, 1046) drawable=(1920, 1046)
-Maximum texture size: 4096x4096
-Resetting cache.
-Bootstrap to the start of init.init took 471.56s
-Early init took 0.00s
-Loader init took 0.03s
-Loading error handling took 0.02s
-Loading script took 0.12s
-Loading save slot metadata. took 0.02s
-Loading persistent took 0.00s
-Importing _renpysteam: ImportError('No module named _renpysteam',)
-Running init code took 0.04s
-Loading analysis data took 0.02s
-Analyze and compile ATL took 0.00s
-Index archives took 0.00s
-Dump and make backups. took 0.05s
-Cleaning cache took 0.00s
-Making clean stores took 0.00s
-Initial gc. took 0.03s
-DPI scale factor: 1.500000
-nvdrs: Loaded, about to disable thread optimizations.
-nvdrs: Disabled thread optimizations.
-Creating interface object took 0.17s
+Creating interface object took 0.82s
 Cleaning stores took 0.00s
 Init translation took 0.04s
-Build styles took 0.00s
-Load screen analysis took 0.02s
+Build styles took 0.01s
+Load screen analysis took 0.03s
 Analyze screens took 0.00s
 Save screen analysis took 0.00s
-Prepare screens took 0.07s
+Prepare screens took 0.10s
 Save pyanalysis. took 0.00s
-Save bytecode. took 0.00s
+Save bytecode. took 0.04s
 Running _start took 0.00s
 Performance test:
-Interface start took 0.05s
+Interface start took 0.13s
 
 Initializing gl2 renderer:
 primary display bounds: (0, 0, 1920, 1080)
@@ -136,58 +44,74 @@ Vendor: 'NVIDIA Corporation'
 Renderer: 'NVIDIA GeForce RTX 2060 with Max-Q Design/PCIe/SSE2'
 Version: '4.6.0 NVIDIA 496.49'
 Display Info: None
+Screen sizes: virtual=(1920, 1080) physical=(1739, 978) drawable=(1739, 978)
+Maximum texture size: 4096x4096
 Screen sizes: virtual=(1920, 1080) physical=(1920, 1046) drawable=(1920, 1046)
 Maximum texture size: 4096x4096
-Resetting cache.
-Bootstrap to the start of init.init took 485.78s
-Early init took 0.00s
-Loader init took 0.03s
-Loading error handling took 0.02s
-Loading script took 0.12s
-Loading save slot metadata. took 0.02s
-Loading persistent took 0.00s
-Importing _renpysteam: ImportError('No module named _renpysteam',)
-Running init code took 0.04s
-Loading analysis data took 0.02s
-Analyze and compile ATL took 0.00s
-Index archives took 0.00s
-Dump and make backups. took 0.06s
-Cleaning cache took 0.00s
-Making clean stores took 0.00s
-Initial gc. took 0.04s
-DPI scale factor: 1.500000
-nvdrs: Loaded, about to disable thread optimizations.
-nvdrs: Disabled thread optimizations.
-Creating interface object took 0.17s
-Cleaning stores took 0.00s
-Init translation took 0.04s
-Build styles took 0.00s
-Load screen analysis took 0.02s
-Analyze screens took 0.00s
-Save screen analysis took 0.00s
-Prepare screens took 0.07s
-Save pyanalysis. took 0.00s
-Save bytecode. took 0.00s
-Running _start took 0.00s
-Performance test:
-Interface start took 0.05s
 
-Initializing gl2 renderer:
-primary display bounds: (0, 0, 1920, 1080)
-swap interval: 1 frames
-Windowed mode.
-Vendor: 'NVIDIA Corporation'
-Renderer: 'NVIDIA GeForce RTX 2060 with Max-Q Design/PCIe/SSE2'
-Version: '4.6.0 NVIDIA 496.49'
-Display Info: None
-Screen sizes: virtual=(1920, 1080) physical=(1920, 1046) drawable=(1920, 1046)
-Maximum texture size: 4096x4096
+Full traceback:
+  File "game/script.rpy", line 966, in script
+    call screen piano()
+  File "C:\Users\zerog\Downloads\renpy-7.4.11-sdk/renpy/ast.py", line 2015, in execute
+    self.call("execute")
+  File "C:\Users\zerog\Downloads\renpy-7.4.11-sdk/renpy/ast.py", line 2003, in call
+    return renpy.statements.call(method, parsed, *args, **kwargs)
+  File "C:\Users\zerog\Downloads\renpy-7.4.11-sdk/renpy/statements.py", line 278, in call
+    return method(parsed, *args, **kwargs)
+  File "renpy/common/000statements.rpy", line 569, in execute_call_screen
+    store._return = renpy.call_screen(name, *args, **kwargs)
+  File "C:\Users\zerog\Downloads\renpy-7.4.11-sdk/renpy/exports.py", line 3136, in call_screen
+    rv = renpy.ui.interact(mouse="screen", type="screen", roll_forward=roll_forward)
+  File "C:\Users\zerog\Downloads\renpy-7.4.11-sdk/renpy/ui.py", line 298, in interact
+    rv = renpy.game.interface.interact(roll_forward=roll_forward, **kwargs)
+  File "C:\Users\zerog\Downloads\renpy-7.4.11-sdk/renpy/display/core.py", line 3325, in interact
+    repeat, rv = self.interact_core(preloads=preloads, trans_pause=trans_pause, pause=pause, pause_start=pause_start, **kwargs)
+  File "C:\Users\zerog\Downloads\renpy-7.4.11-sdk/renpy/display/core.py", line 4160, in interact_core
+    rv = root_widget.event(ev, x, y, 0)
+  File "C:\Users\zerog\Downloads\renpy-7.4.11-sdk/renpy/display/layout.py", line 1102, in event
+    rv = i.event(ev, x - xo, y - yo, cst)
+  File "C:\Users\zerog\Downloads\renpy-7.4.11-sdk/renpy/display/transition.py", line 48, in event
+    return self.new_widget.event(ev, x, y, st) # E1101
+  File "C:\Users\zerog\Downloads\renpy-7.4.11-sdk/renpy/display/layout.py", line 1102, in event
+    rv = i.event(ev, x - xo, y - yo, cst)
+  File "C:\Users\zerog\Downloads\renpy-7.4.11-sdk/renpy/display/layout.py", line 1102, in event
+    rv = i.event(ev, x - xo, y - yo, cst)
+  File "C:\Users\zerog\Downloads\renpy-7.4.11-sdk/renpy/display/screen.py", line 727, in event
+    rv = self.child.event(ev, x, y, st)
+  File "C:\Users\zerog\Downloads\renpy-7.4.11-sdk/renpy/display/layout.py", line 1102, in event
+    rv = i.event(ev, x - xo, y - yo, cst)
+  File "C:\Users\zerog\Downloads\renpy-7.4.11-sdk/renpy/display/behavior.py", line 983, in event
+    return handle_click(self.clicked)
+  File "C:\Users\zerog\Downloads\renpy-7.4.11-sdk/renpy/display/behavior.py", line 918, in handle_click
+    rv = run(action)
+  File "C:\Users\zerog\Downloads\renpy-7.4.11-sdk/renpy/display/behavior.py", line 323, in run
+    new_rv = run(i, *args, **kwargs)
+  File "C:\Users\zerog\Downloads\renpy-7.4.11-sdk/renpy/display/behavior.py", line 330, in run
+    return action(*args, **kwargs)
+  File "renpy/common/00action_other.rpy", line 537, in __call__
+    rv = self.callable(*self.args, **self.kwargs)
+  File "game/script.rpy", line 1747, in checkpiano
+    renpy.say([name],"that wasn't right.. let me try again.", interact = False)
+  File "C:\Users\zerog\Downloads\renpy-7.4.11-sdk/renpy/exports.py", line 1419, in say
+    who(what, *args, **kwargs)
+TypeError: 'RevertableList' object is not callable
+
+While running game code:
+  File "game/script.rpy", line 966, in script
+    call screen piano()
+  File "renpy/common/000statements.rpy", line 569, in execute_call_screen
+    store._return = renpy.call_screen(name, *args, **kwargs)
+  File "renpy/common/00action_other.rpy", line 537, in __call__
+    rv = self.callable(*self.args, **self.kwargs)
+  File "game/script.rpy", line 1747, in checkpiano
+    renpy.say([name],"that wasn't right.. let me try again.", interact = False)
+TypeError: 'RevertableList' object is not callable
 Resetting cache.
-Bootstrap to the start of init.init took 505.00s
+Bootstrap to the start of init.init took 1150.76s
 Early init took 0.00s
-Loader init took 0.03s
-Loading error handling took 0.02s
-Loading script took 0.18s
+Loader init took 0.04s
+Loading error handling took 0.03s
+Loading script took 0.16s
 Loading save slot metadata. took 0.03s
 Loading persistent took 0.00s
 Importing _renpysteam: ImportError('No module named _renpysteam',)
@@ -195,202 +119,21 @@ Running init code took 0.06s
 Loading analysis data took 0.03s
 Analyze and compile ATL took 0.00s
 Index archives took 0.00s
-Dump and make backups. took 0.07s
+Dump and make backups. took 0.09s
 Cleaning cache took 0.00s
 Making clean stores took 0.00s
-Initial gc. took 0.06s
+Initial gc. took 0.04s
 DPI scale factor: 1.500000
 nvdrs: Loaded, about to disable thread optimizations.
 nvdrs: Disabled thread optimizations.
-Creating interface object took 0.21s
+Creating interface object took 0.24s
 Cleaning stores took 0.00s
-Init translation took 0.04s
+Init translation took 0.05s
 Build styles took 0.00s
-Load screen analysis took 0.02s
+Load screen analysis took 0.03s
 Analyze screens took 0.00s
 Save screen analysis took 0.00s
 Prepare screens took 0.10s
-Save pyanalysis. took 0.00s
-Save bytecode. took 0.00s
-Running _start took 0.00s
-Performance test:
-Interface start took 0.08s
-
-Initializing gl2 renderer:
-primary display bounds: (0, 0, 1920, 1080)
-swap interval: 1 frames
-Windowed mode.
-Vendor: 'NVIDIA Corporation'
-Renderer: 'NVIDIA GeForce RTX 2060 with Max-Q Design/PCIe/SSE2'
-Version: '4.6.0 NVIDIA 496.49'
-Display Info: None
-Screen sizes: virtual=(1920, 1080) physical=(1920, 1046) drawable=(1920, 1046)
-Maximum texture size: 4096x4096
-Resetting cache.
-Bootstrap to the start of init.init took 540.99s
-Early init took 0.00s
-Loader init took 0.03s
-Loading error handling took 0.02s
-Loading script took 0.12s
-Loading save slot metadata. took 0.02s
-Loading persistent took 0.00s
-Importing _renpysteam: ImportError('No module named _renpysteam',)
-Running init code took 0.04s
-Loading analysis data took 0.02s
-Analyze and compile ATL took 0.00s
-Index archives took 0.00s
-Dump and make backups. took 0.05s
-Cleaning cache took 0.00s
-Making clean stores took 0.00s
-Initial gc. took 0.04s
-DPI scale factor: 1.500000
-nvdrs: Loaded, about to disable thread optimizations.
-nvdrs: Disabled thread optimizations.
-Creating interface object took 0.17s
-Cleaning stores took 0.00s
-Init translation took 0.04s
-Build styles took 0.00s
-Load screen analysis took 0.02s
-Analyze screens took 0.00s
-Save screen analysis took 0.00s
-Prepare screens took 0.07s
-Save pyanalysis. took 0.00s
-Save bytecode. took 0.00s
-Running _start took 0.00s
-Performance test:
-Interface start took 0.05s
-
-Initializing gl2 renderer:
-primary display bounds: (0, 0, 1920, 1080)
-swap interval: 1 frames
-Windowed mode.
-Vendor: 'NVIDIA Corporation'
-Renderer: 'NVIDIA GeForce RTX 2060 with Max-Q Design/PCIe/SSE2'
-Version: '4.6.0 NVIDIA 496.49'
-Display Info: None
-Screen sizes: virtual=(1920, 1080) physical=(1920, 1046) drawable=(1920, 1046)
-Maximum texture size: 4096x4096
-Resetting cache.
-Bootstrap to the start of init.init took 563.96s
-Early init took 0.00s
-Loader init took 0.03s
-Loading error handling took 0.02s
-Loading script took 0.12s
-Loading save slot metadata. took 0.02s
-Loading persistent took 0.00s
-Importing _renpysteam: ImportError('No module named _renpysteam',)
-Running init code took 0.04s
-Loading analysis data took 0.02s
-Analyze and compile ATL took 0.00s
-Index archives took 0.00s
-Dump and make backups. took 0.05s
-Cleaning cache took 0.00s
-Making clean stores took 0.00s
-Initial gc. took 0.04s
-DPI scale factor: 1.500000
-nvdrs: Loaded, about to disable thread optimizations.
-nvdrs: Disabled thread optimizations.
-Creating interface object took 0.17s
-Cleaning stores took 0.00s
-Init translation took 0.04s
-Build styles took 0.00s
-Load screen analysis took 0.02s
-Analyze screens took 0.00s
-Save screen analysis took 0.00s
-Prepare screens took 0.07s
-Save pyanalysis. took 0.00s
-Save bytecode. took 0.00s
-Running _start took 0.00s
-Performance test:
-Interface start took 0.05s
-
-Initializing gl2 renderer:
-primary display bounds: (0, 0, 1920, 1080)
-swap interval: 1 frames
-Windowed mode.
-Vendor: 'NVIDIA Corporation'
-Renderer: 'NVIDIA GeForce RTX 2060 with Max-Q Design/PCIe/SSE2'
-Version: '4.6.0 NVIDIA 496.49'
-Display Info: None
-Screen sizes: virtual=(1920, 1080) physical=(1920, 1046) drawable=(1920, 1046)
-Maximum texture size: 4096x4096
-Resetting cache.
-Bootstrap to the start of init.init took 629.31s
-Early init took 0.00s
-Loader init took 0.03s
-Loading error handling took 0.02s
-game/script.rpy:1953: SyntaxWarning: name 'i_overlap' is used prior to global declaration
-  global i_overlap
-game/script.rpy:1954: SyntaxWarning: name 'ie_overlap' is used prior to global declaration
-  global ie_overlap
-Loading script took 0.39s
-Loading save slot metadata. took 0.02s
-Loading persistent took 0.00s
-Importing _renpysteam: ImportError('No module named _renpysteam',)
-Running init code took 0.04s
-Loading analysis data took 0.02s
-Analyze and compile ATL took 0.00s
-Index archives took 0.00s
-Backing up script files to 'C:\\Users\\zerog\\AppData\\Roaming/RenPy/backups\\IDP2022':
-Dump and make backups. took 0.06s
-Cleaning cache took 0.00s
-Making clean stores took 0.00s
-Initial gc. took 0.04s
-DPI scale factor: 1.500000
-nvdrs: Loaded, about to disable thread optimizations.
-nvdrs: Disabled thread optimizations.
-Creating interface object took 0.18s
-Cleaning stores took 0.00s
-Init translation took 0.04s
-Build styles took 0.00s
-Load screen analysis took 0.00s
-Analyze screens took 0.01s
-Save screen analysis took 0.04s
-Prepare screens took 0.09s
-Save pyanalysis. took 0.04s
-Save bytecode. took 0.02s
-Running _start took 0.00s
-Performance test:
-Interface start took 0.05s
-
-Initializing gl2 renderer:
-primary display bounds: (0, 0, 1920, 1080)
-swap interval: 1 frames
-Windowed mode.
-Vendor: 'NVIDIA Corporation'
-Renderer: 'NVIDIA GeForce RTX 2060 with Max-Q Design/PCIe/SSE2'
-Version: '4.6.0 NVIDIA 496.49'
-Display Info: None
-Screen sizes: virtual=(1920, 1080) physical=(1920, 1046) drawable=(1920, 1046)
-Maximum texture size: 4096x4096
-Resetting cache.
-Bootstrap to the start of init.init took 637.89s
-Early init took 0.00s
-Loader init took 0.03s
-Loading error handling took 0.02s
-Loading script took 0.15s
-Loading save slot metadata. took 0.02s
-Loading persistent took 0.00s
-Importing _renpysteam: ImportError('No module named _renpysteam',)
-Running init code took 0.04s
-Loading analysis data took 0.03s
-Analyze and compile ATL took 0.00s
-Index archives took 0.00s
-Dump and make backups. took 0.06s
-Cleaning cache took 0.00s
-Making clean stores took 0.00s
-Initial gc. took 0.05s
-DPI scale factor: 1.500000
-nvdrs: Loaded, about to disable thread optimizations.
-nvdrs: Disabled thread optimizations.
-Creating interface object took 0.18s
-Cleaning stores took 0.00s
-Init translation took 0.04s
-Build styles took 0.00s
-Load screen analysis took 0.02s
-Analyze screens took 0.00s
-Save screen analysis took 0.00s
-Prepare screens took 0.07s
 Save pyanalysis. took 0.00s
 Save bytecode. took 0.00s
 Running _start took 0.00s
@@ -408,38 +151,38 @@ Display Info: None
 Screen sizes: virtual=(1920, 1080) physical=(1920, 1046) drawable=(1920, 1046)
 Maximum texture size: 4096x4096
 Resetting cache.
-Bootstrap to the start of init.init took 639.81s
+Bootstrap to the start of init.init took 1326.07s
 Early init took 0.00s
-Loader init took 0.03s
-Loading error handling took 0.02s
-Loading script took 0.14s
+Loader init took 0.04s
+Loading error handling took 0.03s
+Loading script took 0.16s
 Loading save slot metadata. took 0.02s
 Loading persistent took 0.00s
 Importing _renpysteam: ImportError('No module named _renpysteam',)
-Running init code took 0.04s
-Loading analysis data took 0.02s
+Running init code took 0.06s
+Loading analysis data took 0.03s
 Analyze and compile ATL took 0.00s
 Index archives took 0.00s
-Dump and make backups. took 0.06s
+Dump and make backups. took 0.08s
 Cleaning cache took 0.00s
 Making clean stores took 0.00s
 Initial gc. took 0.04s
 DPI scale factor: 1.500000
 nvdrs: Loaded, about to disable thread optimizations.
 nvdrs: Disabled thread optimizations.
-Creating interface object took 0.18s
+Creating interface object took 0.25s
 Cleaning stores took 0.00s
-Init translation took 0.04s
-Build styles took 0.00s
-Load screen analysis took 0.02s
+Init translation took 0.05s
+Build styles took 0.01s
+Load screen analysis took 0.03s
 Analyze screens took 0.00s
 Save screen analysis took 0.00s
-Prepare screens took 0.07s
+Prepare screens took 0.11s
 Save pyanalysis. took 0.00s
 Save bytecode. took 0.00s
 Running _start took 0.00s
 Performance test:
-Interface start took 0.05s
+Interface start took 0.07s
 
 Initializing gl2 renderer:
 primary display bounds: (0, 0, 1920, 1080)
@@ -501,187 +244,24 @@ Full traceback:
     surf = image.load()
   File "C:\Users\zerog\Downloads\renpy-7.4.11-sdk/renpy/display/im.py", line 706, in load
     raise e
-IOError: Couldn't find file 'images/backgrounds/CaveEntrance.png'.
+IOError: Couldn't find file 'images/backgrounds/towerfloor1.png'.
 
-While loading <'Image' u'images/backgrounds/CaveEntrance.png'>:
+While loading <'Image' u'images/backgrounds/towerfloor1.png'>:
   File "renpy/common/00keymap.rpy", line 469, in script
     python hide:
   File "renpy/common/00keymap.rpy", line 469, in <module>
     python hide:
   File "renpy/common/00keymap.rpy", line 486, in _execute_python_hide
     ui.interact(suppress_overlay=True, suppress_underlay=True)
-IOError: Couldn't find file 'images/backgrounds/CaveEntrance.png'.
+IOError: Couldn't find file 'images/backgrounds/towerfloor1.png'.
 Resetting cache.
-Bootstrap to the start of init.init took 1836.83s
-Early init took 0.00s
-Loader init took 0.02s
-Loading error handling took 0.02s
-Loading script took 0.27s
-Loading save slot metadata. took 0.03s
-Loading persistent took 0.00s
-
-File "game/custom_screens.rpy", line 24: screen expects a non-empty block.
-    screen p1_1Hint:
-                    ^
-
-File "game/custom_screens.rpy", line 26: screen expects a non-empty block.
-    screen p1_2Hint: 
-                     ^
-
-File "game/custom_screens.rpy", line 28: screen expects a non-empty block.
-    screen p1_3Hint:
-                    ^
-
-File "game/custom_screens.rpy", line 30: screen expects a non-empty block.
-    screen p2_1Hint:
-                    ^
-
-File "game/custom_screens.rpy", line 32: screen expects a non-empty block.
-    screen p2_2Hint:
-                    ^
-
-File "game/custom_screens.rpy", line 34: screen expects a non-empty block.
-    screen p2_3Hint:
-                    ^
-
-File "game/custom_screens.rpy", line 36: screen expects a non-empty block.
-    screen p3_1Hint:
-                    ^
-
-File "game/custom_screens.rpy", line 38: screen expects a non-empty block.
-    screen p3_2Hint:
-                    ^
-
-File "game/custom_screens.rpy", line 40: screen expects a non-empty block.
-    screen p3_3Hint:
-                    ^
-
-File "game/script.rpy", line 732: expected statement.
-    renpy.say(" ", ("Time Lapsed = {0}:{1}:{2}".format(int(hours),int(mins),int(sec))))
-                                                                                       ^
-
-File "game/script.rpy", line 752: expected statement.
-    q1 = input("What was the best or worst puzzle in the game and why?")
-       ^
-
-File "game/script.rpy", line 753: expected statement.
-    q2 = input("How would you rate the overall experience 1 to 5?")
-       ^
-
-File "game/script.rpy", line 754: expected statement.
-    q3 = input("Would you recommend it to a friend?")
-       ^
-
-File "game/script.rpy", line 755: expected statement.
-    q4 = input("On a scale from  1 to 5, how engaging were the puzzles?")
-       ^
-
-File "game/script.rpy", line 756: expected statement.
-    q5 = input("How were you feeling throughout the game? Select all that apply.")
-       ^
-DPI scale factor: 1.500000
-nvdrs: Loaded, about to disable thread optimizations.
-nvdrs: Disabled thread optimizations.
-Interface start took 0.45s
-
-Initializing gl2 renderer:
-primary display bounds: (0, 0, 1920, 1080)
-swap interval: 1 frames
-Windowed mode.
-Vendor: 'NVIDIA Corporation'
-Renderer: 'NVIDIA GeForce RTX 2060 with Max-Q Design/PCIe/SSE2'
-Version: '4.6.0 NVIDIA 496.49'
-Display Info: None
-Screen sizes: virtual=(1920, 1080) physical=(1920, 1046) drawable=(1920, 1046)
-Maximum texture size: 4096x4096
-Resetting cache.
-Bootstrap to the start of init.init took 2041.45s
+Bootstrap to the start of init.init took 3306.05s
 Early init took 0.00s
 Loader init took 0.03s
-Loading error handling took 0.02s
-Loading script took 0.13s
+Loading error handling took 0.03s
+Loading script took 0.49s
 Loading save slot metadata. took 0.02s
 Loading persistent took 0.00s
-Importing _renpysteam: ImportError('No module named _renpysteam',)
-Running init code took 0.05s
-Loading analysis data took 0.02s
-Analyze and compile ATL took 0.00s
-Index archives took 0.00s
-Dump and make backups. took 0.05s
-Cleaning cache took 0.00s
-Making clean stores took 0.00s
-Initial gc. took 0.03s
-DPI scale factor: 1.500000
-nvdrs: Loaded, about to disable thread optimizations.
-nvdrs: Disabled thread optimizations.
-Creating interface object took 0.18s
-Cleaning stores took 0.00s
-Init translation took 0.04s
-Build styles took 0.00s
-Load screen analysis took 0.02s
-Analyze screens took 0.00s
-Save screen analysis took 0.00s
-Prepare screens took 0.08s
-Save pyanalysis. took 0.00s
-Save bytecode. took 0.02s
-Running _start took 0.00s
-Performance test:
-Interface start took 0.06s
-
-Initializing gl2 renderer:
-primary display bounds: (0, 0, 1920, 1080)
-swap interval: 1 frames
-Windowed mode.
-Vendor: 'NVIDIA Corporation'
-Renderer: 'NVIDIA GeForce RTX 2060 with Max-Q Design/PCIe/SSE2'
-Version: '4.6.0 NVIDIA 496.49'
-Display Info: None
-Screen sizes: virtual=(1920, 1080) physical=(1920, 1046) drawable=(1920, 1046)
-Maximum texture size: 4096x4096
-Resetting cache.
-Bootstrap to the start of init.init took 2153.28s
-Early init took 0.00s
-Loader init took 0.02s
-Loading error handling took 0.02s
-Loading script took 0.15s
-Loading save slot metadata. took 0.02s
-Loading persistent took 0.00s
-
-File "game/custom_screens.rpy", line 24: screen expects a non-empty block.
-    screen p1_1Hint:
-                    ^
-
-File "game/custom_screens.rpy", line 26: screen expects a non-empty block.
-    screen p1_2Hint: 
-                     ^
-
-File "game/custom_screens.rpy", line 28: screen expects a non-empty block.
-    screen p1_3Hint:
-                    ^
-
-File "game/custom_screens.rpy", line 30: screen expects a non-empty block.
-    screen p2_1Hint:
-                    ^
-
-File "game/custom_screens.rpy", line 32: screen expects a non-empty block.
-    screen p2_2Hint:
-                    ^
-
-File "game/custom_screens.rpy", line 34: screen expects a non-empty block.
-    screen p2_3Hint:
-                    ^
-
-File "game/custom_screens.rpy", line 36: screen expects a non-empty block.
-    screen p3_1Hint:
-                    ^
-
-File "game/custom_screens.rpy", line 38: screen expects a non-empty block.
-    screen p3_2Hint:
-                    ^
-
-File "game/custom_screens.rpy", line 40: screen expects a non-empty block.
-    screen p3_3Hint:
-                    ^
 
 File "game/script.rpy", line 732: expected statement.
     renpy.say(" ", ("Time Lapsed = {0}:{1}:{2}".format(int(hours),int(mins),int(sec))))
@@ -709,7 +289,7 @@ File "game/script.rpy", line 756: expected statement.
 DPI scale factor: 1.500000
 nvdrs: Loaded, about to disable thread optimizations.
 nvdrs: Disabled thread optimizations.
-Interface start took 0.27s
+Interface start took 0.38s
 
 Initializing gl2 renderer:
 primary display bounds: (0, 0, 1920, 1080)
@@ -719,5 +299,5 @@ Vendor: 'NVIDIA Corporation'
 Renderer: 'NVIDIA GeForce RTX 2060 with Max-Q Design/PCIe/SSE2'
 Version: '4.6.0 NVIDIA 496.49'
 Display Info: None
-Screen sizes: virtual=(1920, 1080) physical=(1920, 1046) drawable=(1920, 1046)
+Screen sizes: virtual=(1920, 1080) physical=(1739, 978) drawable=(1739, 978)
 Maximum texture size: 4096x4096

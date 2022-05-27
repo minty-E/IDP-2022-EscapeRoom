@@ -2,42 +2,6 @@
 errors listed below, and try again.
 
 
-File "game/custom_screens.rpy", line 24: screen expects a non-empty block.
-    screen p1_1Hint:
-                    ^
-
-File "game/custom_screens.rpy", line 26: screen expects a non-empty block.
-    screen p1_2Hint: 
-                     ^
-
-File "game/custom_screens.rpy", line 28: screen expects a non-empty block.
-    screen p1_3Hint:
-                    ^
-
-File "game/custom_screens.rpy", line 30: screen expects a non-empty block.
-    screen p2_1Hint:
-                    ^
-
-File "game/custom_screens.rpy", line 32: screen expects a non-empty block.
-    screen p2_2Hint:
-                    ^
-
-File "game/custom_screens.rpy", line 34: screen expects a non-empty block.
-    screen p2_3Hint:
-                    ^
-
-File "game/custom_screens.rpy", line 36: screen expects a non-empty block.
-    screen p3_1Hint:
-                    ^
-
-File "game/custom_screens.rpy", line 38: screen expects a non-empty block.
-    screen p3_2Hint:
-                    ^
-
-File "game/custom_screens.rpy", line 40: screen expects a non-empty block.
-    screen p3_3Hint:
-                    ^
-
 File "game/script.rpy", line 732: expected statement.
     renpy.say(" ", ("Time Lapsed = {0}:{1}:{2}".format(int(hours),int(mins),int(sec))))
                                                                                        ^
@@ -63,4 +27,4 @@ File "game/script.rpy", line 756: expected statement.
        ^
 
 Ren'Py Version: Ren'Py 7.4.11.2266
-Fri May 27 11:46:59 2022
+Fri May 27 14:36:13 2022
