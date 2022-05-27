@@ -1,23 +1,21 @@
 ﻿I'm sorry, but an uncaught exception occurred.
 
 While running game code:
-  File "game/script.rpy", line 968, in script
-    call screen plantboxclose
+  File "game/script.rpy", line 966, in script
+    call screen piano()
   File "renpy/common/000statements.rpy", line 569, in execute_call_screen
     store._return = renpy.call_screen(name, *args, **kwargs)
-  File "game/script.rpy", line 1935, in environmentEvents
-    refreshEnvironment()
-  File "game/script.rpy", line 1758, in refreshEnvironment
-    removeEnvironmentItem(item)
-  File "game/script.rpy", line 2034, in removeEnvironmentItem
-    environment_items.pop(environment_items.index(item.type))
-ValueError: u'kreaf' is not in list
+  File "renpy/common/00action_other.rpy", line 537, in __call__
+    rv = self.callable(*self.args, **self.kwargs)
+  File "game/script.rpy", line 1747, in checkpiano
+    renpy.say([name],"that wasn't right.. let me try again.", interact = False)
+TypeError: 'RevertableList' object is not callable
 
 -- Full Traceback ------------------------------------------------------------
 
 Full traceback:
-  File "game/script.rpy", line 968, in script
-    call screen plantboxclose
+  File "game/script.rpy", line 966, in script
+    call screen piano()
   File "C:\Users\zerog\Downloads\renpy-7.4.11-sdk/renpy/ast.py", line 2015, in execute
     self.call("execute")
   File "C:\Users\zerog\Downloads\renpy-7.4.11-sdk/renpy/ast.py", line 2003, in call
@@ -36,6 +34,8 @@ Full traceback:
     rv = root_widget.event(ev, x, y, 0)
   File "C:\Users\zerog\Downloads\renpy-7.4.11-sdk/renpy/display/layout.py", line 1102, in event
     rv = i.event(ev, x - xo, y - yo, cst)
+  File "C:\Users\zerog\Downloads\renpy-7.4.11-sdk/renpy/display/transition.py", line 48, in event
+    return self.new_widget.event(ev, x, y, st) # E1101
   File "C:\Users\zerog\Downloads\renpy-7.4.11-sdk/renpy/display/layout.py", line 1102, in event
     rv = i.event(ev, x - xo, y - yo, cst)
   File "C:\Users\zerog\Downloads\renpy-7.4.11-sdk/renpy/display/layout.py", line 1102, in event
@@ -44,17 +44,23 @@ Full traceback:
     rv = self.child.event(ev, x, y, st)
   File "C:\Users\zerog\Downloads\renpy-7.4.11-sdk/renpy/display/layout.py", line 1102, in event
     rv = i.event(ev, x - xo, y - yo, cst)
-  File "C:\Users\zerog\Downloads\renpy-7.4.11-sdk/renpy/display/particle.py", line 312, in event
-    return self.event_function(ev, x, y, st)
-  File "game/script.rpy", line 1935, in environmentEvents
-    refreshEnvironment()
-  File "game/script.rpy", line 1758, in refreshEnvironment
-    removeEnvironmentItem(item)
-  File "game/script.rpy", line 2034, in removeEnvironmentItem
-    environment_items.pop(environment_items.index(item.type))
-ValueError: u'kreaf' is not in list
+  File "C:\Users\zerog\Downloads\renpy-7.4.11-sdk/renpy/display/behavior.py", line 983, in event
+    return handle_click(self.clicked)
+  File "C:\Users\zerog\Downloads\renpy-7.4.11-sdk/renpy/display/behavior.py", line 918, in handle_click
+    rv = run(action)
+  File "C:\Users\zerog\Downloads\renpy-7.4.11-sdk/renpy/display/behavior.py", line 323, in run
+    new_rv = run(i, *args, **kwargs)
+  File "C:\Users\zerog\Downloads\renpy-7.4.11-sdk/renpy/display/behavior.py", line 330, in run
+    return action(*args, **kwargs)
+  File "renpy/common/00action_other.rpy", line 537, in __call__
+    rv = self.callable(*self.args, **self.kwargs)
+  File "game/script.rpy", line 1747, in checkpiano
+    renpy.say([name],"that wasn't right.. let me try again.", interact = False)
+  File "C:\Users\zerog\Downloads\renpy-7.4.11-sdk/renpy/exports.py", line 1419, in say
+    who(what, *args, **kwargs)
+TypeError: 'RevertableList' object is not callable
 
 Windows-10-10.0.22000
 Ren'Py 7.4.11.2266
 IDP2022 1.0
-Fri May 27 10:59:47 2022
+Fri May 27 13:59:54 2022

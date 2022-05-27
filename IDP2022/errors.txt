@@ -2,9 +2,9 @@
 errors listed below, and try again.
 
 
-File "game/script.rpy", line 537: expected statement.
-    iamge bg rightstatueclose = "/act2/rightstatuecloseup.png"
-                              ^
+File "game/script.rpy", line 540: expected statement.
+    imagge bg house = "/backgrounds/house.png"
+                    ^
 
 Ren'Py Version: Ren'Py 7.4.11.2266
-Fri May 27 09:08:10 2022
+Fri May 27 13:01:32 2022

@@ -41,6 +41,12 @@ image jeremy wideSmile = "/jeremy/jeremyToothySmile.png"
 # village chief photos, CHECK IF WORKING
 image chief happy = "/villageChief/chiefHappy.png"
 image chief scrunched = "/villageChief/chiefScrunched.png"
+# scientist 1 photos
+image scientist1 default = "/scientists/scientist1default.png"
+image scientist1 smile = "/scientists/scientist1smile.png"
+# scientist 2 photos
+image scientist2 default = "/scientists/scientist2default.png"
+image scientist2 smile = "/sceintists/scientist2smile.png"
 # guard
 image guard default = "/guard/guardDefault.png"
 #doortext
@@ -207,10 +213,7 @@ init python:
                         currentmidy = 608
                         midx = 1
                         midy = 1
-                    else:
-                        renpy.say(mc, "I can't put that there! It's bigger than the piece below.", interact = False)
-                else:
-                    renpy.say(mc, "I can't put that there! It's bigger than the piece below.", interact = False)
+
             if drop.drag_name == "2,1":
                 if currentsmallx != 1187:
                     if currentbigx == 1118:
@@ -261,7 +264,7 @@ init python:
                 drags[0].snap(drop.x,drop.y)
                 drags[0].draggable = False
                 piecesinplace = piecesinplace + 1
-                if piecesinplace == 1:
+                if piecesinplace == 13:
                     renpy.call_in_new_context("puzzle2complete")   
                 return
 
@@ -471,11 +474,10 @@ screen slider(g = slider_1):
                     else:
                         image "images/pieces/{}.png".format(ii)
                     if cheating:
-                        if firsttouch == False:
-                            action Function(g.cheat, ii)
+                        action Function(g.cheat, ii)
                         
                     else:
-                        action Function(g.slide, ii)
+                        action [Function(g.slide, ii), Play("sound", "/audio/tileslide.mp3")]
 
 # this shuffles the thing idk how you can make it happen off screen
     if shuffle == 1:
@@ -535,6 +537,7 @@ image bg towerfloor1 = "/backgrounds/TowerFloor1.png"
 image bg towerfloor2 = "/backgrounds/TowerFloor2.png"
 image bg towerfloor3 = "/backgrounds/Towerfloor3.png"
 image bg rightcloseup = "/act2/rightstatuecloseup.png"
+image bg house = "/backgrounds/house.png"
 # image ralsei default = "ralsei.jpeg"
 # The game starts here.
 
@@ -570,12 +573,6 @@ label start:
     $guardspoke = False
 
 
-    label testButton:
-        scene bg blackScreen
-        "Currently in testing label"
-        show screen testImgButton
-        "testing done"
-        hide screen testImgButton
     
     scene bg blackScreen
     
@@ -584,7 +581,7 @@ label start:
     $ start_time = time.time()
 
 
-    scene bg bedroom
+    scene bg bedroom with fade
 
     "..."
     mc "Huh, I wonder who sent me an email this late at night."
@@ -601,24 +598,27 @@ label start:
         mc "Odyssey7 sent me this?!{w} No way, I love their games!"
         # what email says
         company "Hello!{w} Odyssey7 would like to invite you to the facility where we make our games. We have just developed a new VR game, but we would like you to beta-test it. Please see the link to the address below.{w} See you soon,{w} \nOdyssey7"
-
+        mc "This is crazy."
+        mc "I guess I'll head over to their facility now."
     label facility:
         scene bg facility
+        mc "This is so high tech..."
+        show scientist1 smile at right
         s1 "Hello there [name]! I see you received our email about testing our new game."
         mc "Of course. It would be a shame if I pass up such a good opportunity."
         s1 "I’m glad to hear that!{w} Now, enough said, let’s get you into the game. Follow me!"
-
+        hide scientist1 smile
         scene bg facility
         with fade
-
+        show scientist1 default at right
         s1 "Before we begin your experience, please measure and record your heart rate."
         $ hRate = renpy.input("Enter heart rate and press enter: ")
         $ hRate = hRate.strip()
-
+        hide scientist1 default
         #s2 helps with vr headset
-
+        show scientist2 default at left
         s2 "...{w} Alright, you’re all set. Just remember that the game is still in early stages, so please expect a lot of bugs. Please report anything you find to us through the direct messaging system in your control panel."
-
+        hide scientist2 default
         # HOOKED TO VR
 
 
@@ -626,7 +626,7 @@ label start:
 
 
     label introAct:
-        "...{w} Start of Prologue"
+        "...{w}"
         scene bg blackScreen
         $ renpy.pause(delay = 2, hard = True)
 
@@ -639,37 +639,24 @@ label start:
 
         # exits cave
         #scene bg outsideOfCave
-        scene bg tree
+        scene bg tree with fade
 
         mc "Wow... I expected no less from Odyssey7!"
 
         # pan or show village
 
-        mc "Now if this game follows every videogame trope ever, the quest would start in that village over there."
-        mc "I should head over to the village."
-
-        # maybe fade to black and play footstep noises?
-
-        scene bg blackScreen
-        with fade
-
-        # introduction to jeremy and audrey
-
-        scene bg berries 
-        with fade
+        mc "Odyssey7 never game me any instructions as to where to go..."
+        mc "I guess I could just explore around here."
 
         "Huh, are those people?{w} They must be the new AI characters that Odyssey said they made. I should go up to them!"
         "..."
         mc "Hey, you two! Hey!"
+        # maybe fade to black and play footstep noises?
 
-        scene bg berriesWithout
-
-        # talk to jeremy and audrey
-
-        show audrey default at left
+        show audrey default at left with fade
         #show jeremy default at right
 
-        show jeremy default at right
+        show jeremy default at right with fade
 
         a "Hey!{w} I’ve never seen you before, what's your name?"
         mc "I'm [name]."
@@ -687,7 +674,7 @@ label start:
         j "You should come with us to the village chief.{w} Audrey and I have an important task. You could help us!"
         mc "Well alright!"
 
-        scene bg villageHouse
+        scene bg house with fade
         show audrey default at left
         show jeremy default at right
         show chief happy 
@@ -716,32 +703,8 @@ label start:
 
         show audrey default at left
         a "Well, we can always start at the heart of the problem."
-
-
-        # insert line to line dialogue of conversation
-
-        # move to tree
-
-        scene bg treeNormal
-
-        # tour
-
-        scene bg village
-
-        # more dialogue to return to the tree
-
-        scene bg treeNormal
-
-        # outsider touches tree
-
-        scene bg treeRed
-
-        # dialogue about tree
-
-        scene bg hole
+        scene bg blackScreen with fade
         with vpunch
-        with hpunch 
-
 
     # act 1
     label act1:
@@ -766,7 +729,8 @@ label start:
         "THE HACKER TRIED TO TRAP YOU IN A DUNGEON FOUND WITHIN THE GAME...BUT THAT IS WHERE THE FIRST INGREDIENT IS GROWN"
         "HOWEVER, IT IS GUARDED BY PUZZLES"
         "TRY YOUR BEST... YOUR LIFE DEPENDS ON IT"
-        "AFTER GETTING IT H.. "
+        "We'll contact you once you finish the puzzles here."
+        "Good luck."
         with fade
         window hide
         mc "Seriously? Am I living in some video game plot or what?"
@@ -778,8 +742,8 @@ label start:
         a "I'm more or less fine. Are you guys okay?"
         mc "Yes, surprisingly."
         mc "We have to get out of here. Let's just look around this room, maybe we can find a way to get out."
-        hide jeremy confused
-        hide audrey default
+        hide jeremy confused with fade
+        hide audrey default with fade 
 
         call screen door()
         mc "It's locked."
@@ -807,6 +771,7 @@ label start:
         window hide
         $firsttouch = False
         call screen slider()
+        show bg blackScreen with fade
         show screen puzzle1complete with fade
         mc "The mirror moved. The light is pointing to the pedestal on the right now."
         mc "I should check it out."
