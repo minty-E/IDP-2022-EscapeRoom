@@ -2,9 +2,9 @@
 errors listed below, and try again.
 
 
-File "game/script.rpy", line 1050: u'renpy' is not a keyword argument or valid child for the screen statement.
-    renpy.restart_interaction()
-         ^
+File "game/script.rpy", line 537: expected statement.
+    iamge bg rightstatueclose = "/act2/rightstatuecloseup.png"
+                              ^
 
 Ren'Py Version: Ren'Py 7.4.11.2266
-Tue May 24 04:48:36 2022
+Fri May 27 09:08:10 2022
