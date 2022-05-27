@@ -14,49 +14,81 @@ File "game/script.rpy", line 883: expected statement.
     =======
           ^
 
-File "game/script.rpy", line 891: expected statement.
-    q1 = input("What was the best or worst puzzle in the game and why?")
-       ^
+File "game/script.rpy", line 888: expected statement.
+    <<<<<<< HEAD
+                ^
 
-File "game/script.rpy", line 892: expected statement.
-    q2 = input("How would you rate the overall experience 1 to 5?")
-       ^
+File "game/script.rpy", line 889: expected statement.
+    =======
+          ^
 
 File "game/script.rpy", line 893: expected statement.
-    q3 = input("Would you recommend it to a friend?")
+    q1 = input("What was the best or worst puzzle in the game and why?")
        ^
 
 File "game/script.rpy", line 894: expected statement.
-    q4 = input("On a scale from  1 to 5, how engaging were the puzzles?")
-       ^
-
-File "game/script.rpy", line 895: expected statement.
-    q5 = input("How were you feeling throughout the game? Select all that apply.")
-       ^
-
-File "game/script.rpy", line 896: expected statement.
-    >>>>>>> main
-                ^
-
-File "game/script.rpy", line 1126: expected statement.
-    q1 = input("What was the best or worst puzzle in the game and why?")
-       ^
-
-File "game/script.rpy", line 1127: expected statement.
     q2 = input("How would you rate the overall experience 1 to 5?")
        ^
 
-File "game/script.rpy", line 1128: expected statement.
+File "game/script.rpy", line 895: expected statement.
     q3 = input("Would you recommend it to a friend?")
        ^
 
-File "game/script.rpy", line 1129: expected statement.
+File "game/script.rpy", line 896: expected statement.
     q4 = input("On a scale from  1 to 5, how engaging were the puzzles?")
        ^
 
-File "game/script.rpy", line 1130: expected statement.
+File "game/script.rpy", line 897: expected statement.
+    q5 = input("How were you feeling throughout the game? Select all that apply.")
+       ^
+
+File "game/script.rpy", line 898: expected statement.
+    >>>>>>> main
+                ^
+
+File "game/script.rpy", line 902: expected statement.
+    q1 = input("What was the best or worst puzzle in the game and why?")
+       ^
+
+File "game/script.rpy", line 903: expected statement.
+    q2 = input("How would you rate the overall experience 1 to 5?")
+       ^
+
+File "game/script.rpy", line 904: expected statement.
+    q3 = input("Would you recommend it to a friend?")
+       ^
+
+File "game/script.rpy", line 905: expected statement.
+    q4 = input("On a scale from  1 to 5, how engaging were the puzzles?")
+       ^
+
+File "game/script.rpy", line 906: expected statement.
+    q5 = input("How were you feeling throughout the game? Select all that apply.")
+       ^
+
+File "game/script.rpy", line 907: expected statement.
+    >>>>>>> main
+                ^
+
+File "game/script.rpy", line 1137: expected statement.
+    q1 = input("What was the best or worst puzzle in the game and why?")
+       ^
+
+File "game/script.rpy", line 1138: expected statement.
+    q2 = input("How would you rate the overall experience 1 to 5?")
+       ^
+
+File "game/script.rpy", line 1139: expected statement.
+    q3 = input("Would you recommend it to a friend?")
+       ^
+
+File "game/script.rpy", line 1140: expected statement.
+    q4 = input("On a scale from  1 to 5, how engaging were the puzzles?")
+       ^
+
+File "game/script.rpy", line 1141: expected statement.
     q5 = input("How were you feeling throughout the game? Select all that apply.")
        ^
 
 Ren'Py Version: Ren'Py 7.4.11.2266
-Fri May 27 14:38:58 2022
+Fri May 27 14:40:04 2022
