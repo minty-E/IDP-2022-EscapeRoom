@@ -1,7 +1,9 @@
 style centered_style:
-    xalign 0.5
-    yalign 0.5
+    xalign 0.1
+    yalign 0.15
     spacing 10
+    xsize 50
+    ysize 200
 
 screen testImgButton:
     hbox:
@@ -24,49 +26,46 @@ screen torchPuzzle:
 screen p1_1Hint:
     hbox:
         style "centered_style"
-        textbutton "Hint" action Notify("Shift the pieces to complete and solve the picture...")
-
+        textbutton "Hint" action [Notify("Shift the pieces to complete and solve the picture..."), SetVariable("hintUsed", hintUsed + 1)]
 screen p1_2Hint: 
     hbox:
         style "centered_style"
-        textbutton "Hint" action Notify("You cannot place larger rings on smaller ones, try distributing the rings around first then stacking them in order.")
+        textbutton "Hint" action [Notify("You cannot place larger rings on smaller ones, try distributing the rings around first then stacking them in order."), SetVariable("hintUsed", hintUsed + 1)]
 
 
 screen p1_3Hint:
     hbox:
         style "centered_style"
-        textbutton "Hint" action Notify("Place pieces that fit together on the mirror in order for the light to reflect off of it.")
-
+        textbutton "Hint" action [Notify("Place pieces that fit together on the mirror in order for the light to reflect off of it."), SetVariable("hintUsed", hintUsed + 1)]
 screen p2_1Hint:
     hbox:
         style "centered_style"
-        textbutton "Hint" action Notify("Match the torches to the images above.")
+        textbutton "Hint" action [Notify("Match the torches to the images above."), SetVariable("hintUsed", hintUsed + 1)]
 
 screen p2_2Hint:
     hbox:
         style "centered_style"
-        textbutton "Hint" action Notify("You could play the 4 keys to the melody.")
+        textbutton "Hint" action [Notify("You could play the 4 keys to the melody."), SetVariable("hintUsed", hintUsed + 1)]
 
 screen p2_3Hint:
     hbox:
         style "centered_style"
-        textbutton "Hint" action Notify("You could find this plant located near the plant used to give height.")
+        textbutton "Hint" action[Notify("You could find this plant located near the plant used to give height."), SetVariable("hintUsed", hintUsed + 1)]
 
 screen p3_1Hint:
     hbox:
         style "centered_style"
-        textbutton "Hint" action Notify("It seems like you’re having trouble figuring out what I am asking. What color did Yggdrasil turn after being touched by the outlander? And what color was the sky before it was cursed?")
+        textbutton "Hint" action [Notify("It seems like you’re having trouble figuring out what I am asking. What color did Yggdrasil turn after being touched by the outlander? And what color was the sky before it was cursed?") , SetVariable("hintUsed", hintUsed + 1)]
 
 screen p3_2Hint:
     hbox:
         style "centered_style"
-        textbutton "Hint" action Notify("The middle of the village has a very large plant that was cursed many years ago.")
+        textbutton "Hint" action [Notify("The middle of the village has a very large plant that was cursed many years ago."), SetVariable("hintUsed", hintUsed + 1)]
 
 screen p3_3Hint:
     hbox:
         style "centered_style"
-        textbutton "Hint" action Notify("Put the handle on the tree symbol and press down on it.")
-
+        textbutton "Hint" action [Notify("Put the handle on the tree symbol and press down on it."), SetVariable("hintUsed", hintUsed + 1)]
 
 
     #imagemap:

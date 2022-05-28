@@ -1,36 +1,43 @@
 ﻿I'm sorry, but an uncaught exception occurred.
 
-While running game code:
-  File "renpy/common/00keymap.rpy", line 469, in script
-    python hide:
-  File "renpy/common/00keymap.rpy", line 469, in <module>
-    python hide:
-  File "renpy/common/00keymap.rpy", line 488, in _execute_python_hide
-    renpy.save("_reload-1", "reload save game")
-AttributeError: 'NoneType' object has no attribute 'stores'
+While processing the xysize property of style centered_style:
+  File "renpy/common/00start.rpy", line 80, in _init_language
+    renpy.change_language(language)
+  File "renpy/common/00stylepreferences.rpy", line 124, in _m1_00stylepreferences__change_language
+    __update()
+  File "renpy/common/00stylepreferences.rpy", line 96, in _m1_00stylepreferences__update
+    renpy.style.rebuild()
+TypeError: 'int' object has no attribute '__getitem__'
 
 -- Full Traceback ------------------------------------------------------------
 
 Full traceback:
-  File "renpy/common/00keymap.rpy", line 469, in script
-    python hide:
-  File "C:\Users\zerog\Downloads\renpy-7.4.11-sdk/renpy/ast.py", line 928, in execute
-    renpy.python.py_exec_bytecode(self.code.bytecode, self.hide, store=self.store)
-  File "C:\Users\zerog\Downloads\renpy-7.4.11-sdk/renpy/python.py", line 2245, in py_exec_bytecode
-    exec(bytecode, globals, locals)
-  File "renpy/common/00keymap.rpy", line 469, in <module>
-    python hide:
-  File "renpy/common/00keymap.rpy", line 488, in _execute_python_hide
-    renpy.save("_reload-1", "reload save game")
-  File "C:\Users\zerog\Downloads\renpy-7.4.11-sdk/renpy/loadsave.py", line 394, in save
-    roots = renpy.game.log.freeze(None)
-  File "C:\Users\zerog\Downloads\renpy-7.4.11-sdk/renpy/python.py", line 2142, in freeze
-    self.complete(False)
-  File "C:\Users\zerog\Downloads\renpy-7.4.11-sdk/renpy/python.py", line 1726, in complete
-    self.current.stores[name], self.current.delta_ebc[name] = sd.get_changes(begin)
-AttributeError: 'NoneType' object has no attribute 'stores'
+  File "C:\Users\zerog\Downloads\renpy-7.4.11-sdk/renpy/bootstrap.py", line 331, in bootstrap
+    renpy.main.main()
+  File "C:\Users\zerog\Downloads\renpy-7.4.11-sdk/renpy/main.py", line 662, in main
+    run(restart)
+  File "C:\Users\zerog\Downloads\renpy-7.4.11-sdk/renpy/main.py", line 78, in run
+    renpy.translation.init_translation()
+  File "C:\Users\zerog\Downloads\renpy-7.4.11-sdk/renpy/translation/__init__.py", line 561, in init_translation
+    renpy.store._init_language() # @UndefinedVariable
+  File "renpy/common/00start.rpy", line 80, in _init_language
+    renpy.change_language(language)
+  File "C:\Users\zerog\Downloads\renpy-7.4.11-sdk/renpy/translation/__init__.py", line 650, in change_language
+    i()
+  File "renpy/common/00stylepreferences.rpy", line 124, in _m1_00stylepreferences__change_language
+    __update()
+  File "renpy/common/00stylepreferences.rpy", line 96, in _m1_00stylepreferences__update
+    renpy.style.rebuild()
+  File "style.pyx", line 795, in renpy.style.rebuild
+  File "style.pyx", line 788, in renpy.style.build_styles
+  File "style.pyx", line 709, in renpy.style.build_style
+  File "style.pyx", line 706, in renpy.style.build_style
+  File "gen-static/style_functions.pyx", line 1462, in style_functions.xysize_property
+  File "include/style_common.pxi", line 30, in style_functions.index_0
+    return v[0]
+TypeError: 'int' object has no attribute '__getitem__'
 
 Windows-10-10.0.22000
 Ren'Py 7.4.11.2266
 IDP2022 1.0
-Fri May 27 14:37:22 2022
+Fri May 27 15:28:09 2022

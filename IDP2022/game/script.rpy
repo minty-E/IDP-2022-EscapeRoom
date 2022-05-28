@@ -1,8 +1,8 @@
 init python:
     import time
-    import gspread
-    from gspread.foauth2client.service_account import ServiceAccountCredentials
-    from tabulate import tabulate
+    #import gspread
+    #from gspread.foauth2client.service_account import ServiceAccountCredentials
+    #from tabulate import tabulate
 
     hintUsed = 0
 
@@ -464,7 +464,6 @@ default slider_1  = slider_class(3, 3, 205)
 screen slider(g = slider_1):
     add "backgrounds/dungeonwall.png"
     add "pedestals/pedestal1.png"
-
     style_prefix "slider"
     default cheating = 1
 
@@ -731,10 +730,10 @@ label start:
         "WE HAVE JUST RECIEVED WORD THAT A HACKER HAS TRAPPED YOU INSIDE THE GAME"
         "YOUR REAL BODY IS CURRENTLY IN A COMA STATE."
         "BEAT THE GAME AND CURE THE TREE AND WE MIGHT BE ABLE TO BRING YOU BACK"
-        "IF YOU FAIL TO DO SO IN 30 MINUTES..."
+        "The game has a 30 minute time limit. Fail to do so in that time and..."
         with vpunch
         with hpunch
-        "YOU WILL BE TRAPPED FOREVER"
+        "the game will reset..." 
         with vpunch
         with hpunch
         "YOUR REAL BODY WILL DIE"
@@ -775,13 +774,16 @@ label start:
         "I should check out the pedestal here on the left. Maybe I could move it."
 
         call screen puzzle1()
+
         show screen slider with fade
+        show screen p1_1Hint()
         mc "What is this?"
         mc "Looks like a scrambled image of Yggdrasil..."
         mc "These tiles look like they can be moved."
         mc "Maybe I should try correcting the image."
         window hide
         $firsttouch = False
+        $renpy.notify("Correct the image by clicking the pieces to move them.")
         call screen slider()
         show bg blackScreen with fade
         show screen puzzle1complete with fade
@@ -805,7 +807,7 @@ label start:
         $ ending_time()
         $ starting_time()
 
-        renpy.say(" ", ("Time Lapsed = {0}:{1}:{2}".format(int(hours),int(mins),int(sec))))
+        #renpy.say(" ", ("Time Lapsed = {0}:{1}:{2}".format(int(hours),int(mins),int(sec))))
 label puzzle2complete:
     scene puzzle2complete
     call screen puzzle2completescreen() with fade
@@ -826,7 +828,8 @@ label puzzle2complete:
 
 label puzzle3complete:
     scene puzzle3complete with fade
-<<<<<<< HEAD
+
+
     # show screen dooropen with fade
     scene caveentrance with fade
     $act = 2
@@ -880,56 +883,12 @@ label act2puzzle2complete:
     scene memorialrightopen with fade
     "The statue opened!"
     "Is there anything inside?"
-=======
+
     pause
     # put open door thing
     $ ending_time()
     $ starting_time()
-<<<<<<< HEAD
-<<<<<<< HEAD
-<<<<<<< HEAD
-=======
-=======
-=======
 
-label endingSurvey:
-    #finish fail safe
-    q1 = input("What was the best or worst puzzle in the game and why?")
-    q2 = input("How would you rate the overall experience 1 to 5?")
-    q3 = input("Would you recommend it to a friend?")
-    q4 = input("On a scale from  1 to 5, how engaging were the puzzles?")
-    q5 = input("How were you feeling throughout the game? Select all that apply.")
->>>>>>> main
-
-label endingSurvey:
-    #finish fail safe
-    q1 = input("What was the best or worst puzzle in the game and why?")
-    q2 = input("How would you rate the overall experience 1 to 5?")
-    q3 = input("Would you recommend it to a friend?")
-    q4 = input("On a scale from  1 to 5, how engaging were the puzzles?")
-    q5 = input("How were you feeling throughout the game? Select all that apply.")
->>>>>>> main
-
-label endingSurvey:
-    #finish fail safe
-    q1 = input("What was the best or worst puzzle in the game and why?")
-    q2 = input("How would you rate the overall experience 1 to 5?")
-    q3 = input("Would you recommend it to a friend?")
-    q4 = input("On a scale from  1 to 5, how engaging were the puzzles?")
-    q5 = input("How were you feeling throughout the game? Select all that apply.")
->>>>>>> main
-
-label endingSurvey:
-    #finish fail safe
-    q1 = input("What was the best or worst puzzle in the game and why?")
-    q2 = input("How would you rate the overall experience 1 to 5?")
-    q3 = input("Would you recommend it to a friend?")
-    q4 = input("On a scale from  1 to 5, how engaging were the puzzles?")
-    q5 = input("How were you feeling throughout the game? Select all that apply.")
->>>>>>> main
-
-    call screen rightcompartment()
-    pause
 
 label leftstatue:
     "It says something about this guy having rashes on his hands.."
@@ -1074,7 +1033,7 @@ label gotWrongPlant:
     "To retrieve the last and final ingredient you must prove your worth."
     jump act3
 label act3:
-    scene towerEntrance with fade
+    scene towerentrance with fade
     $act = 3
     "So this is the tower they were talking about."
     "Look menacing..."
@@ -1097,6 +1056,7 @@ label act3:
     $refreshEnvironment()
     call screen act3puzzle1Instructions()
     $addnote()
+
 
 label Potions:
     show screen UI
@@ -1128,18 +1088,21 @@ label Potions:
 
 screen towerfloor1Potions:
     add environment_SM 
+
 label act3puzzle1complete:
     v "Good job adventurer."
     v "Onto the next one."
     v "They'll only get harder from here."
 label act3puzzle2:
-
-label tooManyPlants:
-    show guard default at right 
-    g "You have already chose a plant. I'm afraid I can't let you get another one."
-    hide guard default at right
-    call screen plantboxclose
-    pause
+    scene act1puzzle2room with fade
+    v "Now for your second task."
+    v "I want you to answer a riddle over there on the wall."
+    v "Answer using the blocks scattered around here."
+    v "And put them in the slots on the wall."
+    call screen puzzle2blocks()
+screen puzzle2blocks():
+    draggroup:
+        
 label torchinstructions:
     show screen torchinstr with fade
     mc "What is this?"
@@ -1154,13 +1117,7 @@ label torchinstructions:
     $ ending_time()
     $ starting_time()
 
-label endingSurvey:
-    #finish fail safe
-    q1 = input("What was the best or worst puzzle in the game and why?")
-    q2 = input("How would you rate the overall experience 1 to 5?")
-    q3 = input("Would you recommend it to a friend?")
-    q4 = input("On a scale from  1 to 5, how engaging were the puzzles?")
-    q5 = input("How were you feeling throughout the game? Select all that apply.")
+
 
 screen puzzle3instr:
     add "pedestals/puzzle3instr.png" xalign 0 yalign 0
@@ -1410,77 +1367,6 @@ screen pedestal3close():
             ysize 97
             draggable False
             droppable True
-
-
-
-
-            # enter or implement dragging code 
-
-            # hanoi puzzle IMPORTANT
-
-            # drag and drop pieces of mirror, get artist to do this
-
-        # death of jeremy and audrey leaves
-
-        # get ingredient
-
-        # contact by company, move to cave
-
-    
-
-
-    #label act2:
-        # arrive in cave
-        # "Hm, the cave is blocked."
-
-        # label puzzle2:
-            # torch puzzle, clicking image buttons to change orientation
-
-            # move to memorial where npc guard instructs to solve puzzles
-
-           # g "...{w} Hello."
-           # g "I'm "
-
-            # recreate a piano melody
-
-            # find correct part of statue and drag and drop on it
-
-            
-
-        # receive 2nd ingredient
-
-    #label act3: 
-        # enter tower
-
-        # voice in tower calls out to pass trial 
-
-        # each task will form more stairs
-
-        #label puzzle3:
-            # make a light purple, code different color combinations, drag and drop
-
-            # shuffle different letters to form words
-
-            # slide on image, maze puzzle
-
-        # arrive at top of tower
-
-    # label ending: 
-        # audrey shows up hacked
-        # hacker sends spells through audrey, quick time events to stop
-        # health bar will lower if user fails 
-        # company sends spell book to kill audrey
-        # mixes three ingredients to cure the tree
-        # curing tree leads to exiting the game
-        # hacker gets arrested and user gets sent home
-
-
-
-    #"..."
-    # "This is the end of the game."
-    
-        
-    #    "Test"
 
 screen puzzle2completescreen:
     add "backgrounds/puzzle2complete.png"
