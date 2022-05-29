@@ -1,27 +1,28 @@
-init python:
-    import time
-    #import gspread
-    #from gspread.foauth2client.service_account import ServiceAccountCredentials
-    #from tabulate import tabulate
+init: 
+    python:
+        import time
+        import gspread
+        from gspread.foauth2client.service_account import ServiceAccountCredentials
+        from tabulate import tabulate
 
-    hintUsed = 0
+        hintUsed = 0
 
-    def time_convert(sec):
-        sec += (hintUsed * 10)
-        mins = sec // 60
-        sec = sec % 60
-        hours = mins // 60
-        mins = mins % 60
-        totalTime = ("Time Lapsed = {0}:{1}:{2}".format(int(hours),int(mins),int(sec)))
+        def time_convert(sec):
+            sec += (hintUsed * 10)
+            mins = sec // 60
+            sec = sec % 60
+            hours = mins // 60
+            mins = mins % 60
+            totalTime = ("Time Lapsed = {0}:{1}:{2}".format(int(hours),int(mins),int(sec)))
 
-    def starting_time():
-        start_time = time.time()
+        def starting_time():
+            start_time = time.time()
 
 
-    def ending_time():
-        end_time = time.time()
-        time_lapsed = end_time - start_time
-        time_convert(time_lapsed)
+        def ending_time():
+            end_time = time.time()
+            time_lapsed = end_time - start_time
+            time_convert(time_lapsed)
         
 
 
@@ -727,7 +728,7 @@ label start:
         mc "What just happened?"
         mc "Where am I?"
 
-        "WE HAVE JUST RECIEVED WORD THAT A HACKER HAS TRAPPED YOU INSIDE THE GAME"
+        "WE HAVE JUST RECEIVED WORD THAT A HACKER HAS TRAPPED YOU INSIDE THE GAME"
         "YOUR REAL BODY IS CURRENTLY IN A COMA STATE."
         "BEAT THE GAME AND CURE THE TREE AND WE MIGHT BE ABLE TO BRING YOU BACK"
         "The game has a 30 minute time limit. Fail to do so in that time and..."
@@ -855,7 +856,7 @@ label act2puzzle1complete:
     g "Hello adventurer! It appears that you've gotten through the cave."
     g "If you're here you must be looking for (ingredient name)."
     g "One of the past village chiefs has locked it inside his statue and put a series of puzzles in place to make sure it wouldn't fall into the wrong hands."
-    g "If you wish to recieve the ingredient you must solve the puzzles he has laid out."
+    g "If you wish to receive the ingredient you must solve the puzzles he has laid out."
     g "Start by checking out the statue on the right."
     g "I wish you the best of luck."
     hide guard default
@@ -1010,7 +1011,7 @@ label plantlabel:
 label gotCorrectPlant:
     show guard default at right
     g "Good job adventurer!"
-    g "You have recieved the correct plant."
+    g "You have received the correct plant."
     g "Huxtous is in fact the ingredient you have been searching for."
     g "I wish you the best of luck on the rest of your journey."
     hide guard default
@@ -1043,7 +1044,7 @@ label act3:
     "And why is it so messy?"
     with hpunch
     v "W H O. G O E S. T H E R E."
-    v "You must be here to recieve a special item, but if you wish to do so..."
+    v "You must be here to receive a special item, but if you wish to do so..."
     with vpunch
     v "You must prove that you are worthy enough."
     v "I have 3 tasks for you."
@@ -1100,8 +1101,8 @@ label act3puzzle2:
     v "Answer using the blocks scattered around here."
     v "And put them in the slots on the wall."
     call screen puzzle2blocks()
-screen puzzle2blocks():
-    draggroup:
+#screen puzzle2blocks():
+    #draggroup:
         
 label torchinstructions:
     show screen torchinstr with fade
