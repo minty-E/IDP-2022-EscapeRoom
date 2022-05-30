@@ -1,28 +1,27 @@
-init: 
-    python:
-        import time
-        import gspread
-        from gspread.foauth2client.service_account import ServiceAccountCredentials
-        from tabulate import tabulate
+init python:
+    import time
+    import gspread
+    from gspread.foauth2client.service_account import ServiceAccountCredentials
+    from tabulate import tabulate
 
-        hintUsed = 0
+    hintUsed = 0
 
-        def time_convert(sec):
-            sec += (hintUsed * 10)
-            mins = sec // 60
-            sec = sec % 60
-            hours = mins // 60
-            mins = mins % 60
-            totalTime = ("Time Lapsed = {0}:{1}:{2}".format(int(hours),int(mins),int(sec)))
+    def time_convert(sec):
+        sec += (hintUsed * 10)
+        mins = sec // 60
+        sec = sec % 60
+        hours = mins // 60
+        mins = mins % 60
+        totalTime = ("Time Lapsed = {0}:{1}:{2}".format(int(hours),int(mins),int(sec)))
 
-        def starting_time():
-            start_time = time.time()
+    def starting_time():
+        start_time = time.time()
 
 
-        def ending_time():
-            end_time = time.time()
-            time_lapsed = end_time - start_time
-            time_convert(time_lapsed)
+    def ending_time():
+        end_time = time.time()
+        time_lapsed = end_time - start_time
+        time_convert(time_lapsed)
         
 
 
