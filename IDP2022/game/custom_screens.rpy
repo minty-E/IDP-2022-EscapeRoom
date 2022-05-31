@@ -26,7 +26,7 @@ screen torchPuzzle:
 screen p1_1Hint:
     hbox:
         style "centered_style"
-        textbutton "Hint" action [Notify("Shift the pieces to complete and solve the picture..."), SetVariable("hintUsed", hintUsed + 1)]
+        textbutton "Hint" action [Notify("Shift the pieces to complete and solve the picture..."), SetVariable("hintUsed", hintUsed + 1), Show(, transition = None)]
 screen p1_2Hint: 
     hbox:
         style "centered_style"

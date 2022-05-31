@@ -42,7 +42,12 @@ screen time_finish():
         idle DynamicDisplayable(time_finish, length = 0)
         hover DynamicDisplayable(time_finish, length = 0)
         action Null
-
+label timer_start:
+    $ time = 0
+    $ timer_range = 0
+    $ timer_jump = "lose"
+    show screen countdown
+    jump prologue2
 
 
 
@@ -57,10 +62,10 @@ label start:
 
     scene bg room
     label startTime:
-        show screen time_finish()
+        jump timer_start()
 
     label stopTime:
-        show screen 
+        show screen timer_finish()
 
     
 
