@@ -1243,7 +1243,7 @@ label endgameComplete:
     show hacker smile 
     with vpunch
     h "Their business is going to fail! THEY WILL ALL FAIL WITH ME!"
-    scene bg blackscreen with fade
+    scene bg blackScreen with fade
 
 label survey:
     #EXPORTING VARIABLES ARE HERE + NAME + TIME
@@ -1255,6 +1255,9 @@ label survey:
     $currentHrate = renpy.input("What's your current heart rate?")
     $likedMost = renpy.input("What did you like the most after playing this game?")
     $recommend = renpy.input("Would you recommend this game to a friend?")
+
+    j "Thank you for playing our game!!"
+    add "/endgame/finalimage.png"
 
 
 screen treepedestal:
