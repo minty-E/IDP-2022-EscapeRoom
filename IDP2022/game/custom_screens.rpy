@@ -23,16 +23,8 @@ screen torchPuzzle:
 
 # screens for image/textbuttons for hints`
 
-screen p1_1Hint:
-# finish these hints
-    hbox:
-        style "centered_style"
-        textbutton "Hint" action [Notify("Shift the pieces to complete and solve the picture..."), SetVariable("hintUsed", hintUsed + 1), Show(, transition = None)]
-screen p1_2Hint: 
-    hbox:
-        style "centered_style"
-        textbutton "Hint" action [Notify("You cannot place larger rings on smaller ones, try distributing the rings around first then stacking them in order."), SetVariable("hintUsed", hintUsed + 1)]
-# this too
+screen p1_1Hint: 
+
     imagebutton auto "help-%s.png":
         focus_mask True
         action [Show("slider"), ShowMenu("p1_1menu")]

@@ -1,8 +1,8 @@
 init python:
     import time
-    #import gspread
-    #from gspread.foauth2client.service_account import ServiceAccountCredentials
-    #from tabulate import tabulate
+    import gspread
+    from gspread.foauth2client.service_account import ServiceAccountCredentials
+    from tabulate import tabulate
 
     hintUsed = 0
 
@@ -1406,7 +1406,13 @@ label act3puzzle1complete:
     v "Onto the next one."
     v "They'll only get harder from here."
 
-
+label act3puzzle2:
+    scene act1puzzle2room with fade
+    v "Now for your second task."
+    v "I want you to answer a riddle over there on the wall."
+    v "Answer using the blocks scattered around here."
+    v "And put them in the slots on the wall."
+    call screen puzzle2blocks()
 #screen puzzle2blocks():
     #draggroup:
 
