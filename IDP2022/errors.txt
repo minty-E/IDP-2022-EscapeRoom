@@ -2,9 +2,9 @@
 errors listed below, and try again.
 
 
-File "game/endgame.rpy", line 237: showif expects a non-empty block.
-    showif spell == 3 and bookpage != 2:
-                                        ^
+File "game/script.rpy", line 2478: u'renpy' is not a keyword argument or valid child for the button statement.
+    renpy.call_in_new_context("potionInstructions")
+         ^
 
 Ren'Py Version: Ren'Py 7.4.11.2266
-Tue May 31 23:27:17 2022
+Wed Jun  1 06:28:07 2022
