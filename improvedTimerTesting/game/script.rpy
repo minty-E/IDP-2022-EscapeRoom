@@ -47,7 +47,7 @@ label timer_start:
     $ timer_range = 0
     $ timer_jump = "lose"
     show screen countdown
-    jump prologue2
+    
 
 
 
@@ -62,7 +62,7 @@ label start:
 
     scene bg room
     label startTime:
-        jump timer_start()
+        jump timer_start
 
     label stopTime:
         show screen timer_finish()
