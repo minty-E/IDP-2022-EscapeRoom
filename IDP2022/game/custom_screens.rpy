@@ -24,6 +24,7 @@ screen torchPuzzle:
 # screens for image/textbuttons for hints`
 
 screen p1_1Hint:
+# finish these hints
     hbox:
         style "centered_style"
         textbutton "Hint" action [Notify("Shift the pieces to complete and solve the picture..."), SetVariable("hintUsed", hintUsed + 1), Show(, transition = None)]
@@ -31,12 +32,61 @@ screen p1_2Hint:
     hbox:
         style "centered_style"
         textbutton "Hint" action [Notify("You cannot place larger rings on smaller ones, try distributing the rings around first then stacking them in order."), SetVariable("hintUsed", hintUsed + 1)]
+# this too
+    imagebutton auto "help-%s.png":
+        focus_mask True
+        action [Show("slider"), ShowMenu("p1_1menu")]
+menu p1_1menu:
+    "Would you like to request help from Odyssey7?. Having them help you will shorten the time that they have to get you."
 
+    "Yes":
+        scene bg blackScreen with fade
+        v "Hello?"
+        v "[name]?"
+        v "We can solve this puzzle for you using our computers."
+        $hintUsed = hintUsed + 1
+        jump act1puzzle2
+
+    "No":
+        show screen p1_1Hint
+        hide screen p1_1menu with fade 
+screen p1_2Hint:
+    imagebutton auto "help-%s.png":
+        focus_mask True
+        action [Show("pedestal3close"), ShowMenu("p1_2menu")]
+menu p1_2menu:
+    "Would you like to request help from Odyssey7?. Having them help you will shorten the time that they have to get you."
+
+    "Yes":
+        scene bg blackScreen with fade
+        v "Hello?"
+        v "[name]?"
+        v "We can solve this puzzle for you."
+        $hintUsed = hintUsed + 1
+        jump act1puzzle3
+
+    "No":
+        show screen p1_2Hint
+        hide screen p1_2menu with fade 
 
 screen p1_3Hint:
-    hbox:
-        style "centered_style"
-        textbutton "Hint" action [Notify("Place pieces that fit together on the mirror in order for the light to reflect off of it."), SetVariable("hintUsed", hintUsed + 1)]
+    imagebutton auto "help-%s.png":
+        focus_mask True
+        action [Show("pedestal2close"), ShowMenu("p1_3menu")]
+menu p1_3menu:
+    "Would you like to request help from Odyssey7?. Having them help you will shorten the time that they have to get you."
+
+    "Yes":
+        scene bg blackScreen with fade
+        v "Hello?"
+        v "[name]?"
+        v "We can solve this puzzle for you using our computers."
+        $hintUsed = hintUsed + 1
+        jump act1complete
+
+    "No":
+        show screen p1_3Hint
+        hide screen p1_3menu with fade 
 screen p2_1Hint:
     hbox:
         style "centered_style"
