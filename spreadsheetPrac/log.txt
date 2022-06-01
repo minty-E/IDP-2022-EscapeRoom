@@ -1,85 +1,1520 @@
-<<<<<<< HEAD
-Fri May 27 11:52:55 2022
+Sat May 28 16:24:26 2022
 Darwin-21.1.0-x86_64-i386-64bit
-Ren'Py 7.4.11.2266
- 
-
-Bootstrap to the start of init.init took 0.10s
-Early init took 0.00s
-Loader init took 0.02s
-Loading error handling took 0.03s
-Loading script took 0.10s
-=======
-Fri May 27 11:52:34 2022
-Windows-10-10.0.22000
 Ren'Py 7.4.11.2266
  
 
 Bootstrap to the start of init.init took 0.07s
 Early init took 0.00s
-Loader init took 0.05s
-Loading error handling took 0.03s
-Loading script took 0.71s
->>>>>>> c2c1996ff30b7ac67e813ddef058a0e2e05dda3d
+Loader init took 0.02s
+Loading error handling took 0.02s
+Loading script took 0.44s
 Loading save slot metadata. took 0.00s
 Loading persistent took 0.00s
-Importing _renpysteam: ImportError('No module named _renpysteam',)
 
-Full traceback:
-  File "game/script.rpy", line 6, in script
-    init python:
-  File "C:\Users\zerog\Downloads\renpy-7.4.11-sdk/renpy/ast.py", line 928, in execute
-    renpy.python.py_exec_bytecode(self.code.bytecode, self.hide, store=self.store)
-  File "C:\Users\zerog\Downloads\renpy-7.4.11-sdk/renpy/python.py", line 2245, in py_exec_bytecode
-    exec(bytecode, globals, locals)
-  File "game/script.rpy", line 9, in <module>
-    import gspread
-  File "C:\Users\zerog\Downloads\renpy-7.4.11-sdk/renpy/loader.py", line 985, in load_module
-    exec(code, mod.__dict__)
-  File "python-packages/gspread/__init__.py", line 16, in <module>
-  File "C:\Users\zerog\Downloads\renpy-7.4.11-sdk/renpy/loader.py", line 985, in load_module
-    exec(code, mod.__dict__)
-  File "python-packages/gspread/auth.py", line 12, in <module>
-ImportError: No module named google.oauth2.credentials
+File "game/gui.rpy", line 1: expected statement.
+    <<<<<<< HEAD
+                ^
 
-While running game code:
-  File "game/script.rpy", line 6, in script
-    init python:
-  File "game/script.rpy", line 9, in <module>
-    import gspread
-ImportError: No module named google.oauth2.credentials
-DPI scale factor: 1.500000
-nvdrs: Loaded, about to disable thread optimizations.
-nvdrs: Disabled thread optimizations.
+File "game/gui.rpy", line 2: expected statement.
+    <<<<<<< HEAD
+                ^
 
-Full traceback:
-  File "C:\Users\zerog\Downloads\renpy-7.4.11-sdk/renpy/bootstrap.py", line 331, in bootstrap
-    renpy.main.main()
-  File "C:\Users\zerog\Downloads\renpy-7.4.11-sdk/renpy/main.py", line 560, in main
-    renpy.game.context().run(node)
-  File "game/script.rpy", line 6, in script
-    init python:
-  File "game/script.rpy", line 6, in script
-    init python:
-  File "C:\Users\zerog\Downloads\renpy-7.4.11-sdk/renpy/ast.py", line 928, in execute
-    renpy.python.py_exec_bytecode(self.code.bytecode, self.hide, store=self.store)
-  File "C:\Users\zerog\Downloads\renpy-7.4.11-sdk/renpy/python.py", line 2245, in py_exec_bytecode
-    exec(bytecode, globals, locals)
-  File "game/script.rpy", line 9, in <module>
-    import gspread
-  File "C:\Users\zerog\Downloads\renpy-7.4.11-sdk/renpy/loader.py", line 985, in load_module
-    exec(code, mod.__dict__)
-  File "python-packages/gspread/__init__.py", line 16, in <module>
-  File "C:\Users\zerog\Downloads\renpy-7.4.11-sdk/renpy/loader.py", line 985, in load_module
-    exec(code, mod.__dict__)
-  File "python-packages/gspread/auth.py", line 12, in <module>
-ImportError: No module named google.oauth2.credentials
+File "game/gui.rpy", line 3: expected statement.
+    <<<<<<< HEAD
+                ^
 
-While running game code:
-  File "game/script.rpy", line 6, in script
-    init python:
-  File "game/script.rpy", line 6, in script
-    init python:
-  File "game/script.rpy", line 9, in <module>
-    import gspread
-ImportError: No module named google.oauth2.credentials
+File "game/gui.rpy", line 4: expected statement.
+    <<<<<<< HEAD
+                ^
+
+File "game/gui.rpy", line 5: expected statement.
+    ﻿
+     ^
+
+File "game/gui.rpy", line 479: expected statement.
+    =======
+          ^
+
+File "game/gui.rpy", line 480: expected statement.
+    ﻿
+     ^
+
+File "game/gui.rpy", line 954: expected statement.
+    >>>>>>> main
+                ^
+
+File "game/gui.rpy", line 955: expected statement.
+    =======
+          ^
+
+File "game/gui.rpy", line 956: expected statement.
+    ﻿
+     ^
+
+File "game/gui.rpy", line 1430: expected statement.
+    >>>>>>> main
+                ^
+
+File "game/gui.rpy", line 1431: expected statement.
+    =======
+          ^
+
+File "game/gui.rpy", line 1432: expected statement.
+    ﻿
+     ^
+
+File "game/gui.rpy", line 1906: expected statement.
+    >>>>>>> main
+                ^
+
+File "game/gui.rpy", line 1907: expected statement.
+    =======
+          ^
+
+File "game/gui.rpy", line 1908: expected statement.
+    ﻿
+     ^
+
+File "game/gui.rpy", line 2382: expected statement.
+    >>>>>>> main
+                ^
+
+File "game/options.rpy", line 1: expected statement.
+    <<<<<<< HEAD
+                ^
+
+File "game/options.rpy", line 2: expected statement.
+    <<<<<<< HEAD
+                ^
+
+File "game/options.rpy", line 3: expected statement.
+    <<<<<<< HEAD
+                ^
+
+File "game/options.rpy", line 4: expected statement.
+    <<<<<<< HEAD
+                ^
+
+File "game/options.rpy", line 5: expected statement.
+    ﻿
+     ^
+
+File "game/options.rpy", line 214: expected statement.
+    =======
+          ^
+
+File "game/options.rpy", line 215: expected statement.
+    ﻿
+     ^
+
+File "game/options.rpy", line 424: expected statement.
+    >>>>>>> main
+                ^
+
+File "game/options.rpy", line 425: expected statement.
+    =======
+          ^
+
+File "game/options.rpy", line 426: expected statement.
+    ﻿
+     ^
+
+File "game/options.rpy", line 635: expected statement.
+    >>>>>>> main
+                ^
+
+File "game/options.rpy", line 636: expected statement.
+    =======
+          ^
+
+File "game/options.rpy", line 637: expected statement.
+    ﻿
+     ^
+
+File "game/options.rpy", line 846: expected statement.
+    >>>>>>> main
+                ^
+
+File "game/options.rpy", line 847: expected statement.
+    =======
+          ^
+
+File "game/options.rpy", line 848: expected statement.
+    ﻿
+     ^
+
+File "game/options.rpy", line 1057: expected statement.
+    >>>>>>> main
+                ^
+
+File "game/screens.rpy", line 1: expected statement.
+    <<<<<<< HEAD
+                ^
+
+File "game/screens.rpy", line 2: expected statement.
+    <<<<<<< HEAD
+                ^
+
+File "game/screens.rpy", line 3: expected statement.
+    <<<<<<< HEAD
+                ^
+
+File "game/screens.rpy", line 4: expected statement.
+    <<<<<<< HEAD
+                ^
+
+File "game/screens.rpy", line 5: expected statement.
+    ﻿
+     ^
+
+File "game/screens.rpy", line 1523: expected statement.
+    =======
+          ^
+
+File "game/screens.rpy", line 1524: expected statement.
+    ﻿
+     ^
+
+File "game/screens.rpy", line 3042: expected statement.
+    >>>>>>> main
+                ^
+
+File "game/screens.rpy", line 3043: expected statement.
+    =======
+          ^
+
+File "game/screens.rpy", line 3044: expected statement.
+    ﻿
+     ^
+
+File "game/screens.rpy", line 4562: expected statement.
+    >>>>>>> main
+                ^
+
+File "game/screens.rpy", line 4563: expected statement.
+    =======
+          ^
+
+File "game/screens.rpy", line 4564: expected statement.
+    ﻿
+     ^
+
+File "game/screens.rpy", line 6082: expected statement.
+    >>>>>>> main
+                ^
+
+File "game/screens.rpy", line 6083: expected statement.
+    =======
+          ^
+
+File "game/screens.rpy", line 6084: expected statement.
+    ﻿
+     ^
+
+File "game/screens.rpy", line 7602: expected statement.
+    >>>>>>> main
+                ^
+
+File "game/script.rpy", line 1: expected statement.
+    <<<<<<< HEAD
+                ^
+
+File "game/script.rpy", line 2: expected statement.
+    <<<<<<< HEAD
+                ^
+
+File "game/script.rpy", line 3: expected statement.
+    <<<<<<< HEAD
+                ^
+
+File "game/script.rpy", line 4: expected statement.
+    <<<<<<< HEAD
+                ^
+
+File "game/script.rpy", line 5: expected statement.
+    ﻿   
+        ^
+
+File "game/script.rpy", line 83: expected statement.
+    =======
+          ^
+
+File "game/script.rpy", line 84: expected statement.
+    ﻿   
+        ^
+
+File "game/script.rpy", line 162: expected statement.
+    >>>>>>> main
+                ^
+
+File "game/script.rpy", line 163: expected statement.
+    =======
+          ^
+
+File "game/script.rpy", line 164: expected statement.
+    ﻿   
+        ^
+
+File "game/script.rpy", line 242: expected statement.
+    >>>>>>> main
+                ^
+
+File "game/script.rpy", line 243: expected statement.
+    =======
+          ^
+
+File "game/script.rpy", line 244: expected statement.
+    ﻿   
+        ^
+
+File "game/script.rpy", line 322: expected statement.
+    >>>>>>> main
+                ^
+
+File "game/script.rpy", line 323: expected statement.
+    =======
+          ^
+
+File "game/script.rpy", line 324: expected statement.
+    ﻿   
+        ^
+
+File "game/script.rpy", line 402: expected statement.
+    >>>>>>> main
+                ^
+DPI scale factor: 1.000000
+Interface start took 1.91s
+
+Initializing gl renderer:
+primary display bounds: (0, 0, 1440, 900)
+swap interval: 1 frames
+Windowed mode.
+Vendor: 'Apple'
+Renderer: 'Apple M1'
+Version: '2.1 Metal - 76.1'
+Display Info: None
+Number of texture units: 16
+Using shader environment.
+Using FBO RTT.
+Root FBO is: 0
+FBO Maximum Texture Size: 2048
+Using gl renderer.
+Texture testing:
+- Hardware max texture size: 16384
+- 64px textures work.
+- 128px textures work.
+- 256px textures work.
+- 512px textures work.
+- 1024px textures work.
+- 2048px textures work.
+Screen sizes: virtual=(1920, 1080) physical=(1338, 753) drawable=(2676, 1506)
+Root FBO is: 0
+FBO Maximum Texture Size: 2048
+Resetting cache.
+Bootstrap to the start of init.init took 67.00s
+Early init took 0.00s
+Loader init took 0.05s
+Loading error handling took 0.03s
+Loading script took 0.38s
+Loading save slot metadata. took 0.00s
+Loading persistent took 0.00s
+
+File "game/gui.rpy", line 1: expected statement.
+    <<<<<<< HEAD
+                ^
+
+File "game/gui.rpy", line 2: expected statement.
+    <<<<<<< HEAD
+                ^
+
+File "game/gui.rpy", line 3: expected statement.
+    <<<<<<< HEAD
+                ^
+
+File "game/gui.rpy", line 4: expected statement.
+    <<<<<<< HEAD
+                ^
+
+File "game/gui.rpy", line 5: expected statement.
+    ﻿
+     ^
+
+File "game/gui.rpy", line 479: expected statement.
+    =======
+          ^
+
+File "game/gui.rpy", line 480: expected statement.
+    ﻿
+     ^
+
+File "game/gui.rpy", line 954: expected statement.
+    >>>>>>> main
+                ^
+
+File "game/gui.rpy", line 955: expected statement.
+    =======
+          ^
+
+File "game/gui.rpy", line 956: expected statement.
+    ﻿
+     ^
+
+File "game/gui.rpy", line 1430: expected statement.
+    >>>>>>> main
+                ^
+
+File "game/gui.rpy", line 1431: expected statement.
+    =======
+          ^
+
+File "game/gui.rpy", line 1432: expected statement.
+    ﻿
+     ^
+
+File "game/gui.rpy", line 1906: expected statement.
+    >>>>>>> main
+                ^
+
+File "game/gui.rpy", line 1907: expected statement.
+    =======
+          ^
+
+File "game/gui.rpy", line 1908: expected statement.
+    ﻿
+     ^
+
+File "game/gui.rpy", line 2382: expected statement.
+    >>>>>>> main
+                ^
+
+File "game/options.rpy", line 1: expected statement.
+    <<<<<<< HEAD
+                ^
+
+File "game/options.rpy", line 2: expected statement.
+    <<<<<<< HEAD
+                ^
+
+File "game/options.rpy", line 3: expected statement.
+    <<<<<<< HEAD
+                ^
+
+File "game/options.rpy", line 4: expected statement.
+    <<<<<<< HEAD
+                ^
+
+File "game/options.rpy", line 5: expected statement.
+    ﻿
+     ^
+
+File "game/options.rpy", line 214: expected statement.
+    =======
+          ^
+
+File "game/options.rpy", line 215: expected statement.
+    ﻿
+     ^
+
+File "game/options.rpy", line 424: expected statement.
+    >>>>>>> main
+                ^
+
+File "game/options.rpy", line 425: expected statement.
+    =======
+          ^
+
+File "game/options.rpy", line 426: expected statement.
+    ﻿
+     ^
+
+File "game/options.rpy", line 635: expected statement.
+    >>>>>>> main
+                ^
+
+File "game/options.rpy", line 636: expected statement.
+    =======
+          ^
+
+File "game/options.rpy", line 637: expected statement.
+    ﻿
+     ^
+
+File "game/options.rpy", line 846: expected statement.
+    >>>>>>> main
+                ^
+
+File "game/options.rpy", line 847: expected statement.
+    =======
+          ^
+
+File "game/options.rpy", line 848: expected statement.
+    ﻿
+     ^
+
+File "game/options.rpy", line 1057: expected statement.
+    >>>>>>> main
+                ^
+
+File "game/screens.rpy", line 1: expected statement.
+    <<<<<<< HEAD
+                ^
+
+File "game/screens.rpy", line 2: expected statement.
+    <<<<<<< HEAD
+                ^
+
+File "game/screens.rpy", line 3: expected statement.
+    <<<<<<< HEAD
+                ^
+
+File "game/screens.rpy", line 4: expected statement.
+    <<<<<<< HEAD
+                ^
+
+File "game/screens.rpy", line 5: expected statement.
+    ﻿
+     ^
+
+File "game/screens.rpy", line 1523: expected statement.
+    =======
+          ^
+
+File "game/screens.rpy", line 1524: expected statement.
+    ﻿
+     ^
+
+File "game/screens.rpy", line 3042: expected statement.
+    >>>>>>> main
+                ^
+
+File "game/screens.rpy", line 3043: expected statement.
+    =======
+          ^
+
+File "game/screens.rpy", line 3044: expected statement.
+    ﻿
+     ^
+
+File "game/screens.rpy", line 4562: expected statement.
+    >>>>>>> main
+                ^
+
+File "game/screens.rpy", line 4563: expected statement.
+    =======
+          ^
+
+File "game/screens.rpy", line 4564: expected statement.
+    ﻿
+     ^
+
+File "game/screens.rpy", line 6082: expected statement.
+    >>>>>>> main
+                ^
+
+File "game/screens.rpy", line 6083: expected statement.
+    =======
+          ^
+
+File "game/screens.rpy", line 6084: expected statement.
+    ﻿
+     ^
+
+File "game/screens.rpy", line 7602: expected statement.
+    >>>>>>> main
+                ^
+
+File "game/script.rpy", line 1: expected statement.
+    <<<<<<< HEAD
+                ^
+
+File "game/script.rpy", line 2: expected statement.
+    <<<<<<< HEAD
+                ^
+
+File "game/script.rpy", line 3: expected statement.
+    <<<<<<< HEAD
+                ^
+
+File "game/script.rpy", line 4: expected statement.
+    <<<<<<< HEAD
+                ^
+
+File "game/script.rpy", line 5: expected statement.
+    ﻿   
+        ^
+
+File "game/script.rpy", line 83: expected statement.
+    =======
+          ^
+
+File "game/script.rpy", line 84: expected statement.
+    ﻿   
+        ^
+
+File "game/script.rpy", line 162: expected statement.
+    >>>>>>> main
+                ^
+
+File "game/script.rpy", line 163: expected statement.
+    =======
+          ^
+
+File "game/script.rpy", line 164: expected statement.
+    ﻿   
+        ^
+
+File "game/script.rpy", line 242: expected statement.
+    >>>>>>> main
+                ^
+
+File "game/script.rpy", line 243: expected statement.
+    =======
+          ^
+
+File "game/script.rpy", line 244: expected statement.
+    ﻿   
+        ^
+
+File "game/script.rpy", line 322: expected statement.
+    >>>>>>> main
+                ^
+
+File "game/script.rpy", line 323: expected statement.
+    =======
+          ^
+
+File "game/script.rpy", line 324: expected statement.
+    ﻿   
+        ^
+
+File "game/script.rpy", line 402: expected statement.
+    >>>>>>> main
+                ^
+DPI scale factor: 1.000000
+Interface start took 0.19s
+
+Initializing gl renderer:
+primary display bounds: (0, 0, 1440, 900)
+swap interval: 1 frames
+Windowed mode.
+Vendor: 'Apple'
+Renderer: 'Apple M1'
+Version: '2.1 Metal - 76.1'
+Display Info: None
+Number of texture units: 16
+Using shader environment.
+Using FBO RTT.
+Root FBO is: 0
+FBO Maximum Texture Size: 2048
+Using gl renderer.
+Texture testing:
+- Hardware max texture size: 16384
+Screen sizes: virtual=(1920, 1080) physical=(1338, 753) drawable=(2676, 1506)
+Root FBO is: 0
+FBO Maximum Texture Size: 2048
+Resetting cache.
+Bootstrap to the start of init.init took 68.92s
+Early init took 0.00s
+Loader init took 0.02s
+Loading error handling took 0.01s
+Loading script took 0.38s
+Loading save slot metadata. took 0.00s
+Loading persistent took 0.00s
+
+File "game/gui.rpy", line 1: expected statement.
+    <<<<<<< HEAD
+                ^
+
+File "game/gui.rpy", line 2: expected statement.
+    <<<<<<< HEAD
+                ^
+
+File "game/gui.rpy", line 3: expected statement.
+    <<<<<<< HEAD
+                ^
+
+File "game/gui.rpy", line 4: expected statement.
+    <<<<<<< HEAD
+                ^
+
+File "game/gui.rpy", line 5: expected statement.
+    ﻿
+     ^
+
+File "game/gui.rpy", line 479: expected statement.
+    =======
+          ^
+
+File "game/gui.rpy", line 480: expected statement.
+    ﻿
+     ^
+
+File "game/gui.rpy", line 954: expected statement.
+    >>>>>>> main
+                ^
+
+File "game/gui.rpy", line 955: expected statement.
+    =======
+          ^
+
+File "game/gui.rpy", line 956: expected statement.
+    ﻿
+     ^
+
+File "game/gui.rpy", line 1430: expected statement.
+    >>>>>>> main
+                ^
+
+File "game/gui.rpy", line 1431: expected statement.
+    =======
+          ^
+
+File "game/gui.rpy", line 1432: expected statement.
+    ﻿
+     ^
+
+File "game/gui.rpy", line 1906: expected statement.
+    >>>>>>> main
+                ^
+
+File "game/gui.rpy", line 1907: expected statement.
+    =======
+          ^
+
+File "game/gui.rpy", line 1908: expected statement.
+    ﻿
+     ^
+
+File "game/gui.rpy", line 2382: expected statement.
+    >>>>>>> main
+                ^
+
+File "game/options.rpy", line 1: expected statement.
+    <<<<<<< HEAD
+                ^
+
+File "game/options.rpy", line 2: expected statement.
+    <<<<<<< HEAD
+                ^
+
+File "game/options.rpy", line 3: expected statement.
+    <<<<<<< HEAD
+                ^
+
+File "game/options.rpy", line 4: expected statement.
+    <<<<<<< HEAD
+                ^
+
+File "game/options.rpy", line 5: expected statement.
+    ﻿
+     ^
+
+File "game/options.rpy", line 214: expected statement.
+    =======
+          ^
+
+File "game/options.rpy", line 215: expected statement.
+    ﻿
+     ^
+
+File "game/options.rpy", line 424: expected statement.
+    >>>>>>> main
+                ^
+
+File "game/options.rpy", line 425: expected statement.
+    =======
+          ^
+
+File "game/options.rpy", line 426: expected statement.
+    ﻿
+     ^
+
+File "game/options.rpy", line 635: expected statement.
+    >>>>>>> main
+                ^
+
+File "game/options.rpy", line 636: expected statement.
+    =======
+          ^
+
+File "game/options.rpy", line 637: expected statement.
+    ﻿
+     ^
+
+File "game/options.rpy", line 846: expected statement.
+    >>>>>>> main
+                ^
+
+File "game/options.rpy", line 847: expected statement.
+    =======
+          ^
+
+File "game/options.rpy", line 848: expected statement.
+    ﻿
+     ^
+
+File "game/options.rpy", line 1057: expected statement.
+    >>>>>>> main
+                ^
+
+File "game/screens.rpy", line 1: expected statement.
+    <<<<<<< HEAD
+                ^
+
+File "game/screens.rpy", line 2: expected statement.
+    <<<<<<< HEAD
+                ^
+
+File "game/screens.rpy", line 3: expected statement.
+    <<<<<<< HEAD
+                ^
+
+File "game/screens.rpy", line 4: expected statement.
+    <<<<<<< HEAD
+                ^
+
+File "game/screens.rpy", line 5: expected statement.
+    ﻿
+     ^
+
+File "game/screens.rpy", line 1523: expected statement.
+    =======
+          ^
+
+File "game/screens.rpy", line 1524: expected statement.
+    ﻿
+     ^
+
+File "game/screens.rpy", line 3042: expected statement.
+    >>>>>>> main
+                ^
+
+File "game/screens.rpy", line 3043: expected statement.
+    =======
+          ^
+
+File "game/screens.rpy", line 3044: expected statement.
+    ﻿
+     ^
+
+File "game/screens.rpy", line 4562: expected statement.
+    >>>>>>> main
+                ^
+
+File "game/screens.rpy", line 4563: expected statement.
+    =======
+          ^
+
+File "game/screens.rpy", line 4564: expected statement.
+    ﻿
+     ^
+
+File "game/screens.rpy", line 6082: expected statement.
+    >>>>>>> main
+                ^
+
+File "game/screens.rpy", line 6083: expected statement.
+    =======
+          ^
+
+File "game/screens.rpy", line 6084: expected statement.
+    ﻿
+     ^
+
+File "game/screens.rpy", line 7602: expected statement.
+    >>>>>>> main
+                ^
+
+File "game/script.rpy", line 1: expected statement.
+    <<<<<<< HEAD
+                ^
+
+File "game/script.rpy", line 2: expected statement.
+    <<<<<<< HEAD
+                ^
+
+File "game/script.rpy", line 3: expected statement.
+    <<<<<<< HEAD
+                ^
+
+File "game/script.rpy", line 4: expected statement.
+    <<<<<<< HEAD
+                ^
+
+File "game/script.rpy", line 5: expected statement.
+    ﻿   
+        ^
+
+File "game/script.rpy", line 83: expected statement.
+    =======
+          ^
+
+File "game/script.rpy", line 84: expected statement.
+    ﻿   
+        ^
+
+File "game/script.rpy", line 162: expected statement.
+    >>>>>>> main
+                ^
+
+File "game/script.rpy", line 163: expected statement.
+    =======
+          ^
+
+File "game/script.rpy", line 164: expected statement.
+    ﻿   
+        ^
+
+File "game/script.rpy", line 242: expected statement.
+    >>>>>>> main
+                ^
+
+File "game/script.rpy", line 243: expected statement.
+    =======
+          ^
+
+File "game/script.rpy", line 244: expected statement.
+    ﻿   
+        ^
+
+File "game/script.rpy", line 322: expected statement.
+    >>>>>>> main
+                ^
+
+File "game/script.rpy", line 323: expected statement.
+    =======
+          ^
+
+File "game/script.rpy", line 324: expected statement.
+    ﻿   
+        ^
+
+File "game/script.rpy", line 402: expected statement.
+    >>>>>>> main
+                ^
+DPI scale factor: 1.000000
+Interface start took 0.12s
+
+Initializing gl renderer:
+primary display bounds: (0, 0, 1440, 900)
+swap interval: 1 frames
+Windowed mode.
+Vendor: 'Apple'
+Renderer: 'Apple M1'
+Version: '2.1 Metal - 76.1'
+Display Info: None
+Number of texture units: 16
+Using shader environment.
+Using FBO RTT.
+Root FBO is: 0
+FBO Maximum Texture Size: 2048
+Using gl renderer.
+Texture testing:
+- Hardware max texture size: 16384
+Screen sizes: virtual=(1920, 1080) physical=(1338, 753) drawable=(2676, 1506)
+Root FBO is: 0
+FBO Maximum Texture Size: 2048
+Resetting cache.
+Bootstrap to the start of init.init took 70.08s
+Early init took 0.00s
+Loader init took 0.02s
+Loading error handling took 0.01s
+Loading script took 0.37s
+Loading save slot metadata. took 0.00s
+Loading persistent took 0.00s
+
+File "game/gui.rpy", line 1: expected statement.
+    <<<<<<< HEAD
+                ^
+
+File "game/gui.rpy", line 2: expected statement.
+    <<<<<<< HEAD
+                ^
+
+File "game/gui.rpy", line 3: expected statement.
+    <<<<<<< HEAD
+                ^
+
+File "game/gui.rpy", line 4: expected statement.
+    <<<<<<< HEAD
+                ^
+
+File "game/gui.rpy", line 5: expected statement.
+    ﻿
+     ^
+
+File "game/gui.rpy", line 479: expected statement.
+    =======
+          ^
+
+File "game/gui.rpy", line 480: expected statement.
+    ﻿
+     ^
+
+File "game/gui.rpy", line 954: expected statement.
+    >>>>>>> main
+                ^
+
+File "game/gui.rpy", line 955: expected statement.
+    =======
+          ^
+
+File "game/gui.rpy", line 956: expected statement.
+    ﻿
+     ^
+
+File "game/gui.rpy", line 1430: expected statement.
+    >>>>>>> main
+                ^
+
+File "game/gui.rpy", line 1431: expected statement.
+    =======
+          ^
+
+File "game/gui.rpy", line 1432: expected statement.
+    ﻿
+     ^
+
+File "game/gui.rpy", line 1906: expected statement.
+    >>>>>>> main
+                ^
+
+File "game/gui.rpy", line 1907: expected statement.
+    =======
+          ^
+
+File "game/gui.rpy", line 1908: expected statement.
+    ﻿
+     ^
+
+File "game/gui.rpy", line 2382: expected statement.
+    >>>>>>> main
+                ^
+
+File "game/options.rpy", line 1: expected statement.
+    <<<<<<< HEAD
+                ^
+
+File "game/options.rpy", line 2: expected statement.
+    <<<<<<< HEAD
+                ^
+
+File "game/options.rpy", line 3: expected statement.
+    <<<<<<< HEAD
+                ^
+
+File "game/options.rpy", line 4: expected statement.
+    <<<<<<< HEAD
+                ^
+
+File "game/options.rpy", line 5: expected statement.
+    ﻿
+     ^
+
+File "game/options.rpy", line 214: expected statement.
+    =======
+          ^
+
+File "game/options.rpy", line 215: expected statement.
+    ﻿
+     ^
+
+File "game/options.rpy", line 424: expected statement.
+    >>>>>>> main
+                ^
+
+File "game/options.rpy", line 425: expected statement.
+    =======
+          ^
+
+File "game/options.rpy", line 426: expected statement.
+    ﻿
+     ^
+
+File "game/options.rpy", line 635: expected statement.
+    >>>>>>> main
+                ^
+
+File "game/options.rpy", line 636: expected statement.
+    =======
+          ^
+
+File "game/options.rpy", line 637: expected statement.
+    ﻿
+     ^
+
+File "game/options.rpy", line 846: expected statement.
+    >>>>>>> main
+                ^
+
+File "game/options.rpy", line 847: expected statement.
+    =======
+          ^
+
+File "game/options.rpy", line 848: expected statement.
+    ﻿
+     ^
+
+File "game/options.rpy", line 1057: expected statement.
+    >>>>>>> main
+                ^
+
+File "game/screens.rpy", line 1: expected statement.
+    <<<<<<< HEAD
+                ^
+
+File "game/screens.rpy", line 2: expected statement.
+    <<<<<<< HEAD
+                ^
+
+File "game/screens.rpy", line 3: expected statement.
+    <<<<<<< HEAD
+                ^
+
+File "game/screens.rpy", line 4: expected statement.
+    <<<<<<< HEAD
+                ^
+
+File "game/screens.rpy", line 5: expected statement.
+    ﻿
+     ^
+
+File "game/screens.rpy", line 1523: expected statement.
+    =======
+          ^
+
+File "game/screens.rpy", line 1524: expected statement.
+    ﻿
+     ^
+
+File "game/screens.rpy", line 3042: expected statement.
+    >>>>>>> main
+                ^
+
+File "game/screens.rpy", line 3043: expected statement.
+    =======
+          ^
+
+File "game/screens.rpy", line 3044: expected statement.
+    ﻿
+     ^
+
+File "game/screens.rpy", line 4562: expected statement.
+    >>>>>>> main
+                ^
+
+File "game/screens.rpy", line 4563: expected statement.
+    =======
+          ^
+
+File "game/screens.rpy", line 4564: expected statement.
+    ﻿
+     ^
+
+File "game/screens.rpy", line 6082: expected statement.
+    >>>>>>> main
+                ^
+
+File "game/screens.rpy", line 6083: expected statement.
+    =======
+          ^
+
+File "game/screens.rpy", line 6084: expected statement.
+    ﻿
+     ^
+
+File "game/screens.rpy", line 7602: expected statement.
+    >>>>>>> main
+                ^
+
+File "game/script.rpy", line 1: expected statement.
+    <<<<<<< HEAD
+                ^
+
+File "game/script.rpy", line 2: expected statement.
+    <<<<<<< HEAD
+                ^
+
+File "game/script.rpy", line 3: expected statement.
+    <<<<<<< HEAD
+                ^
+
+File "game/script.rpy", line 4: expected statement.
+    <<<<<<< HEAD
+                ^
+
+File "game/script.rpy", line 5: expected statement.
+    ﻿   
+        ^
+
+File "game/script.rpy", line 83: expected statement.
+    =======
+          ^
+
+File "game/script.rpy", line 84: expected statement.
+    ﻿   
+        ^
+
+File "game/script.rpy", line 162: expected statement.
+    >>>>>>> main
+                ^
+
+File "game/script.rpy", line 163: expected statement.
+    =======
+          ^
+
+File "game/script.rpy", line 164: expected statement.
+    ﻿   
+        ^
+
+File "game/script.rpy", line 242: expected statement.
+    >>>>>>> main
+                ^
+
+File "game/script.rpy", line 243: expected statement.
+    =======
+          ^
+
+File "game/script.rpy", line 244: expected statement.
+    ﻿   
+        ^
+
+File "game/script.rpy", line 322: expected statement.
+    >>>>>>> main
+                ^
+
+File "game/script.rpy", line 323: expected statement.
+    =======
+          ^
+
+File "game/script.rpy", line 324: expected statement.
+    ﻿   
+        ^
+
+File "game/script.rpy", line 402: expected statement.
+    >>>>>>> main
+                ^
+DPI scale factor: 1.000000
+Interface start took 0.13s
+
+Initializing gl renderer:
+primary display bounds: (0, 0, 1440, 900)
+swap interval: 1 frames
+Windowed mode.
+Vendor: 'Apple'
+Renderer: 'Apple M1'
+Version: '2.1 Metal - 76.1'
+Display Info: None
+Number of texture units: 16
+Using shader environment.
+Using FBO RTT.
+Root FBO is: 0
+FBO Maximum Texture Size: 2048
+Using gl renderer.
+Texture testing:
+- Hardware max texture size: 16384
+Screen sizes: virtual=(1920, 1080) physical=(1338, 753) drawable=(2676, 1506)
+Root FBO is: 0
+FBO Maximum Texture Size: 2048
+Resetting cache.
+Bootstrap to the start of init.init took 71.19s
+Early init took 0.00s
+Loader init took 0.01s
+Loading error handling took 0.01s
+Loading script took 0.37s
+Loading save slot metadata. took 0.00s
+Loading persistent took 0.00s
+
+File "game/gui.rpy", line 1: expected statement.
+    <<<<<<< HEAD
+                ^
+
+File "game/gui.rpy", line 2: expected statement.
+    <<<<<<< HEAD
+                ^
+
+File "game/gui.rpy", line 3: expected statement.
+    <<<<<<< HEAD
+                ^
+
+File "game/gui.rpy", line 4: expected statement.
+    <<<<<<< HEAD
+                ^
+
+File "game/gui.rpy", line 5: expected statement.
+    ﻿
+     ^
+
+File "game/gui.rpy", line 479: expected statement.
+    =======
+          ^
+
+File "game/gui.rpy", line 480: expected statement.
+    ﻿
+     ^
+
+File "game/gui.rpy", line 954: expected statement.
+    >>>>>>> main
+                ^
+
+File "game/gui.rpy", line 955: expected statement.
+    =======
+          ^
+
+File "game/gui.rpy", line 956: expected statement.
+    ﻿
+     ^
+
+File "game/gui.rpy", line 1430: expected statement.
+    >>>>>>> main
+                ^
+
+File "game/gui.rpy", line 1431: expected statement.
+    =======
+          ^
+
+File "game/gui.rpy", line 1432: expected statement.
+    ﻿
+     ^
+
+File "game/gui.rpy", line 1906: expected statement.
+    >>>>>>> main
+                ^
+
+File "game/gui.rpy", line 1907: expected statement.
+    =======
+          ^
+
+File "game/gui.rpy", line 1908: expected statement.
+    ﻿
+     ^
+
+File "game/gui.rpy", line 2382: expected statement.
+    >>>>>>> main
+                ^
+
+File "game/options.rpy", line 1: expected statement.
+    <<<<<<< HEAD
+                ^
+
+File "game/options.rpy", line 2: expected statement.
+    <<<<<<< HEAD
+                ^
+
+File "game/options.rpy", line 3: expected statement.
+    <<<<<<< HEAD
+                ^
+
+File "game/options.rpy", line 4: expected statement.
+    <<<<<<< HEAD
+                ^
+
+File "game/options.rpy", line 5: expected statement.
+    ﻿
+     ^
+
+File "game/options.rpy", line 214: expected statement.
+    =======
+          ^
+
+File "game/options.rpy", line 215: expected statement.
+    ﻿
+     ^
+
+File "game/options.rpy", line 424: expected statement.
+    >>>>>>> main
+                ^
+
+File "game/options.rpy", line 425: expected statement.
+    =======
+          ^
+
+File "game/options.rpy", line 426: expected statement.
+    ﻿
+     ^
+
+File "game/options.rpy", line 635: expected statement.
+    >>>>>>> main
+                ^
+
+File "game/options.rpy", line 636: expected statement.
+    =======
+          ^
+
+File "game/options.rpy", line 637: expected statement.
+    ﻿
+     ^
+
+File "game/options.rpy", line 846: expected statement.
+    >>>>>>> main
+                ^
+
+File "game/options.rpy", line 847: expected statement.
+    =======
+          ^
+
+File "game/options.rpy", line 848: expected statement.
+    ﻿
+     ^
+
+File "game/options.rpy", line 1057: expected statement.
+    >>>>>>> main
+                ^
+
+File "game/screens.rpy", line 1: expected statement.
+    <<<<<<< HEAD
+                ^
+
+File "game/screens.rpy", line 2: expected statement.
+    <<<<<<< HEAD
+                ^
+
+File "game/screens.rpy", line 3: expected statement.
+    <<<<<<< HEAD
+                ^
+
+File "game/screens.rpy", line 4: expected statement.
+    <<<<<<< HEAD
+                ^
+
+File "game/screens.rpy", line 5: expected statement.
+    ﻿
+     ^
+
+File "game/screens.rpy", line 1523: expected statement.
+    =======
+          ^
+
+File "game/screens.rpy", line 1524: expected statement.
+    ﻿
+     ^
+
+File "game/screens.rpy", line 3042: expected statement.
+    >>>>>>> main
+                ^
+
+File "game/screens.rpy", line 3043: expected statement.
+    =======
+          ^
+
+File "game/screens.rpy", line 3044: expected statement.
+    ﻿
+     ^
+
+File "game/screens.rpy", line 4562: expected statement.
+    >>>>>>> main
+                ^
+
+File "game/screens.rpy", line 4563: expected statement.
+    =======
+          ^
+
+File "game/screens.rpy", line 4564: expected statement.
+    ﻿
+     ^
+
+File "game/screens.rpy", line 6082: expected statement.
+    >>>>>>> main
+                ^
+
+File "game/screens.rpy", line 6083: expected statement.
+    =======
+          ^
+
+File "game/screens.rpy", line 6084: expected statement.
+    ﻿
+     ^
+
+File "game/screens.rpy", line 7602: expected statement.
+    >>>>>>> main
+                ^
+
+File "game/script.rpy", line 1: expected statement.
+    <<<<<<< HEAD
+                ^
+
+File "game/script.rpy", line 2: expected statement.
+    <<<<<<< HEAD
+                ^
+
+File "game/script.rpy", line 3: expected statement.
+    <<<<<<< HEAD
+                ^
+
+File "game/script.rpy", line 4: expected statement.
+    <<<<<<< HEAD
+                ^
+
+File "game/script.rpy", line 5: expected statement.
+    ﻿   
+        ^
+
+File "game/script.rpy", line 83: expected statement.
+    =======
+          ^
+
+File "game/script.rpy", line 84: expected statement.
+    ﻿   
+        ^
+
+File "game/script.rpy", line 162: expected statement.
+    >>>>>>> main
+                ^
+
+File "game/script.rpy", line 163: expected statement.
+    =======
+          ^
+
+File "game/script.rpy", line 164: expected statement.
+    ﻿   
+        ^
+
+File "game/script.rpy", line 242: expected statement.
+    >>>>>>> main
+                ^
+
+File "game/script.rpy", line 243: expected statement.
+    =======
+          ^
+
+File "game/script.rpy", line 244: expected statement.
+    ﻿   
+        ^
+
+File "game/script.rpy", line 322: expected statement.
+    >>>>>>> main
+                ^
+
+File "game/script.rpy", line 323: expected statement.
+    =======
+          ^
+
+File "game/script.rpy", line 324: expected statement.
+    ﻿   
+        ^
+
+File "game/script.rpy", line 402: expected statement.
+    >>>>>>> main
+                ^
+DPI scale factor: 1.000000
+Interface start took 0.13s
+
+Initializing gl renderer:
+primary display bounds: (0, 0, 1440, 900)
+swap interval: 1 frames
+Windowed mode.
+Vendor: 'Apple'
+Renderer: 'Apple M1'
+Version: '2.1 Metal - 76.1'
+Display Info: None
+Number of texture units: 16
+Using shader environment.
+Using FBO RTT.
+Root FBO is: 0
+FBO Maximum Texture Size: 2048
+Using gl renderer.
+Texture testing:
+- Hardware max texture size: 16384
+Screen sizes: virtual=(1920, 1080) physical=(1338, 753) drawable=(2676, 1506)
+Root FBO is: 0
+FBO Maximum Texture Size: 2048

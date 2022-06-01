@@ -1,8 +1,8 @@
 init python:
     import time
-    #import gspread
-    #from gspread.foauth2client.service_account import ServiceAccountCredentials
-    #from tabulate import tabulate
+    import gspread
+    from gspread.foauth2client.service_account import ServiceAccountCredentials
+    from tabulate import tabulate
 
     hintUsed = 0
 
@@ -766,9 +766,15 @@ label start:
         mc "What just happened?"
         mc "Where am I?"
 
+        "WE HAVE JUST RECEIVED WORD THAT A HACKER HAS TRAPPED YOU INSIDE THE GAME"
+        "YOUR REAL BODY IS CURRENTLY IN A COMA STATE."
+        "BEAT THE GAME AND CURE THE TREE AND WE MIGHT BE ABLE TO BRING YOU BACK"
+        "The game has a 30 minute time limit. Fail to do so in that time and..."
+
         company "WE HAVE JUST RECIEVED WORD THAT A HACKER HAS TRAPPED YOU INSIDE THE GAME, TRANSPORTING YOUR CONCIOUSNESS INTO IT."
         company "Beating the game by curing the tree will end the game, allowing you to return back to your real body."
         company "You were never intended to stay in the game longer than 30 minutes... Fail to complete the game within that time and..."
+
         with vpunch
         with hpunch
         "the game will reset..." 
@@ -977,7 +983,7 @@ label act2puzzle2:
     g "Hello adventurer! It appears that you've gotten through the cave."
     g "If you're here you must be looking for (ingredient name)."
     g "One of the past village chiefs has locked it inside his statue and put a series of puzzles in place to make sure it wouldn't fall into the wrong hands."
-    g "If you wish to recieve the ingredient you must solve the puzzles he has laid out."
+    g "If you wish to receive the ingredient you must solve the puzzles he has laid out."
     g "Start by checking out the statue on the right."
     g "I wish you the best of luck."
     hide guard default
@@ -1240,7 +1246,7 @@ label gotSpellWrong:
 label gotCorrectPlant:
     show guard default at right
     g "Good job adventurer!"
-    g "You have recieved the correct plant."
+    g "You have received the correct plant."
     g "Huxtous is in fact the ingredient you have been searching for."
     g "I wish you the best of luck on the rest of your journey."
     hide guard default
@@ -1273,7 +1279,7 @@ label act3:
     "And why is it so messy?"
     with hpunch
     v "W H O. G O E S. T H E R E."
-    v "You must be here to recieve a special item, but if you wish to do so..."
+    v "You must be here to receive a special item, but if you wish to do so..."
     with vpunch
     v "You must prove that you are worthy enough."
     v "I have 3 tasks for you."
@@ -1333,9 +1339,21 @@ label act3puzzle1complete:
     v "Good job adventurer."
     v "Onto the next one."
     v "They'll only get harder from here."
+
+label act3puzzle2:
+    scene act1puzzle2room with fade
+    v "Now for your second task."
+    v "I want you to answer a riddle over there on the wall."
+    v "Answer using the blocks scattered around here."
+    v "And put them in the slots on the wall."
+    call screen puzzle2blocks()
+#screen puzzle2blocks():
+    #draggroup:
+
     jump act3puzzle2
 
 label act3puzzle2complete:
+
 
         
 label torchinstructions:

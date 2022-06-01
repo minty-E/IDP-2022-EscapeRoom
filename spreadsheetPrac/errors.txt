@@ -2,9 +2,277 @@
 errors listed below, and try again.
 
 
-File "game/script.rpy", line 93: expected statement.
-    spreadsheetTest()
-                     ^
+File "game/gui.rpy", line 1: expected statement.
+    <<<<<<< HEAD
+                ^
+
+File "game/gui.rpy", line 2: expected statement.
+    <<<<<<< HEAD
+                ^
+
+File "game/gui.rpy", line 3: expected statement.
+    <<<<<<< HEAD
+                ^
+
+File "game/gui.rpy", line 4: expected statement.
+    <<<<<<< HEAD
+                ^
+
+File "game/gui.rpy", line 5: expected statement.
+    ﻿
+     ^
+
+File "game/gui.rpy", line 479: expected statement.
+    =======
+          ^
+
+File "game/gui.rpy", line 480: expected statement.
+    ﻿
+     ^
+
+File "game/gui.rpy", line 954: expected statement.
+    >>>>>>> main
+                ^
+
+File "game/gui.rpy", line 955: expected statement.
+    =======
+          ^
+
+File "game/gui.rpy", line 956: expected statement.
+    ﻿
+     ^
+
+File "game/gui.rpy", line 1430: expected statement.
+    >>>>>>> main
+                ^
+
+File "game/gui.rpy", line 1431: expected statement.
+    =======
+          ^
+
+File "game/gui.rpy", line 1432: expected statement.
+    ﻿
+     ^
+
+File "game/gui.rpy", line 1906: expected statement.
+    >>>>>>> main
+                ^
+
+File "game/gui.rpy", line 1907: expected statement.
+    =======
+          ^
+
+File "game/gui.rpy", line 1908: expected statement.
+    ﻿
+     ^
+
+File "game/gui.rpy", line 2382: expected statement.
+    >>>>>>> main
+                ^
+
+File "game/options.rpy", line 1: expected statement.
+    <<<<<<< HEAD
+                ^
+
+File "game/options.rpy", line 2: expected statement.
+    <<<<<<< HEAD
+                ^
+
+File "game/options.rpy", line 3: expected statement.
+    <<<<<<< HEAD
+                ^
+
+File "game/options.rpy", line 4: expected statement.
+    <<<<<<< HEAD
+                ^
+
+File "game/options.rpy", line 5: expected statement.
+    ﻿
+     ^
+
+File "game/options.rpy", line 214: expected statement.
+    =======
+          ^
+
+File "game/options.rpy", line 215: expected statement.
+    ﻿
+     ^
+
+File "game/options.rpy", line 424: expected statement.
+    >>>>>>> main
+                ^
+
+File "game/options.rpy", line 425: expected statement.
+    =======
+          ^
+
+File "game/options.rpy", line 426: expected statement.
+    ﻿
+     ^
+
+File "game/options.rpy", line 635: expected statement.
+    >>>>>>> main
+                ^
+
+File "game/options.rpy", line 636: expected statement.
+    =======
+          ^
+
+File "game/options.rpy", line 637: expected statement.
+    ﻿
+     ^
+
+File "game/options.rpy", line 846: expected statement.
+    >>>>>>> main
+                ^
+
+File "game/options.rpy", line 847: expected statement.
+    =======
+          ^
+
+File "game/options.rpy", line 848: expected statement.
+    ﻿
+     ^
+
+File "game/options.rpy", line 1057: expected statement.
+    >>>>>>> main
+                ^
+
+File "game/screens.rpy", line 1: expected statement.
+    <<<<<<< HEAD
+                ^
+
+File "game/screens.rpy", line 2: expected statement.
+    <<<<<<< HEAD
+                ^
+
+File "game/screens.rpy", line 3: expected statement.
+    <<<<<<< HEAD
+                ^
+
+File "game/screens.rpy", line 4: expected statement.
+    <<<<<<< HEAD
+                ^
+
+File "game/screens.rpy", line 5: expected statement.
+    ﻿
+     ^
+
+File "game/screens.rpy", line 1523: expected statement.
+    =======
+          ^
+
+File "game/screens.rpy", line 1524: expected statement.
+    ﻿
+     ^
+
+File "game/screens.rpy", line 3042: expected statement.
+    >>>>>>> main
+                ^
+
+File "game/screens.rpy", line 3043: expected statement.
+    =======
+          ^
+
+File "game/screens.rpy", line 3044: expected statement.
+    ﻿
+     ^
+
+File "game/screens.rpy", line 4562: expected statement.
+    >>>>>>> main
+                ^
+
+File "game/screens.rpy", line 4563: expected statement.
+    =======
+          ^
+
+File "game/screens.rpy", line 4564: expected statement.
+    ﻿
+     ^
+
+File "game/screens.rpy", line 6082: expected statement.
+    >>>>>>> main
+                ^
+
+File "game/screens.rpy", line 6083: expected statement.
+    =======
+          ^
+
+File "game/screens.rpy", line 6084: expected statement.
+    ﻿
+     ^
+
+File "game/screens.rpy", line 7602: expected statement.
+    >>>>>>> main
+                ^
+
+File "game/script.rpy", line 1: expected statement.
+    <<<<<<< HEAD
+                ^
+
+File "game/script.rpy", line 2: expected statement.
+    <<<<<<< HEAD
+                ^
+
+File "game/script.rpy", line 3: expected statement.
+    <<<<<<< HEAD
+                ^
+
+File "game/script.rpy", line 4: expected statement.
+    <<<<<<< HEAD
+                ^
+
+File "game/script.rpy", line 5: expected statement.
+    ﻿   
+        ^
+
+File "game/script.rpy", line 83: expected statement.
+    =======
+          ^
+
+File "game/script.rpy", line 84: expected statement.
+    ﻿   
+        ^
+
+File "game/script.rpy", line 162: expected statement.
+    >>>>>>> main
+                ^
+
+File "game/script.rpy", line 163: expected statement.
+    =======
+          ^
+
+File "game/script.rpy", line 164: expected statement.
+    ﻿   
+        ^
+
+File "game/script.rpy", line 242: expected statement.
+    >>>>>>> main
+                ^
+
+File "game/script.rpy", line 243: expected statement.
+    =======
+          ^
+
+File "game/script.rpy", line 244: expected statement.
+    ﻿   
+        ^
+
+File "game/script.rpy", line 322: expected statement.
+    >>>>>>> main
+                ^
+
+File "game/script.rpy", line 323: expected statement.
+    =======
+          ^
+
+File "game/script.rpy", line 324: expected statement.
+    ﻿   
+        ^
+
+File "game/script.rpy", line 402: expected statement.
+    >>>>>>> main
+                ^
 
 Ren'Py Version: Ren'Py 7.4.11.2266
-Thu May 26 11:44:40 2022
+Sat May 28 16:25:37 2022

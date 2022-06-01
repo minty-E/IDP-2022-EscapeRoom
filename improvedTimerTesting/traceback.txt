@@ -1,0 +1,22 @@
+﻿I'm sorry, but an uncaught exception occurred.
+
+While running game code:
+  File "game/script.rpy", line 50, in script
+    jump prologue2
+ScriptError: could not find label 'prologue2'.
+
+-- Full Traceback ------------------------------------------------------------
+
+Full traceback:
+  File "game/script.rpy", line 50, in script
+    jump prologue2
+  File "/Applications/renpy-7.4.11-sdk/renpy/ast.py", line 1757, in execute
+    rv = renpy.game.script.lookup(target)
+  File "/Applications/renpy-7.4.11-sdk/renpy/script.py", line 918, in lookup
+    raise ScriptError("could not find label '%s'." % str(original))
+ScriptError: could not find label 'prologue2'.
+
+Darwin-21.1.0-x86_64-i386-64bit
+Ren'Py 7.4.11.2266
+improvedTimerTesting 1.0
+Tue May 31 22:36:58 2022

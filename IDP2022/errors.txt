@@ -2,9 +2,18 @@
 errors listed below, and try again.
 
 
+
+File "game/script.rpy", line 1104: screen expects a non-empty block.
+    screen puzzle2blocks():
+                           ^
+
+Ren'Py Version: Ren'Py 7.4.11.2266
+Sat May 28 16:26:13 2022
+
 File "game/endgame.rpy", line 237: showif expects a non-empty block.
     showif spell == 3 and bookpage != 2:
                                         ^
 
 Ren'Py Version: Ren'Py 7.4.11.2266
 Tue May 31 23:27:17 2022
+
