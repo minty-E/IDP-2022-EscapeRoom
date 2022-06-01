@@ -1,0 +1,22 @@
+﻿I'm sorry, but an uncaught exception occurred.
+
+While running game code:
+  File "game/script.rpy", line 1263, in script
+    add "/endgame/finalimage.png"
+Exception: Sayer 'add' is not defined.
+
+-- Full Traceback ------------------------------------------------------------
+
+Full traceback:
+  File "game/script.rpy", line 1263, in script
+    add "/endgame/finalimage.png"
+  File "C:\Users\zerog\Downloads\renpy-7.4.11-sdk/renpy/ast.py", line 681, in execute
+    who = eval_who(self.who, self.who_fast)
+  File "C:\Users\zerog\Downloads\renpy-7.4.11-sdk/renpy/ast.py", line 574, in eval_who
+    raise Exception("Sayer '%s' is not defined." % who)
+Exception: Sayer 'add' is not defined.
+
+Windows-10-10.0.22000
+Ren'Py 7.4.11.2266
+VR Game Beta Test 1.0
+Wed Jun  1 11:29:00 2022
