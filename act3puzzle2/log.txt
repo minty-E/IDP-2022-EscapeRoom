@@ -1,0 +1,3864 @@
+Mon May 30 04:31:40 2022
+Windows-10-10.0.22000
+Ren'Py 7.4.11.2266
+ 
+
+Bootstrap to the start of init.init took 0.07s
+Early init took 0.01s
+Loader init took 0.01s
+Loading error handling took 0.02s
+Loading script took 0.23s
+Loading save slot metadata. took 0.01s
+Loading persistent took 0.00s
+Importing _renpysteam: ImportError('No module named _renpysteam',)
+Running init code took 0.05s
+Loading analysis data took 0.01s
+Analyze and compile ATL took 0.00s
+Index archives took 0.00s
+Backing up script files to 'C:\\Users\\zerog\\AppData\\Roaming/RenPy/backups\\act3puzzle2':
+Dump and make backups. took 0.06s
+Cleaning cache took 0.00s
+Making clean stores took 0.00s
+Initial gc. took 0.02s
+DPI scale factor: 1.500000
+nvdrs: Loaded, about to disable thread optimizations.
+nvdrs: Disabled thread optimizations.
+Creating interface object took 0.18s
+Cleaning stores took 0.00s
+Init translation took 0.03s
+Build styles took 0.00s
+Load screen analysis took 0.00s
+Analyze screens took 0.01s
+Save screen analysis took 0.02s
+Prepare screens took 0.05s
+Save pyanalysis. took 0.03s
+Save bytecode. took 0.02s
+Running _start took 0.00s
+Performance test:
+Interface start took 0.08s
+
+Initializing gl2 renderer:
+primary display bounds: (0, 0, 1920, 1080)
+swap interval: 1 frames
+Windowed mode.
+Vendor: 'NVIDIA Corporation'
+Renderer: 'NVIDIA GeForce RTX 2060 with Max-Q Design/PCIe/SSE2'
+Version: '4.6.0 NVIDIA 496.49'
+Display Info: None
+Screen sizes: virtual=(1920, 1080) physical=(1739, 978) drawable=(1739, 978)
+Maximum texture size: 4096x4096
+
+Full traceback:
+  File "game/script.rpy", line 45, in script
+    call screen blocks()
+  File "C:\Users\zerog\Downloads\renpy-7.4.11-sdk/renpy/ast.py", line 2015, in execute
+    self.call("execute")
+  File "C:\Users\zerog\Downloads\renpy-7.4.11-sdk/renpy/ast.py", line 2003, in call
+    return renpy.statements.call(method, parsed, *args, **kwargs)
+  File "C:\Users\zerog\Downloads\renpy-7.4.11-sdk/renpy/statements.py", line 278, in call
+    return method(parsed, *args, **kwargs)
+  File "renpy/common/000statements.rpy", line 569, in execute_call_screen
+    store._return = renpy.call_screen(name, *args, **kwargs)
+  File "C:\Users\zerog\Downloads\renpy-7.4.11-sdk/renpy/exports.py", line 3136, in call_screen
+    rv = renpy.ui.interact(mouse="screen", type="screen", roll_forward=roll_forward)
+  File "C:\Users\zerog\Downloads\renpy-7.4.11-sdk/renpy/ui.py", line 298, in interact
+    rv = renpy.game.interface.interact(roll_forward=roll_forward, **kwargs)
+  File "C:\Users\zerog\Downloads\renpy-7.4.11-sdk/renpy/display/core.py", line 3325, in interact
+    repeat, rv = self.interact_core(preloads=preloads, trans_pause=trans_pause, pause=pause, pause_start=pause_start, **kwargs)
+  File "C:\Users\zerog\Downloads\renpy-7.4.11-sdk/renpy/display/core.py", line 3737, in interact_core
+    root_widget.visit_all(lambda i : i.per_interact())
+  File "C:\Users\zerog\Downloads\renpy-7.4.11-sdk/renpy/display/core.py", line 568, in visit_all
+    d.visit_all(callback, seen)
+  File "C:\Users\zerog\Downloads\renpy-7.4.11-sdk/renpy/display/core.py", line 568, in visit_all
+    d.visit_all(callback, seen)
+  File "C:\Users\zerog\Downloads\renpy-7.4.11-sdk/renpy/display/core.py", line 568, in visit_all
+    d.visit_all(callback, seen)
+  File "C:\Users\zerog\Downloads\renpy-7.4.11-sdk/renpy/display/screen.py", line 441, in visit_all
+    self.child.visit_all(callback, seen=None)
+  File "C:\Users\zerog\Downloads\renpy-7.4.11-sdk/renpy/display/core.py", line 568, in visit_all
+    d.visit_all(callback, seen)
+  File "C:\Users\zerog\Downloads\renpy-7.4.11-sdk/renpy/display/core.py", line 568, in visit_all
+    d.visit_all(callback, seen)
+  File "C:\Users\zerog\Downloads\renpy-7.4.11-sdk/renpy/display/core.py", line 570, in visit_all
+    callback(self)
+  File "C:\Users\zerog\Downloads\renpy-7.4.11-sdk/renpy/display/core.py", line 3737, in <lambda>
+    root_widget.visit_all(lambda i : i.per_interact())
+  File "C:\Users\zerog\Downloads\renpy-7.4.11-sdk/renpy/display/behavior.py", line 878, in per_interact
+    if self.is_selected():
+  File "C:\Users\zerog\Downloads\renpy-7.4.11-sdk/renpy/display/behavior.py", line 866, in is_selected
+    return is_selected(self.action)
+  File "C:\Users\zerog\Downloads\renpy-7.4.11-sdk/renpy/display/behavior.py", line 398, in is_selected
+    return any(is_selected(i) for i in action)
+  File "C:\Users\zerog\Downloads\renpy-7.4.11-sdk/renpy/display/behavior.py", line 398, in <genexpr>
+    return any(is_selected(i) for i in action)
+  File "C:\Users\zerog\Downloads\renpy-7.4.11-sdk/renpy/display/behavior.py", line 401, in is_selected
+    return action.get_selected()
+  File "renpy/common/00action_data.rpy", line 79, in get_selected
+    return __get_field(self.object, self.field, self.kind) == self.value
+  File "renpy/common/00action_data.rpy", line 39, in _m1_00action_data__get_field
+    raise NameError("The {} {} does not exist.".format(kind, name))
+NameError: The variable 2taken does not exist.
+
+While running game code:
+  File "game/script.rpy", line 45, in script
+    call screen blocks()
+  File "renpy/common/000statements.rpy", line 569, in execute_call_screen
+    store._return = renpy.call_screen(name, *args, **kwargs)
+  File "renpy/common/00action_data.rpy", line 79, in get_selected
+    return __get_field(self.object, self.field, self.kind) == self.value
+  File "renpy/common/00action_data.rpy", line 39, in _m1_00action_data__get_field
+    raise NameError("The {} {} does not exist.".format(kind, name))
+NameError: The variable 2taken does not exist.
+Resetting cache.
+Bootstrap to the start of init.init took 24.26s
+Early init took 0.00s
+Loader init took 0.01s
+Loading error handling took 0.02s
+Loading script took 0.12s
+Loading save slot metadata. took 0.01s
+Loading persistent took 0.00s
+Importing _renpysteam: ImportError('No module named _renpysteam',)
+Running init code took 0.03s
+Loading analysis data took 0.01s
+Analyze and compile ATL took 0.00s
+Index archives took 0.00s
+Backing up script files to 'C:\\Users\\zerog\\AppData\\Roaming/RenPy/backups\\act3puzzle2':
+Dump and make backups. took 0.05s
+Cleaning cache took 0.00s
+Making clean stores took 0.00s
+Initial gc. took 0.02s
+DPI scale factor: 1.500000
+nvdrs: Loaded, about to disable thread optimizations.
+nvdrs: Disabled thread optimizations.
+Creating interface object took 0.15s
+Cleaning stores took 0.00s
+Init translation took 0.03s
+Build styles took 0.00s
+Load screen analysis took 0.00s
+Analyze screens took 0.01s
+Save screen analysis took 0.02s
+Prepare screens took 0.05s
+Save pyanalysis. took 0.02s
+Save bytecode. took 0.01s
+Running _start took 0.00s
+Performance test:
+Interface start took 0.04s
+
+Initializing gl2 renderer:
+primary display bounds: (0, 0, 1920, 1080)
+swap interval: 1 frames
+Windowed mode.
+Vendor: 'NVIDIA Corporation'
+Renderer: 'NVIDIA GeForce RTX 2060 with Max-Q Design/PCIe/SSE2'
+Version: '4.6.0 NVIDIA 496.49'
+Display Info: None
+Screen sizes: virtual=(1920, 1080) physical=(1739, 978) drawable=(1739, 978)
+Maximum texture size: 4096x4096
+Resetting cache.
+Bootstrap to the start of init.init took 44.92s
+Early init took 0.00s
+Loader init took 0.01s
+Loading error handling took 0.01s
+Loading script took 0.08s
+Loading save slot metadata. took 0.01s
+Loading persistent took 0.00s
+Importing _renpysteam: ImportError('No module named _renpysteam',)
+Running init code took 0.03s
+Loading analysis data took 0.02s
+Analyze and compile ATL took 0.00s
+Index archives took 0.00s
+Dump and make backups. took 0.05s
+Cleaning cache took 0.00s
+Making clean stores took 0.00s
+Initial gc. took 0.02s
+DPI scale factor: 1.500000
+nvdrs: Loaded, about to disable thread optimizations.
+nvdrs: Disabled thread optimizations.
+Creating interface object took 0.16s
+Cleaning stores took 0.00s
+Init translation took 0.03s
+Build styles took 0.00s
+Load screen analysis took 0.02s
+Analyze screens took 0.00s
+Save screen analysis took 0.00s
+Prepare screens took 0.05s
+Save pyanalysis. took 0.00s
+Save bytecode. took 0.00s
+Running _start took 0.00s
+Performance test:
+Interface start took 0.04s
+
+Initializing gl2 renderer:
+primary display bounds: (0, 0, 1920, 1080)
+swap interval: 1 frames
+Windowed mode.
+Vendor: 'NVIDIA Corporation'
+Renderer: 'NVIDIA GeForce RTX 2060 with Max-Q Design/PCIe/SSE2'
+Version: '4.6.0 NVIDIA 496.49'
+Display Info: None
+Screen sizes: virtual=(1920, 1080) physical=(1739, 978) drawable=(1739, 978)
+Maximum texture size: 4096x4096
+Resetting cache.
+Bootstrap to the start of init.init took 48.14s
+Early init took 0.00s
+Loader init took 0.01s
+Loading error handling took 0.01s
+Loading script took 0.09s
+Loading save slot metadata. took 0.01s
+Loading persistent took 0.00s
+Importing _renpysteam: ImportError('No module named _renpysteam',)
+Running init code took 0.03s
+Loading analysis data took 0.02s
+Analyze and compile ATL took 0.00s
+Index archives took 0.00s
+Dump and make backups. took 0.05s
+Cleaning cache took 0.00s
+Making clean stores took 0.00s
+Initial gc. took 0.03s
+DPI scale factor: 1.500000
+nvdrs: Loaded, about to disable thread optimizations.
+nvdrs: Disabled thread optimizations.
+Creating interface object took 0.16s
+Cleaning stores took 0.00s
+Init translation took 0.03s
+Build styles took 0.00s
+Load screen analysis took 0.02s
+Analyze screens took 0.00s
+Save screen analysis took 0.00s
+Prepare screens took 0.05s
+Save pyanalysis. took 0.00s
+Save bytecode. took 0.00s
+Running _start took 0.00s
+Performance test:
+Interface start took 0.04s
+
+Initializing gl2 renderer:
+primary display bounds: (0, 0, 1920, 1080)
+swap interval: 1 frames
+Windowed mode.
+Vendor: 'NVIDIA Corporation'
+Renderer: 'NVIDIA GeForce RTX 2060 with Max-Q Design/PCIe/SSE2'
+Version: '4.6.0 NVIDIA 496.49'
+Display Info: None
+Screen sizes: virtual=(1920, 1080) physical=(1739, 978) drawable=(1739, 978)
+Maximum texture size: 4096x4096
+Resetting cache.
+Bootstrap to the start of init.init took 66.49s
+Early init took 0.00s
+Loader init took 0.01s
+Loading error handling took 0.01s
+Loading script took 0.10s
+Loading save slot metadata. took 0.01s
+Loading persistent took 0.00s
+Importing _renpysteam: ImportError('No module named _renpysteam',)
+Running init code took 0.04s
+Loading analysis data took 0.01s
+Analyze and compile ATL took 0.00s
+Index archives took 0.00s
+Backing up script files to 'C:\\Users\\zerog\\AppData\\Roaming/RenPy/backups\\act3puzzle2':
+Dump and make backups. took 0.05s
+Cleaning cache took 0.00s
+Making clean stores took 0.00s
+Initial gc. took 0.03s
+DPI scale factor: 1.500000
+nvdrs: Loaded, about to disable thread optimizations.
+nvdrs: Disabled thread optimizations.
+Creating interface object took 0.15s
+Cleaning stores took 0.00s
+Init translation took 0.03s
+Build styles took 0.00s
+Load screen analysis took 0.00s
+Analyze screens took 0.01s
+Save screen analysis took 0.02s
+Prepare screens took 0.05s
+Save pyanalysis. took 0.03s
+Save bytecode. took 0.01s
+Running _start took 0.00s
+Performance test:
+Interface start took 0.04s
+
+Initializing gl2 renderer:
+primary display bounds: (0, 0, 1920, 1080)
+swap interval: 1 frames
+Windowed mode.
+Vendor: 'NVIDIA Corporation'
+Renderer: 'NVIDIA GeForce RTX 2060 with Max-Q Design/PCIe/SSE2'
+Version: '4.6.0 NVIDIA 496.49'
+Display Info: None
+Screen sizes: virtual=(1920, 1080) physical=(1739, 978) drawable=(1739, 978)
+Maximum texture size: 4096x4096
+Resetting cache.
+Bootstrap to the start of init.init took 87.91s
+Early init took 0.00s
+Loader init took 0.02s
+Loading error handling took 0.01s
+Loading script took 0.10s
+Loading save slot metadata. took 0.01s
+Loading persistent took 0.00s
+Importing _renpysteam: ImportError('No module named _renpysteam',)
+Running init code took 0.04s
+Loading analysis data took 0.01s
+Analyze and compile ATL took 0.00s
+Index archives took 0.00s
+Backing up script files to 'C:\\Users\\zerog\\AppData\\Roaming/RenPy/backups\\act3puzzle2':
+Dump and make backups. took 0.05s
+Cleaning cache took 0.00s
+Making clean stores took 0.00s
+Initial gc. took 0.03s
+DPI scale factor: 1.500000
+nvdrs: Loaded, about to disable thread optimizations.
+nvdrs: Disabled thread optimizations.
+Creating interface object took 0.16s
+Cleaning stores took 0.00s
+Init translation took 0.03s
+Build styles took 0.00s
+Load screen analysis took 0.00s
+Analyze screens took 0.01s
+Save screen analysis took 0.02s
+Prepare screens took 0.05s
+Save pyanalysis. took 0.03s
+Save bytecode. took 0.01s
+Running _start took 0.00s
+Performance test:
+Interface start took 0.04s
+
+Initializing gl2 renderer:
+primary display bounds: (0, 0, 1920, 1080)
+swap interval: 1 frames
+Windowed mode.
+Vendor: 'NVIDIA Corporation'
+Renderer: 'NVIDIA GeForce RTX 2060 with Max-Q Design/PCIe/SSE2'
+Version: '4.6.0 NVIDIA 496.49'
+Display Info: None
+Screen sizes: virtual=(1920, 1080) physical=(1739, 978) drawable=(1739, 978)
+Maximum texture size: 4096x4096
+Resetting cache.
+Bootstrap to the start of init.init took 94.41s
+Early init took 0.00s
+Loader init took 0.02s
+Loading error handling took 0.01s
+Loading script took 0.10s
+Loading save slot metadata. took 0.01s
+Loading persistent took 0.00s
+Importing _renpysteam: ImportError('No module named _renpysteam',)
+Running init code took 0.03s
+Loading analysis data took 0.02s
+Analyze and compile ATL took 0.00s
+Index archives took 0.00s
+Dump and make backups. took 0.05s
+Cleaning cache took 0.00s
+Making clean stores took 0.00s
+Initial gc. took 0.03s
+DPI scale factor: 1.500000
+nvdrs: Loaded, about to disable thread optimizations.
+nvdrs: Disabled thread optimizations.
+Creating interface object took 0.15s
+Cleaning stores took 0.00s
+Init translation took 0.03s
+Build styles took 0.00s
+Load screen analysis took 0.02s
+Analyze screens took 0.00s
+Save screen analysis took 0.00s
+Prepare screens took 0.05s
+Save pyanalysis. took 0.00s
+Save bytecode. took 0.00s
+Running _start took 0.00s
+Performance test:
+Interface start took 0.04s
+
+Initializing gl2 renderer:
+primary display bounds: (0, 0, 1920, 1080)
+swap interval: 1 frames
+Windowed mode.
+Vendor: 'NVIDIA Corporation'
+Renderer: 'NVIDIA GeForce RTX 2060 with Max-Q Design/PCIe/SSE2'
+Version: '4.6.0 NVIDIA 496.49'
+Display Info: None
+Screen sizes: virtual=(1920, 1080) physical=(1739, 978) drawable=(1739, 978)
+Maximum texture size: 4096x4096
+Resetting cache.
+Bootstrap to the start of init.init took 188.08s
+Early init took 0.00s
+Loader init took 0.01s
+Loading error handling took 0.01s
+Loading script took 0.11s
+Loading save slot metadata. took 0.01s
+Loading persistent took 0.00s
+Importing _renpysteam: ImportError('No module named _renpysteam',)
+Running init code took 0.04s
+Loading analysis data took 0.01s
+Analyze and compile ATL took 0.00s
+Index archives took 0.00s
+Backing up script files to 'C:\\Users\\zerog\\AppData\\Roaming/RenPy/backups\\act3puzzle2':
+Dump and make backups. took 0.05s
+Cleaning cache took 0.00s
+Making clean stores took 0.00s
+Initial gc. took 0.03s
+DPI scale factor: 1.500000
+nvdrs: Loaded, about to disable thread optimizations.
+nvdrs: Disabled thread optimizations.
+Creating interface object took 0.15s
+Cleaning stores took 0.00s
+Init translation took 0.03s
+Build styles took 0.00s
+Load screen analysis took 0.00s
+Analyze screens took 0.01s
+Save screen analysis took 0.02s
+Prepare screens took 0.05s
+Save pyanalysis. took 0.03s
+Save bytecode. took 0.01s
+Running _start took 0.00s
+Performance test:
+Interface start took 0.04s
+
+Initializing gl2 renderer:
+primary display bounds: (0, 0, 1920, 1080)
+swap interval: 1 frames
+Windowed mode.
+Vendor: 'NVIDIA Corporation'
+Renderer: 'NVIDIA GeForce RTX 2060 with Max-Q Design/PCIe/SSE2'
+Version: '4.6.0 NVIDIA 496.49'
+Display Info: None
+Screen sizes: virtual=(1920, 1080) physical=(1739, 978) drawable=(1739, 978)
+Maximum texture size: 4096x4096
+Resetting cache.
+Bootstrap to the start of init.init took 198.09s
+Early init took 0.00s
+Loader init took 0.01s
+Loading error handling took 0.01s
+Loading script took 0.08s
+Loading save slot metadata. took 0.01s
+Loading persistent took 0.00s
+Importing _renpysteam: ImportError('No module named _renpysteam',)
+Running init code took 0.03s
+Loading analysis data took 0.02s
+Analyze and compile ATL took 0.00s
+Index archives took 0.00s
+Dump and make backups. took 0.05s
+Cleaning cache took 0.00s
+Making clean stores took 0.00s
+Initial gc. took 0.03s
+DPI scale factor: 1.500000
+nvdrs: Loaded, about to disable thread optimizations.
+nvdrs: Disabled thread optimizations.
+Creating interface object took 0.16s
+Cleaning stores took 0.00s
+Init translation took 0.03s
+Build styles took 0.00s
+Load screen analysis took 0.02s
+Analyze screens took 0.00s
+Save screen analysis took 0.00s
+Prepare screens took 0.05s
+Save pyanalysis. took 0.00s
+Save bytecode. took 0.00s
+Running _start took 0.00s
+Performance test:
+Interface start took 0.04s
+
+Initializing gl2 renderer:
+primary display bounds: (0, 0, 1920, 1080)
+swap interval: 1 frames
+Windowed mode.
+Vendor: 'NVIDIA Corporation'
+Renderer: 'NVIDIA GeForce RTX 2060 with Max-Q Design/PCIe/SSE2'
+Version: '4.6.0 NVIDIA 496.49'
+Display Info: None
+Screen sizes: virtual=(1920, 1080) physical=(1739, 978) drawable=(1739, 978)
+Maximum texture size: 4096x4096
+Resetting cache.
+Bootstrap to the start of init.init took 239.09s
+Early init took 0.00s
+Loader init took 0.02s
+Loading error handling took 0.01s
+Loading script took 0.11s
+Loading save slot metadata. took 0.01s
+Loading persistent took 0.00s
+Importing _renpysteam: ImportError('No module named _renpysteam',)
+Running init code took 0.04s
+Loading analysis data took 0.01s
+Analyze and compile ATL took 0.00s
+Index archives took 0.00s
+Backing up script files to 'C:\\Users\\zerog\\AppData\\Roaming/RenPy/backups\\act3puzzle2':
+Dump and make backups. took 0.05s
+Cleaning cache took 0.00s
+Making clean stores took 0.00s
+Initial gc. took 0.03s
+DPI scale factor: 1.500000
+nvdrs: Loaded, about to disable thread optimizations.
+nvdrs: Disabled thread optimizations.
+Creating interface object took 0.15s
+Cleaning stores took 0.00s
+Init translation took 0.03s
+Build styles took 0.00s
+Load screen analysis took 0.00s
+Analyze screens took 0.01s
+Save screen analysis took 0.02s
+Prepare screens took 0.05s
+Save pyanalysis. took 0.03s
+Save bytecode. took 0.01s
+Running _start took 0.00s
+Performance test:
+Interface start took 0.04s
+
+Initializing gl2 renderer:
+primary display bounds: (0, 0, 1920, 1080)
+swap interval: 1 frames
+Windowed mode.
+Vendor: 'NVIDIA Corporation'
+Renderer: 'NVIDIA GeForce RTX 2060 with Max-Q Design/PCIe/SSE2'
+Version: '4.6.0 NVIDIA 496.49'
+Display Info: None
+Screen sizes: virtual=(1920, 1080) physical=(1739, 978) drawable=(1739, 978)
+Maximum texture size: 4096x4096
+Resetting cache.
+Bootstrap to the start of init.init took 258.97s
+Early init took 0.00s
+Loader init took 0.01s
+Loading error handling took 0.01s
+Loading script took 0.10s
+Loading save slot metadata. took 0.01s
+Loading persistent took 0.00s
+Importing _renpysteam: ImportError('No module named _renpysteam',)
+Running init code took 0.04s
+Loading analysis data took 0.01s
+Analyze and compile ATL took 0.00s
+Index archives took 0.00s
+Backing up script files to 'C:\\Users\\zerog\\AppData\\Roaming/RenPy/backups\\act3puzzle2':
+Dump and make backups. took 0.05s
+Cleaning cache took 0.00s
+Making clean stores took 0.00s
+Initial gc. took 0.03s
+DPI scale factor: 1.500000
+nvdrs: Loaded, about to disable thread optimizations.
+nvdrs: Disabled thread optimizations.
+Creating interface object took 0.15s
+Cleaning stores took 0.00s
+Init translation took 0.03s
+Build styles took 0.00s
+Load screen analysis took 0.00s
+Analyze screens took 0.01s
+Save screen analysis took 0.02s
+Prepare screens took 0.05s
+Save pyanalysis. took 0.03s
+Save bytecode. took 0.01s
+Running _start took 0.00s
+Performance test:
+Interface start took 0.04s
+
+Initializing gl2 renderer:
+primary display bounds: (0, 0, 1920, 1080)
+swap interval: 1 frames
+Windowed mode.
+Vendor: 'NVIDIA Corporation'
+Renderer: 'NVIDIA GeForce RTX 2060 with Max-Q Design/PCIe/SSE2'
+Version: '4.6.0 NVIDIA 496.49'
+Display Info: None
+Screen sizes: virtual=(1920, 1080) physical=(1739, 978) drawable=(1739, 978)
+Maximum texture size: 4096x4096
+Resetting cache.
+Bootstrap to the start of init.init took 281.91s
+Early init took 0.00s
+Loader init took 0.02s
+Loading error handling took 0.01s
+Loading script took 0.11s
+Loading save slot metadata. took 0.01s
+Loading persistent took 0.00s
+Importing _renpysteam: ImportError('No module named _renpysteam',)
+Running init code took 0.04s
+Loading analysis data took 0.01s
+Analyze and compile ATL took 0.00s
+Index archives took 0.00s
+Backing up script files to 'C:\\Users\\zerog\\AppData\\Roaming/RenPy/backups\\act3puzzle2':
+Dump and make backups. took 0.05s
+Cleaning cache took 0.00s
+Making clean stores took 0.00s
+Initial gc. took 0.03s
+DPI scale factor: 1.500000
+nvdrs: Loaded, about to disable thread optimizations.
+nvdrs: Disabled thread optimizations.
+Creating interface object took 0.15s
+Cleaning stores took 0.00s
+Init translation took 0.03s
+Build styles took 0.00s
+Load screen analysis took 0.00s
+Analyze screens took 0.01s
+Save screen analysis took 0.02s
+Prepare screens took 0.05s
+Save pyanalysis. took 0.03s
+Save bytecode. took 0.01s
+Running _start took 0.00s
+Performance test:
+Interface start took 0.04s
+
+Initializing gl2 renderer:
+primary display bounds: (0, 0, 1920, 1080)
+swap interval: 1 frames
+Windowed mode.
+Vendor: 'NVIDIA Corporation'
+Renderer: 'NVIDIA GeForce RTX 2060 with Max-Q Design/PCIe/SSE2'
+Version: '4.6.0 NVIDIA 496.49'
+Display Info: None
+Screen sizes: virtual=(1920, 1080) physical=(1739, 978) drawable=(1739, 978)
+Maximum texture size: 4096x4096
+Resetting cache.
+Bootstrap to the start of init.init took 933.93s
+Early init took 0.00s
+Loader init took 0.02s
+Loading error handling took 0.01s
+Loading script took 0.11s
+Loading save slot metadata. took 0.01s
+Loading persistent took 0.00s
+Importing _renpysteam: ImportError('No module named _renpysteam',)
+Running init code took 0.04s
+Loading analysis data took 0.01s
+Analyze and compile ATL took 0.00s
+Index archives took 0.00s
+Backing up script files to 'C:\\Users\\zerog\\AppData\\Roaming/RenPy/backups\\act3puzzle2':
+Dump and make backups. took 0.05s
+Cleaning cache took 0.00s
+Making clean stores took 0.00s
+Initial gc. took 0.03s
+DPI scale factor: 1.500000
+nvdrs: Loaded, about to disable thread optimizations.
+nvdrs: Disabled thread optimizations.
+Creating interface object took 0.15s
+Cleaning stores took 0.00s
+Init translation took 0.03s
+Build styles took 0.00s
+Load screen analysis took 0.00s
+Analyze screens took 0.01s
+Save screen analysis took 0.02s
+Prepare screens took 0.05s
+Save pyanalysis. took 0.03s
+Save bytecode. took 0.01s
+Running _start took 0.00s
+Performance test:
+Interface start took 0.04s
+
+Initializing gl2 renderer:
+primary display bounds: (0, 0, 1920, 1080)
+swap interval: 1 frames
+Windowed mode.
+Vendor: 'NVIDIA Corporation'
+Renderer: 'NVIDIA GeForce RTX 2060 with Max-Q Design/PCIe/SSE2'
+Version: '4.6.0 NVIDIA 496.49'
+Display Info: None
+Screen sizes: virtual=(1920, 1080) physical=(1739, 978) drawable=(1739, 978)
+Maximum texture size: 4096x4096
+Resetting cache.
+Bootstrap to the start of init.init took 937.42s
+Early init took 0.00s
+Loader init took 0.01s
+Loading error handling took 0.01s
+Loading script took 0.09s
+Loading save slot metadata. took 0.01s
+Loading persistent took 0.00s
+Importing _renpysteam: ImportError('No module named _renpysteam',)
+Running init code took 0.03s
+Loading analysis data took 0.02s
+Analyze and compile ATL took 0.00s
+Index archives took 0.00s
+Dump and make backups. took 0.05s
+Cleaning cache took 0.00s
+Making clean stores took 0.00s
+Initial gc. took 0.03s
+DPI scale factor: 1.500000
+nvdrs: Loaded, about to disable thread optimizations.
+nvdrs: Disabled thread optimizations.
+Creating interface object took 0.16s
+Cleaning stores took 0.00s
+Init translation took 0.04s
+Build styles took 0.00s
+Load screen analysis took 0.02s
+Analyze screens took 0.00s
+Save screen analysis took 0.00s
+Prepare screens took 0.05s
+Save pyanalysis. took 0.00s
+Save bytecode. took 0.00s
+Running _start took 0.00s
+Performance test:
+Interface start took 0.04s
+
+Initializing gl2 renderer:
+primary display bounds: (0, 0, 1920, 1080)
+swap interval: 1 frames
+Windowed mode.
+Vendor: 'NVIDIA Corporation'
+Renderer: 'NVIDIA GeForce RTX 2060 with Max-Q Design/PCIe/SSE2'
+Version: '4.6.0 NVIDIA 496.49'
+Display Info: None
+Screen sizes: virtual=(1920, 1080) physical=(1739, 978) drawable=(1739, 978)
+Maximum texture size: 4096x4096
+Resetting cache.
+Bootstrap to the start of init.init took 1016.06s
+Early init took 0.00s
+Loader init took 0.01s
+Loading error handling took 0.01s
+Loading script took 0.11s
+Loading save slot metadata. took 0.01s
+Loading persistent took 0.00s
+Importing _renpysteam: ImportError('No module named _renpysteam',)
+Running init code took 0.04s
+Loading analysis data took 0.01s
+Analyze and compile ATL took 0.00s
+Index archives took 0.00s
+Backing up script files to 'C:\\Users\\zerog\\AppData\\Roaming/RenPy/backups\\act3puzzle2':
+Dump and make backups. took 0.05s
+Cleaning cache took 0.00s
+Making clean stores took 0.00s
+Initial gc. took 0.03s
+DPI scale factor: 1.500000
+nvdrs: Loaded, about to disable thread optimizations.
+nvdrs: Disabled thread optimizations.
+Creating interface object took 0.16s
+Cleaning stores took 0.00s
+Init translation took 0.03s
+Build styles took 0.00s
+Load screen analysis took 0.00s
+Analyze screens took 0.01s
+Save screen analysis took 0.02s
+Prepare screens took 0.05s
+Save pyanalysis. took 0.03s
+Save bytecode. took 0.01s
+Running _start took 0.00s
+Performance test:
+Interface start took 0.04s
+
+Initializing gl2 renderer:
+primary display bounds: (0, 0, 1920, 1080)
+swap interval: 1 frames
+Windowed mode.
+Vendor: 'NVIDIA Corporation'
+Renderer: 'NVIDIA GeForce RTX 2060 with Max-Q Design/PCIe/SSE2'
+Version: '4.6.0 NVIDIA 496.49'
+Display Info: None
+Screen sizes: virtual=(1920, 1080) physical=(1739, 978) drawable=(1739, 978)
+Maximum texture size: 4096x4096
+Resetting cache.
+Bootstrap to the start of init.init took 1046.52s
+Early init took 0.00s
+Loader init took 0.02s
+Loading error handling took 0.02s
+Loading script took 0.11s
+Loading save slot metadata. took 0.01s
+Loading persistent took 0.00s
+Importing _renpysteam: ImportError('No module named _renpysteam',)
+Running init code took 0.04s
+Loading analysis data took 0.01s
+Analyze and compile ATL took 0.00s
+Index archives took 0.00s
+Backing up script files to 'C:\\Users\\zerog\\AppData\\Roaming/RenPy/backups\\act3puzzle2':
+Dump and make backups. took 0.05s
+Cleaning cache took 0.00s
+Making clean stores took 0.00s
+Initial gc. took 0.03s
+DPI scale factor: 1.500000
+nvdrs: Loaded, about to disable thread optimizations.
+nvdrs: Disabled thread optimizations.
+Creating interface object took 0.15s
+Cleaning stores took 0.00s
+Init translation took 0.03s
+Build styles took 0.00s
+Load screen analysis took 0.00s
+Analyze screens took 0.01s
+Save screen analysis took 0.02s
+Prepare screens took 0.05s
+Save pyanalysis. took 0.00s
+Save bytecode. took 0.01s
+Running _start took 0.00s
+Performance test:
+Interface start took 0.04s
+
+Initializing gl2 renderer:
+primary display bounds: (0, 0, 1920, 1080)
+swap interval: 1 frames
+Windowed mode.
+Vendor: 'NVIDIA Corporation'
+Renderer: 'NVIDIA GeForce RTX 2060 with Max-Q Design/PCIe/SSE2'
+Version: '4.6.0 NVIDIA 496.49'
+Display Info: None
+Screen sizes: virtual=(1920, 1080) physical=(1739, 978) drawable=(1739, 978)
+Maximum texture size: 4096x4096
+Resetting cache.
+Bootstrap to the start of init.init took 1182.37s
+Early init took 0.00s
+Loader init took 0.02s
+Loading error handling took 0.01s
+Loading script took 0.08s
+Loading save slot metadata. took 0.01s
+Loading persistent took 0.00s
+
+File "game/script.rpy", line 92: indentation mismatch.
+DPI scale factor: 1.500000
+nvdrs: Loaded, about to disable thread optimizations.
+nvdrs: Disabled thread optimizations.
+Interface start took 0.23s
+
+Initializing gl2 renderer:
+primary display bounds: (0, 0, 1920, 1080)
+swap interval: 1 frames
+Windowed mode.
+Vendor: 'NVIDIA Corporation'
+Renderer: 'NVIDIA GeForce RTX 2060 with Max-Q Design/PCIe/SSE2'
+Version: '4.6.0 NVIDIA 496.49'
+Display Info: None
+Screen sizes: virtual=(1920, 1080) physical=(1739, 978) drawable=(1739, 978)
+Maximum texture size: 4096x4096
+Resetting cache.
+Bootstrap to the start of init.init took 1197.60s
+Early init took 0.00s
+Loader init took 0.01s
+Loading error handling took 0.01s
+Loading script took 0.10s
+Loading save slot metadata. took 0.01s
+Loading persistent took 0.00s
+
+File "game/script.rpy", line 82: invalid syntax
+            if taken
+    
+DPI scale factor: 1.500000
+nvdrs: Loaded, about to disable thread optimizations.
+nvdrs: Disabled thread optimizations.
+Interface start took 0.24s
+
+Initializing gl2 renderer:
+primary display bounds: (0, 0, 1920, 1080)
+swap interval: 1 frames
+Windowed mode.
+Vendor: 'NVIDIA Corporation'
+Renderer: 'NVIDIA GeForce RTX 2060 with Max-Q Design/PCIe/SSE2'
+Version: '4.6.0 NVIDIA 496.49'
+Display Info: None
+Screen sizes: virtual=(1920, 1080) physical=(1739, 978) drawable=(1739, 978)
+Maximum texture size: 4096x4096
+Resetting cache.
+Bootstrap to the start of init.init took 1199.59s
+Early init took 0.00s
+Loader init took 0.01s
+Loading error handling took 0.01s
+Loading script took 0.08s
+Loading save slot metadata. took 0.01s
+Loading persistent took 0.00s
+
+File "game/script.rpy", line 82: invalid syntax
+            if taken
+    
+DPI scale factor: 1.500000
+nvdrs: Loaded, about to disable thread optimizations.
+nvdrs: Disabled thread optimizations.
+Interface start took 0.23s
+
+Initializing gl2 renderer:
+primary display bounds: (0, 0, 1920, 1080)
+swap interval: 1 frames
+Windowed mode.
+Vendor: 'NVIDIA Corporation'
+Renderer: 'NVIDIA GeForce RTX 2060 with Max-Q Design/PCIe/SSE2'
+Version: '4.6.0 NVIDIA 496.49'
+Display Info: None
+Screen sizes: virtual=(1920, 1080) physical=(1739, 978) drawable=(1739, 978)
+Maximum texture size: 4096x4096
+Resetting cache.
+Bootstrap to the start of init.init took 1201.65s
+Early init took 0.00s
+Loader init took 0.01s
+Loading error handling took 0.01s
+Loading script took 0.08s
+Loading save slot metadata. took 0.01s
+Loading persistent took 0.00s
+
+File "game/script.rpy", line 82: invalid syntax
+            if taken
+    
+DPI scale factor: 1.500000
+nvdrs: Loaded, about to disable thread optimizations.
+nvdrs: Disabled thread optimizations.
+Interface start took 0.23s
+
+Initializing gl2 renderer:
+primary display bounds: (0, 0, 1920, 1080)
+swap interval: 1 frames
+Windowed mode.
+Vendor: 'NVIDIA Corporation'
+Renderer: 'NVIDIA GeForce RTX 2060 with Max-Q Design/PCIe/SSE2'
+Version: '4.6.0 NVIDIA 496.49'
+Display Info: None
+Screen sizes: virtual=(1920, 1080) physical=(1739, 978) drawable=(1739, 978)
+Maximum texture size: 4096x4096
+Resetting cache.
+Bootstrap to the start of init.init took 1210.87s
+Early init took 0.00s
+Loader init took 0.01s
+Loading error handling took 0.01s
+Loading script took 0.10s
+Loading save slot metadata. took 0.01s
+Loading persistent took 0.00s
+Importing _renpysteam: ImportError('No module named _renpysteam',)
+Running init code took 0.04s
+Loading analysis data took 0.01s
+Analyze and compile ATL took 0.00s
+Index archives took 0.00s
+Backing up script files to 'C:\\Users\\zerog\\AppData\\Roaming/RenPy/backups\\act3puzzle2':
+Dump and make backups. took 0.05s
+Cleaning cache took 0.00s
+Making clean stores took 0.00s
+Initial gc. took 0.02s
+DPI scale factor: 1.500000
+nvdrs: Loaded, about to disable thread optimizations.
+nvdrs: Disabled thread optimizations.
+Creating interface object took 0.15s
+Cleaning stores took 0.00s
+Init translation took 0.03s
+Build styles took 0.00s
+Load screen analysis took 0.00s
+Analyze screens took 0.01s
+Save screen analysis took 0.02s
+Prepare screens took 0.05s
+Save pyanalysis. took 0.03s
+Save bytecode. took 0.01s
+Running _start took 0.00s
+Performance test:
+Interface start took 0.04s
+
+Initializing gl2 renderer:
+primary display bounds: (0, 0, 1920, 1080)
+swap interval: 1 frames
+Windowed mode.
+Vendor: 'NVIDIA Corporation'
+Renderer: 'NVIDIA GeForce RTX 2060 with Max-Q Design/PCIe/SSE2'
+Version: '4.6.0 NVIDIA 496.49'
+Display Info: None
+Screen sizes: virtual=(1920, 1080) physical=(1739, 978) drawable=(1739, 978)
+Maximum texture size: 4096x4096
+Resetting cache.
+Bootstrap to the start of init.init took 1360.22s
+Early init took 0.00s
+Loader init took 0.01s
+Loading error handling took 0.01s
+Loading script took 0.10s
+Loading save slot metadata. took 0.01s
+Loading persistent took 0.00s
+Importing _renpysteam: ImportError('No module named _renpysteam',)
+Running init code took 0.04s
+Loading analysis data took 0.01s
+Analyze and compile ATL took 0.00s
+Index archives took 0.00s
+Backing up script files to 'C:\\Users\\zerog\\AppData\\Roaming/RenPy/backups\\act3puzzle2':
+Dump and make backups. took 0.05s
+Cleaning cache took 0.00s
+Making clean stores took 0.00s
+Initial gc. took 0.03s
+DPI scale factor: 1.500000
+nvdrs: Loaded, about to disable thread optimizations.
+nvdrs: Disabled thread optimizations.
+Creating interface object took 0.15s
+Cleaning stores took 0.00s
+Init translation took 0.03s
+Build styles took 0.00s
+Load screen analysis took 0.00s
+Analyze screens took 0.01s
+Save screen analysis took 0.02s
+Prepare screens took 0.05s
+Save pyanalysis. took 0.03s
+Save bytecode. took 0.01s
+Running _start took 0.00s
+Performance test:
+Interface start took 0.04s
+
+Initializing gl2 renderer:
+primary display bounds: (0, 0, 1920, 1080)
+swap interval: 1 frames
+Windowed mode.
+Vendor: 'NVIDIA Corporation'
+Renderer: 'NVIDIA GeForce RTX 2060 with Max-Q Design/PCIe/SSE2'
+Version: '4.6.0 NVIDIA 496.49'
+Display Info: None
+Screen sizes: virtual=(1920, 1080) physical=(1739, 978) drawable=(1739, 978)
+Maximum texture size: 4096x4096
+Resetting cache.
+Bootstrap to the start of init.init took 1389.41s
+Early init took 0.00s
+Loader init took 0.02s
+Loading error handling took 0.01s
+Loading script took 0.10s
+Loading save slot metadata. took 0.01s
+Loading persistent took 0.00s
+Importing _renpysteam: ImportError('No module named _renpysteam',)
+Running init code took 0.03s
+Loading analysis data took 0.02s
+Analyze and compile ATL took 0.00s
+Index archives took 0.00s
+Dump and make backups. took 0.05s
+Cleaning cache took 0.00s
+Making clean stores took 0.00s
+Initial gc. took 0.03s
+DPI scale factor: 1.500000
+nvdrs: Loaded, about to disable thread optimizations.
+nvdrs: Disabled thread optimizations.
+Creating interface object took 0.15s
+Cleaning stores took 0.00s
+Init translation took 0.03s
+Build styles took 0.00s
+Load screen analysis took 0.02s
+Analyze screens took 0.00s
+Save screen analysis took 0.00s
+Prepare screens took 0.05s
+Save pyanalysis. took 0.00s
+Save bytecode. took 0.00s
+Running _start took 0.00s
+Performance test:
+Interface start took 0.05s
+
+Initializing gl2 renderer:
+primary display bounds: (0, 0, 1920, 1080)
+swap interval: 1 frames
+Windowed mode.
+Vendor: 'NVIDIA Corporation'
+Renderer: 'NVIDIA GeForce RTX 2060 with Max-Q Design/PCIe/SSE2'
+Version: '4.6.0 NVIDIA 496.49'
+Display Info: None
+Screen sizes: virtual=(1920, 1080) physical=(1739, 978) drawable=(1739, 978)
+Maximum texture size: 4096x4096
+Resetting cache.
+Bootstrap to the start of init.init took 1446.99s
+Early init took 0.00s
+Loader init took 0.01s
+Loading error handling took 0.01s
+Loading script took 0.11s
+Loading save slot metadata. took 0.01s
+Loading persistent took 0.00s
+Importing _renpysteam: ImportError('No module named _renpysteam',)
+Running init code took 0.04s
+Loading analysis data took 0.01s
+Analyze and compile ATL took 0.00s
+Index archives took 0.00s
+Backing up script files to 'C:\\Users\\zerog\\AppData\\Roaming/RenPy/backups\\act3puzzle2':
+Dump and make backups. took 0.05s
+Cleaning cache took 0.00s
+Making clean stores took 0.00s
+Initial gc. took 0.03s
+DPI scale factor: 1.500000
+nvdrs: Loaded, about to disable thread optimizations.
+nvdrs: Disabled thread optimizations.
+Creating interface object took 0.16s
+Cleaning stores took 0.00s
+Init translation took 0.03s
+Build styles took 0.00s
+Load screen analysis took 0.00s
+Analyze screens took 0.01s
+Save screen analysis took 0.02s
+Prepare screens took 0.05s
+Save pyanalysis. took 0.00s
+Save bytecode. took 0.01s
+Running _start took 0.00s
+Performance test:
+Interface start took 0.04s
+
+Initializing gl2 renderer:
+primary display bounds: (0, 0, 1920, 1080)
+swap interval: 1 frames
+Windowed mode.
+Vendor: 'NVIDIA Corporation'
+Renderer: 'NVIDIA GeForce RTX 2060 with Max-Q Design/PCIe/SSE2'
+Version: '4.6.0 NVIDIA 496.49'
+Display Info: None
+Screen sizes: virtual=(1920, 1080) physical=(1739, 978) drawable=(1739, 978)
+Maximum texture size: 4096x4096
+Resetting cache.
+Bootstrap to the start of init.init took 1463.86s
+Early init took 0.00s
+Loader init took 0.02s
+Loading error handling took 0.01s
+Loading script took 0.11s
+Loading save slot metadata. took 0.01s
+Loading persistent took 0.00s
+Importing _renpysteam: ImportError('No module named _renpysteam',)
+Running init code took 0.04s
+Loading analysis data took 0.01s
+Analyze and compile ATL took 0.00s
+Index archives took 0.00s
+Backing up script files to 'C:\\Users\\zerog\\AppData\\Roaming/RenPy/backups\\act3puzzle2':
+Dump and make backups. took 0.05s
+Cleaning cache took 0.00s
+Making clean stores took 0.00s
+Initial gc. took 0.03s
+DPI scale factor: 1.500000
+nvdrs: Loaded, about to disable thread optimizations.
+nvdrs: Disabled thread optimizations.
+Creating interface object took 0.15s
+Cleaning stores took 0.00s
+Init translation took 0.03s
+Build styles took 0.00s
+Load screen analysis took 0.00s
+Analyze screens took 0.01s
+Save screen analysis took 0.02s
+Prepare screens took 0.05s
+Save pyanalysis. took 0.00s
+Save bytecode. took 0.01s
+Running _start took 0.00s
+Performance test:
+Interface start took 0.04s
+
+Initializing gl2 renderer:
+primary display bounds: (0, 0, 1920, 1080)
+swap interval: 1 frames
+Windowed mode.
+Vendor: 'NVIDIA Corporation'
+Renderer: 'NVIDIA GeForce RTX 2060 with Max-Q Design/PCIe/SSE2'
+Version: '4.6.0 NVIDIA 496.49'
+Display Info: None
+Screen sizes: virtual=(1920, 1080) physical=(1739, 978) drawable=(1739, 978)
+Maximum texture size: 4096x4096
+Resetting cache.
+Bootstrap to the start of init.init took 1530.44s
+Early init took 0.00s
+Loader init took 0.02s
+Loading error handling took 0.01s
+Loading script took 0.10s
+Loading save slot metadata. took 0.01s
+Loading persistent took 0.00s
+Importing _renpysteam: ImportError('No module named _renpysteam',)
+Running init code took 0.04s
+Loading analysis data took 0.01s
+Analyze and compile ATL took 0.00s
+Index archives took 0.00s
+Backing up script files to 'C:\\Users\\zerog\\AppData\\Roaming/RenPy/backups\\act3puzzle2':
+Dump and make backups. took 0.05s
+Cleaning cache took 0.00s
+Making clean stores took 0.00s
+Initial gc. took 0.03s
+DPI scale factor: 1.500000
+nvdrs: Loaded, about to disable thread optimizations.
+nvdrs: Disabled thread optimizations.
+Creating interface object took 0.15s
+Cleaning stores took 0.00s
+Init translation took 0.03s
+Build styles took 0.00s
+Load screen analysis took 0.00s
+Analyze screens took 0.01s
+Save screen analysis took 0.02s
+Prepare screens took 0.05s
+Save pyanalysis. took 0.03s
+Save bytecode. took 0.01s
+Running _start took 0.00s
+Performance test:
+Interface start took 0.04s
+
+Initializing gl2 renderer:
+primary display bounds: (0, 0, 1920, 1080)
+swap interval: 1 frames
+Windowed mode.
+Vendor: 'NVIDIA Corporation'
+Renderer: 'NVIDIA GeForce RTX 2060 with Max-Q Design/PCIe/SSE2'
+Version: '4.6.0 NVIDIA 496.49'
+Display Info: None
+Screen sizes: virtual=(1920, 1080) physical=(1739, 978) drawable=(1739, 978)
+Maximum texture size: 4096x4096
+Resetting cache.
+Bootstrap to the start of init.init took 1586.23s
+Early init took 0.00s
+Loader init took 0.02s
+Loading error handling took 0.01s
+Loading script took 0.08s
+Loading save slot metadata. took 0.01s
+Loading persistent took 0.00s
+Importing _renpysteam: ImportError('No module named _renpysteam',)
+Running init code took 0.03s
+Loading analysis data took 0.02s
+Analyze and compile ATL took 0.00s
+Index archives took 0.00s
+Dump and make backups. took 0.05s
+Cleaning cache took 0.00s
+Making clean stores took 0.00s
+Initial gc. took 0.03s
+DPI scale factor: 1.500000
+nvdrs: Loaded, about to disable thread optimizations.
+nvdrs: Disabled thread optimizations.
+Creating interface object took 0.15s
+Cleaning stores took 0.00s
+Init translation took 0.03s
+Build styles took 0.00s
+Load screen analysis took 0.01s
+Analyze screens took 0.00s
+Save screen analysis took 0.00s
+Prepare screens took 0.05s
+Save pyanalysis. took 0.00s
+Save bytecode. took 0.00s
+Running _start took 0.00s
+Performance test:
+Interface start took 0.05s
+
+Initializing gl2 renderer:
+primary display bounds: (0, 0, 1920, 1080)
+swap interval: 1 frames
+Windowed mode.
+Vendor: 'NVIDIA Corporation'
+Renderer: 'NVIDIA GeForce RTX 2060 with Max-Q Design/PCIe/SSE2'
+Version: '4.6.0 NVIDIA 496.49'
+Display Info: None
+Screen sizes: virtual=(1920, 1080) physical=(1739, 978) drawable=(1739, 978)
+Maximum texture size: 4096x4096
+Resetting cache.
+Bootstrap to the start of init.init took 1590.83s
+Early init took 0.00s
+Loader init took 0.02s
+Loading error handling took 0.01s
+Loading script took 0.11s
+Loading save slot metadata. took 0.01s
+Loading persistent took 0.00s
+Importing _renpysteam: ImportError('No module named _renpysteam',)
+Running init code took 0.03s
+Loading analysis data took 0.02s
+Analyze and compile ATL took 0.00s
+Index archives took 0.00s
+Dump and make backups. took 0.05s
+Cleaning cache took 0.00s
+Making clean stores took 0.00s
+Initial gc. took 0.03s
+DPI scale factor: 1.500000
+nvdrs: Loaded, about to disable thread optimizations.
+nvdrs: Disabled thread optimizations.
+Creating interface object took 0.15s
+Cleaning stores took 0.00s
+Init translation took 0.03s
+Build styles took 0.00s
+Load screen analysis took 0.01s
+Analyze screens took 0.00s
+Save screen analysis took 0.00s
+Prepare screens took 0.05s
+Save pyanalysis. took 0.00s
+Save bytecode. took 0.00s
+Running _start took 0.00s
+Performance test:
+Interface start took 0.05s
+
+Initializing gl2 renderer:
+primary display bounds: (0, 0, 1920, 1080)
+swap interval: 1 frames
+Windowed mode.
+Vendor: 'NVIDIA Corporation'
+Renderer: 'NVIDIA GeForce RTX 2060 with Max-Q Design/PCIe/SSE2'
+Version: '4.6.0 NVIDIA 496.49'
+Display Info: None
+Screen sizes: virtual=(1920, 1080) physical=(1739, 978) drawable=(1739, 978)
+Maximum texture size: 4096x4096
+Resetting cache.
+Bootstrap to the start of init.init took 1878.69s
+Early init took 0.00s
+Loader init took 0.01s
+Loading error handling took 0.01s
+Loading script took 0.09s
+Loading save slot metadata. took 0.01s
+Loading persistent took 0.00s
+Importing _renpysteam: ImportError('No module named _renpysteam',)
+Running init code took 0.03s
+Loading analysis data took 0.02s
+Analyze and compile ATL took 0.00s
+Index archives took 0.00s
+Dump and make backups. took 0.05s
+Cleaning cache took 0.00s
+Making clean stores took 0.00s
+Initial gc. took 0.03s
+DPI scale factor: 1.500000
+nvdrs: Loaded, about to disable thread optimizations.
+nvdrs: Disabled thread optimizations.
+Creating interface object took 0.19s
+Cleaning stores took 0.00s
+Init translation took 0.03s
+Build styles took 0.00s
+Load screen analysis took 0.02s
+Analyze screens took 0.00s
+Save screen analysis took 0.00s
+Prepare screens took 0.05s
+Save pyanalysis. took 0.00s
+Save bytecode. took 0.00s
+Running _start took 0.00s
+Performance test:
+Interface start took 0.05s
+
+Initializing gl2 renderer:
+primary display bounds: (0, 0, 1920, 1080)
+swap interval: 1 frames
+Windowed mode.
+Vendor: 'NVIDIA Corporation'
+Renderer: 'NVIDIA GeForce RTX 2060 with Max-Q Design/PCIe/SSE2'
+Version: '4.6.0 NVIDIA 496.49'
+Display Info: None
+Screen sizes: virtual=(1920, 1080) physical=(1739, 978) drawable=(1739, 978)
+Maximum texture size: 4096x4096
+Resetting cache.
+Bootstrap to the start of init.init took 10793.80s
+Early init took 0.00s
+Loader init took 0.01s
+Loading error handling took 0.02s
+Loading script took 0.28s
+Loading save slot metadata. took 0.01s
+Loading persistent took 0.00s
+
+File "game/script.rpy", line 636: Line is indented, but the preceding focus_mask statement does not expect a block. Please check this line's indentation.
+    action [SetVariable("Avisible", True), SetVariable("Abutton", False), SetVariable("taken4", False), Function(refresh)]
+    ^
+DPI scale factor: 1.500000
+nvdrs: Loaded, about to disable thread optimizations.
+nvdrs: Disabled thread optimizations.
+Interface start took 0.52s
+
+Initializing gl2 renderer:
+primary display bounds: (0, 0, 1920, 1080)
+swap interval: 1 frames
+Windowed mode.
+Vendor: 'NVIDIA Corporation'
+Renderer: 'NVIDIA GeForce RTX 2060 with Max-Q Design/PCIe/SSE2'
+Version: '4.6.0 NVIDIA 496.49'
+Display Info: None
+Screen sizes: virtual=(1920, 1080) physical=(1739, 978) drawable=(1739, 978)
+Maximum texture size: 4096x4096
+Resetting cache.
+Bootstrap to the start of init.init took 10818.12s
+Early init took 0.00s
+Loader init took 0.02s
+Loading error handling took 0.01s
+Loading script took 0.14s
+Loading save slot metadata. took 0.01s
+Loading persistent took 0.00s
+
+File "game/script.rpy", line 657: Line is indented, but the preceding focus_mask statement does not expect a block. Please check this line's indentation.
+    action [SetVariable("Bvisible", True), SetVariable("Bbutton", False), SetVariable("taken4", False), Function(refresh)]
+    ^
+DPI scale factor: 1.500000
+nvdrs: Loaded, about to disable thread optimizations.
+nvdrs: Disabled thread optimizations.
+Interface start took 0.24s
+
+Initializing gl2 renderer:
+primary display bounds: (0, 0, 1920, 1080)
+swap interval: 1 frames
+Windowed mode.
+Vendor: 'NVIDIA Corporation'
+Renderer: 'NVIDIA GeForce RTX 2060 with Max-Q Design/PCIe/SSE2'
+Version: '4.6.0 NVIDIA 496.49'
+Display Info: None
+Screen sizes: virtual=(1920, 1080) physical=(1739, 978) drawable=(1739, 978)
+Maximum texture size: 4096x4096
+Resetting cache.
+Bootstrap to the start of init.init took 10890.91s
+Early init took 0.00s
+Loader init took 0.02s
+Loading error handling took 0.02s
+Loading script took 0.13s
+Loading save slot metadata. took 0.01s
+Loading persistent took 0.00s
+
+File "game/script.rpy", line 657: Line is indented, but the preceding focus_mask statement does not expect a block. Please check this line's indentation.
+    action [SetVariable("Bvisible", True), SetVariable("Bbutton", False), SetVariable("taken4", False), Function(refresh)]
+    ^
+DPI scale factor: 1.500000
+nvdrs: Loaded, about to disable thread optimizations.
+nvdrs: Disabled thread optimizations.
+Interface start took 0.24s
+
+Initializing gl2 renderer:
+primary display bounds: (0, 0, 1920, 1080)
+swap interval: 1 frames
+Windowed mode.
+Vendor: 'NVIDIA Corporation'
+Renderer: 'NVIDIA GeForce RTX 2060 with Max-Q Design/PCIe/SSE2'
+Version: '4.6.0 NVIDIA 496.49'
+Display Info: None
+Screen sizes: virtual=(1920, 1080) physical=(1739, 978) drawable=(1739, 978)
+Maximum texture size: 4096x4096
+Resetting cache.
+Bootstrap to the start of init.init took 10895.64s
+Early init took 0.00s
+Loader init took 0.01s
+Loading error handling took 0.01s
+Loading script took 0.14s
+Loading save slot metadata. took 0.01s
+Loading persistent took 0.00s
+
+File "game/script.rpy", line 665: imagebutton expects a non-empty block.
+    imagebutton:
+                ^
+DPI scale factor: 1.500000
+nvdrs: Loaded, about to disable thread optimizations.
+nvdrs: Disabled thread optimizations.
+Interface start took 0.25s
+
+Initializing gl2 renderer:
+primary display bounds: (0, 0, 1920, 1080)
+swap interval: 1 frames
+Windowed mode.
+Vendor: 'NVIDIA Corporation'
+Renderer: 'NVIDIA GeForce RTX 2060 with Max-Q Design/PCIe/SSE2'
+Version: '4.6.0 NVIDIA 496.49'
+Display Info: None
+Screen sizes: virtual=(1920, 1080) physical=(1739, 978) drawable=(1739, 978)
+Maximum texture size: 4096x4096
+Resetting cache.
+Bootstrap to the start of init.init took 10927.38s
+Early init took 0.00s
+Loader init took 0.01s
+Loading error handling took 0.01s
+Loading script took 0.29s
+Loading save slot metadata. took 0.01s
+Loading persistent took 0.00s
+Importing _renpysteam: ImportError('No module named _renpysteam',)
+Running init code took 0.04s
+Loading analysis data took 0.02s
+Analyze and compile ATL took 0.00s
+Index archives took 0.00s
+Backing up script files to 'C:\\Users\\zerog\\AppData\\Roaming/RenPy/backups\\act3puzzle2':
+Dump and make backups. took 0.05s
+Cleaning cache took 0.00s
+Making clean stores took 0.00s
+Initial gc. took 0.02s
+DPI scale factor: 1.500000
+nvdrs: Loaded, about to disable thread optimizations.
+nvdrs: Disabled thread optimizations.
+Creating interface object took 0.16s
+Cleaning stores took 0.00s
+Init translation took 0.03s
+Build styles took 0.00s
+Load screen analysis took 0.00s
+Analyze screens took 0.01s
+Save screen analysis took 0.04s
+Prepare screens took 0.11s
+Save pyanalysis. took 0.05s
+Save bytecode. took 0.02s
+Running _start took 0.00s
+Performance test:
+Interface start took 0.05s
+
+Initializing gl2 renderer:
+primary display bounds: (0, 0, 1920, 1080)
+swap interval: 1 frames
+Windowed mode.
+Vendor: 'NVIDIA Corporation'
+Renderer: 'NVIDIA GeForce RTX 2060 with Max-Q Design/PCIe/SSE2'
+Version: '4.6.0 NVIDIA 496.49'
+Display Info: None
+Screen sizes: virtual=(1920, 1080) physical=(1739, 978) drawable=(1739, 978)
+Maximum texture size: 4096x4096
+
+Full traceback:
+  File "game/script.rpy", line 87, in script
+    call screen blocks()
+  File "C:\Users\zerog\Downloads\renpy-7.4.11-sdk/renpy/ast.py", line 2015, in execute
+    self.call("execute")
+  File "C:\Users\zerog\Downloads\renpy-7.4.11-sdk/renpy/ast.py", line 2003, in call
+    return renpy.statements.call(method, parsed, *args, **kwargs)
+  File "C:\Users\zerog\Downloads\renpy-7.4.11-sdk/renpy/statements.py", line 278, in call
+    return method(parsed, *args, **kwargs)
+  File "renpy/common/000statements.rpy", line 569, in execute_call_screen
+    store._return = renpy.call_screen(name, *args, **kwargs)
+  File "C:\Users\zerog\Downloads\renpy-7.4.11-sdk/renpy/exports.py", line 3136, in call_screen
+    rv = renpy.ui.interact(mouse="screen", type="screen", roll_forward=roll_forward)
+  File "C:\Users\zerog\Downloads\renpy-7.4.11-sdk/renpy/ui.py", line 298, in interact
+    rv = renpy.game.interface.interact(roll_forward=roll_forward, **kwargs)
+  File "C:\Users\zerog\Downloads\renpy-7.4.11-sdk/renpy/display/core.py", line 3325, in interact
+    repeat, rv = self.interact_core(preloads=preloads, trans_pause=trans_pause, pause=pause, pause_start=pause_start, **kwargs)
+  File "C:\Users\zerog\Downloads\renpy-7.4.11-sdk/renpy/display/core.py", line 3737, in interact_core
+    root_widget.visit_all(lambda i : i.per_interact())
+  File "C:\Users\zerog\Downloads\renpy-7.4.11-sdk/renpy/display/core.py", line 568, in visit_all
+    d.visit_all(callback, seen)
+  File "C:\Users\zerog\Downloads\renpy-7.4.11-sdk/renpy/display/core.py", line 568, in visit_all
+    d.visit_all(callback, seen)
+  File "C:\Users\zerog\Downloads\renpy-7.4.11-sdk/renpy/display/core.py", line 568, in visit_all
+    d.visit_all(callback, seen)
+  File "C:\Users\zerog\Downloads\renpy-7.4.11-sdk/renpy/display/screen.py", line 436, in visit_all
+    callback(self)
+  File "C:\Users\zerog\Downloads\renpy-7.4.11-sdk/renpy/display/core.py", line 3737, in <lambda>
+    root_widget.visit_all(lambda i : i.per_interact())
+  File "C:\Users\zerog\Downloads\renpy-7.4.11-sdk/renpy/display/screen.py", line 447, in per_interact
+    self.update()
+  File "C:\Users\zerog\Downloads\renpy-7.4.11-sdk/renpy/display/screen.py", line 637, in update
+    self.screen.function(**self.scope)
+  File "game/script.rpy", line 615, in execute
+    screen blocks:
+  File "game/script.rpy", line 615, in execute
+    screen blocks:
+  File "game/script.rpy", line 1037, in execute
+    showif E2visible == True:
+  File "game/script.rpy", line 1037, in <module>
+    showif E2visible == True:
+NameError: name 'E2visible' is not defined
+
+While running game code:
+  File "game/script.rpy", line 87, in script
+    call screen blocks()
+  File "renpy/common/000statements.rpy", line 569, in execute_call_screen
+    store._return = renpy.call_screen(name, *args, **kwargs)
+  File "game/script.rpy", line 615, in execute
+    screen blocks:
+  File "game/script.rpy", line 615, in execute
+    screen blocks:
+  File "game/script.rpy", line 1037, in execute
+    showif E2visible == True:
+  File "game/script.rpy", line 1037, in <module>
+    showif E2visible == True:
+NameError: name 'E2visible' is not defined
+Resetting cache.
+Bootstrap to the start of init.init took 12342.78s
+Early init took 0.00s
+Loader init took 0.02s
+Loading error handling took 0.02s
+Loading script took 0.25s
+Loading save slot metadata. took 0.01s
+Loading persistent took 0.00s
+Importing _renpysteam: ImportError('No module named _renpysteam',)
+Running init code took 0.03s
+Loading analysis data took 0.03s
+Analyze and compile ATL took 0.00s
+Index archives took 0.00s
+Dump and make backups. took 0.05s
+Cleaning cache took 0.00s
+Making clean stores took 0.00s
+Initial gc. took 0.04s
+DPI scale factor: 1.500000
+nvdrs: Loaded, about to disable thread optimizations.
+nvdrs: Disabled thread optimizations.
+Creating interface object took 0.20s
+Cleaning stores took 0.00s
+Init translation took 0.04s
+Build styles took 0.00s
+Load screen analysis took 0.02s
+Analyze screens took 0.00s
+Save screen analysis took 0.00s
+Prepare screens took 0.08s
+Save pyanalysis. took 0.00s
+Save bytecode. took 0.00s
+Running _start took 0.00s
+Performance test:
+Interface start took 0.06s
+
+Initializing gl2 renderer:
+primary display bounds: (0, 0, 1920, 1080)
+swap interval: 1 frames
+Windowed mode.
+Vendor: 'NVIDIA Corporation'
+Renderer: 'NVIDIA GeForce RTX 2060 with Max-Q Design/PCIe/SSE2'
+Version: '4.6.0 NVIDIA 496.49'
+Display Info: None
+Screen sizes: virtual=(1920, 1080) physical=(1739, 978) drawable=(1739, 978)
+Maximum texture size: 4096x4096
+
+Full traceback:
+  File "game/script.rpy", line 87, in script
+    call screen blocks()
+  File "C:\Users\zerog\Downloads\renpy-7.4.11-sdk/renpy/ast.py", line 2015, in execute
+    self.call("execute")
+  File "C:\Users\zerog\Downloads\renpy-7.4.11-sdk/renpy/ast.py", line 2003, in call
+    return renpy.statements.call(method, parsed, *args, **kwargs)
+  File "C:\Users\zerog\Downloads\renpy-7.4.11-sdk/renpy/statements.py", line 278, in call
+    return method(parsed, *args, **kwargs)
+  File "renpy/common/000statements.rpy", line 569, in execute_call_screen
+    store._return = renpy.call_screen(name, *args, **kwargs)
+  File "C:\Users\zerog\Downloads\renpy-7.4.11-sdk/renpy/exports.py", line 3136, in call_screen
+    rv = renpy.ui.interact(mouse="screen", type="screen", roll_forward=roll_forward)
+  File "C:\Users\zerog\Downloads\renpy-7.4.11-sdk/renpy/ui.py", line 298, in interact
+    rv = renpy.game.interface.interact(roll_forward=roll_forward, **kwargs)
+  File "C:\Users\zerog\Downloads\renpy-7.4.11-sdk/renpy/display/core.py", line 3325, in interact
+    repeat, rv = self.interact_core(preloads=preloads, trans_pause=trans_pause, pause=pause, pause_start=pause_start, **kwargs)
+  File "C:\Users\zerog\Downloads\renpy-7.4.11-sdk/renpy/display/core.py", line 3737, in interact_core
+    root_widget.visit_all(lambda i : i.per_interact())
+  File "C:\Users\zerog\Downloads\renpy-7.4.11-sdk/renpy/display/core.py", line 568, in visit_all
+    d.visit_all(callback, seen)
+  File "C:\Users\zerog\Downloads\renpy-7.4.11-sdk/renpy/display/core.py", line 568, in visit_all
+    d.visit_all(callback, seen)
+  File "C:\Users\zerog\Downloads\renpy-7.4.11-sdk/renpy/display/core.py", line 568, in visit_all
+    d.visit_all(callback, seen)
+  File "C:\Users\zerog\Downloads\renpy-7.4.11-sdk/renpy/display/screen.py", line 436, in visit_all
+    callback(self)
+  File "C:\Users\zerog\Downloads\renpy-7.4.11-sdk/renpy/display/core.py", line 3737, in <lambda>
+    root_widget.visit_all(lambda i : i.per_interact())
+  File "C:\Users\zerog\Downloads\renpy-7.4.11-sdk/renpy/display/screen.py", line 447, in per_interact
+    self.update()
+  File "C:\Users\zerog\Downloads\renpy-7.4.11-sdk/renpy/display/screen.py", line 637, in update
+    self.screen.function(**self.scope)
+  File "game/script.rpy", line 615, in execute
+    screen blocks:
+  File "game/script.rpy", line 615, in execute
+    screen blocks:
+  File "game/script.rpy", line 1037, in execute
+    showif E2visible == True:
+  File "game/script.rpy", line 1037, in <module>
+    showif E2visible == True:
+NameError: name 'E2visible' is not defined
+
+While running game code:
+  File "game/script.rpy", line 87, in script
+    call screen blocks()
+  File "renpy/common/000statements.rpy", line 569, in execute_call_screen
+    store._return = renpy.call_screen(name, *args, **kwargs)
+  File "game/script.rpy", line 615, in execute
+    screen blocks:
+  File "game/script.rpy", line 615, in execute
+    screen blocks:
+  File "game/script.rpy", line 1037, in execute
+    showif E2visible == True:
+  File "game/script.rpy", line 1037, in <module>
+    showif E2visible == True:
+NameError: name 'E2visible' is not defined
+Resetting cache.
+Bootstrap to the start of init.init took 12358.16s
+Early init took 0.00s
+Loader init took 0.02s
+Loading error handling took 0.02s
+Loading script took 0.29s
+Loading save slot metadata. took 0.01s
+Loading persistent took 0.00s
+Importing _renpysteam: ImportError('No module named _renpysteam',)
+Running init code took 0.03s
+Loading analysis data took 0.03s
+Analyze and compile ATL took 0.00s
+Index archives took 0.00s
+Backing up script files to 'C:\\Users\\zerog\\AppData\\Roaming/RenPy/backups\\act3puzzle2':
+Dump and make backups. took 0.05s
+Cleaning cache took 0.00s
+Making clean stores took 0.00s
+Initial gc. took 0.04s
+DPI scale factor: 1.500000
+nvdrs: Loaded, about to disable thread optimizations.
+nvdrs: Disabled thread optimizations.
+Creating interface object took 0.17s
+Cleaning stores took 0.00s
+Init translation took 0.04s
+Build styles took 0.00s
+Load screen analysis took 0.00s
+Analyze screens took 0.01s
+Save screen analysis took 0.04s
+Prepare screens took 0.12s
+Save pyanalysis. took 0.04s
+Save bytecode. took 0.02s
+Running _start took 0.00s
+Performance test:
+Interface start took 0.05s
+
+Initializing gl2 renderer:
+primary display bounds: (0, 0, 1920, 1080)
+swap interval: 1 frames
+Windowed mode.
+Vendor: 'NVIDIA Corporation'
+Renderer: 'NVIDIA GeForce RTX 2060 with Max-Q Design/PCIe/SSE2'
+Version: '4.6.0 NVIDIA 496.49'
+Display Info: None
+Screen sizes: virtual=(1920, 1080) physical=(1739, 978) drawable=(1739, 978)
+Maximum texture size: 4096x4096
+
+Full traceback:
+  File "game/script.rpy", line 90, in script
+    call screen blocks()
+  File "C:\Users\zerog\Downloads\renpy-7.4.11-sdk/renpy/ast.py", line 2015, in execute
+    self.call("execute")
+  File "C:\Users\zerog\Downloads\renpy-7.4.11-sdk/renpy/ast.py", line 2003, in call
+    return renpy.statements.call(method, parsed, *args, **kwargs)
+  File "C:\Users\zerog\Downloads\renpy-7.4.11-sdk/renpy/statements.py", line 278, in call
+    return method(parsed, *args, **kwargs)
+  File "renpy/common/000statements.rpy", line 569, in execute_call_screen
+    store._return = renpy.call_screen(name, *args, **kwargs)
+  File "C:\Users\zerog\Downloads\renpy-7.4.11-sdk/renpy/exports.py", line 3136, in call_screen
+    rv = renpy.ui.interact(mouse="screen", type="screen", roll_forward=roll_forward)
+  File "C:\Users\zerog\Downloads\renpy-7.4.11-sdk/renpy/ui.py", line 298, in interact
+    rv = renpy.game.interface.interact(roll_forward=roll_forward, **kwargs)
+  File "C:\Users\zerog\Downloads\renpy-7.4.11-sdk/renpy/display/core.py", line 3325, in interact
+    repeat, rv = self.interact_core(preloads=preloads, trans_pause=trans_pause, pause=pause, pause_start=pause_start, **kwargs)
+  File "C:\Users\zerog\Downloads\renpy-7.4.11-sdk/renpy/display/core.py", line 3839, in interact_core
+    self.draw_screen(root_widget, fullscreen_video, (not fullscreen_video) or video_frame_drawn)
+  File "C:\Users\zerog\Downloads\renpy-7.4.11-sdk/renpy/display/core.py", line 2565, in draw_screen
+    renpy.config.screen_height,
+  File "render.pyx", line 492, in renpy.display.render.render_screen
+  File "render.pyx", line 263, in renpy.display.render.render
+  File "C:\Users\zerog\Downloads\renpy-7.4.11-sdk/renpy/display/layout.py", line 826, in render
+    surf = render(child, width, height, cst, cat)
+  File "render.pyx", line 170, in renpy.display.render.render
+  File "render.pyx", line 263, in renpy.display.render.render
+  File "C:\Users\zerog\Downloads\renpy-7.4.11-sdk/renpy/display/layout.py", line 826, in render
+    surf = render(child, width, height, cst, cat)
+  File "render.pyx", line 170, in renpy.display.render.render
+  File "render.pyx", line 263, in renpy.display.render.render
+  File "C:\Users\zerog\Downloads\renpy-7.4.11-sdk/renpy/display/layout.py", line 826, in render
+    surf = render(child, width, height, cst, cat)
+  File "render.pyx", line 170, in renpy.display.render.render
+  File "render.pyx", line 263, in renpy.display.render.render
+  File "C:\Users\zerog\Downloads\renpy-7.4.11-sdk/renpy/display/screen.py", line 688, in render
+    child = renpy.display.render.render(self.child, w, h, st, at)
+  File "render.pyx", line 170, in renpy.display.render.render
+  File "render.pyx", line 263, in renpy.display.render.render
+  File "C:\Users\zerog\Downloads\renpy-7.4.11-sdk/renpy/display/layout.py", line 826, in render
+    surf = render(child, width, height, cst, cat)
+  File "render.pyx", line 170, in renpy.display.render.render
+  File "render.pyx", line 263, in renpy.display.render.render
+  File "C:\Users\zerog\Downloads\renpy-7.4.11-sdk/renpy/sl2/sldisplayables.py", line 86, in render
+    cr = renpy.display.render.render(self.child, width, height, st, at)
+  File "render.pyx", line 170, in renpy.display.render.render
+  File "render.pyx", line 263, in renpy.display.render.render
+  File "C:\Users\zerog\Downloads\renpy-7.4.11-sdk/renpy/display/behavior.py", line 795, in render
+    rv = super(Button, self).render(width, height, st, at)
+  File "C:\Users\zerog\Downloads\renpy-7.4.11-sdk/renpy/display/layout.py", line 1264, in render
+    st, at)
+  File "render.pyx", line 170, in renpy.display.render.render
+  File "render.pyx", line 263, in renpy.display.render.render
+  File "C:\Users\zerog\Downloads\renpy-7.4.11-sdk/renpy/display/im.py", line 625, in render
+    return cache.get(self, render=True)
+  File "C:\Users\zerog\Downloads\renpy-7.4.11-sdk/renpy/display/im.py", line 287, in get
+    surf = image.load()
+  File "C:\Users\zerog\Downloads\renpy-7.4.11-sdk/renpy/display/im.py", line 706, in load
+    raise e
+IOError: Couldn't find file 'Ospot1.png'.
+
+While loading <'Image' u'Ospot1.png'>:
+  File "game/script.rpy", line 90, in script
+    call screen blocks()
+  File "renpy/common/000statements.rpy", line 569, in execute_call_screen
+    store._return = renpy.call_screen(name, *args, **kwargs)
+IOError: Couldn't find file 'Ospot1.png'.
+Cleaning stores took 0.00s
+Init translation took 0.00s
+Build styles took 0.00s
+Load screen analysis took 0.02s
+Analyze screens took 0.00s
+Prepare screens took 0.00s
+Running _start took 0.00s
+Resetting cache.
+Bootstrap to the start of init.init took 12431.14s
+Early init took 0.00s
+Loader init took 0.02s
+Loading error handling took 0.02s
+Loading script took 0.26s
+Loading save slot metadata. took 0.01s
+Loading persistent took 0.00s
+Importing _renpysteam: ImportError('No module named _renpysteam',)
+Running init code took 0.03s
+Loading analysis data took 0.03s
+Analyze and compile ATL took 0.00s
+Index archives took 0.00s
+Backing up script files to 'C:\\Users\\zerog\\AppData\\Roaming/RenPy/backups\\act3puzzle2':
+Dump and make backups. took 0.05s
+Cleaning cache took 0.00s
+Making clean stores took 0.00s
+Initial gc. took 0.04s
+DPI scale factor: 1.500000
+nvdrs: Loaded, about to disable thread optimizations.
+nvdrs: Disabled thread optimizations.
+Creating interface object took 0.17s
+Cleaning stores took 0.00s
+Init translation took 0.04s
+Build styles took 0.00s
+Load screen analysis took 0.00s
+Analyze screens took 0.01s
+Save screen analysis took 0.04s
+Prepare screens took 0.07s
+Save pyanalysis. took 0.04s
+Save bytecode. took 0.01s
+Running _start took 0.00s
+Performance test:
+Interface start took 0.05s
+
+Initializing gl2 renderer:
+primary display bounds: (0, 0, 1920, 1080)
+swap interval: 1 frames
+Windowed mode.
+Vendor: 'NVIDIA Corporation'
+Renderer: 'NVIDIA GeForce RTX 2060 with Max-Q Design/PCIe/SSE2'
+Version: '4.6.0 NVIDIA 496.49'
+Display Info: None
+Screen sizes: virtual=(1920, 1080) physical=(1739, 978) drawable=(1739, 978)
+Maximum texture size: 4096x4096
+
+Full traceback:
+  File "game/script.rpy", line 90, in script
+    call screen blocks()
+  File "C:\Users\zerog\Downloads\renpy-7.4.11-sdk/renpy/ast.py", line 2015, in execute
+    self.call("execute")
+  File "C:\Users\zerog\Downloads\renpy-7.4.11-sdk/renpy/ast.py", line 2003, in call
+    return renpy.statements.call(method, parsed, *args, **kwargs)
+  File "C:\Users\zerog\Downloads\renpy-7.4.11-sdk/renpy/statements.py", line 278, in call
+    return method(parsed, *args, **kwargs)
+  File "renpy/common/000statements.rpy", line 569, in execute_call_screen
+    store._return = renpy.call_screen(name, *args, **kwargs)
+  File "C:\Users\zerog\Downloads\renpy-7.4.11-sdk/renpy/exports.py", line 3136, in call_screen
+    rv = renpy.ui.interact(mouse="screen", type="screen", roll_forward=roll_forward)
+  File "C:\Users\zerog\Downloads\renpy-7.4.11-sdk/renpy/ui.py", line 298, in interact
+    rv = renpy.game.interface.interact(roll_forward=roll_forward, **kwargs)
+  File "C:\Users\zerog\Downloads\renpy-7.4.11-sdk/renpy/display/core.py", line 3325, in interact
+    repeat, rv = self.interact_core(preloads=preloads, trans_pause=trans_pause, pause=pause, pause_start=pause_start, **kwargs)
+  File "C:\Users\zerog\Downloads\renpy-7.4.11-sdk/renpy/display/core.py", line 3737, in interact_core
+    root_widget.visit_all(lambda i : i.per_interact())
+  File "C:\Users\zerog\Downloads\renpy-7.4.11-sdk/renpy/display/core.py", line 568, in visit_all
+    d.visit_all(callback, seen)
+  File "C:\Users\zerog\Downloads\renpy-7.4.11-sdk/renpy/display/core.py", line 568, in visit_all
+    d.visit_all(callback, seen)
+  File "C:\Users\zerog\Downloads\renpy-7.4.11-sdk/renpy/display/core.py", line 568, in visit_all
+    d.visit_all(callback, seen)
+  File "C:\Users\zerog\Downloads\renpy-7.4.11-sdk/renpy/display/screen.py", line 436, in visit_all
+    callback(self)
+  File "C:\Users\zerog\Downloads\renpy-7.4.11-sdk/renpy/display/core.py", line 3737, in <lambda>
+    root_widget.visit_all(lambda i : i.per_interact())
+  File "C:\Users\zerog\Downloads\renpy-7.4.11-sdk/renpy/display/screen.py", line 447, in per_interact
+    self.update()
+  File "C:\Users\zerog\Downloads\renpy-7.4.11-sdk/renpy/display/screen.py", line 637, in update
+    self.screen.function(**self.scope)
+  File "game/script.rpy", line 623, in execute
+    screen blocks:
+  File "game/script.rpy", line 623, in execute
+    screen blocks:
+  File "game/script.rpy", line 1045, in execute
+    showif E2visible == True:
+  File "game/script.rpy", line 1046, in execute
+    draggroup:
+  File "game/script.rpy", line 1079, in execute
+    drag:
+  File "game/script.rpy", line 1079, in keywords
+    drag:
+  File "game/script.rpy", line 1082, in <module>
+    xpos E2x
+NameError: name 'E2x' is not defined
+
+While running game code:
+  File "game/script.rpy", line 90, in script
+    call screen blocks()
+  File "renpy/common/000statements.rpy", line 569, in execute_call_screen
+    store._return = renpy.call_screen(name, *args, **kwargs)
+  File "game/script.rpy", line 623, in execute
+    screen blocks:
+  File "game/script.rpy", line 623, in execute
+    screen blocks:
+  File "game/script.rpy", line 1045, in execute
+    showif E2visible == True:
+  File "game/script.rpy", line 1046, in execute
+    draggroup:
+  File "game/script.rpy", line 1079, in execute
+    drag:
+  File "game/script.rpy", line 1079, in keywords
+    drag:
+  File "game/script.rpy", line 1082, in <module>
+    xpos E2x
+NameError: name 'E2x' is not defined
+Resetting cache.
+Bootstrap to the start of init.init took 12500.56s
+Early init took 0.00s
+Loader init took 0.01s
+Loading error handling took 0.01s
+Loading script took 0.26s
+Loading save slot metadata. took 0.01s
+Loading persistent took 0.00s
+Importing _renpysteam: ImportError('No module named _renpysteam',)
+Running init code took 0.03s
+Loading analysis data took 0.03s
+Analyze and compile ATL took 0.00s
+Index archives took 0.00s
+Backing up script files to 'C:\\Users\\zerog\\AppData\\Roaming/RenPy/backups\\act3puzzle2':
+Dump and make backups. took 0.05s
+Cleaning cache took 0.00s
+Making clean stores took 0.00s
+Initial gc. took 0.04s
+DPI scale factor: 1.500000
+nvdrs: Loaded, about to disable thread optimizations.
+nvdrs: Disabled thread optimizations.
+Creating interface object took 0.17s
+Cleaning stores took 0.00s
+Init translation took 0.04s
+Build styles took 0.00s
+Load screen analysis took 0.00s
+Analyze screens took 0.01s
+Save screen analysis took 0.04s
+Prepare screens took 0.07s
+Save pyanalysis. took 0.05s
+Save bytecode. took 0.01s
+Running _start took 0.00s
+Performance test:
+Interface start took 0.05s
+
+Initializing gl2 renderer:
+primary display bounds: (0, 0, 1920, 1080)
+swap interval: 1 frames
+Windowed mode.
+Vendor: 'NVIDIA Corporation'
+Renderer: 'NVIDIA GeForce RTX 2060 with Max-Q Design/PCIe/SSE2'
+Version: '4.6.0 NVIDIA 496.49'
+Display Info: None
+Screen sizes: virtual=(1920, 1080) physical=(1739, 978) drawable=(1739, 978)
+Maximum texture size: 4096x4096
+Resetting cache.
+Bootstrap to the start of init.init took 12629.41s
+Early init took 0.00s
+Loader init took 0.02s
+Loading error handling took 0.02s
+Loading script took 0.28s
+Loading save slot metadata. took 0.01s
+Loading persistent took 0.00s
+Importing _renpysteam: ImportError('No module named _renpysteam',)
+Running init code took 0.03s
+Loading analysis data took 0.03s
+Analyze and compile ATL took 0.00s
+Index archives took 0.00s
+Backing up script files to 'C:\\Users\\zerog\\AppData\\Roaming/RenPy/backups\\act3puzzle2':
+Dump and make backups. took 0.05s
+Cleaning cache took 0.00s
+Making clean stores took 0.00s
+Initial gc. took 0.04s
+DPI scale factor: 1.500000
+nvdrs: Loaded, about to disable thread optimizations.
+nvdrs: Disabled thread optimizations.
+Creating interface object took 0.17s
+Cleaning stores took 0.00s
+Init translation took 0.04s
+Build styles took 0.00s
+Load screen analysis took 0.00s
+Analyze screens took 0.01s
+Save screen analysis took 0.04s
+Prepare screens took 0.09s
+Save pyanalysis. took 0.05s
+Save bytecode. took 0.01s
+Running _start took 0.00s
+Performance test:
+Interface start took 0.05s
+
+Initializing gl2 renderer:
+primary display bounds: (0, 0, 1920, 1080)
+swap interval: 1 frames
+Windowed mode.
+Vendor: 'NVIDIA Corporation'
+Renderer: 'NVIDIA GeForce RTX 2060 with Max-Q Design/PCIe/SSE2'
+Version: '4.6.0 NVIDIA 496.49'
+Display Info: None
+Screen sizes: virtual=(1920, 1080) physical=(1739, 978) drawable=(1739, 978)
+Maximum texture size: 4096x4096
+Screen sizes: virtual=(1920, 1080) physical=(1920, 1046) drawable=(1920, 1046)
+Maximum texture size: 4096x4096
+Resetting cache.
+Bootstrap to the start of init.init took 13385.82s
+Early init took 0.00s
+Loader init took 0.02s
+Loading error handling took 0.02s
+Loading script took 0.27s
+Loading save slot metadata. took 0.01s
+Loading persistent took 0.00s
+Importing _renpysteam: ImportError('No module named _renpysteam',)
+Running init code took 0.03s
+Loading analysis data took 0.03s
+Analyze and compile ATL took 0.00s
+Index archives took 0.00s
+Backing up script files to 'C:\\Users\\zerog\\AppData\\Roaming/RenPy/backups\\act3puzzle2':
+Dump and make backups. took 0.05s
+Cleaning cache took 0.00s
+Making clean stores took 0.00s
+Initial gc. took 0.04s
+DPI scale factor: 1.500000
+nvdrs: Loaded, about to disable thread optimizations.
+nvdrs: Disabled thread optimizations.
+Creating interface object took 0.17s
+Cleaning stores took 0.00s
+Init translation took 0.04s
+Build styles took 0.00s
+Load screen analysis took 0.00s
+Analyze screens took 0.01s
+Save screen analysis took 0.04s
+Prepare screens took 0.09s
+Save pyanalysis. took 0.05s
+Save bytecode. took 0.01s
+Running _start took 0.00s
+Performance test:
+Interface start took 0.05s
+
+Initializing gl2 renderer:
+primary display bounds: (0, 0, 1920, 1080)
+swap interval: 1 frames
+Windowed mode.
+Vendor: 'NVIDIA Corporation'
+Renderer: 'NVIDIA GeForce RTX 2060 with Max-Q Design/PCIe/SSE2'
+Version: '4.6.0 NVIDIA 496.49'
+Display Info: None
+Screen sizes: virtual=(1920, 1080) physical=(1920, 1046) drawable=(1920, 1046)
+Maximum texture size: 4096x4096
+Resetting cache.
+Bootstrap to the start of init.init took 13397.25s
+Early init took 0.00s
+Loader init took 0.01s
+Loading error handling took 0.02s
+Loading script took 0.09s
+Loading save slot metadata. took 0.01s
+Loading persistent took 0.00s
+Importing _renpysteam: ImportError('No module named _renpysteam',)
+Running init code took 0.04s
+Loading analysis data took 0.03s
+Analyze and compile ATL took 0.00s
+Index archives took 0.00s
+Dump and make backups. took 0.05s
+Cleaning cache took 0.00s
+Making clean stores took 0.00s
+Initial gc. took 0.04s
+DPI scale factor: 1.500000
+nvdrs: Loaded, about to disable thread optimizations.
+nvdrs: Disabled thread optimizations.
+Creating interface object took 0.17s
+Cleaning stores took 0.00s
+Init translation took 0.04s
+Build styles took 0.00s
+Load screen analysis took 0.02s
+Analyze screens took 0.00s
+Save screen analysis took 0.00s
+Prepare screens took 0.08s
+Save pyanalysis. took 0.00s
+Save bytecode. took 0.00s
+Running _start took 0.00s
+Performance test:
+Interface start took 0.06s
+
+Initializing gl2 renderer:
+primary display bounds: (0, 0, 1920, 1080)
+swap interval: 1 frames
+Windowed mode.
+Vendor: 'NVIDIA Corporation'
+Renderer: 'NVIDIA GeForce RTX 2060 with Max-Q Design/PCIe/SSE2'
+Version: '4.6.0 NVIDIA 496.49'
+Display Info: None
+Screen sizes: virtual=(1920, 1080) physical=(1920, 1046) drawable=(1920, 1046)
+Maximum texture size: 4096x4096
+
+Full traceback:
+  File "game/script.rpy", line 90, in script
+    call screen blocks()
+  File "C:\Users\zerog\Downloads\renpy-7.4.11-sdk/renpy/ast.py", line 2015, in execute
+    self.call("execute")
+  File "C:\Users\zerog\Downloads\renpy-7.4.11-sdk/renpy/ast.py", line 2003, in call
+    return renpy.statements.call(method, parsed, *args, **kwargs)
+  File "C:\Users\zerog\Downloads\renpy-7.4.11-sdk/renpy/statements.py", line 278, in call
+    return method(parsed, *args, **kwargs)
+  File "renpy/common/000statements.rpy", line 569, in execute_call_screen
+    store._return = renpy.call_screen(name, *args, **kwargs)
+  File "C:\Users\zerog\Downloads\renpy-7.4.11-sdk/renpy/exports.py", line 3136, in call_screen
+    rv = renpy.ui.interact(mouse="screen", type="screen", roll_forward=roll_forward)
+  File "C:\Users\zerog\Downloads\renpy-7.4.11-sdk/renpy/ui.py", line 298, in interact
+    rv = renpy.game.interface.interact(roll_forward=roll_forward, **kwargs)
+  File "C:\Users\zerog\Downloads\renpy-7.4.11-sdk/renpy/display/core.py", line 3325, in interact
+    repeat, rv = self.interact_core(preloads=preloads, trans_pause=trans_pause, pause=pause, pause_start=pause_start, **kwargs)
+  File "C:\Users\zerog\Downloads\renpy-7.4.11-sdk/renpy/display/core.py", line 3839, in interact_core
+    self.draw_screen(root_widget, fullscreen_video, (not fullscreen_video) or video_frame_drawn)
+  File "C:\Users\zerog\Downloads\renpy-7.4.11-sdk/renpy/display/core.py", line 2565, in draw_screen
+    renpy.config.screen_height,
+  File "render.pyx", line 492, in renpy.display.render.render_screen
+  File "render.pyx", line 263, in renpy.display.render.render
+  File "C:\Users\zerog\Downloads\renpy-7.4.11-sdk/renpy/display/layout.py", line 826, in render
+    surf = render(child, width, height, cst, cat)
+  File "render.pyx", line 170, in renpy.display.render.render
+  File "render.pyx", line 263, in renpy.display.render.render
+  File "C:\Users\zerog\Downloads\renpy-7.4.11-sdk/renpy/display/layout.py", line 826, in render
+    surf = render(child, width, height, cst, cat)
+  File "render.pyx", line 170, in renpy.display.render.render
+  File "render.pyx", line 263, in renpy.display.render.render
+  File "C:\Users\zerog\Downloads\renpy-7.4.11-sdk/renpy/display/layout.py", line 826, in render
+    surf = render(child, width, height, cst, cat)
+  File "render.pyx", line 170, in renpy.display.render.render
+  File "render.pyx", line 263, in renpy.display.render.render
+  File "C:\Users\zerog\Downloads\renpy-7.4.11-sdk/renpy/display/screen.py", line 688, in render
+    child = renpy.display.render.render(self.child, w, h, st, at)
+  File "render.pyx", line 170, in renpy.display.render.render
+  File "render.pyx", line 263, in renpy.display.render.render
+  File "C:\Users\zerog\Downloads\renpy-7.4.11-sdk/renpy/display/layout.py", line 826, in render
+    surf = render(child, width, height, cst, cat)
+  File "render.pyx", line 170, in renpy.display.render.render
+  File "render.pyx", line 263, in renpy.display.render.render
+  File "C:\Users\zerog\Downloads\renpy-7.4.11-sdk/renpy/sl2/sldisplayables.py", line 86, in render
+    cr = renpy.display.render.render(self.child, width, height, st, at)
+  File "render.pyx", line 170, in renpy.display.render.render
+  File "render.pyx", line 263, in renpy.display.render.render
+  File "C:\Users\zerog\Downloads\renpy-7.4.11-sdk/renpy/display/behavior.py", line 795, in render
+    rv = super(Button, self).render(width, height, st, at)
+  File "C:\Users\zerog\Downloads\renpy-7.4.11-sdk/renpy/display/layout.py", line 1264, in render
+    st, at)
+  File "render.pyx", line 170, in renpy.display.render.render
+  File "render.pyx", line 263, in renpy.display.render.render
+  File "C:\Users\zerog\Downloads\renpy-7.4.11-sdk/renpy/display/im.py", line 625, in render
+    return cache.get(self, render=True)
+  File "C:\Users\zerog\Downloads\renpy-7.4.11-sdk/renpy/display/im.py", line 287, in get
+    surf = image.load()
+  File "C:\Users\zerog\Downloads\renpy-7.4.11-sdk/renpy/display/im.py", line 706, in load
+    raise e
+IOError: Couldn't find file 'Sspot3.png'.
+
+While loading <'Image' u'Sspot3.png'>:
+  File "game/script.rpy", line 90, in script
+    call screen blocks()
+  File "renpy/common/000statements.rpy", line 569, in execute_call_screen
+    store._return = renpy.call_screen(name, *args, **kwargs)
+IOError: Couldn't find file 'Sspot3.png'.
+Cleaning stores took 0.00s
+Init translation took 0.00s
+Build styles took 0.00s
+Load screen analysis took 0.02s
+Analyze screens took 0.00s
+Prepare screens took 0.00s
+Running _start took 0.00s
+Resetting cache.
+Bootstrap to the start of init.init took 13458.17s
+Early init took 0.00s
+Loader init took 0.02s
+Loading error handling took 0.01s
+Loading script took 0.27s
+Loading save slot metadata. took 0.01s
+Loading persistent took 0.00s
+Importing _renpysteam: ImportError('No module named _renpysteam',)
+Running init code took 0.03s
+Loading analysis data took 0.03s
+Analyze and compile ATL took 0.00s
+Index archives took 0.00s
+Backing up script files to 'C:\\Users\\zerog\\AppData\\Roaming/RenPy/backups\\act3puzzle2':
+Dump and make backups. took 0.05s
+Cleaning cache took 0.00s
+Making clean stores took 0.00s
+Initial gc. took 0.04s
+DPI scale factor: 1.500000
+nvdrs: Loaded, about to disable thread optimizations.
+nvdrs: Disabled thread optimizations.
+Creating interface object took 0.17s
+Cleaning stores took 0.00s
+Init translation took 0.04s
+Build styles took 0.00s
+Load screen analysis took 0.00s
+Analyze screens took 0.01s
+Save screen analysis took 0.04s
+Prepare screens took 0.09s
+Save pyanalysis. took 0.05s
+Save bytecode. took 0.01s
+Running _start took 0.00s
+Performance test:
+Interface start took 0.05s
+
+Initializing gl2 renderer:
+primary display bounds: (0, 0, 1920, 1080)
+swap interval: 1 frames
+Windowed mode.
+Vendor: 'NVIDIA Corporation'
+Renderer: 'NVIDIA GeForce RTX 2060 with Max-Q Design/PCIe/SSE2'
+Version: '4.6.0 NVIDIA 496.49'
+Display Info: None
+Screen sizes: virtual=(1920, 1080) physical=(1920, 1046) drawable=(1920, 1046)
+Maximum texture size: 4096x4096
+Resetting cache.
+Bootstrap to the start of init.init took 13464.06s
+Early init took 0.00s
+Loader init took 0.02s
+Loading error handling took 0.02s
+Loading script took 0.11s
+Loading save slot metadata. took 0.01s
+Loading persistent took 0.00s
+Importing _renpysteam: ImportError('No module named _renpysteam',)
+Running init code took 0.04s
+Loading analysis data took 0.03s
+Analyze and compile ATL took 0.00s
+Index archives took 0.00s
+Dump and make backups. took 0.05s
+Cleaning cache took 0.00s
+Making clean stores took 0.00s
+Initial gc. took 0.04s
+DPI scale factor: 1.500000
+nvdrs: Loaded, about to disable thread optimizations.
+nvdrs: Disabled thread optimizations.
+Creating interface object took 0.18s
+Cleaning stores took 0.00s
+Init translation took 0.04s
+Build styles took 0.00s
+Load screen analysis took 0.02s
+Analyze screens took 0.00s
+Save screen analysis took 0.00s
+Prepare screens took 0.08s
+Save pyanalysis. took 0.00s
+Save bytecode. took 0.00s
+Running _start took 0.00s
+Performance test:
+Interface start took 0.06s
+
+Initializing gl2 renderer:
+primary display bounds: (0, 0, 1920, 1080)
+swap interval: 1 frames
+Windowed mode.
+Vendor: 'NVIDIA Corporation'
+Renderer: 'NVIDIA GeForce RTX 2060 with Max-Q Design/PCIe/SSE2'
+Version: '4.6.0 NVIDIA 496.49'
+Display Info: None
+Screen sizes: virtual=(1920, 1080) physical=(1920, 1046) drawable=(1920, 1046)
+Maximum texture size: 4096x4096
+Resetting cache.
+Bootstrap to the start of init.init took 13529.42s
+Early init took 0.00s
+Loader init took 0.01s
+Loading error handling took 0.02s
+Loading script took 0.28s
+Loading save slot metadata. took 0.01s
+Loading persistent took 0.00s
+Importing _renpysteam: ImportError('No module named _renpysteam',)
+Running init code took 0.03s
+Loading analysis data took 0.03s
+Analyze and compile ATL took 0.00s
+Index archives took 0.00s
+Backing up script files to 'C:\\Users\\zerog\\AppData\\Roaming/RenPy/backups\\act3puzzle2':
+Dump and make backups. took 0.05s
+Cleaning cache took 0.00s
+Making clean stores took 0.00s
+Initial gc. took 0.04s
+DPI scale factor: 1.500000
+nvdrs: Loaded, about to disable thread optimizations.
+nvdrs: Disabled thread optimizations.
+Creating interface object took 0.16s
+Cleaning stores took 0.00s
+Init translation took 0.04s
+Build styles took 0.00s
+Load screen analysis took 0.00s
+Analyze screens took 0.01s
+Save screen analysis took 0.04s
+Prepare screens took 0.09s
+Save pyanalysis. took 0.05s
+Save bytecode. took 0.01s
+Running _start took 0.00s
+Performance test:
+Interface start took 0.05s
+
+Initializing gl2 renderer:
+primary display bounds: (0, 0, 1920, 1080)
+swap interval: 1 frames
+Windowed mode.
+Vendor: 'NVIDIA Corporation'
+Renderer: 'NVIDIA GeForce RTX 2060 with Max-Q Design/PCIe/SSE2'
+Version: '4.6.0 NVIDIA 496.49'
+Display Info: None
+Screen sizes: virtual=(1920, 1080) physical=(1920, 1046) drawable=(1920, 1046)
+Maximum texture size: 4096x4096
+Resetting cache.
+Bootstrap to the start of init.init took 13886.46s
+Early init took 0.00s
+Loader init took 0.02s
+Loading error handling took 0.02s
+Loading script took 0.26s
+Loading save slot metadata. took 0.01s
+Loading persistent took 0.00s
+Importing _renpysteam: ImportError('No module named _renpysteam',)
+Running init code took 0.03s
+Loading analysis data took 0.03s
+Analyze and compile ATL took 0.00s
+Index archives took 0.00s
+Backing up script files to 'C:\\Users\\zerog\\AppData\\Roaming/RenPy/backups\\act3puzzle2':
+Dump and make backups. took 0.06s
+Cleaning cache took 0.00s
+Making clean stores took 0.00s
+Initial gc. took 0.04s
+DPI scale factor: 1.500000
+nvdrs: Loaded, about to disable thread optimizations.
+nvdrs: Disabled thread optimizations.
+Creating interface object took 0.16s
+Cleaning stores took 0.00s
+Init translation took 0.04s
+Build styles took 0.00s
+Load screen analysis took 0.00s
+Analyze screens took 0.01s
+Save screen analysis took 0.04s
+Prepare screens took 0.08s
+Save pyanalysis. took 0.04s
+Save bytecode. took 0.01s
+Running _start took 0.00s
+Performance test:
+Interface start took 0.05s
+
+Initializing gl2 renderer:
+primary display bounds: (0, 0, 1920, 1080)
+swap interval: 1 frames
+Windowed mode.
+Vendor: 'NVIDIA Corporation'
+Renderer: 'NVIDIA GeForce RTX 2060 with Max-Q Design/PCIe/SSE2'
+Version: '4.6.0 NVIDIA 496.49'
+Display Info: None
+Screen sizes: virtual=(1920, 1080) physical=(1920, 1046) drawable=(1920, 1046)
+Maximum texture size: 4096x4096
+Resetting cache.
+Bootstrap to the start of init.init took 13906.52s
+Early init took 0.00s
+Loader init took 0.02s
+Loading error handling took 0.02s
+Loading script took 0.25s
+Loading save slot metadata. took 0.01s
+Loading persistent took 0.00s
+Importing _renpysteam: ImportError('No module named _renpysteam',)
+Running init code took 0.03s
+Loading analysis data took 0.02s
+Analyze and compile ATL took 0.00s
+Index archives took 0.00s
+Backing up script files to 'C:\\Users\\zerog\\AppData\\Roaming/RenPy/backups\\act3puzzle2':
+Dump and make backups. took 0.06s
+Cleaning cache took 0.00s
+Making clean stores took 0.00s
+Initial gc. took 0.04s
+DPI scale factor: 1.500000
+nvdrs: Loaded, about to disable thread optimizations.
+nvdrs: Disabled thread optimizations.
+Creating interface object took 0.18s
+Cleaning stores took 0.00s
+Init translation took 0.04s
+Build styles took 0.00s
+Load screen analysis took 0.00s
+Analyze screens took 0.01s
+Save screen analysis took 0.04s
+Prepare screens took 0.07s
+Save pyanalysis. took 0.05s
+Save bytecode. took 0.01s
+Running _start took 0.00s
+Performance test:
+Interface start took 0.05s
+
+Initializing gl2 renderer:
+primary display bounds: (0, 0, 1920, 1080)
+swap interval: 1 frames
+Windowed mode.
+Vendor: 'NVIDIA Corporation'
+Renderer: 'NVIDIA GeForce RTX 2060 with Max-Q Design/PCIe/SSE2'
+Version: '4.6.0 NVIDIA 496.49'
+Display Info: None
+Screen sizes: virtual=(1920, 1080) physical=(1920, 1046) drawable=(1920, 1046)
+Maximum texture size: 4096x4096
+Resetting cache.
+Bootstrap to the start of init.init took 15423.06s
+Early init took 0.00s
+Loader init took 0.02s
+Loading error handling took 0.02s
+Loading script took 0.24s
+Loading save slot metadata. took 0.01s
+Loading persistent took 0.00s
+Importing _renpysteam: ImportError('No module named _renpysteam',)
+Running init code took 0.04s
+Loading analysis data took 0.03s
+Analyze and compile ATL took 0.00s
+Index archives took 0.00s
+Dump and make backups. took 0.05s
+Cleaning cache took 0.00s
+Making clean stores took 0.00s
+Initial gc. took 0.04s
+DPI scale factor: 1.500000
+nvdrs: Loaded, about to disable thread optimizations.
+nvdrs: Disabled thread optimizations.
+Creating interface object took 0.18s
+Cleaning stores took 0.00s
+Init translation took 0.04s
+Build styles took 0.00s
+Load screen analysis took 0.02s
+Analyze screens took 0.00s
+Save screen analysis took 0.00s
+Prepare screens took 0.08s
+Save pyanalysis. took 0.00s
+Save bytecode. took 0.00s
+Running _start took 0.00s
+Performance test:
+Interface start took 0.05s
+
+Initializing gl2 renderer:
+primary display bounds: (0, 0, 1920, 1080)
+swap interval: 1 frames
+Windowed mode.
+Vendor: 'NVIDIA Corporation'
+Renderer: 'NVIDIA GeForce RTX 2060 with Max-Q Design/PCIe/SSE2'
+Version: '4.6.0 NVIDIA 496.49'
+Display Info: None
+Screen sizes: virtual=(1920, 1080) physical=(1920, 1046) drawable=(1920, 1046)
+Maximum texture size: 4096x4096
+Resetting cache.
+Bootstrap to the start of init.init took 15472.91s
+Early init took 0.00s
+Loader init took 0.02s
+Loading error handling took 0.01s
+Loading script took 0.10s
+Loading save slot metadata. took 0.01s
+Loading persistent took 0.00s
+Importing _renpysteam: ImportError('No module named _renpysteam',)
+Running init code took 0.04s
+Loading analysis data took 0.02s
+Analyze and compile ATL took 0.00s
+Index archives took 0.00s
+Dump and make backups. took 0.05s
+Cleaning cache took 0.00s
+Making clean stores took 0.00s
+Initial gc. took 0.03s
+DPI scale factor: 1.500000
+nvdrs: Loaded, about to disable thread optimizations.
+nvdrs: Disabled thread optimizations.
+Creating interface object took 0.16s
+Cleaning stores took 0.00s
+Init translation took 0.04s
+Build styles took 0.00s
+Load screen analysis took 0.02s
+Analyze screens took 0.00s
+Save screen analysis took 0.00s
+Prepare screens took 0.07s
+Save pyanalysis. took 0.00s
+Save bytecode. took 0.00s
+Running _start took 0.00s
+Performance test:
+Interface start took 0.05s
+
+Initializing gl2 renderer:
+primary display bounds: (0, 0, 1920, 1080)
+swap interval: 1 frames
+Windowed mode.
+Vendor: 'NVIDIA Corporation'
+Renderer: 'NVIDIA GeForce RTX 2060 with Max-Q Design/PCIe/SSE2'
+Version: '4.6.0 NVIDIA 496.49'
+Display Info: None
+Screen sizes: virtual=(1920, 1080) physical=(1920, 1046) drawable=(1920, 1046)
+Maximum texture size: 4096x4096
+Resetting cache.
+Bootstrap to the start of init.init took 15786.14s
+Early init took 0.00s
+Loader init took 0.02s
+Loading error handling took 0.01s
+Loading script took 0.30s
+Loading save slot metadata. took 0.01s
+Loading persistent took 0.00s
+Importing _renpysteam: ImportError('No module named _renpysteam',)
+Running init code took 0.03s
+Loading analysis data took 0.03s
+Analyze and compile ATL took 0.00s
+Index archives took 0.00s
+Backing up script files to 'C:\\Users\\zerog\\AppData\\Roaming/RenPy/backups\\act3puzzle2':
+Dump and make backups. took 0.05s
+Cleaning cache took 0.00s
+Making clean stores took 0.00s
+Initial gc. took 0.04s
+DPI scale factor: 1.500000
+nvdrs: Loaded, about to disable thread optimizations.
+nvdrs: Disabled thread optimizations.
+Creating interface object took 0.17s
+Cleaning stores took 0.00s
+Init translation took 0.04s
+Build styles took 0.00s
+Load screen analysis took 0.00s
+Analyze screens took 0.01s
+Save screen analysis took 0.04s
+Prepare screens took 0.11s
+Save pyanalysis. took 0.04s
+Save bytecode. took 0.02s
+Running _start took 0.00s
+Performance test:
+Interface start took 0.05s
+
+Initializing gl2 renderer:
+primary display bounds: (0, 0, 1920, 1080)
+swap interval: 1 frames
+Windowed mode.
+Vendor: 'NVIDIA Corporation'
+Renderer: 'NVIDIA GeForce RTX 2060 with Max-Q Design/PCIe/SSE2'
+Version: '4.6.0 NVIDIA 496.49'
+Display Info: None
+Screen sizes: virtual=(1920, 1080) physical=(1920, 1046) drawable=(1920, 1046)
+Maximum texture size: 4096x4096
+
+Full traceback:
+  File "game/script.rpy", line 90, in script
+    call screen blocks()
+  File "C:\Users\zerog\Downloads\renpy-7.4.11-sdk/renpy/ast.py", line 2015, in execute
+    self.call("execute")
+  File "C:\Users\zerog\Downloads\renpy-7.4.11-sdk/renpy/ast.py", line 2003, in call
+    return renpy.statements.call(method, parsed, *args, **kwargs)
+  File "C:\Users\zerog\Downloads\renpy-7.4.11-sdk/renpy/statements.py", line 278, in call
+    return method(parsed, *args, **kwargs)
+  File "renpy/common/000statements.rpy", line 569, in execute_call_screen
+    store._return = renpy.call_screen(name, *args, **kwargs)
+  File "C:\Users\zerog\Downloads\renpy-7.4.11-sdk/renpy/exports.py", line 3136, in call_screen
+    rv = renpy.ui.interact(mouse="screen", type="screen", roll_forward=roll_forward)
+  File "C:\Users\zerog\Downloads\renpy-7.4.11-sdk/renpy/ui.py", line 298, in interact
+    rv = renpy.game.interface.interact(roll_forward=roll_forward, **kwargs)
+  File "C:\Users\zerog\Downloads\renpy-7.4.11-sdk/renpy/display/core.py", line 3325, in interact
+    repeat, rv = self.interact_core(preloads=preloads, trans_pause=trans_pause, pause=pause, pause_start=pause_start, **kwargs)
+  File "C:\Users\zerog\Downloads\renpy-7.4.11-sdk/renpy/display/core.py", line 3839, in interact_core
+    self.draw_screen(root_widget, fullscreen_video, (not fullscreen_video) or video_frame_drawn)
+  File "C:\Users\zerog\Downloads\renpy-7.4.11-sdk/renpy/display/core.py", line 2565, in draw_screen
+    renpy.config.screen_height,
+  File "render.pyx", line 492, in renpy.display.render.render_screen
+  File "render.pyx", line 263, in renpy.display.render.render
+  File "C:\Users\zerog\Downloads\renpy-7.4.11-sdk/renpy/display/layout.py", line 826, in render
+    surf = render(child, width, height, cst, cat)
+  File "render.pyx", line 170, in renpy.display.render.render
+  File "render.pyx", line 263, in renpy.display.render.render
+  File "C:\Users\zerog\Downloads\renpy-7.4.11-sdk/renpy/display/layout.py", line 826, in render
+    surf = render(child, width, height, cst, cat)
+  File "render.pyx", line 170, in renpy.display.render.render
+  File "render.pyx", line 263, in renpy.display.render.render
+  File "C:\Users\zerog\Downloads\renpy-7.4.11-sdk/renpy/display/layout.py", line 826, in render
+    surf = render(child, width, height, cst, cat)
+  File "render.pyx", line 170, in renpy.display.render.render
+  File "render.pyx", line 263, in renpy.display.render.render
+  File "C:\Users\zerog\Downloads\renpy-7.4.11-sdk/renpy/display/screen.py", line 688, in render
+    child = renpy.display.render.render(self.child, w, h, st, at)
+  File "render.pyx", line 170, in renpy.display.render.render
+  File "render.pyx", line 263, in renpy.display.render.render
+  File "C:\Users\zerog\Downloads\renpy-7.4.11-sdk/renpy/display/layout.py", line 826, in render
+    surf = render(child, width, height, cst, cat)
+  File "render.pyx", line 170, in renpy.display.render.render
+  File "render.pyx", line 263, in renpy.display.render.render
+  File "C:\Users\zerog\Downloads\renpy-7.4.11-sdk/renpy/sl2/sldisplayables.py", line 86, in render
+    cr = renpy.display.render.render(self.child, width, height, st, at)
+  File "render.pyx", line 170, in renpy.display.render.render
+  File "render.pyx", line 263, in renpy.display.render.render
+  File "C:\Users\zerog\Downloads\renpy-7.4.11-sdk/renpy/display/behavior.py", line 795, in render
+    rv = super(Button, self).render(width, height, st, at)
+  File "C:\Users\zerog\Downloads\renpy-7.4.11-sdk/renpy/display/layout.py", line 1264, in render
+    st, at)
+  File "render.pyx", line 170, in renpy.display.render.render
+  File "render.pyx", line 263, in renpy.display.render.render
+  File "C:\Users\zerog\Downloads\renpy-7.4.11-sdk/renpy/display/im.py", line 625, in render
+    return cache.get(self, render=True)
+  File "C:\Users\zerog\Downloads\renpy-7.4.11-sdk/renpy/display/im.py", line 287, in get
+    surf = image.load()
+  File "C:\Users\zerog\Downloads\renpy-7.4.11-sdk/renpy/display/im.py", line 706, in load
+    raise e
+IOError: Couldn't find file 'Tspot3.png'.
+
+While loading <'Image' u'Tspot3.png'>:
+  File "game/script.rpy", line 90, in script
+    call screen blocks()
+  File "renpy/common/000statements.rpy", line 569, in execute_call_screen
+    store._return = renpy.call_screen(name, *args, **kwargs)
+IOError: Couldn't find file 'Tspot3.png'.
+Cleaning stores took 0.00s
+Init translation took 0.00s
+Build styles took 0.00s
+Load screen analysis took 0.02s
+Analyze screens took 0.00s
+Prepare screens took 0.00s
+Running _start took 0.00s
+Cleaning stores took 0.00s
+Init translation took 0.00s
+Build styles took 0.00s
+Load screen analysis took 0.02s
+Analyze screens took 0.00s
+Prepare screens took 0.00s
+Running _start took 0.00s
+Resetting cache.
+Bootstrap to the start of init.init took 16114.52s
+Early init took 0.00s
+Loader init took 0.02s
+Loading error handling took 0.01s
+Loading script took 0.10s
+Loading save slot metadata. took 0.01s
+Loading persistent took 0.00s
+Importing _renpysteam: ImportError('No module named _renpysteam',)
+Running init code took 0.04s
+Loading analysis data took 0.03s
+Analyze and compile ATL took 0.00s
+Index archives took 0.00s
+Dump and make backups. took 0.05s
+Cleaning cache took 0.00s
+Making clean stores took 0.00s
+Initial gc. took 0.04s
+DPI scale factor: 1.500000
+nvdrs: Loaded, about to disable thread optimizations.
+nvdrs: Disabled thread optimizations.
+Creating interface object took 0.16s
+Cleaning stores took 0.00s
+Init translation took 0.04s
+Build styles took 0.00s
+Load screen analysis took 0.02s
+Analyze screens took 0.00s
+Save screen analysis took 0.00s
+Prepare screens took 0.08s
+Save pyanalysis. took 0.00s
+Save bytecode. took 0.00s
+Running _start took 0.00s
+Performance test:
+Interface start took 0.05s
+
+Initializing gl2 renderer:
+primary display bounds: (0, 0, 1920, 1080)
+swap interval: 1 frames
+Windowed mode.
+Vendor: 'NVIDIA Corporation'
+Renderer: 'NVIDIA GeForce RTX 2060 with Max-Q Design/PCIe/SSE2'
+Version: '4.6.0 NVIDIA 496.49'
+Display Info: None
+Screen sizes: virtual=(1920, 1080) physical=(1920, 1046) drawable=(1920, 1046)
+Maximum texture size: 4096x4096
+
+Full traceback:
+  File "game/script.rpy", line 90, in script
+    call screen blocks()
+  File "C:\Users\zerog\Downloads\renpy-7.4.11-sdk/renpy/ast.py", line 2015, in execute
+    self.call("execute")
+  File "C:\Users\zerog\Downloads\renpy-7.4.11-sdk/renpy/ast.py", line 2003, in call
+    return renpy.statements.call(method, parsed, *args, **kwargs)
+  File "C:\Users\zerog\Downloads\renpy-7.4.11-sdk/renpy/statements.py", line 278, in call
+    return method(parsed, *args, **kwargs)
+  File "renpy/common/000statements.rpy", line 569, in execute_call_screen
+    store._return = renpy.call_screen(name, *args, **kwargs)
+  File "C:\Users\zerog\Downloads\renpy-7.4.11-sdk/renpy/exports.py", line 3136, in call_screen
+    rv = renpy.ui.interact(mouse="screen", type="screen", roll_forward=roll_forward)
+  File "C:\Users\zerog\Downloads\renpy-7.4.11-sdk/renpy/ui.py", line 298, in interact
+    rv = renpy.game.interface.interact(roll_forward=roll_forward, **kwargs)
+  File "C:\Users\zerog\Downloads\renpy-7.4.11-sdk/renpy/display/core.py", line 3325, in interact
+    repeat, rv = self.interact_core(preloads=preloads, trans_pause=trans_pause, pause=pause, pause_start=pause_start, **kwargs)
+  File "C:\Users\zerog\Downloads\renpy-7.4.11-sdk/renpy/display/core.py", line 3839, in interact_core
+    self.draw_screen(root_widget, fullscreen_video, (not fullscreen_video) or video_frame_drawn)
+  File "C:\Users\zerog\Downloads\renpy-7.4.11-sdk/renpy/display/core.py", line 2565, in draw_screen
+    renpy.config.screen_height,
+  File "render.pyx", line 492, in renpy.display.render.render_screen
+  File "render.pyx", line 263, in renpy.display.render.render
+  File "C:\Users\zerog\Downloads\renpy-7.4.11-sdk/renpy/display/layout.py", line 826, in render
+    surf = render(child, width, height, cst, cat)
+  File "render.pyx", line 170, in renpy.display.render.render
+  File "render.pyx", line 263, in renpy.display.render.render
+  File "C:\Users\zerog\Downloads\renpy-7.4.11-sdk/renpy/display/layout.py", line 826, in render
+    surf = render(child, width, height, cst, cat)
+  File "render.pyx", line 170, in renpy.display.render.render
+  File "render.pyx", line 263, in renpy.display.render.render
+  File "C:\Users\zerog\Downloads\renpy-7.4.11-sdk/renpy/display/layout.py", line 826, in render
+    surf = render(child, width, height, cst, cat)
+  File "render.pyx", line 170, in renpy.display.render.render
+  File "render.pyx", line 263, in renpy.display.render.render
+  File "C:\Users\zerog\Downloads\renpy-7.4.11-sdk/renpy/display/screen.py", line 688, in render
+    child = renpy.display.render.render(self.child, w, h, st, at)
+  File "render.pyx", line 170, in renpy.display.render.render
+  File "render.pyx", line 263, in renpy.display.render.render
+  File "C:\Users\zerog\Downloads\renpy-7.4.11-sdk/renpy/display/layout.py", line 826, in render
+    surf = render(child, width, height, cst, cat)
+  File "render.pyx", line 170, in renpy.display.render.render
+  File "render.pyx", line 263, in renpy.display.render.render
+  File "C:\Users\zerog\Downloads\renpy-7.4.11-sdk/renpy/sl2/sldisplayables.py", line 86, in render
+    cr = renpy.display.render.render(self.child, width, height, st, at)
+  File "render.pyx", line 170, in renpy.display.render.render
+  File "render.pyx", line 263, in renpy.display.render.render
+  File "C:\Users\zerog\Downloads\renpy-7.4.11-sdk/renpy/display/behavior.py", line 795, in render
+    rv = super(Button, self).render(width, height, st, at)
+  File "C:\Users\zerog\Downloads\renpy-7.4.11-sdk/renpy/display/layout.py", line 1264, in render
+    st, at)
+  File "render.pyx", line 170, in renpy.display.render.render
+  File "render.pyx", line 263, in renpy.display.render.render
+  File "C:\Users\zerog\Downloads\renpy-7.4.11-sdk/renpy/display/im.py", line 625, in render
+    return cache.get(self, render=True)
+  File "C:\Users\zerog\Downloads\renpy-7.4.11-sdk/renpy/display/im.py", line 287, in get
+    surf = image.load()
+  File "C:\Users\zerog\Downloads\renpy-7.4.11-sdk/renpy/display/im.py", line 706, in load
+    raise e
+IOError: Couldn't find file 'Ospot1.png'.
+
+While loading <'Image' u'Ospot1.png'>:
+  File "game/script.rpy", line 90, in script
+    call screen blocks()
+  File "renpy/common/000statements.rpy", line 569, in execute_call_screen
+    store._return = renpy.call_screen(name, *args, **kwargs)
+IOError: Couldn't find file 'Ospot1.png'.
+Resetting cache.
+Bootstrap to the start of init.init took 29305.13s
+Early init took 0.00s
+Loader init took 0.02s
+Loading error handling took 0.02s
+Loading script took 0.45s
+Loading save slot metadata. took 0.01s
+Loading persistent took 0.00s
+Importing _renpysteam: ImportError('No module named _renpysteam',)
+Running init code took 0.03s
+Loading analysis data took 0.03s
+Analyze and compile ATL took 0.00s
+Index archives took 0.00s
+Backing up script files to 'C:\\Users\\zerog\\AppData\\Roaming/RenPy/backups\\act3puzzle2':
+Dump and make backups. took 0.05s
+Cleaning cache took 0.00s
+Making clean stores took 0.00s
+Initial gc. took 0.04s
+DPI scale factor: 1.500000
+nvdrs: Loaded, about to disable thread optimizations.
+nvdrs: Disabled thread optimizations.
+Creating interface object took 0.20s
+Cleaning stores took 0.00s
+Init translation took 0.04s
+Build styles took 0.00s
+Load screen analysis took 0.00s
+Analyze screens took 0.01s
+Save screen analysis took 0.04s
+Prepare screens took 0.12s
+Save pyanalysis. took 0.05s
+Save bytecode. took 0.01s
+Running _start took 0.00s
+Performance test:
+Interface start took 0.05s
+
+Initializing gl2 renderer:
+primary display bounds: (0, 0, 1920, 1080)
+swap interval: 1 frames
+Windowed mode.
+Vendor: 'NVIDIA Corporation'
+Renderer: 'NVIDIA GeForce RTX 2060 with Max-Q Design/PCIe/SSE2'
+Version: '4.6.0 NVIDIA 496.49'
+Display Info: None
+Screen sizes: virtual=(1920, 1080) physical=(1920, 1046) drawable=(1920, 1046)
+Maximum texture size: 4096x4096
+
+Full traceback:
+  File "game/script.rpy", line 93, in script
+    call screen blocks()
+  File "C:\Users\zerog\Downloads\renpy-7.4.11-sdk/renpy/ast.py", line 2015, in execute
+    self.call("execute")
+  File "C:\Users\zerog\Downloads\renpy-7.4.11-sdk/renpy/ast.py", line 2003, in call
+    return renpy.statements.call(method, parsed, *args, **kwargs)
+  File "C:\Users\zerog\Downloads\renpy-7.4.11-sdk/renpy/statements.py", line 278, in call
+    return method(parsed, *args, **kwargs)
+  File "renpy/common/000statements.rpy", line 569, in execute_call_screen
+    store._return = renpy.call_screen(name, *args, **kwargs)
+  File "C:\Users\zerog\Downloads\renpy-7.4.11-sdk/renpy/exports.py", line 3136, in call_screen
+    rv = renpy.ui.interact(mouse="screen", type="screen", roll_forward=roll_forward)
+  File "C:\Users\zerog\Downloads\renpy-7.4.11-sdk/renpy/ui.py", line 298, in interact
+    rv = renpy.game.interface.interact(roll_forward=roll_forward, **kwargs)
+  File "C:\Users\zerog\Downloads\renpy-7.4.11-sdk/renpy/display/core.py", line 3325, in interact
+    repeat, rv = self.interact_core(preloads=preloads, trans_pause=trans_pause, pause=pause, pause_start=pause_start, **kwargs)
+  File "C:\Users\zerog\Downloads\renpy-7.4.11-sdk/renpy/display/core.py", line 3839, in interact_core
+    self.draw_screen(root_widget, fullscreen_video, (not fullscreen_video) or video_frame_drawn)
+  File "C:\Users\zerog\Downloads\renpy-7.4.11-sdk/renpy/display/core.py", line 2565, in draw_screen
+    renpy.config.screen_height,
+  File "render.pyx", line 492, in renpy.display.render.render_screen
+  File "render.pyx", line 263, in renpy.display.render.render
+  File "C:\Users\zerog\Downloads\renpy-7.4.11-sdk/renpy/display/layout.py", line 826, in render
+    surf = render(child, width, height, cst, cat)
+  File "render.pyx", line 170, in renpy.display.render.render
+  File "render.pyx", line 263, in renpy.display.render.render
+  File "C:\Users\zerog\Downloads\renpy-7.4.11-sdk/renpy/display/layout.py", line 826, in render
+    surf = render(child, width, height, cst, cat)
+  File "render.pyx", line 170, in renpy.display.render.render
+  File "render.pyx", line 263, in renpy.display.render.render
+  File "C:\Users\zerog\Downloads\renpy-7.4.11-sdk/renpy/display/layout.py", line 826, in render
+    surf = render(child, width, height, cst, cat)
+  File "render.pyx", line 170, in renpy.display.render.render
+  File "render.pyx", line 263, in renpy.display.render.render
+  File "C:\Users\zerog\Downloads\renpy-7.4.11-sdk/renpy/display/screen.py", line 688, in render
+    child = renpy.display.render.render(self.child, w, h, st, at)
+  File "render.pyx", line 170, in renpy.display.render.render
+  File "render.pyx", line 263, in renpy.display.render.render
+  File "C:\Users\zerog\Downloads\renpy-7.4.11-sdk/renpy/display/layout.py", line 826, in render
+    surf = render(child, width, height, cst, cat)
+  File "render.pyx", line 170, in renpy.display.render.render
+  File "render.pyx", line 263, in renpy.display.render.render
+  File "C:\Users\zerog\Downloads\renpy-7.4.11-sdk/renpy/sl2/sldisplayables.py", line 86, in render
+    cr = renpy.display.render.render(self.child, width, height, st, at)
+  File "render.pyx", line 170, in renpy.display.render.render
+  File "render.pyx", line 263, in renpy.display.render.render
+  File "C:\Users\zerog\Downloads\renpy-7.4.11-sdk/renpy/display/behavior.py", line 795, in render
+    rv = super(Button, self).render(width, height, st, at)
+  File "C:\Users\zerog\Downloads\renpy-7.4.11-sdk/renpy/display/layout.py", line 1264, in render
+    st, at)
+  File "render.pyx", line 170, in renpy.display.render.render
+  File "render.pyx", line 263, in renpy.display.render.render
+  File "C:\Users\zerog\Downloads\renpy-7.4.11-sdk/renpy/display/im.py", line 625, in render
+    return cache.get(self, render=True)
+  File "C:\Users\zerog\Downloads\renpy-7.4.11-sdk/renpy/display/im.py", line 287, in get
+    surf = image.load()
+  File "C:\Users\zerog\Downloads\renpy-7.4.11-sdk/renpy/display/im.py", line 706, in load
+    raise e
+IOError: Couldn't find file 'Tspot1.png'.
+
+While loading <'Image' u'Tspot1.png'>:
+  File "game/script.rpy", line 93, in script
+    call screen blocks()
+  File "renpy/common/000statements.rpy", line 569, in execute_call_screen
+    store._return = renpy.call_screen(name, *args, **kwargs)
+IOError: Couldn't find file 'Tspot1.png'.
+Cleaning stores took 0.00s
+Init translation took 0.00s
+Build styles took 0.00s
+Load screen analysis took 0.02s
+Analyze screens took 0.00s
+Prepare screens took 0.00s
+Running _start took 0.00s
+Resetting cache.
+Bootstrap to the start of init.init took 29378.36s
+Early init took 0.00s
+Loader init took 0.02s
+Loading error handling took 0.02s
+Loading script took 0.11s
+Loading save slot metadata. took 0.01s
+Loading persistent took 0.00s
+Importing _renpysteam: ImportError('No module named _renpysteam',)
+Running init code took 0.03s
+Loading analysis data took 0.03s
+Analyze and compile ATL took 0.00s
+Index archives took 0.00s
+Dump and make backups. took 0.05s
+Cleaning cache took 0.00s
+Making clean stores took 0.00s
+Initial gc. took 0.04s
+DPI scale factor: 1.500000
+nvdrs: Loaded, about to disable thread optimizations.
+nvdrs: Disabled thread optimizations.
+Creating interface object took 0.17s
+Cleaning stores took 0.00s
+Init translation took 0.04s
+Build styles took 0.00s
+Load screen analysis took 0.02s
+Analyze screens took 0.00s
+Save screen analysis took 0.00s
+Prepare screens took 0.08s
+Save pyanalysis. took 0.00s
+Save bytecode. took 0.00s
+Running _start took 0.00s
+Performance test:
+Interface start took 0.05s
+
+Initializing gl2 renderer:
+primary display bounds: (0, 0, 1920, 1080)
+swap interval: 1 frames
+Windowed mode.
+Vendor: 'NVIDIA Corporation'
+Renderer: 'NVIDIA GeForce RTX 2060 with Max-Q Design/PCIe/SSE2'
+Version: '4.6.0 NVIDIA 496.49'
+Display Info: None
+Screen sizes: virtual=(1920, 1080) physical=(1920, 1046) drawable=(1920, 1046)
+Maximum texture size: 4096x4096
+Resetting cache.
+Bootstrap to the start of init.init took 29429.22s
+Early init took 0.00s
+Loader init took 0.02s
+Loading error handling took 0.01s
+Loading script took 0.10s
+Loading save slot metadata. took 0.02s
+Loading persistent took 0.00s
+Importing _renpysteam: ImportError('No module named _renpysteam',)
+Running init code took 0.03s
+Loading analysis data took 0.03s
+Analyze and compile ATL took 0.00s
+Index archives took 0.00s
+Dump and make backups. took 0.05s
+Cleaning cache took 0.00s
+Making clean stores took 0.00s
+Initial gc. took 0.04s
+DPI scale factor: 1.500000
+nvdrs: Loaded, about to disable thread optimizations.
+nvdrs: Disabled thread optimizations.
+Creating interface object took 0.17s
+Cleaning stores took 0.00s
+Init translation took 0.04s
+Build styles took 0.00s
+Load screen analysis took 0.02s
+Analyze screens took 0.00s
+Save screen analysis took 0.00s
+Prepare screens took 0.08s
+Save pyanalysis. took 0.00s
+Save bytecode. took 0.00s
+Running _start took 0.00s
+Performance test:
+Interface start took 0.06s
+
+Initializing gl2 renderer:
+primary display bounds: (0, 0, 1920, 1080)
+swap interval: 1 frames
+Windowed mode.
+Vendor: 'NVIDIA Corporation'
+Renderer: 'NVIDIA GeForce RTX 2060 with Max-Q Design/PCIe/SSE2'
+Version: '4.6.0 NVIDIA 496.49'
+Display Info: None
+Screen sizes: virtual=(1920, 1080) physical=(1920, 1046) drawable=(1920, 1046)
+Maximum texture size: 4096x4096
+Resetting cache.
+Bootstrap to the start of init.init took 29436.62s
+Early init took 0.00s
+Loader init took 0.02s
+Loading error handling took 0.02s
+Loading script took 0.12s
+Loading save slot metadata. took 0.01s
+Loading persistent took 0.00s
+Importing _renpysteam: ImportError('No module named _renpysteam',)
+Running init code took 0.03s
+Loading analysis data took 0.03s
+Analyze and compile ATL took 0.00s
+Index archives took 0.00s
+Dump and make backups. took 0.05s
+Cleaning cache took 0.00s
+Making clean stores took 0.00s
+Initial gc. took 0.03s
+DPI scale factor: 1.500000
+nvdrs: Loaded, about to disable thread optimizations.
+nvdrs: Disabled thread optimizations.
+Creating interface object took 0.17s
+Cleaning stores took 0.00s
+Init translation took 0.04s
+Build styles took 0.00s
+Load screen analysis took 0.02s
+Analyze screens took 0.00s
+Save screen analysis took 0.00s
+Prepare screens took 0.08s
+Save pyanalysis. took 0.00s
+Save bytecode. took 0.00s
+Running _start took 0.00s
+Performance test:
+Interface start took 0.06s
+
+Initializing gl2 renderer:
+primary display bounds: (0, 0, 1920, 1080)
+swap interval: 1 frames
+Windowed mode.
+Vendor: 'NVIDIA Corporation'
+Renderer: 'NVIDIA GeForce RTX 2060 with Max-Q Design/PCIe/SSE2'
+Version: '4.6.0 NVIDIA 496.49'
+Display Info: None
+Screen sizes: virtual=(1920, 1080) physical=(1920, 1046) drawable=(1920, 1046)
+Maximum texture size: 4096x4096
+Resetting cache.
+Bootstrap to the start of init.init took 29642.33s
+Early init took 0.00s
+Loader init took 0.02s
+Loading error handling took 0.02s
+Loading script took 0.26s
+Loading save slot metadata. took 0.01s
+Loading persistent took 0.00s
+Importing _renpysteam: ImportError('No module named _renpysteam',)
+Running init code took 0.03s
+Loading analysis data took 0.03s
+Analyze and compile ATL took 0.00s
+Index archives took 0.00s
+Backing up script files to 'C:\\Users\\zerog\\AppData\\Roaming/RenPy/backups\\act3puzzle2':
+Dump and make backups. took 0.05s
+Cleaning cache took 0.00s
+Making clean stores took 0.00s
+Initial gc. took 0.04s
+DPI scale factor: 1.500000
+nvdrs: Loaded, about to disable thread optimizations.
+nvdrs: Disabled thread optimizations.
+Creating interface object took 0.17s
+Cleaning stores took 0.00s
+Init translation took 0.04s
+Build styles took 0.00s
+Load screen analysis took 0.00s
+Analyze screens took 0.01s
+Save screen analysis took 0.04s
+Prepare screens took 0.07s
+Save pyanalysis. took 0.05s
+Save bytecode. took 0.01s
+Running _start took 0.00s
+Performance test:
+Interface start took 0.05s
+
+Initializing gl2 renderer:
+primary display bounds: (0, 0, 1920, 1080)
+swap interval: 1 frames
+Windowed mode.
+Vendor: 'NVIDIA Corporation'
+Renderer: 'NVIDIA GeForce RTX 2060 with Max-Q Design/PCIe/SSE2'
+Version: '4.6.0 NVIDIA 496.49'
+Display Info: None
+Screen sizes: virtual=(1920, 1080) physical=(1920, 1046) drawable=(1920, 1046)
+Maximum texture size: 4096x4096
+Resetting cache.
+Bootstrap to the start of init.init took 29651.89s
+Early init took 0.00s
+Loader init took 0.02s
+Loading error handling took 0.01s
+Loading script took 0.10s
+Loading save slot metadata. took 0.01s
+Loading persistent took 0.00s
+Importing _renpysteam: ImportError('No module named _renpysteam',)
+Running init code took 0.04s
+Loading analysis data took 0.02s
+Analyze and compile ATL took 0.00s
+Index archives took 0.00s
+Dump and make backups. took 0.05s
+Cleaning cache took 0.00s
+Making clean stores took 0.00s
+Initial gc. took 0.03s
+DPI scale factor: 1.500000
+nvdrs: Loaded, about to disable thread optimizations.
+nvdrs: Disabled thread optimizations.
+Creating interface object took 0.16s
+Cleaning stores took 0.00s
+Init translation took 0.04s
+Build styles took 0.00s
+Load screen analysis took 0.02s
+Analyze screens took 0.00s
+Save screen analysis took 0.00s
+Prepare screens took 0.08s
+Save pyanalysis. took 0.00s
+Save bytecode. took 0.00s
+Running _start took 0.00s
+Performance test:
+Interface start took 0.05s
+
+Initializing gl2 renderer:
+primary display bounds: (0, 0, 1920, 1080)
+swap interval: 1 frames
+Windowed mode.
+Vendor: 'NVIDIA Corporation'
+Renderer: 'NVIDIA GeForce RTX 2060 with Max-Q Design/PCIe/SSE2'
+Version: '4.6.0 NVIDIA 496.49'
+Display Info: None
+Screen sizes: virtual=(1920, 1080) physical=(1920, 1046) drawable=(1920, 1046)
+Maximum texture size: 4096x4096
+Resetting cache.
+Bootstrap to the start of init.init took 29782.08s
+Early init took 0.00s
+Loader init took 0.02s
+Loading error handling took 0.02s
+Loading script took 0.32s
+Loading save slot metadata. took 0.01s
+Loading persistent took 0.00s
+Importing _renpysteam: ImportError('No module named _renpysteam',)
+Running init code took 0.03s
+Loading analysis data took 0.03s
+Analyze and compile ATL took 0.00s
+Index archives took 0.00s
+Backing up script files to 'C:\\Users\\zerog\\AppData\\Roaming/RenPy/backups\\act3puzzle2':
+Dump and make backups. took 0.05s
+Cleaning cache took 0.00s
+Making clean stores took 0.00s
+Initial gc. took 0.04s
+DPI scale factor: 1.500000
+nvdrs: Loaded, about to disable thread optimizations.
+nvdrs: Disabled thread optimizations.
+Creating interface object took 0.17s
+Cleaning stores took 0.00s
+Init translation took 0.04s
+Build styles took 0.00s
+Load screen analysis took 0.00s
+Analyze screens took 0.01s
+Save screen analysis took 0.04s
+Prepare screens took 0.12s
+Save pyanalysis. took 0.05s
+Save bytecode. took 0.01s
+Running _start took 0.00s
+Performance test:
+Interface start took 0.05s
+
+Initializing gl2 renderer:
+primary display bounds: (0, 0, 1920, 1080)
+swap interval: 1 frames
+Windowed mode.
+Vendor: 'NVIDIA Corporation'
+Renderer: 'NVIDIA GeForce RTX 2060 with Max-Q Design/PCIe/SSE2'
+Version: '4.6.0 NVIDIA 496.49'
+Display Info: None
+Screen sizes: virtual=(1920, 1080) physical=(1920, 1046) drawable=(1920, 1046)
+Maximum texture size: 4096x4096
+
+Full traceback:
+  File "game/script.rpy", line 93, in script
+    call screen blocks()
+  File "C:\Users\zerog\Downloads\renpy-7.4.11-sdk/renpy/ast.py", line 2015, in execute
+    self.call("execute")
+  File "C:\Users\zerog\Downloads\renpy-7.4.11-sdk/renpy/ast.py", line 2003, in call
+    return renpy.statements.call(method, parsed, *args, **kwargs)
+  File "C:\Users\zerog\Downloads\renpy-7.4.11-sdk/renpy/statements.py", line 278, in call
+    return method(parsed, *args, **kwargs)
+  File "renpy/common/000statements.rpy", line 569, in execute_call_screen
+    store._return = renpy.call_screen(name, *args, **kwargs)
+  File "C:\Users\zerog\Downloads\renpy-7.4.11-sdk/renpy/exports.py", line 3136, in call_screen
+    rv = renpy.ui.interact(mouse="screen", type="screen", roll_forward=roll_forward)
+  File "C:\Users\zerog\Downloads\renpy-7.4.11-sdk/renpy/ui.py", line 298, in interact
+    rv = renpy.game.interface.interact(roll_forward=roll_forward, **kwargs)
+  File "C:\Users\zerog\Downloads\renpy-7.4.11-sdk/renpy/display/core.py", line 3325, in interact
+    repeat, rv = self.interact_core(preloads=preloads, trans_pause=trans_pause, pause=pause, pause_start=pause_start, **kwargs)
+  File "C:\Users\zerog\Downloads\renpy-7.4.11-sdk/renpy/display/core.py", line 4160, in interact_core
+    rv = root_widget.event(ev, x, y, 0)
+  File "C:\Users\zerog\Downloads\renpy-7.4.11-sdk/renpy/display/layout.py", line 1102, in event
+    rv = i.event(ev, x - xo, y - yo, cst)
+  File "C:\Users\zerog\Downloads\renpy-7.4.11-sdk/renpy/display/layout.py", line 1102, in event
+    rv = i.event(ev, x - xo, y - yo, cst)
+  File "C:\Users\zerog\Downloads\renpy-7.4.11-sdk/renpy/display/layout.py", line 1102, in event
+    rv = i.event(ev, x - xo, y - yo, cst)
+  File "C:\Users\zerog\Downloads\renpy-7.4.11-sdk/renpy/display/screen.py", line 727, in event
+    rv = self.child.event(ev, x, y, st)
+  File "C:\Users\zerog\Downloads\renpy-7.4.11-sdk/renpy/display/layout.py", line 1102, in event
+    rv = i.event(ev, x - xo, y - yo, cst)
+  File "C:\Users\zerog\Downloads\renpy-7.4.11-sdk/renpy/display/behavior.py", line 2296, in event
+    return run(self.function, *self.args, **self.kwargs)
+  File "C:\Users\zerog\Downloads\renpy-7.4.11-sdk/renpy/display/behavior.py", line 330, in run
+    return action(*args, **kwargs)
+  File "renpy/common/00action_other.rpy", line 537, in __call__
+    rv = self.callable(*self.args, **self.kwargs)
+  File "game/script.rpy", line 102, in checkblocks
+    renpy.say(e, "OMG YAS SLAY")
+  File "C:\Users\zerog\Downloads\renpy-7.4.11-sdk/renpy/exports.py", line 1419, in say
+    who(what, *args, **kwargs)
+  File "C:\Users\zerog\Downloads\renpy-7.4.11-sdk/renpy/character.py", line 1249, in __call__
+    self.do_display(who, what, cb_args=self.cb_args, dtt=dtt, **display_args)
+  File "C:\Users\zerog\Downloads\renpy-7.4.11-sdk/renpy/character.py", line 901, in do_display
+    **display_args)
+  File "C:\Users\zerog\Downloads\renpy-7.4.11-sdk/renpy/character.py", line 647, in display_say
+    rv = renpy.ui.interact(mouse='say', type=type, roll_forward=roll_forward)
+  File "C:\Users\zerog\Downloads\renpy-7.4.11-sdk/renpy/ui.py", line 298, in interact
+    rv = renpy.game.interface.interact(roll_forward=roll_forward, **kwargs)
+  File "C:\Users\zerog\Downloads\renpy-7.4.11-sdk/renpy/display/core.py", line 3301, in interact
+    raise Exception("Cannot start an interaction in the middle of an interaction, without creating a new context.")
+Exception: Cannot start an interaction in the middle of an interaction, without creating a new context.
+
+While running game code:
+  File "game/script.rpy", line 93, in script
+    call screen blocks()
+  File "renpy/common/000statements.rpy", line 569, in execute_call_screen
+    store._return = renpy.call_screen(name, *args, **kwargs)
+  File "renpy/common/00action_other.rpy", line 537, in __call__
+    rv = self.callable(*self.args, **self.kwargs)
+  File "game/script.rpy", line 102, in checkblocks
+    renpy.say(e, "OMG YAS SLAY")
+Exception: Cannot start an interaction in the middle of an interaction, without creating a new context.
+Cleaning stores took 0.00s
+Init translation took 0.00s
+Build styles took 0.00s
+Load screen analysis took 0.02s
+Analyze screens took 0.00s
+Prepare screens took 0.00s
+Running _start took 0.00s
+Resetting cache.
+Bootstrap to the start of init.init took 29826.16s
+Early init took 0.00s
+Loader init took 0.02s
+Loading error handling took 0.02s
+Loading script took 0.26s
+Loading save slot metadata. took 0.01s
+Loading persistent took 0.00s
+Importing _renpysteam: ImportError('No module named _renpysteam',)
+Running init code took 0.03s
+Loading analysis data took 0.03s
+Analyze and compile ATL took 0.00s
+Index archives took 0.00s
+Backing up script files to 'C:\\Users\\zerog\\AppData\\Roaming/RenPy/backups\\act3puzzle2':
+Dump and make backups. took 0.05s
+Cleaning cache took 0.00s
+Making clean stores took 0.00s
+Initial gc. took 0.05s
+DPI scale factor: 1.500000
+nvdrs: Loaded, about to disable thread optimizations.
+nvdrs: Disabled thread optimizations.
+Creating interface object took 0.17s
+Cleaning stores took 0.00s
+Init translation took 0.04s
+Build styles took 0.00s
+Load screen analysis took 0.00s
+Analyze screens took 0.01s
+Save screen analysis took 0.04s
+Prepare screens took 0.07s
+Save pyanalysis. took 0.05s
+Save bytecode. took 0.01s
+Running _start took 0.00s
+Performance test:
+Interface start took 0.05s
+
+Initializing gl2 renderer:
+primary display bounds: (0, 0, 1920, 1080)
+swap interval: 1 frames
+Windowed mode.
+Vendor: 'NVIDIA Corporation'
+Renderer: 'NVIDIA GeForce RTX 2060 with Max-Q Design/PCIe/SSE2'
+Version: '4.6.0 NVIDIA 496.49'
+Display Info: None
+Screen sizes: virtual=(1920, 1080) physical=(1920, 1046) drawable=(1920, 1046)
+Maximum texture size: 4096x4096
+Resetting cache.
+Bootstrap to the start of init.init took 29872.10s
+Early init took 0.00s
+Loader init took 0.02s
+Loading error handling took 0.01s
+Loading script took 0.10s
+Loading save slot metadata. took 0.01s
+Loading persistent took 0.00s
+Importing _renpysteam: ImportError('No module named _renpysteam',)
+Running init code took 0.04s
+Loading analysis data took 0.03s
+Analyze and compile ATL took 0.00s
+Index archives took 0.00s
+Dump and make backups. took 0.05s
+Cleaning cache took 0.00s
+Making clean stores took 0.00s
+Initial gc. took 0.04s
+DPI scale factor: 1.500000
+nvdrs: Loaded, about to disable thread optimizations.
+nvdrs: Disabled thread optimizations.
+Creating interface object took 0.17s
+Cleaning stores took 0.00s
+Init translation took 0.04s
+Build styles took 0.00s
+Load screen analysis took 0.02s
+Analyze screens took 0.00s
+Save screen analysis took 0.00s
+Prepare screens took 0.08s
+Save pyanalysis. took 0.00s
+Save bytecode. took 0.00s
+Running _start took 0.00s
+Performance test:
+Interface start took 0.06s
+
+Initializing gl2 renderer:
+primary display bounds: (0, 0, 1920, 1080)
+swap interval: 1 frames
+Windowed mode.
+Vendor: 'NVIDIA Corporation'
+Renderer: 'NVIDIA GeForce RTX 2060 with Max-Q Design/PCIe/SSE2'
+Version: '4.6.0 NVIDIA 496.49'
+Display Info: None
+Screen sizes: virtual=(1920, 1080) physical=(1920, 1046) drawable=(1920, 1046)
+Maximum texture size: 4096x4096
+Resetting cache.
+Bootstrap to the start of init.init took 29879.51s
+Early init took 0.00s
+Loader init took 0.02s
+Loading error handling took 0.02s
+Loading script took 0.11s
+Loading save slot metadata. took 0.01s
+Loading persistent took 0.00s
+Importing _renpysteam: ImportError('No module named _renpysteam',)
+Running init code took 0.05s
+Loading analysis data took 0.03s
+Analyze and compile ATL took 0.00s
+Index archives took 0.00s
+Dump and make backups. took 0.05s
+Cleaning cache took 0.00s
+Making clean stores took 0.00s
+Initial gc. took 0.04s
+DPI scale factor: 1.500000
+nvdrs: Loaded, about to disable thread optimizations.
+nvdrs: Disabled thread optimizations.
+Creating interface object took 0.17s
+Cleaning stores took 0.00s
+Init translation took 0.04s
+Build styles took 0.00s
+Load screen analysis took 0.02s
+Analyze screens took 0.00s
+Save screen analysis took 0.00s
+Prepare screens took 0.09s
+Save pyanalysis. took 0.00s
+Save bytecode. took 0.00s
+Running _start took 0.00s
+Performance test:
+Interface start took 0.06s
+
+Initializing gl2 renderer:
+primary display bounds: (0, 0, 1920, 1080)
+swap interval: 1 frames
+Windowed mode.
+Vendor: 'NVIDIA Corporation'
+Renderer: 'NVIDIA GeForce RTX 2060 with Max-Q Design/PCIe/SSE2'
+Version: '4.6.0 NVIDIA 496.49'
+Display Info: None
+Screen sizes: virtual=(1920, 1080) physical=(1920, 1046) drawable=(1920, 1046)
+Maximum texture size: 4096x4096
+Resetting cache.
+Bootstrap to the start of init.init took 29977.83s
+Early init took 0.00s
+Loader init took 0.02s
+Loading error handling took 0.01s
+Loading script took 0.10s
+Loading save slot metadata. took 0.01s
+Loading persistent took 0.00s
+Importing _renpysteam: ImportError('No module named _renpysteam',)
+Running init code took 0.04s
+Loading analysis data took 0.03s
+Analyze and compile ATL took 0.00s
+Index archives took 0.00s
+Dump and make backups. took 0.06s
+Cleaning cache took 0.00s
+Making clean stores took 0.00s
+Initial gc. took 0.04s
+DPI scale factor: 1.500000
+nvdrs: Loaded, about to disable thread optimizations.
+nvdrs: Disabled thread optimizations.
+Creating interface object took 0.18s
+Cleaning stores took 0.00s
+Init translation took 0.04s
+Build styles took 0.00s
+Load screen analysis took 0.02s
+Analyze screens took 0.00s
+Save screen analysis took 0.00s
+Prepare screens took 0.08s
+Save pyanalysis. took 0.00s
+Save bytecode. took 0.00s
+Running _start took 0.00s
+Performance test:
+Interface start took 0.05s
+
+Initializing gl2 renderer:
+primary display bounds: (0, 0, 1920, 1080)
+swap interval: 1 frames
+Windowed mode.
+Vendor: 'NVIDIA Corporation'
+Renderer: 'NVIDIA GeForce RTX 2060 with Max-Q Design/PCIe/SSE2'
+Version: '4.6.0 NVIDIA 496.49'
+Display Info: None
+Screen sizes: virtual=(1920, 1080) physical=(1920, 1046) drawable=(1920, 1046)
+Maximum texture size: 4096x4096
+Resetting cache.
+Bootstrap to the start of init.init took 29985.02s
+Early init took 0.00s
+Loader init took 0.02s
+Loading error handling took 0.01s
+Loading script took 0.11s
+Loading save slot metadata. took 0.01s
+Loading persistent took 0.00s
+Importing _renpysteam: ImportError('No module named _renpysteam',)
+Running init code took 0.05s
+Loading analysis data took 0.03s
+Analyze and compile ATL took 0.00s
+Index archives took 0.00s
+Dump and make backups. took 0.06s
+Cleaning cache took 0.00s
+Making clean stores took 0.00s
+Initial gc. took 0.04s
+DPI scale factor: 1.500000
+nvdrs: Loaded, about to disable thread optimizations.
+nvdrs: Disabled thread optimizations.
+Creating interface object took 0.17s
+Cleaning stores took 0.00s
+Init translation took 0.04s
+Build styles took 0.00s
+Load screen analysis took 0.02s
+Analyze screens took 0.00s
+Save screen analysis took 0.00s
+Prepare screens took 0.08s
+Save pyanalysis. took 0.00s
+Save bytecode. took 0.00s
+Running _start took 0.00s
+Performance test:
+Interface start took 0.06s
+
+Initializing gl2 renderer:
+primary display bounds: (0, 0, 1920, 1080)
+swap interval: 1 frames
+Windowed mode.
+Vendor: 'NVIDIA Corporation'
+Renderer: 'NVIDIA GeForce RTX 2060 with Max-Q Design/PCIe/SSE2'
+Version: '4.6.0 NVIDIA 496.49'
+Display Info: None
+Screen sizes: virtual=(1920, 1080) physical=(1920, 1046) drawable=(1920, 1046)
+Maximum texture size: 4096x4096
+Resetting cache.
+Bootstrap to the start of init.init took 30054.80s
+Early init took 0.00s
+Loader init took 0.02s
+Loading error handling took 0.01s
+Loading script took 0.10s
+Loading save slot metadata. took 0.01s
+Loading persistent took 0.00s
+Importing _renpysteam: ImportError('No module named _renpysteam',)
+Running init code took 0.04s
+Loading analysis data took 0.03s
+Analyze and compile ATL took 0.00s
+Index archives took 0.00s
+Dump and make backups. took 0.05s
+Cleaning cache took 0.00s
+Making clean stores took 0.00s
+Initial gc. took 0.03s
+DPI scale factor: 1.500000
+nvdrs: Loaded, about to disable thread optimizations.
+nvdrs: Disabled thread optimizations.
+Creating interface object took 0.17s
+Cleaning stores took 0.00s
+Init translation took 0.04s
+Build styles took 0.00s
+Load screen analysis took 0.02s
+Analyze screens took 0.00s
+Save screen analysis took 0.00s
+Prepare screens took 0.08s
+Save pyanalysis. took 0.00s
+Save bytecode. took 0.00s
+Running _start took 0.00s
+Performance test:
+Interface start took 0.06s
+
+Initializing gl2 renderer:
+primary display bounds: (0, 0, 1920, 1080)
+swap interval: 1 frames
+Windowed mode.
+Vendor: 'NVIDIA Corporation'
+Renderer: 'NVIDIA GeForce RTX 2060 with Max-Q Design/PCIe/SSE2'
+Version: '4.6.0 NVIDIA 496.49'
+Display Info: None
+Screen sizes: virtual=(1920, 1080) physical=(1920, 1046) drawable=(1920, 1046)
+Maximum texture size: 4096x4096
+Resetting cache.
+Bootstrap to the start of init.init took 30059.86s
+Early init took 0.00s
+Loader init took 0.02s
+Loading error handling took 0.02s
+Loading script took 0.10s
+Loading save slot metadata. took 0.01s
+Loading persistent took 0.00s
+Importing _renpysteam: ImportError('No module named _renpysteam',)
+Running init code took 0.04s
+Loading analysis data took 0.02s
+Analyze and compile ATL took 0.00s
+Index archives took 0.00s
+Dump and make backups. took 0.05s
+Cleaning cache took 0.00s
+Making clean stores took 0.00s
+Initial gc. took 0.03s
+DPI scale factor: 1.500000
+nvdrs: Loaded, about to disable thread optimizations.
+nvdrs: Disabled thread optimizations.
+Creating interface object took 0.17s
+Cleaning stores took 0.00s
+Init translation took 0.04s
+Build styles took 0.00s
+Load screen analysis took 0.02s
+Analyze screens took 0.00s
+Save screen analysis took 0.00s
+Prepare screens took 0.08s
+Save pyanalysis. took 0.00s
+Save bytecode. took 0.00s
+Running _start took 0.00s
+Performance test:
+Interface start took 0.05s
+
+Initializing gl2 renderer:
+primary display bounds: (0, 0, 1920, 1080)
+swap interval: 1 frames
+Windowed mode.
+Vendor: 'NVIDIA Corporation'
+Renderer: 'NVIDIA GeForce RTX 2060 with Max-Q Design/PCIe/SSE2'
+Version: '4.6.0 NVIDIA 496.49'
+Display Info: None
+Screen sizes: virtual=(1920, 1080) physical=(1920, 1046) drawable=(1920, 1046)
+Maximum texture size: 4096x4096
+Resetting cache.
+Bootstrap to the start of init.init took 30072.82s
+Early init took 0.00s
+Loader init took 0.02s
+Loading error handling took 0.01s
+Loading script took 0.10s
+Loading save slot metadata. took 0.01s
+Loading persistent took 0.00s
+Importing _renpysteam: ImportError('No module named _renpysteam',)
+Running init code took 0.04s
+Loading analysis data took 0.02s
+Analyze and compile ATL took 0.00s
+Index archives took 0.00s
+Dump and make backups. took 0.05s
+Cleaning cache took 0.00s
+Making clean stores took 0.00s
+Initial gc. took 0.04s
+DPI scale factor: 1.500000
+nvdrs: Loaded, about to disable thread optimizations.
+nvdrs: Disabled thread optimizations.
+Creating interface object took 0.17s
+Cleaning stores took 0.00s
+Init translation took 0.04s
+Build styles took 0.00s
+Load screen analysis took 0.02s
+Analyze screens took 0.00s
+Save screen analysis took 0.00s
+Prepare screens took 0.08s
+Save pyanalysis. took 0.00s
+Save bytecode. took 0.00s
+Running _start took 0.00s
+Performance test:
+Interface start took 0.05s
+
+Initializing gl2 renderer:
+primary display bounds: (0, 0, 1920, 1080)
+swap interval: 1 frames
+Windowed mode.
+Vendor: 'NVIDIA Corporation'
+Renderer: 'NVIDIA GeForce RTX 2060 with Max-Q Design/PCIe/SSE2'
+Version: '4.6.0 NVIDIA 496.49'
+Display Info: None
+Screen sizes: virtual=(1920, 1080) physical=(1920, 1046) drawable=(1920, 1046)
+Maximum texture size: 4096x4096
+Resetting cache.
+Bootstrap to the start of init.init took 30162.27s
+Early init took 0.00s
+Loader init took 0.02s
+Loading error handling took 0.01s
+Loading script took 0.30s
+Loading save slot metadata. took 0.01s
+Loading persistent took 0.00s
+Importing _renpysteam: ImportError('No module named _renpysteam',)
+Running init code took 0.03s
+Loading analysis data took 0.03s
+Analyze and compile ATL took 0.00s
+Index archives took 0.00s
+Backing up script files to 'C:\\Users\\zerog\\AppData\\Roaming/RenPy/backups\\act3puzzle2':
+Dump and make backups. took 0.05s
+Cleaning cache took 0.00s
+Making clean stores took 0.00s
+Initial gc. took 0.04s
+DPI scale factor: 1.500000
+nvdrs: Loaded, about to disable thread optimizations.
+nvdrs: Disabled thread optimizations.
+Creating interface object took 0.17s
+Cleaning stores took 0.00s
+Init translation took 0.04s
+Build styles took 0.00s
+Load screen analysis took 0.00s
+Analyze screens took 0.01s
+Save screen analysis took 0.04s
+Prepare screens took 0.12s
+Save pyanalysis. took 0.04s
+Save bytecode. took 0.02s
+Running _start took 0.00s
+Performance test:
+Interface start took 0.05s
+
+Initializing gl2 renderer:
+primary display bounds: (0, 0, 1920, 1080)
+swap interval: 1 frames
+Windowed mode.
+Vendor: 'NVIDIA Corporation'
+Renderer: 'NVIDIA GeForce RTX 2060 with Max-Q Design/PCIe/SSE2'
+Version: '4.6.0 NVIDIA 496.49'
+Display Info: None
+Screen sizes: virtual=(1920, 1080) physical=(1920, 1046) drawable=(1920, 1046)
+Maximum texture size: 4096x4096
+Resetting cache.
+Bootstrap to the start of init.init took 30772.83s
+Early init took 0.00s
+Loader init took 0.02s
+Loading error handling took 0.02s
+Loading script took 0.30s
+Loading save slot metadata. took 0.01s
+Loading persistent took 0.00s
+Importing _renpysteam: ImportError('No module named _renpysteam',)
+Running init code took 0.03s
+Loading analysis data took 0.03s
+Analyze and compile ATL took 0.00s
+Index archives took 0.00s
+Backing up script files to 'C:\\Users\\zerog\\AppData\\Roaming/RenPy/backups\\act3puzzle2':
+Dump and make backups. took 0.05s
+Cleaning cache took 0.00s
+Making clean stores took 0.00s
+Initial gc. took 0.04s
+DPI scale factor: 1.500000
+nvdrs: Loaded, about to disable thread optimizations.
+nvdrs: Disabled thread optimizations.
+Creating interface object took 0.17s
+Cleaning stores took 0.00s
+Init translation took 0.04s
+Build styles took 0.00s
+Load screen analysis took 0.00s
+Analyze screens took 0.01s
+Save screen analysis took 0.04s
+Prepare screens took 0.12s
+Save pyanalysis. took 0.05s
+Save bytecode. took 0.02s
+Running _start took 0.00s
+Performance test:
+Interface start took 0.05s
+
+Initializing gl2 renderer:
+primary display bounds: (0, 0, 1920, 1080)
+swap interval: 1 frames
+Windowed mode.
+Vendor: 'NVIDIA Corporation'
+Renderer: 'NVIDIA GeForce RTX 2060 with Max-Q Design/PCIe/SSE2'
+Version: '4.6.0 NVIDIA 496.49'
+Display Info: None
+Screen sizes: virtual=(1920, 1080) physical=(1920, 1046) drawable=(1920, 1046)
+Maximum texture size: 4096x4096
+Resetting cache.
+Bootstrap to the start of init.init took 30933.27s
+Early init took 0.00s
+Loader init took 0.02s
+Loading error handling took 0.01s
+Loading script took 0.26s
+Loading save slot metadata. took 0.01s
+Loading persistent took 0.00s
+Importing _renpysteam: ImportError('No module named _renpysteam',)
+Running init code took 0.03s
+Loading analysis data took 0.03s
+Analyze and compile ATL took 0.00s
+Index archives took 0.00s
+Backing up script files to 'C:\\Users\\zerog\\AppData\\Roaming/RenPy/backups\\act3puzzle2':
+Dump and make backups. took 0.05s
+Cleaning cache took 0.00s
+Making clean stores took 0.00s
+Initial gc. took 0.04s
+DPI scale factor: 1.500000
+nvdrs: Loaded, about to disable thread optimizations.
+nvdrs: Disabled thread optimizations.
+Creating interface object took 0.17s
+Cleaning stores took 0.00s
+Init translation took 0.04s
+Build styles took 0.00s
+Load screen analysis took 0.00s
+Analyze screens took 0.01s
+Save screen analysis took 0.04s
+Prepare screens took 0.07s
+Save pyanalysis. took 0.05s
+Save bytecode. took 0.01s
+Running _start took 0.00s
+Performance test:
+Interface start took 0.05s
+
+Initializing gl2 renderer:
+primary display bounds: (0, 0, 1920, 1080)
+swap interval: 1 frames
+Windowed mode.
+Vendor: 'NVIDIA Corporation'
+Renderer: 'NVIDIA GeForce RTX 2060 with Max-Q Design/PCIe/SSE2'
+Version: '4.6.0 NVIDIA 496.49'
+Display Info: None
+Screen sizes: virtual=(1920, 1080) physical=(1920, 1046) drawable=(1920, 1046)
+Maximum texture size: 4096x4096
+Resetting cache.
+Bootstrap to the start of init.init took 31040.88s
+Early init took 0.00s
+Loader init took 0.02s
+Loading error handling took 0.01s
+Loading script took 0.26s
+Loading save slot metadata. took 0.01s
+Loading persistent took 0.00s
+Importing _renpysteam: ImportError('No module named _renpysteam',)
+Running init code took 0.03s
+Loading analysis data took 0.02s
+Analyze and compile ATL took 0.00s
+Index archives took 0.00s
+Backing up script files to 'C:\\Users\\zerog\\AppData\\Roaming/RenPy/backups\\act3puzzle2':
+Dump and make backups. took 0.05s
+Cleaning cache took 0.00s
+Making clean stores took 0.00s
+Initial gc. took 0.04s
+DPI scale factor: 1.500000
+nvdrs: Loaded, about to disable thread optimizations.
+nvdrs: Disabled thread optimizations.
+Creating interface object took 0.17s
+Cleaning stores took 0.00s
+Init translation took 0.04s
+Build styles took 0.00s
+Load screen analysis took 0.00s
+Analyze screens took 0.01s
+Save screen analysis took 0.04s
+Prepare screens took 0.07s
+Save pyanalysis. took 0.05s
+Save bytecode. took 0.01s
+Running _start took 0.00s
+Performance test:
+Interface start took 0.05s
+
+Initializing gl2 renderer:
+primary display bounds: (0, 0, 1920, 1080)
+swap interval: 1 frames
+Windowed mode.
+Vendor: 'NVIDIA Corporation'
+Renderer: 'NVIDIA GeForce RTX 2060 with Max-Q Design/PCIe/SSE2'
+Version: '4.6.0 NVIDIA 496.49'
+Display Info: None
+Screen sizes: virtual=(1920, 1080) physical=(1920, 1046) drawable=(1920, 1046)
+Maximum texture size: 4096x4096
+Resetting cache.
+Bootstrap to the start of init.init took 32180.54s
+Early init took 0.00s
+Loader init took 0.02s
+Loading error handling took 0.01s
+Loading script took 0.10s
+Loading save slot metadata. took 0.01s
+Loading persistent took 0.00s
+Importing _renpysteam: ImportError('No module named _renpysteam',)
+Running init code took 0.04s
+Loading analysis data took 0.03s
+Analyze and compile ATL took 0.00s
+Index archives took 0.00s
+Dump and make backups. took 0.05s
+Cleaning cache took 0.00s
+Making clean stores took 0.00s
+Initial gc. took 0.03s
+DPI scale factor: 1.500000
+nvdrs: Loaded, about to disable thread optimizations.
+nvdrs: Disabled thread optimizations.
+Creating interface object took 0.16s
+Cleaning stores took 0.00s
+Init translation took 0.04s
+Build styles took 0.00s
+Load screen analysis took 0.02s
+Analyze screens took 0.00s
+Save screen analysis took 0.00s
+Prepare screens took 0.07s
+Save pyanalysis. took 0.00s
+Save bytecode. took 0.00s
+Running _start took 0.00s
+Performance test:
+Interface start took 0.05s
+
+Initializing gl2 renderer:
+primary display bounds: (0, 0, 1920, 1080)
+swap interval: 1 frames
+Windowed mode.
+Vendor: 'NVIDIA Corporation'
+Renderer: 'NVIDIA GeForce RTX 2060 with Max-Q Design/PCIe/SSE2'
+Version: '4.6.0 NVIDIA 496.49'
+Display Info: None
+Screen sizes: virtual=(1920, 1080) physical=(1920, 1046) drawable=(1920, 1046)
+Maximum texture size: 4096x4096
+Resetting cache.
+Bootstrap to the start of init.init took 32186.97s
+Early init took 0.00s
+Loader init took 0.02s
+Loading error handling took 0.01s
+Loading script took 0.25s
+Loading save slot metadata. took 0.01s
+Loading persistent took 0.00s
+Importing _renpysteam: ImportError('No module named _renpysteam',)
+Running init code took 0.03s
+Loading analysis data took 0.03s
+Analyze and compile ATL took 0.00s
+Index archives took 0.00s
+Backing up script files to 'C:\\Users\\zerog\\AppData\\Roaming/RenPy/backups\\act3puzzle2':
+Dump and make backups. took 0.06s
+Cleaning cache took 0.00s
+Making clean stores took 0.00s
+Initial gc. took 0.03s
+DPI scale factor: 1.500000
+nvdrs: Loaded, about to disable thread optimizations.
+nvdrs: Disabled thread optimizations.
+Creating interface object took 0.17s
+Cleaning stores took 0.00s
+Init translation took 0.04s
+Build styles took 0.00s
+Load screen analysis took 0.00s
+Analyze screens took 0.01s
+Save screen analysis took 0.04s
+Prepare screens took 0.08s
+Save pyanalysis. took 0.05s
+Save bytecode. took 0.01s
+Running _start took 0.00s
+Performance test:
+Interface start took 0.05s
+
+Initializing gl2 renderer:
+primary display bounds: (0, 0, 1920, 1080)
+swap interval: 1 frames
+Windowed mode.
+Vendor: 'NVIDIA Corporation'
+Renderer: 'NVIDIA GeForce RTX 2060 with Max-Q Design/PCIe/SSE2'
+Version: '4.6.0 NVIDIA 496.49'
+Display Info: None
+Screen sizes: virtual=(1920, 1080) physical=(1920, 1046) drawable=(1920, 1046)
+Maximum texture size: 4096x4096
+Resetting cache.
+Bootstrap to the start of init.init took 33161.53s
+Early init took 0.00s
+Loader init took 0.02s
+Loading error handling took 0.01s
+Loading script took 0.31s
+Loading save slot metadata. took 0.01s
+Loading persistent took 0.00s
+Importing _renpysteam: ImportError('No module named _renpysteam',)
+
+The label start is defined twice, at File "game/blocks.rpy", line 88:
+label start:
+and File "game/script.rpyc", line 88:
+label start:
+
+DPI scale factor: 1.500000
+nvdrs: Loaded, about to disable thread optimizations.
+nvdrs: Disabled thread optimizations.
+Interface start took 0.30s
+
+Initializing gl2 renderer:
+primary display bounds: (0, 0, 1920, 1080)
+swap interval: 1 frames
+Windowed mode.
+Vendor: 'NVIDIA Corporation'
+Renderer: 'NVIDIA GeForce RTX 2060 with Max-Q Design/PCIe/SSE2'
+Version: '4.6.0 NVIDIA 496.49'
+Display Info: None
+Screen sizes: virtual=(1920, 1080) physical=(1920, 1046) drawable=(1920, 1046)
+Maximum texture size: 4096x4096
+Resetting cache.
+Bootstrap to the start of init.init took 33334.63s
+Early init took 0.00s
+Loader init took 0.02s
+Loading error handling took 0.02s
+Loading script took 0.12s
+Loading save slot metadata. took 0.01s
+Loading persistent took 0.00s
+Importing _renpysteam: ImportError('No module named _renpysteam',)
+Running init code took 0.04s
+Loading analysis data took 0.03s
+Analyze and compile ATL took 0.00s
+Index archives took 0.00s
+Dump and make backups. took 0.06s
+Cleaning cache took 0.00s
+Making clean stores took 0.00s
+Initial gc. took 0.04s
+DPI scale factor: 1.500000
+nvdrs: Loaded, about to disable thread optimizations.
+nvdrs: Disabled thread optimizations.
+Creating interface object took 0.20s
+Cleaning stores took 0.00s
+Init translation took 0.04s
+Build styles took 0.00s
+Load screen analysis took 0.02s
+Analyze screens took 0.00s
+Save screen analysis took 0.00s
+Prepare screens took 0.08s
+Save pyanalysis. took 0.00s
+Save bytecode. took 0.00s
+Running _start took 0.00s
+Performance test:
+Interface start took 0.06s
+
+Initializing gl2 renderer:
+primary display bounds: (0, 0, 1920, 1080)
+swap interval: 1 frames
+Windowed mode.
+Vendor: 'NVIDIA Corporation'
+Renderer: 'NVIDIA GeForce RTX 2060 with Max-Q Design/PCIe/SSE2'
+Version: '4.6.0 NVIDIA 496.49'
+Display Info: None
+Screen sizes: virtual=(1920, 1080) physical=(1920, 1046) drawable=(1920, 1046)
+Maximum texture size: 4096x4096
+
+Full traceback:
+  File "game/script.rpyc", line 91, in script
+    È ôÀÎÂÁÙ t–@ÎÂÍ,*Q*>©­
+  File "C:\Users\zerog\Downloads\renpy-7.4.11-sdk/renpy/ast.py", line 2015, in execute
+    self.call("execute")
+  File "C:\Users\zerog\Downloads\renpy-7.4.11-sdk/renpy/ast.py", line 2003, in call
+    return renpy.statements.call(method, parsed, *args, **kwargs)
+  File "C:\Users\zerog\Downloads\renpy-7.4.11-sdk/renpy/statements.py", line 278, in call
+    return method(parsed, *args, **kwargs)
+  File "renpy/common/000statements.rpy", line 569, in execute_call_screen
+    store._return = renpy.call_screen(name, *args, **kwargs)
+  File "C:\Users\zerog\Downloads\renpy-7.4.11-sdk/renpy/exports.py", line 3136, in call_screen
+    rv = renpy.ui.interact(mouse="screen", type="screen", roll_forward=roll_forward)
+  File "C:\Users\zerog\Downloads\renpy-7.4.11-sdk/renpy/ui.py", line 298, in interact
+    rv = renpy.game.interface.interact(roll_forward=roll_forward, **kwargs)
+  File "C:\Users\zerog\Downloads\renpy-7.4.11-sdk/renpy/display/core.py", line 3325, in interact
+    repeat, rv = self.interact_core(preloads=preloads, trans_pause=trans_pause, pause=pause, pause_start=pause_start, **kwargs)
+  File "C:\Users\zerog\Downloads\renpy-7.4.11-sdk/renpy/display/core.py", line 3839, in interact_core
+    self.draw_screen(root_widget, fullscreen_video, (not fullscreen_video) or video_frame_drawn)
+  File "C:\Users\zerog\Downloads\renpy-7.4.11-sdk/renpy/display/core.py", line 2565, in draw_screen
+    renpy.config.screen_height,
+  File "render.pyx", line 492, in renpy.display.render.render_screen
+  File "render.pyx", line 263, in renpy.display.render.render
+  File "C:\Users\zerog\Downloads\renpy-7.4.11-sdk/renpy/display/layout.py", line 826, in render
+    surf = render(child, width, height, cst, cat)
+  File "render.pyx", line 170, in renpy.display.render.render
+  File "render.pyx", line 263, in renpy.display.render.render
+  File "C:\Users\zerog\Downloads\renpy-7.4.11-sdk/renpy/display/layout.py", line 826, in render
+    surf = render(child, width, height, cst, cat)
+  File "render.pyx", line 170, in renpy.display.render.render
+  File "render.pyx", line 263, in renpy.display.render.render
+  File "C:\Users\zerog\Downloads\renpy-7.4.11-sdk/renpy/display/layout.py", line 826, in render
+    surf = render(child, width, height, cst, cat)
+  File "render.pyx", line 170, in renpy.display.render.render
+  File "render.pyx", line 263, in renpy.display.render.render
+  File "C:\Users\zerog\Downloads\renpy-7.4.11-sdk/renpy/display/screen.py", line 688, in render
+    child = renpy.display.render.render(self.child, w, h, st, at)
+  File "render.pyx", line 170, in renpy.display.render.render
+  File "render.pyx", line 263, in renpy.display.render.render
+  File "C:\Users\zerog\Downloads\renpy-7.4.11-sdk/renpy/display/layout.py", line 826, in render
+    surf = render(child, width, height, cst, cat)
+  File "render.pyx", line 170, in renpy.display.render.render
+  File "render.pyx", line 263, in renpy.display.render.render
+  File "C:\Users\zerog\Downloads\renpy-7.4.11-sdk/renpy/sl2/sldisplayables.py", line 86, in render
+    cr = renpy.display.render.render(self.child, width, height, st, at)
+  File "render.pyx", line 170, in renpy.display.render.render
+  File "render.pyx", line 263, in renpy.display.render.render
+  File "C:\Users\zerog\Downloads\renpy-7.4.11-sdk/renpy/display/dragdrop.py", line 853, in render
+    return super(DragGroup, self).render(width, height, st, at)
+  File "C:\Users\zerog\Downloads\renpy-7.4.11-sdk/renpy/display/layout.py", line 826, in render
+    surf = render(child, width, height, cst, cat)
+  File "render.pyx", line 170, in renpy.display.render.render
+  File "render.pyx", line 263, in renpy.display.render.render
+  File "C:\Users\zerog\Downloads\renpy-7.4.11-sdk/renpy/display/dragdrop.py", line 461, in render
+    cr = render(child, width, height, st, at)
+  File "render.pyx", line 170, in renpy.display.render.render
+  File "render.pyx", line 263, in renpy.display.render.render
+  File "C:\Users\zerog\Downloads\renpy-7.4.11-sdk/renpy/display/im.py", line 625, in render
+    return cache.get(self, render=True)
+  File "C:\Users\zerog\Downloads\renpy-7.4.11-sdk/renpy/display/im.py", line 287, in get
+    surf = image.load()
+  File "C:\Users\zerog\Downloads\renpy-7.4.11-sdk/renpy/display/im.py", line 706, in load
+    raise e
+IOError: Couldn't find file 'E2.png'.
+
+While loading <'Image' u'E2.png'>:
+  File "renpy/common/000statements.rpy", line 569, in execute_call_screen
+    store._return = renpy.call_screen(name, *args, **kwargs)
+IOError: Couldn't find file 'E2.png'.

@@ -26,7 +26,7 @@ init python:
 
 
 # add color to characters later
-define company = Character("Email")
+define company = Character("Odyssey7")
 define s1 = Character("Scientist 1", color = "#808080")
 define s2 = Character("Scientist 2", color = "#808080")
 define j = Character("Jeremy")
@@ -39,6 +39,8 @@ define hacker = Character("Mysterious Hacker")
 define g = Character("Guard")
 define v = Character("Mysterious Voice")
 define o = Character("Odyssey7")
+define r = Character("Reporter")
+define h = Character("Hacker")
 # audrey photos
 image audrey default = "/audrey/audreyDefault.png"
 image audrey confused = "/audrey/audreyConfused.png"
@@ -61,10 +63,15 @@ image scientist2 default = "/scientists/scientist2default.png"
 image scientist2 smile = "/sceintists/scientist2smile.png"
 # guard
 image guard default = "/guard/guardDefault.png"
+image hacker irritated = "/hacker/hackerIrritated.png"
+image hacker smile = "/hacker/hackerBitterSmile.png"
 #doortext
 image doortext = "doortext.png"
 
 #act 1 stuff
+define eyeopen = ImageDissolve("eyeopen.png", 0.5, 100)
+define eyeclose = ImageDissolve("eyeopen.png", 0.5, 100, reverse=True)
+define upfast = PushMove(0.2, mode ="pushup")
 define blink = Fade(1.0, 0.0, 1.0, color= "#000")
 define shuffle = 1
 define firsttouch = True
@@ -85,7 +92,7 @@ init python:
     bigy = 0 
     def check():
         if torch1dir == 2 and torch2dir == 0 and torch4dir == 3 and torch5dir == 1:
-            renpy.call_in_new_context("act2puzzle1complete")
+            renpy.call_in_new_context("act2puzzle2")
     def refresh():
         renpy.restart_interaction()
     def dragringsmall(drags, drop):
@@ -95,6 +102,7 @@ init python:
         global currentsmally
         global currentmidx
         global currentbigx
+        renpy.play("audio/stacking.mp3", channel = None)
         if drop:
             if drop.drag_name == "0,0":
                 if currentmidx != 536 and currentbigx != 508:
@@ -171,7 +179,7 @@ init python:
                     currentsmally = 511
                     smallx = 2
                     smally = 2
-                    renpy.call_in_new_context("puzzle3complete")
+                    renpy.call_in_new_context("act1complete")
                     return  
                
         drags[0].snap(currentsmallx,currentsmally)
@@ -184,6 +192,7 @@ init python:
         global currentmidy
         global currentsmallx
         global currentbigx
+        renpy.play("audio/stacking.mp3", channel = None)
         if drop:
             if drop.drag_name == "0,0":
                 if currentsmallx != 562 and currentbigx != 508:
@@ -245,6 +254,7 @@ init python:
         global currentbigy
         global currentsmallx
         global currentmidx
+        renpy.play("audio/stacking.mp3", channel = None)        
         if drop:
             if drop.drag_name == "0,0":
                 if currentsmallx != 562 and currentmidx != 536:
@@ -271,13 +281,14 @@ init python:
         return          
     def snapinplace1(drags, drop):
         global piecesinplace
+        renpy.play("audio/glassMove.mp3", channel = None)
         if drop:
             if drop.x == 790:
                 drags[0].snap(drop.x,drop.y)
                 drags[0].draggable = False
                 piecesinplace = piecesinplace + 1
-                if piecesinplace == 13:
-                    renpy.call_in_new_context("puzzle2complete")   
+                if piecesinplace == 1:
+                    renpy.call_in_new_context("act1puzzle3")   
                 return
 
     def snapinplace2(drags, drop):
@@ -288,7 +299,7 @@ init python:
                 drags[0].draggable = False
                 piecesinplace = piecesinplace + 1
                 if piecesinplace == 13:
-                    renpy.call_in_new_context("puzzle2complete")
+                    renpy.call_in_new_context("act1puzzle3")
                 return
     def snapinplace3(drags, drop):
         global piecesinplace
@@ -298,7 +309,7 @@ init python:
                 drags[0].draggable = False
                 piecesinplace = piecesinplace + 1
                 if piecesinplace == 13:
-                    renpy.call_in_new_context("puzzle2complete")
+                    renpy.call_in_new_context("act1puzzle3")
                 return
     def snapinplace4(drags, drop):
         global piecesinplace
@@ -308,7 +319,7 @@ init python:
                 drags[0].draggable = False
                 piecesinplace = piecesinplace + 1
                 if piecesinplace == 13:
-                    renpy.call_in_new_context("puzzle2complete")
+                    renpy.call_in_new_context("act1puzzle3")
                     return
     def snapinplace5(drags, drop):
         global piecesinplace
@@ -318,7 +329,7 @@ init python:
                 drags[0].draggable = False
                 piecesinplace = piecesinplace + 1
                 if piecesinplace == 13:
-                    renpy.call_in_new_context("puzzle2complete")
+                    renpy.call_in_new_context("act1puzzle3")
                 return
     def snapinplace6(drags, drop):
         global piecesinplace
@@ -328,7 +339,7 @@ init python:
                 drags[0].draggable = False
                 piecesinplace = piecesinplace + 1
                 if piecesinplace == 13:
-                    renpy.call_in_new_context("puzzle2complete")
+                    renpy.call_in_new_context("act1puzzle3")
                 return
     def snapinplace7(drags, drop):
         global piecesinplace
@@ -338,7 +349,7 @@ init python:
                 drags[0].draggable = False
                 piecesinplace = piecesinplace + 1
                 if piecesinplace == 13:
-                    renpy.call_in_new_context("puzzle2complete")
+                    renpy.call_in_new_context("act1puzzle3")
                 return
     def snapinplace8(drags, drop):
         global piecesinplace
@@ -348,7 +359,7 @@ init python:
                 drags[0].draggable = False
                 piecesinplace = piecesinplace + 1
                 if piecesinplace == 13:
-                    renpy.call_in_new_context("puzzle2complete")
+                    renpy.call_in_new_context("act1puzzle3")
                 return
     def snapinplace9(drags, drop):
         global piecesinplace
@@ -358,7 +369,7 @@ init python:
                 drags[0].draggable = False
                 piecesinplace = piecesinplace + 1
                 if piecesinplace == 13:
-                    renpy.call_in_new_context("puzzle2complete")
+                    renpy.call_in_new_context("act1puzzle3")
                 return
     def snapinplace10(drags, drop):
         global piecesinplace
@@ -368,7 +379,7 @@ init python:
                 drags[0].draggable = False
                 piecesinplace = piecesinplace + 1
                 if piecesinplace == 13:
-                    renpy.call_in_new_context("puzzle2complete")
+                    renpy.call_in_new_context("act1puzzle3")
                 return
     def snapinplace11(drags, drop):
         global piecesinplace
@@ -378,7 +389,7 @@ init python:
                 drags[0].draggable = False
                 piecesinplace = piecesinplace + 1
                 if piecesinplace == 13:
-                    renpy.call_in_new_context("puzzle2complete")
+                    renpy.call_in_new_context("act1puzzle3")
                 return
     def snapinplace12(drags, drop):
         global piecesinplace
@@ -388,7 +399,7 @@ init python:
                 drags[0].draggable = False
                 piecesinplace = piecesinplace + 1
                 if piecesinplace == 13:
-                    renpy.call_in_new_context("puzzle2complete")
+                    renpy.call_in_new_context("act1puzzle3")
                 return
     def snapinplace13(drags, drop):
         global piecesinplace
@@ -398,7 +409,7 @@ init python:
                 drags[0].draggable = False
                 piecesinplace = piecesinplace + 1
                 if piecesinplace == 13:
-                    renpy.call_in_new_context("puzzle2complete")
+                    renpy.call_in_new_context("actpuzzle3")
                 return
 
     def drag_placed(drags, drop):
@@ -485,7 +496,7 @@ screen slider(g = slider_1):
                     else:
                         image "images/pieces/{}.png".format(ii)
                     if cheating:
-                        action Function(g.cheat, ii)
+                        action [Function(g.cheat, ii), Play("sound", "/audio/tileslide.mp3")]
                         
                     else:
                         action [Function(g.slide, ii), Play("sound", "/audio/tileslide.mp3")]
@@ -527,11 +538,22 @@ define haspiano = False
 define plantsTaken = 0
 define correctPlant = False
 define page = 1
+define incorrect = False 
 
 # act 3 stuff
 define act = 1
 # backgrounds
 
+# instructions images
+
+image clickable1 = "/Instructions/clickable-idle.png"
+image clickable2 = "/Instructions/clickable-hover.png"
+image tower1 = "/Instructions/tower1.png"
+image tower2 = "/Instructions/tower2.png"
+image tower3 = "/Instructions/tower3.png"
+image tower4 = "/Instructions/tower4.png"
+
+image bg police = "/backgrounds/PoliceStation.png"
 image bg blackScreen = "/backgrounds/blackScreen.png"
 image bg cave = "/backgrounds/StartCaveBackground.png"
 image bg bedroom = "/backgrounds/BedRoom.png"
@@ -545,10 +567,17 @@ image bg caveentrance = "/backgrounds/CaveEntrance.png"
 image bg memorialrightopen = "/act2/memorialrightopen.png"
 image bg towerentrance = "/backgrounds/towerentrance.png"
 image bg towerfloor1 = "/backgrounds/TowerFloor1.png"
-image bg towerfloor2 = "/backgrounds/TowerFloor2.png"
+image bg towerfloor2 = "/towerfloor2.png"
 image bg towerfloor3 = "/backgrounds/Towerfloor3.png"
 image bg rightcloseup = "/act2/rightstatuecloseup.png"
 image bg house = "/backgrounds/house.png"
+image bg treeclose = "/backgrounds/treeclose.png"
+image bg treered = "/backgrounds/treeclosered.png"
+image bg towerofHanoi = "/backgrounds/towerofHanoi.png"
+image bg dooropen = "/backgrounds/dooropen.png"
+image bg ingredient = "/backgrounds/ingredient1.png"
+image bg ingredientclose = "/backgrounds/ingredient1closeup.png"
+image bg towerofHanoiDone = "/backgrounds/towerofHanoidone.png"
 # image ralsei default = "ralsei.jpeg"
 # The game starts here.
 
@@ -614,7 +643,7 @@ label start:
     label facility:
         scene bg facility
         mc "This is so high tech..."
-        show scientist1 smile at right
+        show scientist1 smile with moveinright
         s1 "Hello there [name]! I see you received our email about testing our new game."
         mc "Of course. It would be a shame if I pass up such a good opportunity."
         s1 "I’m glad to hear that!{w} Now, enough said, let’s get you into the game. Follow me!"
@@ -625,11 +654,11 @@ label start:
         s1 "Before we begin your experience, please measure and record your heart rate."
         $ hRate = renpy.input("Enter heart rate and press enter: ")
         $ hRate = hRate.strip()
-        hide scientist1 default
+        hide scientist1 default with moveoutright
         #s2 helps with vr headset
-        show scientist2 default at left
+        show scientist2 default with moveinleft
         s2 "...{w} Alright, you’re all set. Just remember that the game is still in early stages, so please expect a lot of bugs. Please report anything you find to us through the direct messaging system in your control panel."
-        hide scientist2 default
+        hide scientist2 default with moveoutleft
         # HOOKED TO VR
 
 
@@ -659,9 +688,6 @@ label start:
         mc "Odyssey7 never game me any instructions as to where to go..."
         mc "I guess I could just explore around here."
 
-        "Huh, are those people?{w} They must be the new AI characters that Odyssey said they made. I should go up to them!"
-        "..."
-        mc "Hey, you two! Hey!"
         # maybe fade to black and play footstep noises?
 
         show audrey default at left with fade
@@ -674,7 +700,7 @@ label start:
 
         show audrey happy at left
 
-        a "Oh, hi [name]! Welcome to our village! I’m Audrey. This guy is my best friend."
+        a "Oh, hi [name]! I’m Audrey. This guy is my best friend."
 
         show jeremy wideSmile at right
 
@@ -682,8 +708,8 @@ label start:
 
         show jeremy smile at right
 
-        j "You should come with us to the village chief.{w} Audrey and I have an important task. You could help us!"
-        mc "Well alright!"
+        j "You should come with us to our village near the tree and meet our village chief.{w} Audrey and I have an important task. You could help us!"
+        mc "Well alright of course!"
 
         scene bg house with fade
         show audrey default at left
@@ -713,35 +739,55 @@ label start:
         mc "Sure, I'll help you guys. Where do we start searching?"
 
         show audrey default at left
-        a "Well, we can always start at the heart of the problem."
-        scene bg blackScreen with fade
+        a "I think there should be something at the tree. Let's go check it out."
+        scene bg treeclose with fade
+        "This is such a nice area. The graphics are amazing."
+        "I guess I'll go check out the tree. There might be something on it maybe?"
+        call screen treecloseup()
+        scene bg treered with dissolve
+        mc "Wait, what's happening? What the.."
+        with vpunch
+        scene bg blackScreen with upfast
         with vpunch
 
     # act 1
     label act1:
-        scene bg dungeon with blink
-        scene bg dungeon with blink
-        scene bg dungeon with blink
+        scene bg dungeon with upfast
+        with vpunch
+        scene bg blackScreen with eyeclose
+        $ renpy.notify("You were knocked out...")
+        $ renpy.pause(delay = 5, hard = True)
+
+        scene bg dungeon with eyeopen
+        scene bg blackScreen with eyeclose
+        scene bg dungeon with eyeopen
 
         mc "..."
         mc "What just happened?"
         mc "Where am I?"
 
-        "WE HAVE JUST RECIEVED WORD THAT A HACKER HAS TRAPPED YOU INSIDE THE GAME"
-        "YOUR REAL BODY IS CURRENTLY IN A COMA STATE."
-        "BEAT THE GAME AND CURE THE TREE AND WE MIGHT BE ABLE TO BRING YOU BACK"
-        "The game has a 30 minute time limit. Fail to do so in that time and..."
+        company "WE HAVE JUST RECIEVED WORD THAT A HACKER HAS TRAPPED YOU INSIDE THE GAME, TRANSPORTING YOUR CONCIOUSNESS INTO IT."
+        company "Beating the game by curing the tree will end the game, allowing you to return back to your real body."
+        company "You were never intended to stay in the game longer than 30 minutes... Fail to complete the game within that time and..."
         with vpunch
         with hpunch
         "the game will reset..." 
         with vpunch
         with hpunch
-        "YOUR REAL BODY WILL DIE"
-        "THE HACKER TRIED TO TRAP YOU IN A DUNGEON FOUND WITHIN THE GAME...BUT THAT IS WHERE THE FIRST INGREDIENT IS GROWN"
-        "HOWEVER, IT IS GUARDED BY PUZZLES"
-        "TRY YOUR BEST... YOUR LIFE DEPENDS ON IT"
-        "We'll contact you once you finish the puzzles here."
-        "Good luck."
+        company "CAUSING YOUR REAL BODY WILL DIE"
+        company "The hacker tried to trap you in a dungeon found within the game. But that is where the first ingredient is held."
+        company "However, it is guarded by puzzles."
+        company "Try your best, your life depends on it."
+        company "We'll contact you once you finish the puzzles here."
+        company"Good luck."
+        company "By the way,"
+        company "You can optionally contact us to have us solve things that you need help with."
+        with vpunch
+        company "HOWEVER. Doing so will require us to use technology that shortens the time that we have to get you out of there."
+        company "So.. do your best to solve everything yourself."
+        company "And also... dying in there means you die in real life."
+        company "Try your best not to do that."
+        company "Good luck."
         with fade
         window hide
         mc "Seriously? Am I living in some video game plot or what?"
@@ -753,9 +799,27 @@ label start:
         a "I'm more or less fine. Are you guys okay?"
         mc "Yes, surprisingly."
         mc "We have to get out of here. Let's just look around this room, maybe we can find a way to get out."
-        hide jeremy confused with fade
-        hide audrey default with fade 
-
+        hide jeremy confused 
+        hide audrey default
+        show clickable1 with fade
+        $ renpy.pause(delay = 2, hard = True)
+        hide clickable1
+        show clickable2
+        $ renpy.pause(delay = 2, hard = True)
+        hide clickable2
+        show clickable1
+        $ renpy.pause(delay = 2, hard = True)
+        hide clickable1
+        show clickable2
+        $ renpy.pause(delay = 2, hard = True)
+        hide clickable2
+        show clickable1
+        $ renpy.pause(delay = 2, hard = True)
+        hide clickable1
+        show clickable2
+        $ renpy.pause(delay = 2, hard = True)
+        hide clickable1
+        hide clickable2 with fade
         call screen door()
         mc "It's locked."
         mc "Wait.. there's a small piece of text on the door."
@@ -785,49 +849,107 @@ label start:
         $firsttouch = False
         $renpy.notify("Correct the image by clicking the pieces to move them.")
         call screen slider()
-        show bg blackScreen with fade
-        show screen puzzle1complete with fade
-        mc "The mirror moved. The light is pointing to the pedestal on the right now."
-        mc "I should check it out."
-        window hide
-        call screen puzzle1complete()
-        scene puzzle1complete
-        show screen pedestal3close with fade
-        mc "The mirror is shattered. I should put the pieces back together."
-        window hide
-        call screen pedestal3close()
-        show screen puzzle2complete with fade
-        show screen pedestal2close with fade
-        mc "What is this supposed to be?"
-        mc "There's a small piece of text here..."
-        window hide 
-        call screen pedestal2close()
+        hide screen p1_1Hint
+        label act1puzzle2:
+            scene bg blackScreen with fade
+            play sound "audio/mirrorturn.mp3"
+            $renpy.pause(delay= 1, hard = True)
+            show screen puzzle1complete with fade
+            mc "The mirror moved. The light is pointing to the pedestal on the right now."
+            mc "I should check it out."
+            window hide
+            call screen puzzle1complete()
+            scene puzzle1complete
+            show screen pedestal3close with fade
+            mc "The mirror is shattered..."
+            mc "I should put the pieces back together."
+            window hide
+            call screen pedestal3close()
+            show screen p1_2Hint
+            scene bg blackScreen with fade
+            play sound "audio/mirrorturn.mp3"
+            $renpy.pause(delay = 1, hard= True)
+            show screen puzzle2complete with fade
+            show screen pedestal2close with fade
+            mc "What is this supposed to be?"
+            mc "There's a small piece of text here..."
+            window hide 
+            call screen pedestal2close()
 
         # where is ending?
         $ ending_time()
         $ starting_time()
 
         #renpy.say(" ", ("Time Lapsed = {0}:{1}:{2}".format(int(hours),int(mins),int(sec))))
-label puzzle2complete:
-    scene puzzle2complete
-    call screen puzzle2completescreen() with fade
-    show screen pedestal2close with fade
-    mc "What are these rings? I don't quite understand..."
-    show jeremy wideSmile at left
-    j "There's a piece of text under here!"
-    hide jeremy wideSmile
-    show screen puzzle3instr with fade
-    mc "..."
-    mc "So I have to stack the rings on the third pole..."
-    mc "without stacking a bigger one on a smaller."
-    hide screen puzzle3instr with fade
-    call screen pedestal2close()
+        label act1puzzle3:
+            scene bg blackScreen with fade
+            play sound "audio/mirrorturn.mp3"
+            $renpy.pause(delay = 1.5, hard= True)
+            scene puzzle2complete with fade 
+            mc "One more mirror."
+            call screen puzzle2completescreen()
+            scene bg towerofHanoi with fade
+            mc "What are these rings? I don't quite understand..."
+            show jeremy wideSmile at left
+            j "There's a piece of text under here!"
+            hide jeremy wideSmile
+            show screen puzzle3instr with fade
+            mc "..."
+            mc "So I have to stack the rings on the third pole..."
+            mc "without stacking a bigger one on a smaller."
+            hide screen puzzle3instr
+            show tower1 with fade
+            $renpy.pause(delay = 1.5, hard= True)
+            hide tower1
+            show tower2 
+            $renpy.pause(delay = 1.5, hard= True)
+            hide tower2 
+            show tower3
+            $renpy.pause(delay = 1.5, hard= True)
+            hide tower3 
+            show tower4
+            $renpy.pause(delay = 1.5, hard = True)
+            hide tower4 
+            show tower1
+            $renpy.pause(delay = 1.5, hard= True)
+            hide tower1 
+            show tower2 
+            $renpy.pause(delay = 1.5, hard= True)
+            hide tower2 
+            show tower3 
+            $renpy.pause(delay = 1.5, hard= True)
+            hide tower3
+            show tower4
+            $renpy.pause(delay = 1.5, hard= True)
+            hide tower4 with fade
+            call screen pedestal2close()
 
-    $ ending_time()
-    $ starting_time()
+            $ ending_time()
+            $ starting_time()
 
-label puzzle3complete:
+label act1complete:
+    scene bg towerofHanoiDone 
+    scene bg blackScreen with fade
+    play sound "audio/mirrorturn.mp3"
+    $renpy.pause(delay = 1.5, hard= True)
     scene puzzle3complete with fade
+    $renpy.pause(delay = 1.5, hard = True) 
+    scene bg dooropen with dissolve
+    mc "The door opened!"
+    mc "Let's get out of here."
+    show jeremy default at right 
+    j "Finally getting out of this horrible place."
+    show jeremy wideSmile 
+    j "Thanks for all the stuff you've done [name]. We couldn't have done this without you!"
+    hide jeremy default
+    hide jeremy wideSmile
+    call screen dooropen()
+    scene bg ingredient with fade 
+    mc "This must be the first ingredient!"
+    mc "Let's grab this and get out of here quickly."
+    scene bg ingredientclose with dissolve 
+    call screen gettingIngredient()
+
 
 
     # show screen dooropen with fade
@@ -846,7 +968,7 @@ label puzzle3complete:
     "I might find something useful."
     call screen torchpuzzle()
 
-label act2puzzle1complete:
+label act2puzzle2:
     
     scene memorial with fade
     "So this is the memorial they were talking about... "
@@ -871,6 +993,8 @@ label act2puzzle1complete:
     call screen rightstatueclose()
     call screen memorial()
 screen rightstatueclose:
+    $global atrightstatue  
+    $atrightstatue = True 
     timer .2 repeat False action SetVariable("atrightstatue", True)
     add "/act2/rightstatuecloseup.png"
     imagebutton:
@@ -879,33 +1003,37 @@ screen rightstatueclose:
         xpos -1245
         ypos -86
         action [Show("memorial", transition = fade), Hide("rightstatueclose")]
-label act2puzzle2complete:
+label playedWrongTune:
+    scene memorial with fade
+    "Nothing happened.."
+    "I must've played the wrong tune."
+    call screen memorial()
+label act2puzzle3:
     scene memorialrightopen with fade
     "The statue opened!"
     "Is there anything inside?"
+    call screen rightcompartment()
+label act2puzzle3gotjournal:
+    "A plant journal.."
+    "Might be useful later."
+    call screen act2puzzle3leftstatue()
+    mc "This statue says something about this past village chief always having a rash."
+    mc "The journal I got might have something in it about a plant that helps with rashes.."
+    "There's some plants in that plant box there."
+    "It might have the plant I'm looking for."
 
-    pause
+    call screen act2puzzle3screen()
     # put open door thing
     $ ending_time()
     $ starting_time()
 
-
 label leftstatue:
-    "It says something about this guy having rashes on his hands.."
+    "It says something about this village chief always having a rash.."
     "The journal might have something about rashes in it."
     call screen act2puzzle3screen()
     pause
 label plantboxlabel:
-    if guardspoke == False:
-        show guard default at right
-        g "I see that you've made it this far."
-        g "However, I cannot permit you to grab any more than 2 plants from this plant box."
-        g "Choose wisely."
-        hide guard default
-        $ guardspoke = True
-    mc "Okay, I have to choose the correct plant according to the statue I read earlier."
-    mc "I can use this plant journal to identify these plants and make the right decision."
-    mc "Best not to find out what happens when I get the wrong one."
+    
     $environment_items = ["axade", "glowingfluxroot", "huxtous", "kreaf", "ootross", "wildsorrel", "xoom", "zum"]
     python:
         for item in environment_items:
@@ -958,19 +1086,25 @@ label plantboxlabel:
                 environment_sprites[-1].x = 261
                 environment_sprites[-1].y = 84
     scene plantbox
-    show screen UI
+    show screen UI 
+    mc "The journal I got earlier has information about what these plants are."
+    mc "I can use the journal to find the plant that helps with rashes."
+    if guardspoke == False:
+        show guard default at right
+        g "I see that you've made it this far."
+        g "However, I can only permit you to grab one plant from this plant box."
+        g "Choose wisely."
+        hide guard default
+        $ guardspoke = True
     call screen plantboxclose
 screen plantboxclose():
     $currentscreen = "plantboxclose"
     add environment_SM
-label act2puzzle3:
-    scene memorialrightopen
-    show screen UI
-    pause
-    call screen act2puzzle3leftstatue()
-    mc "The statue says something about this past village chief always having a rash on his hand."
-    mc "Maybe I could help get rid of them with something."
-    call screen act2puzzle3screen()
+screen treecloseup():
+    imagebutton auto "tree-%s.png":
+        focus_mask True
+        action Return()
+
 screen act2puzzle3leftstatue():
     imagebutton auto "act2/leftstatue-%s.png":
         focus_mask True
@@ -985,16 +1119,29 @@ screen act2puzzle3screen():
 screen rightcompartment():
     imagebutton auto "act2/rightcompartment-%s.png":
         focus_mask True 
-        action Function(addplantjournal)
+        action [Function(addplantjournal), Return()]
 screen rightstatue():
     imagebutton auto "act2/musicstatue-%s.png":
         focus_mask True 
-        action Return()
+        action [Play("sound", "audio/click.mp3"), Return()]
 label pianolabel:
-    call screen piano()
+    if atrightstatue == True:
+        scene rightstatuecloseup 
+    if atrightstatue == False:
+        scene memorial
+    call screen piano() with fade
     pause
+label whichscreen:
+    if atrightstatue == False:
+        call screen memorial()
+    if atrightstatue == True:
+        call screen rightstatueclose()
 label musiclabel:
-    call screen musicbox()
+    if atrightstatue == True:
+        scene rightstatuecloseup 
+    if atrightstatue == False:
+        scene memorial
+    call screen musicbox() with fade
     pause
 label plantlabel:
     if currentscreen == "rightstatueclose":
@@ -1007,6 +1154,89 @@ label plantlabel:
         show screen act2puzzle3screen
     call screen plantjournal()
     pause
+label audreyInjured:
+    show audrey hacked
+    $renpy.pause(delay=0.1, hard = True) 
+    hide audrey hacked
+    show audrey hacked2
+    $renpy.pause(delay=0.1, hard = True) 
+    hide audrey hacked2  
+    show audrey hacked3
+    $renpy.pause(delay=0.1, hard = True) 
+    show audrey confused
+    $renpy.pause(delay= 1, hard = True)
+    $spell = spell + 1
+    if spell == 4:
+        jump endgameComplete
+    else:
+        mc "That was the right spell."
+        company "Good job [name]! Keep it up! The next spell can be found at the top left of your screen."
+        $doingSomething = False
+        window hide
+        jump endgamesetup
+label endgameComplete:
+    scene bg lastfloor with fade
+    show audrey confused
+    a "It wasn't supposed to end like this..."
+    hide audrey confused with pixellate 
+    "Audrey is finally gone. The hacker will leave me alone now. I have to hurry and make the cure so I can leave."
+    "I can make it over there at the table using the ingredients I got, and the last one which should be in that little beaker."
+    call screen table
+    "I have to get out of this tower and go to the tree to place this cure on something..."
+    scene bg treered with fade
+    "It looks like there's a pedestal over there near the tree. I can place the cure on that."
+    call screen treepedestal
+    scene bg treeclose with dissolve
+    scene bg blackScreen with fade
+    $renpy.pause(delay = 4, hard = True)
+    scene bg facility with pixellate
+    show scientist1 default at right
+    s1 "Finally, you're out of the game! You did a great job enduring all of that."
+    s1 "We caught the hacker's IP address and arrested him."
+    show scientist2 default at left 
+    s2 "Yes, we apologize as well for putting your life at risk..."
+    mc "Whatever... can I go home now? I have a job interview tomorrow."
+    scene bg blackScreen with fade
+    $renpy.pause(delay = 3, hard = True)
+    scene bg police with dissolve 
+    show hacker irritated
+    r "Do you have any reason behind all of this?"
+    h "It was Odyssey7's fault. They started all of this, stealing all of my years' worth of hard work for my dream game."
+    h "That game they're about to release..."
+    show hacker smile 
+    with vpunch
+    h "Their business is going to fail! THEY WILL ALL FAIL WITH ME!"
+    scene bg blackscreen with fade
+     # END
+    pause 
+
+screen treepedestal:
+    imagebutton auto "endgame/treepedestal-%s.png":
+        focus_mask True 
+        action Return()
+screen table:
+    imagebutton auto "endgame/table-%s.png":
+        focus_mask True 
+        action Return()
+label gotSpellWrong:
+    $lives = lives - 1
+    show screen lives
+    if lives == 0:
+        $died = True
+        hide screen lives
+        hide screen spellbook
+        hide screen bookUI
+        scene bg blackScreen with eyeclose
+        $doingSomething = False
+        $renpy.pause(delay=3, hard= True)
+        jump endgamesetup
+    $renpy.restart_interaction()
+    "Ouch..."
+    "I got the wrong spell..."
+    window hide
+    $doingSomething = False
+    jump endgamesetup
+
 label gotCorrectPlant:
     show guard default at right
     g "Good job adventurer!"
@@ -1060,7 +1290,7 @@ label act3:
 
 label Potions:
     show screen UI
-    $environment_items = ["blue", "red"]
+    $environment_items = ["blue", "red", "white", "yellow"]
     python:
         for item in environment_items:
             idle_image = Image("Environment Items/{}-idle.png".format(item))
@@ -1072,15 +1302,25 @@ label Potions:
             environment_sprites[-1].hover_image = hover_image
             # sets up positions of the items change for our items
             if item == "blue":
-                environment_sprites[-1].width = 130
-                environment_sprites[-1].height = 199
-                environment_sprites[-1].x = 571
-                environment_sprites[-1].y = 820
+                environment_sprites[-1].width = 109
+                environment_sprites[-1].height = 164
+                environment_sprites[-1].x = 1042
+                environment_sprites[-1].y = 358
             elif item == "red":
-                environment_sprites[-1].width = 125
-                environment_sprites[-1].height = 177
-                environment_sprites[-1].x = 400
-                environment_sprites[-1].y = 169
+                environment_sprites[-1].width = 84
+                environment_sprites[-1].height = 126
+                environment_sprites[-1].x = 1472
+                environment_sprites[-1].y = 398
+            elif item == "white":
+                environment_sprites[-1].width = 134
+                environment_sprites[-1].height = 178
+                environment_sprites[-1].x = 164
+                environment_sprites[-1].y = 117
+            elif item == "yellow":
+                environment_sprites[-1].width = 130
+                environment_sprites[-1].height = 200
+                environment_sprites[-1].x = 383
+                environment_sprites[-1].y = 764
            
     scene towerfloor1
     show screen UI
@@ -1093,15 +1333,10 @@ label act3puzzle1complete:
     v "Good job adventurer."
     v "Onto the next one."
     v "They'll only get harder from here."
-label act3puzzle2:
-    scene act1puzzle2room with fade
-    v "Now for your second task."
-    v "I want you to answer a riddle over there on the wall."
-    v "Answer using the blocks scattered around here."
-    v "And put them in the slots on the wall."
-    call screen puzzle2blocks()
-screen puzzle2blocks():
-    draggroup:
+    jump act3puzzle2
+
+label act3puzzle2complete:
+
         
 label torchinstructions:
     show screen torchinstr with fade
@@ -1126,6 +1361,7 @@ screen act3puzzle1Instructions():
         focus_mask True 
         action Return()
 
+
 screen door():
     imagebutton auto "door-%s":
         focus_mask True
@@ -1141,7 +1377,6 @@ screen puzzle1complete():
         action [Play("sound", "audio/click.mp3"), Return()]
 
 screen pedestal3close():
-    modal True
     add "backgrounds/dungeonwall.png"
     add "pedestals/pedestal3.png"   
     draggroup:
@@ -1372,7 +1607,7 @@ screen puzzle2completescreen:
     add "backgrounds/puzzle2complete.png"
     imagebutton auto "pedestal2-%s":
         focus_mask True
-        action Return()
+        action [Play("sound", "audio/click.mp3"), Return()]
 screen pedestal2close:
     add "backgrounds/dungeonwall.png"
     add "pedestals/pedestal2.png"
@@ -1416,7 +1651,7 @@ screen pedestal2close:
             xsize 205
             ysize 60
             draggable False
-            droppable True
+
         drag:
             drag_name "0,1"
             xpos 568
@@ -1481,6 +1716,14 @@ screen pedestal2close:
             ysize 60
             draggable False
             droppable True
+screen dooropen():
+    imagebutton auto "/opendoor-%s.png":
+        focus_mask True 
+        action [Play("sound", "audio/click.mp3"), Return()]
+screen gettingIngredient():
+    imagebutton auto "/ingredient-%s.png":
+        focus_mask True
+        action [Play("sound", "audio/click.mp3"), Return()]
 screen torchpuzzle():
     timer .2 repeat True action Function(check)
 
@@ -1611,16 +1854,17 @@ screen musicbox():
     imagebutton:
         focus_mask True
         idle "UI/exitui.png"
-        action [Hide("musicbox", transition= None), Show("UI", transition = None), If(atrightstatue == False, true= Show("memorial", transition= fade), false= Show("rightstatueclose", transition = fade))]
+        action [Hide("musicbox", transition= None), Show("UI", transition = None), ShowMenu("whichscreen")]
 
 screen piano():
     modal True
+    $global atrightstatue
     add "Items Pop Up/items-pop-up-bg.png" xalign 0.5 yalign 0.5
     add "images/Items Pop Up/thumbpiano-pop-up.png" 
     imagebutton:
         focus_mask True
         idle "UI/exitui.png"
-        action [Hide("piano", transition= None), Show("UI", transition = None), If(atrightstatue == True, true= Show("rightstatueclose", transition = fade), false= Show("memorial", transition = fade))]
+        action [Hide("piano", transition= None), Show("UI", transition = None), ShowMenu("whichscreen")]
     imagebutton auto "images/piano/key1-%s.png":
         focus_mask True
         action [Play("sound", "<from 0.7 to 1.5>audio/pianokey1.mp3"), SetVariable("key{}".format(keyspressed), 1), If(atrightstatue == True, true = SetVariable("keyspressed", keyspressed + 1), false = NullAction()), Function(checkpiano)]
@@ -1649,15 +1893,17 @@ screen piano():
         focus_mask True
         action [Play("sound", "<from 0.7 to 1.5>audio/pianokey9.mp3"), SetVariable("key{}".format(keyspressed), 9), If(atrightstatue == True, true = SetVariable("keyspressed", keyspressed + 1), false = NullAction()), Function(checkpiano)]
 screen memorial():
-    $atrightstatue = False 
+    $global atrightstatue
+    $atrightstatue = False
+    $global incorrect
     timer .2 repeat False action [Show("UI", transition = None), SetVariable("atrightstatue", False)]
     add "/backgrounds/memorial.png"
     imagebutton auto "act2/musicstatue-%s.png":
         focus_mask True 
-        action [Show("rightstatueclose", transition = fade), Hide("memorial")]
-    imagebutton auto "act2/righthand-%s.png":
+        action [Play("sound", "audio/click.mp3"), Show("rightstatueclose", transition = fade), Hide("memorial")]
+    imagebutton auto "act2/leftstatue-%s.png":
         focus_mask True
-        action If(haspiano == False, true= [Function(addpiano), SetVariable("haspiano", True)], false = NullAction())
+        action If(haspiano == False, true= [Play("sound", "audio/click.mp3"), Function(addpiano), SetVariable("haspiano", True)], false = NullAction())
 screen plantjournal():
     $global currentscreen
     add "/act2/journalpage{}.png".format(page)
@@ -1668,7 +1914,7 @@ screen plantjournal():
         ypos -83
         action [Hide("plantjournal", transition= None), Show("UI", transition = None), If(currentscreen == "act2puzzle3screen", true = ShowMenu("act2puzzle3screen", transition= fade), false = Show("plantboxclose"))]
     imagebutton auto "/act2/rightarrow-%s.png":
-        focus_mask True 
+        focus_mask True     
         action [SetVariable("page", If(page == 3, true= 3, false= page + 1)), Function(refresh)]
     imagebutton auto "/act2/leftarrow-%s.png":
         focus_mask True 
@@ -1697,17 +1943,19 @@ init python:
         global key4
         global key5
         global keyspressed
+        global incorrect
         if keyspressed == 6:
             # change to the correct keys to press. ex: 1457 or smth
             if key1 == 4 and key2 == 9 and key3 == 7 and key4 == 5 and key5 == 6:
                 #i kept getting an error if i didn't put interact = False so keep that in mind w/ dialogue
                 renpy.hide_screen("piano")
-                renpy.call_in_new_context("act2puzzle2complete")
+                keyspressed = 1
+                renpy.call_in_new_context("act2puzzle3")
                 keyspressed = 1
             else:
-                # this resets the keys you pressed so you can try again
-                renpy.say([name],"that wasn't right.. let me try again.", interact = False)
-                keyspressed = 1
+               renpy.hide_screen("piano")
+               keyspressed = 1
+               renpy.call_in_new_context("playedWrongTune")
     def addnote():
         addToInventory(["note"])
         renpy.show_screen("inspectItem", ["note"])
@@ -1718,7 +1966,7 @@ init python:
     def addmusicbox():
         addToInventory(["musicbox"])
         renpy.show_screen("inspectItem", ["musicbox"])
-        characterSay(who = "(mc)", what = ["This must play the tune that the statue is talking about.", "I just need to find something to play it on now."], inspectItem = True)
+        characterSay(who = name, what = ["This must play the tune that the statue is talking about.", "I just need to find something to play it on now."], inspectItem = True)
         inventory_SM.redraw(0)
         environment_SM.redraw(0)
         renpy.restart_interaction()
@@ -1732,7 +1980,7 @@ init python:
     def addpiano():
         addToInventory(["thumbpiano"])
         renpy.show_screen("inspectItem", ["thumbpiano"])
-        characterSay(who = "(mc)", what = ["A thumb piano.", "Maybe I could play the tune on this in front of the statue."], inspectItem = True)
+        characterSay(who = name, what = ["A thumb piano.", "Maybe I could play the tune on this in front of the statue."], inspectItem = True)
         inventory_SM.redraw(0)
         environment_SM.redraw(0)
         renpy.restart_interaction()
@@ -1773,8 +2021,55 @@ init python:
                                         removeInventoryItem(item2)
                                         addToInventory(["purple"])
                                         renpy.show_screen("inspectItem", ["purple"])
+                                    elif (item1.type == "red" or item1.type == "yellow") and (item2.type == "red" or item2.type == "yellow"):
+                                        i_combine = True
+                                        removeInventoryItem(item1)
+                                        removeInventoryItem(item2)
+                                        addToInventory(["orange"])
+                                        renpy.show_screen("inspectItem", ["orange"])
+                                    elif (item1.type == "red" or item1.type == "white") and (item2.type == "red" or item2.type == "white"):
+                                        i_combine = True
+                                        removeInventoryItem(item1)
+                                        removeInventoryItem(item2)
+                                        addToInventory(["pink"])
+                                        renpy.show_screen("inspectItem", ["pink"])
+                                    elif (item1.type == "blue" or item1.type == "white") and (item2.type == "blue" or item2.type == "white"):
+                                        i_combine = True
+                                        removeInventoryItem(item1)
+                                        removeInventoryItem(item2)
+                                        addToInventory(["lightblue"])
+                                        renpy.show_screen("inspectItem", ["lightblue"])
+                                    elif (item1.type == "yellow" or item1.type == "white") and (item2.type == "yellow" or item2.type == "white"):
+                                        i_combine = True
+                                        removeInventoryItem(item1)
+                                        removeInventoryItem(item2)
+                                        addToInventory(["lightyellow"])
+                                        renpy.show_screen("inspectItem", ["lightyellow"])
+                                    elif (item1.type == "purple" or item1.type == "white") and (item2.type == "purple" or item2.type == "white"):
+                                        i_combine = True
+                                        removeInventoryItem(item1)
+                                        removeInventoryItem(item2)
+                                        addToInventory(["lightpurple"])
+                                        renpy.show_screen("inspectItem", ["lightpurple"])
                                         renpy.call_in_new_context("act3puzzle1complete")
-                                    
+                                    elif (item1.type == "orange" or item1.type == "white") and (item2.type == "orange" or item2.type == "white"):
+                                        i_combine = True
+                                        removeInventoryItem(item1)
+                                        removeInventoryItem(item2)
+                                        addToInventory(["lightorange"])
+                                        renpy.show_screen("inspectItem", ["lightorange"])
+                                    elif (item1.type == "green" or item1.type == "white") and (item2.type == "green" or item2.type == "white"):
+                                        i_combine = True
+                                        removeInventoryItem(item1)
+                                        removeInventoryItem(item2)
+                                        addToInventory(["lightgreen"])
+                                        renpy.show_screen("inspectItem", ["lightgreen"])
+                                    elif (item1.type == "blue" or item1.type == "yellow") and (item2.type == "blue" or item2.type == "yellow"):
+                                        i_combine = True
+                                        removeInventoryItem(item1)
+                                        removeInventoryItem(item2)
+                                        addToInventory(["green"])
+                                        renpy.show_screen("inspectItem", ["green"])
                             if i_combine == False:
                                 for item3 in environment_sprites:
                                     items_overlap = checkItemsOverlap(item1, item3)
@@ -1872,7 +2167,13 @@ init python:
                                         renpy.show_screen("inspectItem", ["blue"])
                                     elif item.type == "red":
                                         addToInventory(["red"])
-                                        renpy.show_screen("inspectItem", ["blue"])
+                                        renpy.show_screen("inspectItem", ["red"])
+                                    elif item.type == "yellow":
+                                        addToInventory(["yellow"])
+                                        renpy.show_screen("inspectItem", ["yellow"])
+                                    elif item.type == "white":
+                                        addToInventory(["white"])
+                                        renpy.show_screen("inspectItem", ["white"])
                                 
 
 
@@ -1917,6 +2218,15 @@ init python:
                 setItemVisibility(item = item, visible = False)
             elif item != "":
                 setItemVisibility(item = item, visible = True)
+        if len(inventory_sprites) > 0:
+            if inventory_sprites[-1].visible == True:
+                inventory_rb_enabled = False
+            else:
+                inventory_rb_enabled = True
+            if inventory_sprites[0].visible == True:
+                inventory_lb_enabled = False
+            else:
+                inventory_lb_enabled = True
         renpy.retain_after_load()
 
     def addToInventory(items):
@@ -1966,7 +2276,40 @@ init python:
         inventory_sprites.pop(inventory_sprites.index(item))
         inventory_items.pop(inventory_items.index(item.type))
         repositionInventoryItems()
+    def inventoryArrows(button):
+        global inventory_lb_enabled
+        global inventory_rb_enabled
 
+        if len(inventory_sprites) > 7:
+            citem = ""
+            for i, item in enumerate(inventory_sprites):
+                if button == "right" and inventory_rb_enabled == True:
+                    if inventory_sprites[-1].visible == False:
+                        item.x -= item.width + inventory_slot_padding
+                        citem = item
+                elif button == "left" and inventory_lb_enabled == True:
+                    if inventory_sprites[0].visible == False:
+                        reversed_index = (len(inventory_sprites) - 1) - i
+                        inventory_sprites[reversed_index].x += item.width + inventory_slot_padding
+                        citem = inventory_sprites[reversed_index]
+
+                if citem != "" and (citem.x < inventory_first_slot_x or citem.x > (inventory_first_slot_x + (citem.width * 7)) + (inventory_slot_padding * 5)):
+                    setItemVisibility(item = citem, visible = False)
+                elif citem != "":
+                    setItemVisibility(item = citem, visible = True)
+
+            if inventory_sprites[-1].visible == True:
+                inventory_rb_enabled = False
+            else:
+                inventory_rb_enabled = True
+            if inventory_sprites[0].visible == True:
+                inventory_lb_enabled = False
+            else:
+                inventory_lb_enabled = True
+
+            if citem != "":
+                inventory_SM.redraw(0)
+                renpy.restart_interaction()
     def setItemVisibility(item, visible):
         if visible == False:
             item.visible = False
@@ -1992,13 +2335,15 @@ init python:
 
 screen UI:
     zorder 1
-    image "UI/inventory-icon-bg.png" xpos 0 ypos 0.8 at test
     imagebutton auto "UI/inventory-icon-%s.png" action If(renpy.get_screen("inventory") == None, true= Show("inventory"), false= Hide("inventory")) xpos 0.03 ypos 0.825 at test
     add environment_SM
 screen inventory:
     zorder 3
     image "UI/inventory-bg.png" xpos 0.17 ypos 0.8 at test
     image "UI/inventory-slots.png" xpos 0.274 ypos 0.845 at test
+    imagebutton idle If(inventory_rb_enabled == True, true= "UI/inventory-arrow-right-enabled-idle.png", false= "UI/inventory-arrow-right-disabled.png") hover If(inventory_rb_enabled == True, true= "UI/inventory-arrow-right-enabled-hover.png", false= "UI/inventory-arrow-right-disabled.png") action Function(inventoryArrows, button = "right") xpos 0.921 ypos 0.86 at half_size
+    imagebutton idle If(inventory_lb_enabled == True, true= "UI/inventory-arrow-left-enabled-idle.png", false= "UI/inventory-arrow-left-disabled.png") hover If(inventory_lb_enabled == True, true= "UI/inventory-arrow-left-enabled-hover.png", false= "UI/inventory-arrow-left-disabled.png") action Function(inventoryArrows, button = "left") xpos 0.202 ypos 0.86 at half_size
+
 
     add inventory_SM
 transform test:
@@ -2022,12 +2367,14 @@ screen inspectItem(items):
         timer .2 repeat False action ShowMenu("musiclabel", transition = None)
     elif items[0] == "plantjournal" and firsttime3 == False:
         timer .2 repeat False action ShowMenu("plantlabel", transition = None)
+    elif items[0] == "book":
+        timer .2 repeat False action ShowMenu("booklabel", transition = None)
     else:
 
         button:
             xfill True
             yfill True
-            action [If(len(items) > 1, true = RemoveFromSet(items, items[0]), false= [Hide("inspectItem"), If(len(dialogue) > 0, true= Show("characterSay"), false= NullAction())]), If(firsttime1 == True, true = SetVariable("firsttime1", False), false= If(firsttime2 == True, true = SetVariable("firsttime2", False), false= SetVariable("firsttime3", False))), If(items[0] == "plantjournal", true= ShowMenu("act2puzzle3", transition= fade), false= None)]
+            action [If(len(items) > 1, true = RemoveFromSet(items, items[0]), false= [Hide("inspectItem"), If(len(dialogue) > 0, true= Show("characterSay"), false= NullAction())]), If(firsttime1 == True, true = SetVariable("firsttime1", False), false= If(firsttime2 == True, true = SetVariable("firsttime2", False), false= SetVariable("firsttime3", False))), If(items[0] == "plantjournal", true= ShowMenu("act2puzzle3gotjournal", transition= fade), false= None)]
             image "Items Pop Up/items-pop-up-bg.png" align (0.5, 0.5) at half_size
 
             python:

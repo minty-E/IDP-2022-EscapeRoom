@@ -2,9 +2,9 @@
 errors listed below, and try again.
 
 
-File "game/script.rpy", line 1104: draggroup expects a non-empty block.
-    draggroup:
-              ^
+File "game/endgame.rpy", line 237: showif expects a non-empty block.
+    showif spell == 3 and bookpage != 2:
+                                        ^
 
 Ren'Py Version: Ren'Py 7.4.11.2266
-Sat May 28 09:12:35 2022
+Tue May 31 23:27:17 2022

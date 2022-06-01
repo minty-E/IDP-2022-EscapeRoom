@@ -2,9 +2,11 @@
 errors listed below, and try again.
 
 
-File "game/script.rpy", line 30: u'd' is not a keyword argument or valid child for the drag statement.
-    d "wallblockBspot1.png"
-     ^
+The label start is defined twice, at File "game/blocks.rpy", line 88:
+label start:
+and File "game/script.rpyc", line 88:
+label start:
+
 
 Ren'Py Version: Ren'Py 7.4.11.2266
-Sat May 28 10:05:13 2022
+Mon May 30 13:44:22 2022
