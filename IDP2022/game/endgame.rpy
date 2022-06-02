@@ -10,16 +10,23 @@ image audrey hacked = "/audrey/audreyhacked.png"
 image audrey hacked2 = "/audrey/audreyhacked2.png"
 image audrey hacked3 = "/audrey/audreyhacked3.png"
 label endgame:
-    scene bg lastfloor
-    show audrey black with fade
+    stop music
+    v "Good job adventurer!"
+    v "You have proven yourself to be worthy of the item you seek."
+    v "I wish you the best of luck on the rest of your journey."
+    scene bg lastfloor with fade
+    show audrey black
     m "..."
     m "Haha.... You're so slow."
     mc "Who's there?"
+    play music "audio/bossmusic.mp3" volume 0.65
     show audrey evil at truecenter
-    a "First you forget about Jeremy and now me?"
+    
+    ha "First you forget about Jeremy and now me?"
     show audrey mad 
-    a "You must be thinking you're play some kind of game now?!"
+    ha "You must be thinking you're play some kind of game now?!"
     hide audrey mad
+    play sound "audio/glitch.mp3"
     show audrey hacked
     $renpy.pause(delay=0.1, hard = True) 
     hide audrey hacked
@@ -27,12 +34,37 @@ label endgame:
     $renpy.pause(delay=0.1, hard = True) 
     hide audrey hacked2  
     show audrey hacked3
+    $renpy.pause(delay=0.1, hard = True)
+    show audrey hacked
     $renpy.pause(delay=0.1, hard = True) 
+    hide audrey hacked
+    show audrey hacked2
+    $renpy.pause(delay=0.1, hard = True) 
+    hide audrey hacked2  
+    show audrey hacked3
+    $renpy.pause(delay=0.1, hard = True)
+    hide audrey hacked 
     show audrey evil
-    a "You've gotten so far. This isn't supposed to happen."
-    a "You won't leave this game."
+    ha "You've gotten so far. This isn't supposed to happen."
+    ha "You won't leave this game."
+    play sound "audio/glitch.mp3"
+    show audrey hacked
+    $renpy.pause(delay=0.1, hard = True) 
+    hide audrey hacked
+    show audrey hacked2
+    $renpy.pause(delay=0.1, hard = True) 
+    hide audrey hacked2  
+    show audrey hacked3
+    $renpy.pause(delay=0.1, hard = True)
+    show audrey hacked
+    $renpy.pause(delay=0.1, hard = True) 
+    hide audrey hacked
+    show audrey hacked2
+    $renpy.pause(delay=0.1, hard = True) 
+    hide audrey hacked2  
+    show audrey evil
     mc "Are you the hacker that locked me in here or something?"
-    a "Too bad, you will never understand. Say goodbye to that damned company and your life."
+    ha "Too bad, you will never understand. Say goodbye to that damned company and your life."
     hide audrey hacked3
     company "The hacker is about to code something that can kill you! Hit the incoming blows to block them."
     company "We've handed a spellbook to you that should be in your inventory."
@@ -40,13 +72,18 @@ label endgame:
     company "Due to a firewall placed by the hacker we can't  say the exact name of the spells you must use."
     company "But we can tell you through hints and clues..."
     company "Be careful, using the wrong spell might backfire and injure you. Take too much damage and you might die."
+    hide audrey evil 
+    call screen endgameInstructions
+    show audrey evil 
+    company "Get ready [name]! The hacker is starting to attack!"
+    company "Quickly! Find the curse starting with R!"
+    window hide 
     show screen bookUI
     show screen health
     show screen hints
     jump endgamesetup
 
 label endgamesetup:
- 
     if died == True:
         scene bg lastfloor with eyeopen
         "..."
@@ -70,19 +107,21 @@ label endgamesetup:
     $ cont = 0 #continue variable
     $ arr_keys = ["a", "c", "e", "K_UP", "K_SPACE"] #list of keyboard inputs to be selected from. See https://www.pygame.org/docs/ref/key.html for more keys
     if doingSomething == False:
+            show screen bookUI
             show screen health
-            $renpy.pause(delay= 5, hard = True)
-            $renpy.play("audio/warn.mp3", channel = None)
-            call qte_setup(1.5, 1.5, 0.1, renpy.random.choice(arr_keys), renpy.random.randint(1, 9) * 0.1, renpy.random.randint(1, 9) * 0.1)
+            $renpy.pause(delay= 1, hard = True)
+            play sound "audio/attack.mp3"
+            call qte_setup(1.25, 1.25, 0.1, renpy.random.choice(arr_keys), renpy.random.randint(1, 9) * 0.1, renpy.random.randint(1, 9) * 0.1)
     # "Function Call" - see label qte_setup for detail on "function"
     # in the above, I randomly select a key from a previously defined set of keys (arr_keys), and randomise the location
 
     while cont == 1:
         show screen health
+        show screen bookUI
         if doingSomething == False:
-                $renpy.pause(delay= renpy.random.randint(3, 7), hard = True)
-                $renpy.play("audio/warn.mp3", channel = None)
-                call qte_setup(1.5, 1.5, 0.1, renpy.random.choice(arr_keys), renpy.random.randint(1, 9) * 0.1, renpy.random.randint(1, 9) * 0.1)
+                $renpy.pause(delay= renpy.random.randint(2, 5), hard = True)
+                play sound "audio/attack.mp3"
+                call qte_setup(1.25, 1.25, 0.1, renpy.random.choice(arr_keys), renpy.random.randint(1, 9) * 0.1, renpy.random.randint(1, 9) * 0.1)
         # to repeat the qte events until it is missed
     if doingSomething == False:
         $lives = lives - 1
@@ -97,7 +136,10 @@ label endgamesetup:
             $renpy.pause(delay=3, hard= True)
             jump endgamesetup
         else:
+            play sound "audio/damage.mp3"
+            show audrey happy
             $renpy.restart_interaction()
+            show screen bookUI
             show screen health
             jump endgamesetup
         $renpy.restart_interaction()
@@ -139,7 +181,7 @@ screen qte_button:
         xalign x_align yalign y_align spacing 25
 
         imagebutton:
-            action Return(1)
+            action [Play("sound", "audio/charm.mp3"), Return(1)]
             xalign 0.5
             yalign 0.5
             xysize 250,250
@@ -213,7 +255,34 @@ screen spellbook():
             xsize 1094
             ysize 189
             action [Hide("spellbook"), SetVariable("doingSomething", True), ShowMenu("gotSpellWrong", transition= None)]
-                                           
+    showif spell == 4 and bookpage != 8:
+        button:
+            xpos 434
+            ypos 169
+            xsize 1049
+            ysize 705
+            action [Hide("spellbook"), SetVariable("doingSomething", True), ShowMenu("gotSpellWrong", transition= None)]
+    showif spell == 4 and bookpage == 8:
+        button:
+            xpos 976
+            ypos 186
+            xsize 505
+            ysize 192
+            action [Hide("spellbook"), SetVariable("doingSomething", True), ShowMenu("audreyInjured", transition = fade)]
+        button:
+            xpos 390
+            ypos 177
+            xsize 548
+            ysize 674
+            action [Hide("spellbook"), SetVariable("doingSomething", True), ShowMenu("gotSpellWrong", transition= None)]
+        button:
+            xpos 983
+            ypos 392
+            xsize 513
+            ysize 449
+            action [Hide("spellbook"), SetVariable("doingSomething", True), ShowMenu("gotSpellWrong", transition= None)]
+                                          
+                                          
     showif spell == 1 and bookpage == 10:
         button:
             xpos 966

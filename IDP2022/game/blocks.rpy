@@ -91,8 +91,20 @@ label act3puzzle2:
     v "I want you to answer a riddle over there on the wall."
     v "Answer using the blocks scattered around here."
     v "And put them in the slots on the wall."
+    call screen blocksInstructions
     show screen UI
+    $takeoutpotions()
+    $takeoutpotions()
+    $takeoutpotions()
+    $takeoutpotions()
+    $takeoutpotions()
+    $takeoutpotions()
+    $takeoutpotions()
+    $takeoutpotions()
+    $takeoutpotions()
+    $takeoutpotions()
     $takeoutpotions()                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                    
+    $addToInventory(["note"])
     call screen blocks()
 
 init python:
@@ -101,32 +113,7 @@ init python:
         for item in environment_sprites:
             removeEnvironmentItem(item)
         for item in inventory_sprites:
-            if item == "white":
-                removeInventooryItem(item)
-            elif item == "red":
-                removeInventooryItem(item)
-            elif item == "blue":
-                removeInventooryItem(item)
-            elif item == "yellow":
-                removeInventooryItem(item)
-            elif item == "pink":
-                removeInventooryItem(item)
-            elif item == "lightblue":
-                removeInventooryItem(item)
-            elif item == "lightyellow":
-                removeInventooryItem(item)
-            elif item == "green":
-                removeInventooryItem(item)
-            elif item == "orange":
-                removeInventooryItem(item)
-            elif item == "lightgreen":
-                removeInventooryItem(item)
-            elif item == "lightorange":
-                removeInventooryItem(item)
-            elif item == "purple":
-                removeInventooryItem(item)
-            elif item == "lightpurple":
-                removeInventooryItem(item)
+            removeInventoryItem(item)
     def refresh():
         renpy.restart_interaction()
     def checkblocks():
@@ -1920,8 +1907,8 @@ screen blocks:
                 child "O.png"
                 xpos 426
                 ypos 849
-                draggable False
-                droppable True
+                draggable True
+                droppable False
                 dragged blockdrag
     showif Tvisible == True:
         draggroup:

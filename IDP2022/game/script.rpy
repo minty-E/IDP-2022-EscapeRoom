@@ -41,6 +41,7 @@ define v = Character("Mysterious Voice")
 define o = Character("Odyssey7")
 define r = Character("Reporter")
 define h = Character("Hacker")
+define ha = Character("Audrey?")
 # audrey photos
 image audrey default = "/audrey/audreyDefault.png"
 image audrey confused = "/audrey/audreyConfused.png"
@@ -520,7 +521,7 @@ screen slider(g = slider_1):
         timer .2 repeat False action [Function(g.shuffle), SetVariable("shuffle", 0)]
 
     elif g.win == g.pieces:
-        timer .2 repeat False action [Play("sound", "audio/completed.mp3"), Return()]
+        timer .2 repeat False action Return()
 transform slider_piece(x, y):
     ease .2 xpos x ypos y
 transform slider_image:
@@ -593,6 +594,7 @@ image bg dooropen = "/backgrounds/dooropen.png"
 image bg ingredient = "/backgrounds/ingredient1.png"
 image bg ingredientclose = "/backgrounds/ingredient1closeup.png"
 image bg towerofHanoiDone = "/backgrounds/towerofHanoidone.png"
+image bg final = "/endgame/finalscene.png"
 # image ralsei default = "ralsei.jpeg"
 # The game starts here.
 
@@ -646,7 +648,7 @@ label start:
     mc "Huh, I wonder who sent me an email this late at night."
     menu: 
         "Open the email":
-            jump emailScene
+            jump endgame
 
 
     label emailScene:
@@ -1050,6 +1052,7 @@ label act2puzzle3:
 label act2puzzle3gotjournal:
     "A plant journal.."
     "Might be useful later."
+    "I should check out the statue on the left now to see what it has."
     call screen act2puzzle3leftstatue()
     mc "This statue says something about this past village chief always having a rash."
     mc "The journal I got might have something in it about a plant that helps with rashes.."
@@ -1067,6 +1070,9 @@ label leftstatue:
     call screen act2puzzle3screen()
     pause
 label plantboxlabel:
+    $takeoutpotions()
+    $takeoutpotions()
+    $addToInventory(["plantjournal"])
     scene plantbox
     mc "The journal I got earlier has information about what these plants are."
     mc "I can use the journal to find the plant that helps with rashes."
@@ -1212,7 +1218,7 @@ label audreyInjured:
         if spell == 2:
             company "Find the 4th spell that starts with E!"
         if spell == 3:
-            company "Find (Cun-____-sis)!"
+            company "Find the spell pronounced (Cun - _____ - is)"
         if spell == 4:
             company "Find the only spell starting with M containing 3 vowels!"
         $doingSomething = False
@@ -1266,7 +1272,7 @@ label survey:
     $recommend = renpy.input("Would you recommend this game to a friend?")
 
     j "Thank you for playing our game!!"
-    
+    scene bg final with fade
 
 
 screen treepedestal:
@@ -1283,6 +1289,7 @@ label gotSpellWrong:
     show screen lives
     if lives == 0:
         $died = True
+        $spell = 1
         hide screen lives
         hide screen spellbook
         hide screen bookUI
@@ -2073,7 +2080,7 @@ init python:
     def addpiano():
         addToInventory(["thumbpiano"])
         renpy.show_screen("inspectItem", ["thumbpiano"])
-        characterSay(who = name, what = ["A thumb piano.", "Maybe I could play the tune on this in front of the statue when I'm ready. For now I can practice getting the tune right."], inspectItem = True)
+        characterSay(who = name, what = ["A thumb piano.", "Maybe I could play the tune on this in front of the statue when I'm ready.", " For now I can practice getting the tune right."], inspectItem = True)
         inventory_SM.redraw(0)
         environment_SM.redraw(0)
         renpy.restart_interaction()

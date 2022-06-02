@@ -1,66 +1,42 @@
 ﻿I'm sorry, but an uncaught exception occurred.
 
-After initialization, but before game start.
-  File "game/custom_screens.rpy", line 26, in prepare_screen
-    screen p1_1Hint:
-  File "game/custom_screens.rpy", line 26, in prepare
-    screen p1_1Hint:
-  File "game/custom_screens.rpy", line 28, in prepare
-    hbox:
-  File "game/custom_screens.rpy", line 28, in prepare
-    hbox:
-  File "game/custom_screens.rpy", line 30, in prepare
-    textbutton "Hint" action [Notify("Shift the pieces to complete and solve the picture..."), SetVariable("hintUsed", hintUsed + 1), Show(, transition = None)]
-  File "game/custom_screens.rpy", line 30, in prepare
-    textbutton "Hint" action [Notify("Shift the pieces to complete and solve the picture..."), SetVariable("hintUsed", hintUsed + 1), Show(, transition = None)]
-SyntaxError: invalid syntax (custom_screens.rpy, line 30)
+While running game code:
+  File "renpy/common/00start.rpy", line 212, in script call
+    call _load_reload_game from _call__load_reload_game_1
+  File "renpy/common/00keymap.rpy", line 504, in script
+    python hide:
+  File "renpy/common/00keymap.rpy", line 504, in <module>
+    python hide:
+  File "renpy/common/00keymap.rpy", line 514, in _execute_python_hide
+    renpy.load("_reload-2")
+Exception: Couldn't find a place to stop rolling back. Perhaps the script changed in an incompatible way?
 
 -- Full Traceback ------------------------------------------------------------
 
 Full traceback:
-  File "C:\Users\zerog\Downloads\renpy-7.4.11-sdk/renpy/bootstrap.py", line 331, in bootstrap
-    renpy.main.main()
-  File "C:\Users\zerog\Downloads\renpy-7.4.11-sdk/renpy/main.py", line 583, in main
-    renpy.game.script.report_duplicate_labels()
-  File "C:\Users\zerog\Downloads\renpy-7.4.11-sdk/renpy/script.py", line 970, in report_duplicate_labels
-    if renpy.parser.report_parse_errors():
-  File "C:\Users\zerog\Downloads\renpy-7.4.11-sdk/renpy/parser.py", line 3015, in report_parse_errors
-    renpy.display.error.report_parse_errors(full_text, error_fn)
-  File "C:\Users\zerog\Downloads\renpy-7.4.11-sdk/renpy/display/error.py", line 198, in report_parse_errors
-    error_fn=error_fn,
-  File "C:\Users\zerog\Downloads\renpy-7.4.11-sdk/renpy/game.py", line 284, in invoke_in_new_context
-    return callable(*args, **kwargs)
-  File "C:\Users\zerog\Downloads\renpy-7.4.11-sdk/renpy/display/error.py", line 46, in call_exception_screen
-    return renpy.ui.interact(mouse="screen", type="screen", suppress_overlay=True, suppress_underlay=True)
-  File "C:\Users\zerog\Downloads\renpy-7.4.11-sdk/renpy/ui.py", line 298, in interact
-    rv = renpy.game.interface.interact(roll_forward=roll_forward, **kwargs)
-  File "C:\Users\zerog\Downloads\renpy-7.4.11-sdk/renpy/display/core.py", line 3325, in interact
-    repeat, rv = self.interact_core(preloads=preloads, trans_pause=trans_pause, pause=pause, pause_start=pause_start, **kwargs)
-  File "C:\Users\zerog\Downloads\renpy-7.4.11-sdk/renpy/display/core.py", line 3506, in interact_core
-    renpy.display.screen.prepare_screens()
-  File "C:\Users\zerog\Downloads\renpy-7.4.11-sdk/renpy/display/screen.py", line 955, in prepare_screens
-    s.ast.prepare_screen()
-  File "game/custom_screens.rpy", line 26, in prepare_screen
-    screen p1_1Hint:
-  File "game/custom_screens.rpy", line 26, in prepare
-    screen p1_1Hint:
-  File "game/custom_screens.rpy", line 28, in prepare
-    hbox:
-  File "game/custom_screens.rpy", line 28, in prepare
-    hbox:
-  File "game/custom_screens.rpy", line 30, in prepare
-    textbutton "Hint" action [Notify("Shift the pieces to complete and solve the picture..."), SetVariable("hintUsed", hintUsed + 1), Show(, transition = None)]
-  File "game/custom_screens.rpy", line 30, in prepare
-    textbutton "Hint" action [Notify("Shift the pieces to complete and solve the picture..."), SetVariable("hintUsed", hintUsed + 1), Show(, transition = None)]
-  File "C:\Users\zerog\Downloads\renpy-7.4.11-sdk/renpy/pyanalysis.py", line 714, in ast_eval
-    return self.ast_eval_literal(expr)[0]
-  File "C:\Users\zerog\Downloads\renpy-7.4.11-sdk/renpy/pyanalysis.py", line 696, in ast_eval_literal
-    expr = py_compile(expr, 'eval', ast_node=True)
-  File "C:\Users\zerog\Downloads\renpy-7.4.11-sdk/renpy/python.py", line 835, in py_compile
-    raise e
-SyntaxError: invalid syntax (custom_screens.rpy, line 30)
+  File "renpy/common/00start.rpy", line 212, in script call
+    call _load_reload_game from _call__load_reload_game_1
+  File "renpy/common/00keymap.rpy", line 504, in script
+    python hide:
+  File "C:\Users\zerog\Downloads\renpy-7.4.11-sdk/renpy/ast.py", line 928, in execute
+    renpy.python.py_exec_bytecode(self.code.bytecode, self.hide, store=self.store)
+  File "C:\Users\zerog\Downloads\renpy-7.4.11-sdk/renpy/python.py", line 2245, in py_exec_bytecode
+    exec(bytecode, globals, locals)
+  File "renpy/common/00keymap.rpy", line 504, in <module>
+    python hide:
+  File "renpy/common/00keymap.rpy", line 514, in _execute_python_hide
+    renpy.load("_reload-2")
+  File "C:\Users\zerog\Downloads\renpy-7.4.11-sdk/renpy/loadsave.py", line 771, in load
+    log.unfreeze(roots, label="_after_load")
+  File "C:\Users\zerog\Downloads\renpy-7.4.11-sdk/renpy/python.py", line 2200, in unfreeze
+    self.rollback(0, force=True, label=label, greedy=greedy, on_load=True)
+  File "C:\Users\zerog\Downloads\renpy-7.4.11-sdk/renpy/python.py", line 2014, in rollback
+    self.load_failed()
+  File "C:\Users\zerog\Downloads\renpy-7.4.11-sdk/renpy/python.py", line 1932, in load_failed
+    raise Exception("Couldn't find a place to stop rolling back. Perhaps the script changed in an incompatible way?")
+Exception: Couldn't find a place to stop rolling back. Perhaps the script changed in an incompatible way?
 
 Windows-10-10.0.22000
 Ren'Py 7.4.11.2266
 IDP2022 1.0
-Wed Jun  1 12:40:24 2022
+Wed Jun  1 15:07:37 2022
