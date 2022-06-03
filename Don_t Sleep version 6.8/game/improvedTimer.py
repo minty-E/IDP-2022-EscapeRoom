@@ -48,3 +48,44 @@ label timer_start:
     $ timer_jump = "lose"
     show screen countdown
     jump prologue2
+
+
+       """
+    def time_convert(sec):
+        sec += (hintUsed * 10)
+        mins = sec // 60
+        sec = sec % 60
+        hours = mins // 60
+        mins = mins % 60
+        #global totalTime 
+        # NEED TO RUN TIME ELAPSED FOR EACH STARTING TIME
+        totalActTime = ("Time Lapsed = {0}:{1}:{2}".format(int(hours),int(mins),int(sec)))
+
+    def starting_time1():
+        global start_time1 
+        start_time1 = time.time()
+    def starting_time2():
+        global start_time2 
+        start_time2 = time.time()
+    def starting_time3():
+        global start_time3 
+        start_time3 = time.time()
+
+    def ending_time1():
+        end_time1 = time.time()
+        time_lapsed1 = end_time1 - start_time1
+        global totalAct1Time
+        totalAct1Time = time_convert(time_lapsed1)
+    def ending_time2():
+        end_time2 = time.time()
+        time_lapsed2 = end_time2 - start_time2
+        global totalAct2Time
+        totalAct2Time = time_convert(time_lapsed2)
+    def ending_time3():
+        end_time3 = time.time()
+        time_lapsed3 = end_time3 - start_time3
+        global totalAct3Time
+        totalAct3Time = time_convert(time_lapsed3)
+    def getTotalTime():
+        global totalTime
+        totalTime = totalAct1Time + totalAct2Time + totalAct3Time"""

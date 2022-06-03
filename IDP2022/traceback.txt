@@ -1,42 +1,26 @@
 ﻿I'm sorry, but an uncaught exception occurred.
 
 While running game code:
-  File "renpy/common/00start.rpy", line 212, in script call
-    call _load_reload_game from _call__load_reload_game_1
-  File "renpy/common/00keymap.rpy", line 504, in script
-    python hide:
-  File "renpy/common/00keymap.rpy", line 504, in <module>
-    python hide:
-  File "renpy/common/00keymap.rpy", line 514, in _execute_python_hide
-    renpy.load("_reload-2")
-Exception: Couldn't find a place to stop rolling back. Perhaps the script changed in an incompatible way?
+  File "game/script.rpy", line 2596, in script
+    python:
+  File "game/script.rpy", line 2606, in <module>
+    act3Time = act3_time_string
+NameError: name 'act3_time_string' is not defined
 
 -- Full Traceback ------------------------------------------------------------
 
 Full traceback:
-  File "renpy/common/00start.rpy", line 212, in script call
-    call _load_reload_game from _call__load_reload_game_1
-  File "renpy/common/00keymap.rpy", line 504, in script
-    python hide:
-  File "C:\Users\zerog\Downloads\renpy-7.4.11-sdk/renpy/ast.py", line 928, in execute
+  File "game/script.rpy", line 2596, in script
+    python:
+  File "/Applications/renpy-7.4.11-sdk/renpy/ast.py", line 928, in execute
     renpy.python.py_exec_bytecode(self.code.bytecode, self.hide, store=self.store)
-  File "C:\Users\zerog\Downloads\renpy-7.4.11-sdk/renpy/python.py", line 2245, in py_exec_bytecode
+  File "/Applications/renpy-7.4.11-sdk/renpy/python.py", line 2245, in py_exec_bytecode
     exec(bytecode, globals, locals)
-  File "renpy/common/00keymap.rpy", line 504, in <module>
-    python hide:
-  File "renpy/common/00keymap.rpy", line 514, in _execute_python_hide
-    renpy.load("_reload-2")
-  File "C:\Users\zerog\Downloads\renpy-7.4.11-sdk/renpy/loadsave.py", line 771, in load
-    log.unfreeze(roots, label="_after_load")
-  File "C:\Users\zerog\Downloads\renpy-7.4.11-sdk/renpy/python.py", line 2200, in unfreeze
-    self.rollback(0, force=True, label=label, greedy=greedy, on_load=True)
-  File "C:\Users\zerog\Downloads\renpy-7.4.11-sdk/renpy/python.py", line 2014, in rollback
-    self.load_failed()
-  File "C:\Users\zerog\Downloads\renpy-7.4.11-sdk/renpy/python.py", line 1932, in load_failed
-    raise Exception("Couldn't find a place to stop rolling back. Perhaps the script changed in an incompatible way?")
-Exception: Couldn't find a place to stop rolling back. Perhaps the script changed in an incompatible way?
+  File "game/script.rpy", line 2606, in <module>
+    act3Time = act3_time_string
+NameError: name 'act3_time_string' is not defined
 
-Windows-10-10.0.22000
+Darwin-21.1.0-x86_64-i386-64bit
 Ren'Py 7.4.11.2266
 IDP2022 1.0
-Wed Jun  1 15:07:37 2022
+Thu Jun  2 23:40:55 2022

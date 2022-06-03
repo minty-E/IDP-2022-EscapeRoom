@@ -1,28 +1,65 @@
 init python:
     import time
+    hintUsed = 0
+    timer_jump = 0
+    timer_range = 0
+    time = 0
+    minutes = 0
+    seconds = 0
+    final_minutes = 0
+    final_seconds = 0
+    def countdown(st, at, length=0.0):
+        global time
+        global minutes
+        global seconds
+        minutes = time // 60
+        seconds = time % 60
+        for i in range(10):
+            if seconds == i:
+                seconds = str("0" + str(i))
+        
+        return Text(str(str(minutes) + ":" + str(seconds)), color="#fff", size=48), .1
+    def time_finish(st, at, length=0.0):
+        global time
+        global minutes
+        global seconds
+        global final_minutes
+        global final_seconds
+        final_minutes = minutes
+        final_seconds = seconds
+        return Text(str(str(final_minutes) + ":" + str(final_seconds)), color="#fff", size=48), .1
+
+screen countdown():
+    timer 1 repeat True action If(time >= 0, true = SetVariable("time", time + 1), false = [Hide("countdown"), Jump(timer_jump)])
+    imagebutton:
+        xpos 50
+        ypos 50
+        idle DynamicDisplayable(countdown, length = 0)
+        hover DynamicDisplayable(countdown, length = 0)
+        action Null
+
+screen time_finish():
+    imagebutton:
+        xpos 50
+        ypos 50
+        idle DynamicDisplayable(time_finish, length = 0)
+        hover DynamicDisplayable(time_finish, length = 0)
+        action Null
+
+label timer_start:
+    $ global time
+    $ time = 0
+    $ timer_range = 0
+    $ timer_jump = "lose"
+    show screen countdown
+    ## JUMP FIX
+    jump startingIntro
     #import gspread
     #from gspread.foauth2client.service_account import ServiceAccountCredentials
     #from tabulate import tabulate
 
-    hintUsed = 0
 
-    def time_convert(sec):
-        sec += (hintUsed * 10)
-        mins = sec // 60
-        sec = sec % 60
-        hours = mins // 60
-        mins = mins % 60
-        totalTime = ("Time Lapsed = {0}:{1}:{2}".format(int(hours),int(mins),int(sec)))
-
-    def starting_time():
-        start_time = time.time()
-
-
-    def ending_time():
-        end_time = time.time()
-        time_lapsed = end_time - start_time
-        time_convert(time_lapsed)
-        
+    
 
 
 # add color to characters later
@@ -639,16 +676,17 @@ label start:
     
     $ name = renpy.input("What is your name?")
     $ name = name.strip()
-    $ start_time = time.time()
+    jump timer_start
 
-
-    scene bg bedroom with fade
-    #play music "audio/openingmusic.mp3" fadein 1.0 volume 0.75 loop
-    "..."
-    mc "Huh, I wonder who sent me an email this late at night."
-    menu: 
-        "Open the email":
-            jump endgame
+    label startingIntro:
+        scene bg bedroom with fade
+        #play music "audio/openingmusic.mp3" fadein 1.0 volume 0.75 loop
+        "..."
+        mc "Huh, I wonder who sent me an email this late at night."
+        menu: 
+            "Open the email":
+                jump emailScene
+                #jump endgame
 
 
     label emailScene:
@@ -885,10 +923,7 @@ label start:
             window hide 
             call screen pedestal2close()
 
-        # where is ending?
-        $ ending_time()
-        $ starting_time()
-
+        
         #renpy.say(" ", ("Time Lapsed = {0}:{1}:{2}".format(int(hours),int(mins),int(sec))))
         label act1puzzle3:
             scene bg blackScreen with fade
@@ -912,8 +947,7 @@ label start:
             call screen pedestal2close()
             hide screen p1_3Hint 
 
-            $ ending_time()
-            $ starting_time()
+            
 
 label act1complete:
     scene bg towerofHanoiDone 
@@ -923,6 +957,12 @@ label act1complete:
     scene puzzle3complete with fade
     $renpy.pause(delay = 1.5, hard = True) 
     scene bg dooropen with dissolve
+
+    $ act1_time = time
+    $ act1_minutes = minutes
+    $ act1_seconds = seconds
+    $ act1_time_string = str(str(act1_minutes) + ":" + str(act1_seconds))
+
     mc "The door opened!"
     mc "Let's get out of here."
     show jeremy default at right 
@@ -973,6 +1013,11 @@ label act1complete:
     "Let me grab this quickly."
     scene bg ingredientclose with dissolve 
     call screen gettingIngredient()
+
+    $ act2_time = time
+    $ act2_minutes = minutes
+    $ act2_seconds = seconds
+    $ act2_time_string = str(str(act2_minutes) + ":" + str(act2_seconds))
 
 
     company "Hello [name]! Good job getting the first ingredient."
@@ -1061,8 +1106,7 @@ label act2puzzle3gotjournal:
 
     call screen act2puzzle3screen()
     # put open door thing
-    $ ending_time()
-    $ starting_time()
+   
 
 label leftstatue:
     "It says something about this village chief always having a rash.."
@@ -1231,6 +1275,12 @@ label endgameComplete:
     a "It wasn't supposed to end like this..."
     play sound "audio/glitch.mp3"
     hide audrey confused with pixellate 
+
+    $ act3_time = time
+    $ act3_minutes = minutes
+    $ act3_seconds = seconds
+    $ act3_time_string = str(str(act3_minutes) + ":" + str(act3_seconds))
+
     "Audrey is finally gone. The hacker will leave me alone now. I have to hurry and make the cure so I can leave."
     "I can make it over there at the table using the ingredients I got, and the last one which should be in that little beaker."
     call screen table
@@ -1312,6 +1362,12 @@ label gotCorrectPlant:
     g "You have received the correct plant."
     g "Huxtous is in fact the ingredient you have been searching for."
     g "I wish you the best of luck on the rest of your journey."
+
+    $ act2_time = time
+    $ act2_minutes = minutes
+    $ act2_seconds = seconds
+    $ act2_time_string = str(str(act2_minutes) + ":" + str(act2_seconds))
+
     hide guard default
     company "Hello [name]! Good job for getting the next ingredient. You're journey is almost complete."
     company "The last place you have to go to is a tall tower near the memorial."
@@ -1331,6 +1387,12 @@ label gotWrongPlant:
     mc "Now I have to work faster to escape with my life..."
     company "The next area you must go to is the tower in the back of the memorial. Be careful however."
     company "To retrieve the last and final ingredient you must prove your worth."
+
+    $ act2_time = time
+    $ act2_minutes = minutes + 3
+    $ act2_seconds = seconds
+    $ act2_time_string = str(str(act2_minutes) + ":" + str(act2_seconds))
+
     jump act3
 label act3:
     scene towerentrance with fade
@@ -1414,6 +1476,8 @@ label act3puzzle1complete:
     v "They'll only get harder from here."
 
 
+
+
 #screen puzzle2blocks():
     #draggroup:
 
@@ -1434,8 +1498,7 @@ label torchinstructions:
     hide screen torchinstr with fade
     # put dialogue
     # put open door thing
-    $ ending_time()
-    $ starting_time()
+    
 
 
 
@@ -2529,7 +2592,38 @@ screen characterSay(who = None, what = None):
 
 transform half_size:
     zoom 0.75
+label spreadsheetExp:
+    python:
+        import requests
 
+        URL = "https://script.google.com/macros/s/AKfycbxmTCKt-S3ux72ZFPvVaJDOJQRb7iEjHSFhDp2CYb6UgxgS1uly/exec"
+
+        #CHANGE VARIABLES
+        totalTime = str(str(final_minutes) + ":" + str(final_seconds))
+        gameTime = totalTime        
+        act1Time = act1_time_string
+        act2Time = act2_time_string
+        act3Time = act3_time_string
+        endGameTime = act4_time_string
+        
+
+        requests.post(URL, json={'totalTime' : totalTime, 'username' : name, 'heartRateBefore' : hRate, 'heartRateAfter' : currentHrate,'act1Time' :  act1Time, 'act2Time' : act2Time, 'act3Time' : act3Time, 'endGameTime' : endGameTime, 'rating' : rating, 'enjoyment' : enjoyment, 'likedMost' : likedMost, 'recommend' : recommend}, timeout=5)
+    
+    jump leaderboard
+
+## LEADERBOARD NEEDS WORK
+label leaderboard:
+    $ lb = requests.get("https://docs.google.com/spreadsheets/d/e/2PACX-1vTac-e8kK_vcXTVWUdi6zw3UjdFl86QrT3JFeZfQVzLmQeM-bdhtbMwcBmGxojIToDNI-Jj_7SPyTXA/pub?gid=355459653&single=true&output=csv")
+    show screen leaderboard
+    "Leaderboard:"
+
+    return
+
+screen leaderboard():
+    vbox:
+        xpos 50
+        ypos 50
+        text ("{color=#fff} {size=30} [lb.text] {/size} {/color}")
 
 #    return
  

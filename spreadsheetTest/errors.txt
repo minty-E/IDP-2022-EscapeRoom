@@ -1,0 +1,11 @@
+﻿I'm sorry, but errors were detected in your script. Please correct the
+errors listed below, and try again.
+
+
+File "game/script.rpy", line 126: invalid syntax
+    requests.post(URL, json={'totalTime' : totalTime, 'username' : name, 'heartRateBefore' : hRate, 'heartRateAfter' : currentHrate,'act1Time' :  act1Time, 'act2Time' : act2Time, 'act3Time' : act3Time, 'endGameTime' : endGameTime, 'rating' : rating, 'enjoyment' : enjoyment, 'likedMost' : likedMost, 'recommend' : recommend 'FinalTime' : FinalTime}, timeout=5)
+                                                                                                                                                                                                                                                                                                                                               ^
+    
+
+Ren'Py Version: Ren'Py 7.4.11.2266
+Thu Jun  2 16:56:21 2022
